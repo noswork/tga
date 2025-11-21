@@ -63,17 +63,23 @@ const BUILDING_DATA: Record<string, number[][]> = {
   ]
 };
 
-// Icon Image URLs
-const iconPath = (filename: string) => `../../assets/tools/StrongholdMap/${filename}`;
+// Icon Image URLs - Import assets using Vite's import mechanism
+import cityIcon from '../../assets/tools/StrongholdMap/city.png';
+import buildingIcon from '../../assets/tools/StrongholdMap/building.png';
+import houseIcon from '../../assets/tools/StrongholdMap/house.png';
+import hospitalIcon from '../../assets/tools/StrongholdMap/hospital.png';
+import fortressIcon from '../../assets/tools/StrongholdMap/fortress.png';
+import orgIcon from '../../assets/tools/StrongholdMap/org.png';
+import blockIcon from '../../assets/tools/StrongholdMap/block.png';
 
 const ICON_IMAGES: Record<string, string> = {
-  mainCity: iconPath('city.png'),
-  building: iconPath('building.png'),
-  house: iconPath('house.png'),
-  hospital: iconPath('hospital.png'),
-  fortress: iconPath('fortress.png'),
-  organization: iconPath('org.png'),
-  block: iconPath('block.png')
+  mainCity: cityIcon,
+  building: buildingIcon,
+  house: houseIcon,
+  hospital: hospitalIcon,
+  fortress: fortressIcon,
+  organization: orgIcon,
+  block: blockIcon
 };
 
 const keyFor = (x: number, y: number) => `${x},${y}`;
