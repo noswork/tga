@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tokyo Ghoul: Awakening</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&family=Shippori+Mincho+B1:wght@400;500;600;700;800&family=Nosifer&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'ghoul-black': '#18181b',
+              'ghoul-dark': '#27272a',
+              'ghoul-red': '#ff0000',
+              'ghoul-crimson': '#8a0000',
+              'ghoul-gray': '#3f3f46',
+              'ccg-white': '#e5e5e5',
+              'ccg-light': '#f5f5f5',
+              'ccg-gray': '#d4d4d4',
+              'ghoul-cyan': '#00ffff',
+            },
+            fontFamily: {
+              'serif': ['"Cinzel"', 'serif'],
+              'ghoul': ['"Shippori Mincho B1"', 'serif'],
+              'tech': ['"Rajdhani"', 'sans-serif'],
+              'horror': ['"Nosifer"', 'cursive'],
+            },
+            backgroundImage: {
+              'grid-pattern': "linear-gradient(to right, #333 1px, transparent 1px), linear-gradient(to bottom, #333 1px, transparent 1px)",
+              'grid-pattern-light': "linear-gradient(to right, #ddd 1px, transparent 1px), linear-gradient(to bottom, #ddd 1px, transparent 1px)",
+            },
+            animation: {
+              'pulse-fast': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'glitch-grid': 'glitch-grid 2.5s infinite linear alternate',
+              'glitch-rgb': 'glitch-rgb 3s infinite linear alternate-reverse',
+              'drip': 'drip 4s infinite ease-in-out',
+              'cursor-blink': 'cursor-blink 1s step-end infinite',
+              'scan-line': 'scan-line 1.5s linear infinite',
+              'input-jitter': 'input-jitter 0.2s infinite',
+              'noise': 'noise 0.5s steps(5) infinite',
+            },
+            keyframes: {
+              'cursor-blink': {
+                '0%, 100%': { opacity: '1' },
+                '50%': { opacity: '0' },
+              },
+              'scan-line': {
+                '0%': { left: '0%', transform: 'translateX(-100%)' },
+                '100%': { left: '100%', transform: 'translateX(0%)' },
+              },
+              'glitch-grid': {
+                '0%': { clipPath: 'inset(10% 0 60% 0)', transform: 'translate(-2px, 2px)' },
+                '20%': { clipPath: 'inset(80% 0 5% 0)', transform: 'translate(2px, -2px)' },
+                '40%': { clipPath: 'inset(40% 0 30% 0)', transform: 'translate(-2px, 2px)' },
+                '60%': { clipPath: 'inset(10% 0 80% 0)', transform: 'translate(2px, -2px)' },
+                '80%': { clipPath: 'inset(60% 0 20% 0)', transform: 'translate(-2px, 2px)' },
+                '100%': { clipPath: 'inset(30% 0 50% 0)', transform: 'translate(2px, -2px)' },
+              },
+              'glitch-rgb': {
+                '0%': { textShadow: '2px 2px #ff0000, -2px -2px #00ffff' },
+                '25%': { textShadow: '-2px 2px #ff0000, 2px -2px #00ffff' },
+                '50%': { textShadow: '2px -2px #ff0000, -2px 2px #00ffff' },
+                '75%': { textShadow: '-2px -2px #ff0000, 2px 2px #00ffff' },
+                '100%': { textShadow: '2px 2px #ff0000, -2px -2px #00ffff' },
+              },
+              drip: {
+                '0%, 100%': { filter: 'drop-shadow(0 0 2px #ff0000)' },
+                '50%': { filter: 'drop-shadow(0 4px 8px #ff0000)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              'input-jitter': {
+                '0%': { transform: 'translate(0, 0)' },
+                '25%': { transform: 'translate(1px, 0)' },
+                '50%': { transform: 'translate(-1px, 1px)' },
+                '75%': { transform: 'translate(0, -1px)' },
+                '100%': { transform: 'translate(0, 0)' },
+              },
+              'noise': {
+                '0%': { opacity: '1' },
+                '20%': { opacity: '0.8' },
+                '40%': { opacity: '0.9' },
+                '60%': { opacity: '0.8' },
+                '80%': { opacity: '1' },
+                '100%': { opacity: '0.9' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f5f5f5;
+        color: #1a1a1a;
+        overflow-x: hidden;
+        transition: background-color 0.3s, color 0.3s;
+        font-family: 'Rajdhani', sans-serif;
+      }
+
+      .dark body {
+        background-color: #18181b;
+        color: #e5e5e5;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #e5e5e5; 
+      }
+      .dark ::-webkit-scrollbar-track {
+        background: #18181b;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: #999; 
+        border-radius: 0px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #52525b;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ff0000; 
+      }
+      
+      /* Angled Shapes */
+      .clip-angled {
+        clip-path: polygon(
+          20px 0, 100% 0, 
+          100% calc(100% - 20px), calc(100% - 20px) 100%, 
+          0 100%, 0 20px
+        );
+      }
+      
+      .clip-button {
+        clip-path: polygon(
+          12px 0, 100% 0, 
+          100% calc(100% - 12px), calc(100% - 12px) 100%, 
+          0 100%, 0 12px
+        );
+      }
+
+      .text-glow {
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+      }
+      .dark .text-glow {
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+      }
+      
+      /* Grid Overlay Utility */
+      .bg-grid-overlay {
+        background-size: 20px 20px;
+        background-image: linear-gradient(to right, rgba(255, 0, 0, 0.1) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(255, 0, 0, 0.1) 1px, transparent 1px);
+      }
+      
+      /* Improved Readability Input */
+      .input-ghoul-focus {
+         transition: all 0.3s ease;
+      }
+      .input-ghoul-focus:focus {
+         background-color: rgba(255, 0, 0, 0.05);
+         box-shadow: 0 0 0 1px rgba(255, 0, 0, 0.3);
+      }
+
+      /* --- MAP SPECIFIC STYLES --- */
+      :root {
+        /* Light Mode Defaults (CCG/Laboratory Style) */
+        --hex-stroke: #a1a1aa; /* Zinc 400 - Increased contrast */
+        --hex-stroke-width: 1.5; /* Increased width */
+        --hex-fill: #ffffff;   /* White */
+        --hex-hover: rgba(239, 68, 68, 0.1);
+        --label-scale: 1;
+        
+        /* Map SVG Elements */
+        --label-bg-fill: rgba(255, 255, 255, 0.95);
+        --label-text-fill: #18181b;
+        --label-stroke: #ef4444;
+        --map-bg: #f4f4f5; /* Zinc 100 */
+        --grid-line-color: #e4e4e7; /* Zinc 200 */
+      }
+
+      .dark {
+        /* Dark Mode Overrides (Ghoul/Night Style) */
+        --hex-stroke: #52525b; /* Zinc 600 - Increased contrast (Lighter grey on dark bg) */
+        --hex-fill: rgba(24, 24, 27, 0.5);
+        --hex-hover: rgba(220, 38, 38, 0.15);
+        
+        /* Map SVG Elements */
+        --label-bg-fill: rgba(9, 9, 11, 0.95); /* Zinc 950 */
+        --label-text-fill: #ffffff;
+        --label-stroke: #ef4444;
+        --map-bg: #09090b; /* Zinc 950 */
+        --grid-line-color: #27272a; /* Zinc 800 */
+      }
+      
+      .hex-group {
+        pointer-events: painted;
+      }
+
+      .hex-polygon {
+        fill: var(--hex-fill);
+        stroke: var(--hex-stroke);
+        stroke-width: var(--hex-stroke-width);
+        stroke-linejoin: miter;
+        stroke-miterlimit: 10;
+        vector-effect: non-scaling-stroke;
+        transition: fill 120ms ease, stroke-width 120ms ease, stroke 120ms ease;
+      }
+
+      .hex-group:hover .hex-polygon {
+        fill: var(--hex-hover) !important;
+        /* Border is now handled by the highlight overlay layer, so we keep this subtle or remove stroke change */
+        stroke: #7f1d1d !important; 
+        stroke-opacity: 0.5;
+      }
+      
+      /* Disable hover effects during panning */
+      .hex-map.panning .hex-group {
+        pointer-events: none !important;
+      }
+      .hex-map.panning .hex-group:hover .hex-polygon {
+        fill: var(--hex-fill) !important;
+        stroke: var(--hex-stroke) !important;
+      }
+
+      .hex-mark {
+        fill: transparent;
+        stroke: transparent;
+        pointer-events: none;
+        transition: fill 120ms ease;
+      }
+
+      .hex-mark.marked {
+        stroke-width: 2;
+      }
+
+      /* SVG Label Classes */
+      .map-label-bg {
+        fill: var(--label-bg-fill);
+        stroke: var(--label-stroke);
+        stroke-width: 1;
+        rx: 4px;
+        ry: 4px;
+      }
+
+      .map-label-text {
+        fill: var(--label-text-fill);
+        font-family: 'Rajdhani', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        text-anchor: middle;
+        dominant-baseline: middle;
+        pointer-events: none;
+        text-shadow: 0 0 4px rgba(0,0,0,0.1);
+      }
+      .dark .map-label-text {
+         text-shadow: 0 0 4px rgba(0,0,0,0.5);
+      }
+
+      .hex-icon {
+        pointer-events: none;
+        opacity: 0.9;
+        transition: opacity 200ms ease, transform 200ms ease;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+      }
+
+      svg.dragging {
+        cursor: grabbing;
+      }
+      svg {
+        cursor: grab;
+      }
+
+      /* Custom Cursor Styles */
+      * {
+        cursor: url('/assets/cursor/cursor.ani'), url('/assets/cursor/pointer..cur'), auto;
+      }
+      
+      a, button, [role="button"], input[type="button"], input[type="submit"], input[type="reset"] {
+        cursor: url('/assets/cursor/pointer..cur'), pointer;
+      }
+      
+      input[type="text"], input[type="email"], input[type="password"], textarea, select {
+        cursor: url('/assets/cursor/cursor.ani'), text;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-markdown": "https://esm.sh/react-markdown@9?bundle",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
