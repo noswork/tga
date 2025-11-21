@@ -4,6 +4,8 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
+    // 優先使用環境變量（GitHub Actions），否則使用 .env 文件
+    const apiKey = process.env.GEMINI_API_KEY || env.GEMINI_API_KEY;
     return {
       base: '/', // GitHub Pages with custom domain
       server: {
@@ -12,8 +14,8 @@ export default defineConfig(({ mode }) => {
       },
       plugins: [react()],
       define: {
-        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
+        'process.env.API_KEY': JSON.stringify(apiKey),
+        'process.env.GEMINI_API_KEY': JSON.stringify(apiKey)
       },
       resolve: {
         alias: {
