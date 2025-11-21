@@ -353,7 +353,8 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
       }
     }
 
-    if (!s.dragging && !s.isPanning) {
+    // 只有在沒有指針按下（沒有拖拽或平移）時才顯示高亮
+    if (s.pointers.size === 0 && !s.dragging && !s.isPanning) {
       const target = document.elementFromPoint(e.clientX, e.clientY);
       const group = target?.closest('.hex-group') as HTMLElement;
       

@@ -99,12 +99,14 @@
       }
     </script>
     <style>
+      html,
       body {
         background-color: #f5f5f5;
         color: #1a1a1a;
         overflow-x: hidden;
         transition: background-color 0.3s, color 0.3s;
         font-family: 'Rajdhani', sans-serif;
+        cursor: url('/assets/cursor/arrow.png') 0 0, url('/assets/cursor/hand.png') 0 0, auto !important;
       }
 
       .dark body {
@@ -277,24 +279,114 @@
         filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
       }
 
-      svg.dragging {
-        cursor: grabbing;
-      }
-      svg {
-        cursor: grab;
-      }
-
-      /* Custom Cursor Styles */
-      * {
-        cursor: url('/assets/cursor/cursor.ani'), url('/assets/cursor/pointer..cur'), auto;
+      /* Custom Cursor Styles - 應用於所有元素 */
+      *,
+      *::before,
+      *::after {
+        cursor: url('/assets/cursor/arrow.png') 0 0, url('/assets/cursor/hand.png') 0 0, auto !important;
       }
       
-      a, button, [role="button"], input[type="button"], input[type="submit"], input[type="reset"] {
-        cursor: url('/assets/cursor/pointer..cur'), pointer;
+      /* 可點擊元素使用 pointer 游標 */
+      a, 
+      button, 
+      [role="button"], 
+      input[type="button"], 
+      input[type="submit"], 
+      input[type="reset"],
+      [onclick],
+      [style*="cursor: pointer"],
+      .cursor-pointer {
+        cursor: url('/assets/cursor/hand.png') 0 0, pointer !important;
       }
       
-      input[type="text"], input[type="email"], input[type="password"], textarea, select {
-        cursor: url('/assets/cursor/cursor.ani'), text;
+      /* 文字輸入元素使用文字游標 */
+      input[type="text"], 
+      input[type="email"], 
+      input[type="password"], 
+      input[type="search"],
+      input[type="url"],
+      input[type="tel"],
+      input[type="number"],
+      textarea, 
+      select,
+      [contenteditable="true"],
+      [contenteditable=""] {
+        cursor: url('/assets/cursor/arrow.png') 0 0, url('/assets/cursor/hand.png') 0 0, text !important;
+      }
+      
+      /* 拖拽相關游標 */
+      svg.dragging,
+      [draggable="true"]:active {
+        cursor: url('/assets/cursor/hand.png') 0 0, grabbing !important;
+      }
+      
+      svg:not(.dragging) {
+        cursor: url('/assets/cursor/hand.png') 0 0, grab !important;
+      }
+      
+      /* 禁用狀態 */
+      :disabled,
+      [disabled],
+      [aria-disabled="true"] {
+        cursor: url('/assets/cursor/arrow.png') 0 0, url('/assets/cursor/hand.png') 0 0, not-allowed !important;
+      }
+      
+      /* 等待/加載狀態 */
+      [aria-busy="true"],
+      .loading {
+        cursor: url('/assets/cursor/arrow.png') 0 0, url('/assets/cursor/hand.png') 0 0, wait !important;
+      }
+      
+      /* 調整大小游標 */
+      [style*="resize"] {
+        cursor: url('/assets/cursor/hand.png') 0 0, nwse-resize !important;
+      }
+      
+      /* 確保圖片和 SVG 也使用自定義游標 */
+      img,
+      svg,
+      canvas,
+      video {
+        cursor: url('/assets/cursor/arrow.png') 0 0, url('/assets/cursor/hand.png') 0 0, auto !important;
+      }
+      
+      /* 確保所有互動元素在 hover 時也顯示正確游標 */
+      a:hover,
+      button:hover,
+      [role="button"]:hover {
+        cursor: url('/assets/cursor/hand.png') 0 0, pointer !important;
+      }
+      
+      /* 強制覆蓋所有可能的游標樣式，包括內聯樣式 */
+      [style*="cursor"] {
+        cursor: url('/assets/cursor/arrow.png') 0 0, url('/assets/cursor/hand.png') 0 0, auto !important;
+      }
+      
+      /* 特別處理 SVG 元素的所有狀態 */
+      svg,
+      svg * {
+        cursor: url('/assets/cursor/hand.png') 0 0, grab !important;
+      }
+      
+      svg.dragging,
+      svg.dragging * {
+        cursor: url('/assets/cursor/hand.png') 0 0, grabbing !important;
+      }
+      
+      /* 確保所有偽元素和動態添加的元素也使用自定義游標 */
+      ::selection {
+        cursor: url('/assets/cursor/arrow.png') 0 0, url('/assets/cursor/hand.png') 0 0, auto !important;
+      }
+      
+      /* 覆蓋可能的內聯樣式 */
+      [style*="cursor: default"],
+      [style*="cursor:auto"] {
+        cursor: url('/assets/cursor/arrow.png') 0 0, url('/assets/cursor/hand.png') 0 0, auto !important;
+      }
+      
+      [style*="cursor: pointer"],
+      [style*="cursor:grab"] {
+        cursor: url('/assets/cursor/hand.png') 0 0, pointer !important;
       }
     </style>
   <script type="importmap">
@@ -315,5 +407,164 @@
   <body>
     <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
+  <script>
+    // 強制設置自定義游標，確保始終顯示
+    const cursorArrow = '/assets/cursor/arrow.png';
+    const cursorHand = '/assets/cursor/hand.png';
+    
+    // 獲取當前鼠標下的元素並設置游標
+    function getCursorForElement(element) {
+      if (!element || element === document || element === document.documentElement) {
+        return `url('${cursorArrow}') 0 0, url('${cursorHand}') 0 0, auto`;
+      }
+      
+      const tagName = element.tagName?.toLowerCase();
+      const isClickable = element.tagName === 'A' || 
+                        element.tagName === 'BUTTON' || 
+                        element.getAttribute('role') === 'button' ||
+                        element.onclick !== null ||
+                        element.classList?.contains('cursor-pointer') ||
+                        element.closest('a, button, [role="button"]');
+      
+      const isInput = tagName === 'input' || tagName === 'textarea' || tagName === 'select' || 
+                     element.contentEditable === 'true' ||
+                     element.closest('input, textarea, select, [contenteditable]');
+      
+      if (isClickable) {
+        return `url('${cursorHand}') 0 0, pointer`;
+      } else if (isInput) {
+        return `url('${cursorArrow}') 0 0, url('${cursorHand}') 0 0, text`;
+      } else {
+        return `url('${cursorArrow}') 0 0, url('${cursorHand}') 0 0, auto`;
+      }
+    }
+    
+    function setCursor(element, force = false) {
+      if (!element || element === document) return;
+      
+      if (!force && element.dataset.cursorSet === 'true') return;
+      
+      const cursorValue = getCursorForElement(element);
+      element.style.setProperty('cursor', cursorValue, 'important');
+      element.dataset.cursorSet = 'true';
+    }
+    
+    function applyCursorToAll() {
+      // 設置body和html
+      document.documentElement.style.setProperty('cursor', `url('${cursorArrow}') 0 0, url('${cursorHand}') 0 0, auto`, 'important');
+      document.body.style.setProperty('cursor', `url('${cursorArrow}') 0 0, url('${cursorHand}') 0 0, auto`, 'important');
+      
+      // 設置所有元素
+      const allElements = document.querySelectorAll('*');
+      allElements.forEach(el => setCursor(el));
+    }
+    
+    // 全局鼠標移動事件，強制設置游標
+    let lastElement = null;
+    function handleMouseMove(e) {
+      const target = e.target;
+      if (target !== lastElement) {
+        lastElement = target;
+        // 強制更新當前元素及其父元素的游標
+        let current = target;
+        while (current && current !== document.body) {
+          setCursor(current, true);
+          current = current.parentElement;
+        }
+        // 也更新body和html
+        setCursor(document.body, true);
+        setCursor(document.documentElement, true);
+      }
+    }
+    
+    // 鼠標進入事件
+    function handleMouseEnter(e) {
+      setCursor(e.target, true);
+    }
+    
+    // 鼠標離開事件
+    function handleMouseLeave(e) {
+      // 設置下一個目標元素（如果有的話）
+      if (e.relatedTarget) {
+        setCursor(e.relatedTarget, true);
+      }
+    }
+    
+    // 點擊事件後強制設置
+    function handleClick(e) {
+      setCursor(e.target, true);
+    }
+    
+    // 右鍵菜單事件
+    function handleContextMenu(e) {
+      e.preventDefault(); // 可選：阻止默認右鍵菜單
+      setCursor(e.target, true);
+      // 確保在右鍵菜單關閉後也設置游標
+      setTimeout(() => {
+        const element = document.elementFromPoint(e.clientX, e.clientY);
+        if (element) {
+          setCursor(element, true);
+        }
+      }, 10);
+    }
+    
+    // 頁面加載時設置
+    function initCursor() {
+      applyCursorToAll();
+      
+      // 添加全局事件監聽器
+      document.addEventListener('mousemove', handleMouseMove, true); // 使用捕獲階段
+      document.addEventListener('mouseenter', handleMouseEnter, true);
+      document.addEventListener('mouseleave', handleMouseLeave, true);
+      document.addEventListener('click', handleClick, true);
+      document.addEventListener('contextmenu', handleContextMenu, true);
+      document.addEventListener('mousedown', handleClick, true);
+      document.addEventListener('mouseup', handleClick, true);
+    }
+    
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initCursor);
+    } else {
+      initCursor();
+    }
+    
+    // 監聽DOM變化，為新添加的元素設置游標
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (node.nodeType === 1) { // Element node
+            setCursor(node, true);
+            // 也為子元素設置
+            if (node.querySelectorAll) {
+              node.querySelectorAll('*').forEach(el => setCursor(el, true));
+            }
+          }
+        });
+      });
+    });
+    
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+    
+    // 更頻繁地檢查並修復游標（作為備用方案）
+    setInterval(() => {
+      const allElements = document.querySelectorAll('*');
+      allElements.forEach((el) => {
+        const style = window.getComputedStyle(el);
+        const cursor = style.cursor;
+        // 檢查是否是默認游標或沒有包含自定義游標
+        if (cursor === 'auto' || cursor === 'default' || 
+            (!cursor.includes('arrow.png') && !cursor.includes('hand.png') && 
+             cursor !== 'pointer' && cursor !== 'text' && cursor !== 'grab' && cursor !== 'grabbing')) {
+          setCursor(el, true);
+        }
+      });
+      // 也確保body和html始終有游標
+      setCursor(document.body, true);
+      setCursor(document.documentElement, true);
+    }, 100); // 更頻繁的檢查（每100ms）
+  </script>
 </body>
 </html>
