@@ -77,6 +77,18 @@ export const translations: Record<Lang, Translation> = {
           q1: 'Standard',
           q2: 'High (2x)',
           q3: 'Ultra (4x)'
+        },
+        annotation: {
+          title: 'ANNOTATION TOOLS',
+          addArrow: 'ADD ARROW',
+          addRectangle: 'ADD RECTANGLE',
+          addText: 'ADD TEXT',
+          startSketching: 'START SKETCHING',
+          drag: 'DRAG',
+          selectColor: 'SELECT COLOR',
+          undo: 'UNDO',
+          clear: 'CLEAR',
+          done: 'DONE'
         }
       },
       calcTitle: 'RC CALCULATOR',
@@ -185,6 +197,18 @@ export const translations: Record<Lang, Translation> = {
           q1: '標準',
           q2: '高畫質 (2x)',
           q3: '超清 (4x)'
+        },
+        annotation: {
+          title: '註釋工具',
+          addArrow: '添加箭頭',
+          addRectangle: '添加矩形',
+          addText: '添加文字',
+          startSketching: '開始繪圖',
+          drag: '拖動',
+          selectColor: '選擇顏色',
+          undo: '撤銷',
+          clear: '清除',
+          done: '完成'
         }
       },
       calcTitle: 'RC 計算機',

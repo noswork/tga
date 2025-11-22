@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Lang } from '../../types';
 import { translations } from '../../constants';
-import { X, Target, Settings, Download, CheckCircle, Trash2, Activity, Eraser, Monitor, Layers, Image as ImageIcon } from 'lucide-react';
+import { X, Target, Settings, Download, CheckCircle, Trash2, Activity, Eraser, Monitor, Layers, Image as ImageIcon, ArrowRight, Square, Type, Pencil, Move, Palette, Undo2, RotateCcw, GripVertical } from 'lucide-react';
 
 interface StrongholdMapProps {
   lang: Lang;
@@ -111,13 +111,44 @@ const WATERMARK_TILES = Array.from({ length: 300 });
 export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) => {
   const t = translations[lang].tools.map;
   const qT = t.quality;
+  const aT = t.annotation;
   const svgRef = useRef<SVGSVGElement>(null);
   const [markMode, setMarkMode] = useState<'add' | 'remove'>('add');
   const [selectedColor, setSelectedColor] = useState('#ef4444');
   const [isExporting, setIsExporting] = useState(false);
   const [exportQuality, setExportQuality] = useState(2); // Default to 2x (High)
+  const [annotationMode, setAnnotationMode] = useState<'none' | 'arrow' | 'rectangle' | 'text' | 'sketch' | 'eraser'>('none');
+  const [annotationColor, setAnnotationColor] = useState('#ef4444');
+  const [annotationFontSize, setAnnotationFontSize] = useState(16);
+  const [annotationStrokeWidth, setAnnotationStrokeWidth] = useState(3);
+  const [annotations, setAnnotations] = useState<any[]>([]);
+  const [annotationHistory, setAnnotationHistory] = useState<any[][]>([]);
+  const [toolbarPosition, setToolbarPosition] = useState({ x: 0, y: 0 });
+  const [isDraggingToolbar, setIsDraggingToolbar] = useState(false);
+  const [toolbarDragStart, setToolbarDragStart] = useState({ x: 0, y: 0 });
+  const [textInputVisible, setTextInputVisible] = useState(false);
+  const [textInputPosition, setTextInputPosition] = useState({ x: 0, y: 0 });
+  const [textInputValue, setTextInputValue] = useState('');
+  const textInputRef = useRef<HTMLInputElement>(null);
+  const annotationLayerRef = useRef<SVGGElement>(null);
+  const isDrawingRef = useRef(false);
+  const currentAnnotationRef = useRef<any>(null);
+  const sketchPathRef = useRef<SVGPathElement | null>(null);
+  const toolbarRef = useRef<HTMLDivElement>(null);
 
-  const state = useRef({
+  const     state = useRef<{
+    scale: number;
+    translate: { x: number; y: number };
+    isPanning: boolean;
+    dragging: boolean;
+    startPointer: { x: number; y: number };
+    lastPointer: { x: number; y: number };
+    pointers: Map<number, {x: number, y: number}>;
+    cellMap: Map<string, any>;
+    markedCells: Map<string, any>;
+    lastHoveredKey: string | null;
+    annotationStart: { x: number; y: number };
+  }>({
     scale: 0.5,
     translate: { x: 0, y: 0 },
     isPanning: false,
@@ -127,7 +158,8 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
     pointers: new Map<number, {x: number, y: number}>(),
     cellMap: new Map<string, any>(),
     markedCells: new Map<string, any>(),
-    lastHoveredKey: null as string | null,
+    lastHoveredKey: null,
+    annotationStart: { x: 0, y: 0 },
   });
 
   const applyTransform = () => {
@@ -135,15 +167,15 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
     const matrix = `matrix(${scale}, 0, 0, ${scale}, ${translate.x}, ${translate.y})`;
     if (!svgRef.current) return;
     
-    ['hex-layer', 'mark-layer', 'highlight-layer', 'building-layer', 'label-layer'].forEach(id => {
+    ['hex-layer', 'mark-layer', 'highlight-layer', 'building-layer', 'label-layer', 'annotation-layer'].forEach(id => {
       const el = svgRef.current!.querySelector(`#${id}`);
       if(el) el.setAttribute("transform", matrix);
     });
     
-    if (lastHoveredKey) {
+    if (lastHoveredKey && svgRef.current) {
        const cell = state.current.cellMap.get(lastHoveredKey);
        const labelGroup = svgRef.current.querySelector('#hover-label');
-       if (cell && labelGroup) {
+       if (cell && labelGroup && scale > 0) {
          labelGroup.setAttribute("transform", `translate(${cell.cx}, ${cell.cy}) scale(${1/scale})`);
        }
     }
@@ -187,12 +219,14 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
     const buildingLayer = svg.querySelector('#building-layer') as SVGGElement;
     const highlightLayer = svg.querySelector('#highlight-layer') as SVGGElement;
     const labelLayer = svg.querySelector('#label-layer') as SVGGElement;
+    const annotationLayer = svg.querySelector('#annotation-layer') as SVGGElement;
 
     hexLayer.innerHTML = '';
     markLayer.innerHTML = '';
     buildingLayer.innerHTML = '';
     highlightLayer.innerHTML = '';
     labelLayer.innerHTML = '';
+    if (annotationLayer) annotationLayer.innerHTML = '';
     state.current.cellMap.clear();
 
     const halfH = HEX_H / 2;
@@ -271,6 +305,16 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
     hoverLabelGroup.appendChild(labelText);
     labelLayer.appendChild(hoverLabelGroup);
 
+    // Initialize annotation layer if it doesn't exist
+    if (!annotationLayer) {
+      const newAnnotationLayer = document.createElementNS("http://www.w3.org/2000/svg", "g");
+      newAnnotationLayer.setAttribute("id", "annotation-layer");
+      svg.appendChild(newAnnotationLayer);
+      annotationLayerRef.current = newAnnotationLayer;
+    } else {
+      annotationLayerRef.current = annotationLayer;
+    }
+
     applyTransform();
 
     // Load saved marks after cellMap is fully initialized
@@ -334,9 +378,64 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
 
   const handlePointerDown = (e: React.PointerEvent) => {
     const s = state.current;
+    
+    // Prevent handling if clicking on text input or its container
+    const target = e.target as Element;
+    if (target.closest('input[type="text"]') || 
+        (target as HTMLElement).tagName === 'INPUT' ||
+        target.closest('[data-text-input-container]')) {
+      return;
+    }
+    
     (e.target as Element).setPointerCapture(e.pointerId);
     s.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    
     if (s.pointers.size === 1) {
+      const rect = svgRef.current?.getBoundingClientRect();
+      if (!rect) return;
+      
+      const mx = e.clientX - rect.left;
+      const my = e.clientY - rect.top;
+      const wx = (mx - s.translate.x) / s.scale;
+      const wy = (my - s.translate.y) / s.scale;
+      
+      // Handle annotation tools
+      if (annotationMode !== 'none' && annotationMode !== 'eraser') {
+        s.isPanning = false;
+        s.dragging = false;
+        s.annotationStart = { x: wx, y: wy };
+        isDrawingRef.current = true;
+        
+        if (annotationMode === 'arrow' || annotationMode === 'rectangle' || annotationMode === 'text') {
+          currentAnnotationRef.current = { type: annotationMode, start: { x: wx, y: wy }, end: { x: wx, y: wy }, color: annotationColor, strokeWidth: annotationStrokeWidth };
+        } else if (annotationMode === 'sketch') {
+          if (!annotationLayerRef.current) return;
+          const sketchId = Date.now();
+          const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+          g.setAttribute("data-annotation-id", String(sketchId));
+          const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+          path.setAttribute("d", `M ${wx} ${wy}`);
+          path.setAttribute("stroke", annotationColor);
+          path.setAttribute("stroke-width", String(annotationStrokeWidth));
+          path.setAttribute("fill", "none");
+          path.setAttribute("stroke-linecap", "round");
+          path.setAttribute("stroke-linejoin", "round");
+          g.appendChild(path);
+          annotationLayerRef.current.appendChild(g);
+          sketchPathRef.current = path;
+          currentAnnotationRef.current = { 
+            type: 'sketch', 
+            id: sketchId,
+            pathData: `M ${wx} ${wy}`,
+            color: annotationColor, 
+            strokeWidth: annotationStrokeWidth 
+          };
+        }
+        return;
+      }
+      
+      
+      // Normal panning
       s.isPanning = true;
       s.dragging = false;
       s.startPointer = { x: e.clientX, y: e.clientY };
@@ -359,6 +458,31 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
 
     if (s.pointers.has(e.pointerId)) {
       s.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      
+      const rect = svgRef.current.getBoundingClientRect();
+      const mx = e.clientX - rect.left;
+      const my = e.clientY - rect.top;
+      const wx = (mx - s.translate.x) / s.scale;
+      const wy = (my - s.translate.y) / s.scale;
+      
+      // Handle annotation drawing
+      if (isDrawingRef.current && annotationMode !== 'none' && annotationMode !== 'eraser') {
+        if (annotationMode === 'sketch' && sketchPathRef.current && currentAnnotationRef.current) {
+          const path = sketchPathRef.current;
+          const currentPath = path.getAttribute("d") || '';
+          const newPathData = `${currentPath} L ${wx} ${wy}`;
+          path.setAttribute("d", newPathData);
+          currentAnnotationRef.current.pathData = newPathData;
+        } else if (annotationMode === 'arrow' || annotationMode === 'rectangle' || annotationMode === 'text') {
+          if (currentAnnotationRef.current) {
+            currentAnnotationRef.current.end = { x: wx, y: wy };
+            renderCurrentAnnotation();
+          }
+        }
+        return;
+      }
+      
+      
       if (s.pointers.size === 1 && s.isPanning) {
         const dx = e.clientX - s.lastPointer.x;
         const dy = e.clientY - s.lastPointer.y;
@@ -370,8 +494,8 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
       }
     }
 
-    // 只有在沒有指針按下（沒有拖拽或平移）時才顯示高亮
-    if (s.pointers.size === 0 && !s.dragging && !s.isPanning) {
+    // 只有在沒有指針按下（沒有拖拽或平移）且註釋模式為none時才顯示高亮
+    if (s.pointers.size === 0 && !s.dragging && !s.isPanning && annotationMode === 'none') {
       const target = document.elementFromPoint(e.clientX, e.clientY);
       const group = target?.closest('.hex-group') as HTMLElement;
       
@@ -440,6 +564,84 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
   const handlePointerUp = (e: React.PointerEvent) => {
     const s = state.current;
     s.pointers.delete(e.pointerId);
+    
+    if (isDrawingRef.current && annotationMode !== 'none' && annotationMode !== 'eraser') {
+      if (annotationMode === 'arrow' || annotationMode === 'rectangle') {
+        if (currentAnnotationRef.current) {
+          const dist = Math.hypot(
+            currentAnnotationRef.current.end.x - currentAnnotationRef.current.start.x,
+            currentAnnotationRef.current.end.y - currentAnnotationRef.current.start.y
+          );
+          if (dist > 5) {
+            addAnnotation(currentAnnotationRef.current);
+          }
+          currentAnnotationRef.current = null;
+        }
+      } else if (annotationMode === 'text') {
+        if (currentAnnotationRef.current) {
+          const dist = Math.hypot(
+            currentAnnotationRef.current.end.x - currentAnnotationRef.current.start.x,
+            currentAnnotationRef.current.end.y - currentAnnotationRef.current.start.y
+          );
+          if (dist > 5) {
+            // Calculate the center bottom position of the selection box
+            const start = currentAnnotationRef.current.start;
+            const end = currentAnnotationRef.current.end;
+            const centerX = (start.x + end.x) / 2;
+            const bottomY = Math.max(start.y, end.y);
+            const boxHeight = Math.abs(end.y - start.y);
+            
+            // Convert to screen coordinates
+            if (svgRef.current) {
+              const rect = svgRef.current.getBoundingClientRect();
+              const screenX = centerX * s.scale + s.translate.x;
+              const screenY = bottomY * s.scale + s.translate.y;
+              
+              // Calculate spacing based on box height and font size
+              const spacing = Math.max(boxHeight * s.scale * 0.2, annotationFontSize * s.scale * 0.5, 20);
+              
+              // Store the selection box info for later use
+              currentAnnotationRef.current.textBox = {
+                start: { x: start.x, y: start.y },
+                end: { x: end.x, y: end.y },
+                centerX,
+                bottomY
+              };
+              
+              setTextInputPosition({ 
+                x: screenX, 
+                y: screenY + spacing // Position below the box with proper spacing
+              });
+              setTextInputValue('');
+              setTextInputVisible(true);
+              setTimeout(() => {
+                textInputRef.current?.focus();
+              }, 0);
+            }
+          } else {
+            currentAnnotationRef.current = null;
+          }
+        }
+      } else if (annotationMode === 'sketch') {
+        if (currentAnnotationRef.current && sketchPathRef.current) {
+          const pathData = sketchPathRef.current.getAttribute("d") || '';
+          // Only save if path has more than just the initial move command
+          if (pathData.length > 10) {
+            addAnnotation(currentAnnotationRef.current);
+          } else {
+            // Remove the empty sketch group if path is too short
+            const g = sketchPathRef.current.parentElement;
+            if (g && g.getAttribute('data-annotation-id')) {
+              g.remove();
+            }
+          }
+          currentAnnotationRef.current = null;
+        }
+      }
+      isDrawingRef.current = false;
+      sketchPathRef.current = null;
+    }
+    
     if (s.pointers.size === 0) {
       s.isPanning = false;
       if (svgRef.current) {
@@ -449,9 +651,56 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
     }
   };
 
+  // Ensure text input gets focus when visible
+  useEffect(() => {
+    if (textInputVisible && textInputRef.current) {
+      // Use requestAnimationFrame to ensure DOM is ready
+      requestAnimationFrame(() => {
+        if (textInputRef.current) {
+          textInputRef.current.focus();
+          textInputRef.current.select();
+        }
+      });
+    }
+  }, [textInputVisible]);
+
   const handleClick = (e: React.MouseEvent) => {
-    if (state.current.dragging) return;
+    // Prevent click if clicking on text input or its container
     const target = e.target as Element;
+    if (target.closest('input[type="text"]') || 
+        (target as HTMLElement).tagName === 'INPUT' ||
+        target.closest('[data-text-input-container]')) return;
+    
+    // Handle eraser mode - delete annotation on click
+    if (annotationMode === 'eraser') {
+      const annotationGroup = target.closest('[data-annotation-id]') as Element;
+      if (annotationGroup) {
+        const annotationId = Number(annotationGroup.getAttribute('data-annotation-id'));
+        if (annotationId) {
+          setAnnotations(prev => {
+            setAnnotationHistory(history => [...history, [...prev]]);
+            return prev.filter(a => a.id !== annotationId);
+          });
+          e.stopPropagation();
+          return;
+        }
+      }
+      // If clicking outside annotations in eraser mode, do nothing
+      if (!target.closest('#annotation-layer')) {
+        e.stopPropagation();
+        return;
+      }
+    }
+    
+    // Disable marking when annotation mode is active (unless in eraser mode)
+    if (annotationMode !== 'none' && annotationMode !== 'eraser') return;
+    
+    // Prevent click if we were dragging
+    if (state.current.dragging) return;
+    
+    // Prevent click if clicking on annotation elements (unless in eraser mode)
+    if (annotationMode !== 'eraser' && target.closest('#annotation-layer')) return;
+    
     const group = target.closest('.hex-group') as HTMLElement;
     if (!group) return;
 
@@ -476,7 +725,10 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
   };
 
   const handleContextMenu = (e: React.MouseEvent) => {
-    e.preventDefault(); 
+    e.preventDefault();
+    // Disable marking when annotation mode is active (unless in eraser mode)
+    if (annotationMode !== 'none' && annotationMode !== 'eraser') return;
+    
     const s = state.current;
     const dist = Math.hypot(e.clientX - s.startPointer.x, e.clientY - s.startPointer.y);
     if (dist > 10) return;
@@ -545,13 +797,15 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
       const isDark = document.documentElement.classList.contains('dark');
       
       // Reset transforms for export so the whole map is visible
-      ['hex-layer', 'mark-layer', 'building-layer'].forEach(id => 
+      ['hex-layer', 'mark-layer', 'building-layer', 'annotation-layer'].forEach(id => 
         clone.querySelector(`#${id}`)?.removeAttribute('transform')
       );
       
       // Remove UI helpers
       clone.querySelector('#label-layer')?.remove(); 
-      clone.querySelector('#highlight-layer')?.remove(); 
+      clone.querySelector('#highlight-layer')?.remove();
+      
+      // Keep annotation layer for export 
       
       // --- Embed images as Base64 ---
       const images = clone.querySelectorAll('image');
@@ -673,6 +927,290 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
     saveMarks();
   };
 
+  const addAnnotation = (annotation: any) => {
+    setAnnotations(prev => {
+      setAnnotationHistory(history => [...history, [...prev]]);
+      const newAnnotation = { ...annotation, id: Date.now() };
+      // Don't render here - let useEffect handle it to avoid duplicates
+      return [...prev, newAnnotation];
+    });
+  };
+
+  const renderAnnotation = (annotation: any) => {
+    if (!annotationLayerRef.current) return;
+    
+    const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+    g.setAttribute("data-annotation-id", String(annotation.id || Date.now()));
+    
+    if (annotation.type === 'arrow') {
+      const { start, end, color, strokeWidth } = annotation;
+      const dx = end.x - start.x;
+      const dy = end.y - start.y;
+      const angle = Math.atan2(dy, dx);
+      const arrowLength = Math.hypot(dx, dy);
+      const arrowHeadSize = Math.max(10, (strokeWidth || annotationStrokeWidth) * 5);
+      
+      const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      line.setAttribute("x1", String(start.x));
+      line.setAttribute("y1", String(start.y));
+      line.setAttribute("x2", String(end.x));
+      line.setAttribute("y2", String(end.y));
+      line.setAttribute("stroke", color);
+      line.setAttribute("stroke-width", String(strokeWidth || annotationStrokeWidth));
+      g.appendChild(line);
+      
+      const arrowHead = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+      const points = [
+        `${end.x},${end.y}`,
+        `${end.x - arrowHeadSize * Math.cos(angle - Math.PI / 6)},${end.y - arrowHeadSize * Math.sin(angle - Math.PI / 6)}`,
+        `${end.x - arrowHeadSize * Math.cos(angle + Math.PI / 6)},${end.y - arrowHeadSize * Math.sin(angle + Math.PI / 6)}`
+      ].join(' ');
+      arrowHead.setAttribute("points", points);
+      arrowHead.setAttribute("fill", color);
+      g.appendChild(arrowHead);
+    } else if (annotation.type === 'rectangle') {
+      const { start, end, color, strokeWidth } = annotation;
+      const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+      const x = Math.min(start.x, end.x);
+      const y = Math.min(start.y, end.y);
+      const width = Math.abs(end.x - start.x);
+      const height = Math.abs(end.y - start.y);
+      rect.setAttribute("x", String(x));
+      rect.setAttribute("y", String(y));
+      rect.setAttribute("width", String(width));
+      rect.setAttribute("height", String(height));
+      rect.setAttribute("fill", "none");
+      rect.setAttribute("stroke", color);
+      rect.setAttribute("stroke-width", String(strokeWidth || annotationStrokeWidth));
+      g.appendChild(rect);
+    } else if (annotation.type === 'text') {
+      const { x, y, text, color, fontSize, start, end, strokeWidth } = annotation;
+      
+      // Draw dashed selection box if start and end are provided
+      if (start && end) {
+        const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+        const rectX = Math.min(start.x, end.x);
+        const rectY = Math.min(start.y, end.y);
+        const width = Math.abs(end.x - start.x);
+        const height = Math.abs(end.y - start.y);
+        rect.setAttribute("x", String(rectX));
+        rect.setAttribute("y", String(rectY));
+        rect.setAttribute("width", String(width));
+        rect.setAttribute("height", String(height));
+        rect.setAttribute("fill", "none");
+        rect.setAttribute("stroke", color);
+        rect.setAttribute("stroke-width", String(strokeWidth || annotationStrokeWidth));
+        g.appendChild(rect);
+      }
+      
+      // Draw text below the selection box (or at the specified position for backward compatibility)
+      const textEl = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      // Calculate text position: if we have start/end, position text below the box with proper spacing
+      let textX = x || 0;
+      let textY = y || 0;
+      if (start && end) {
+        textX = (Math.min(start.x, end.x) + Math.abs(end.x - start.x) / 2);
+        const boxBottom = Math.max(start.y, end.y);
+        const boxHeight = Math.abs(end.y - start.y);
+        // Position text below the box with spacing based on box height and font size
+        textY = boxBottom + Math.max(boxHeight * 0.2, (fontSize || annotationFontSize) * 0.5);
+      }
+      textEl.setAttribute("x", String(textX));
+      textEl.setAttribute("y", String(textY));
+      textEl.setAttribute("fill", color);
+      textEl.setAttribute("font-size", String(fontSize || annotationFontSize));
+      textEl.setAttribute("font-weight", "bold");
+      textEl.setAttribute("font-family", "monospace");
+      textEl.setAttribute("text-anchor", "middle"); // Center align
+      textEl.setAttribute("dominant-baseline", "hanging"); // Align from top
+      textEl.textContent = text;
+      g.appendChild(textEl);
+    } else if (annotation.type === 'sketch') {
+      const { pathData, color, strokeWidth } = annotation;
+      const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      path.setAttribute("d", pathData);
+      path.setAttribute("stroke", color);
+      path.setAttribute("stroke-width", String(strokeWidth || annotationStrokeWidth));
+      path.setAttribute("fill", "none");
+      path.setAttribute("stroke-linecap", "round");
+      path.setAttribute("stroke-linejoin", "round");
+      g.appendChild(path);
+    }
+    
+    annotationLayerRef.current.appendChild(g);
+  };
+
+
+  const renderCurrentAnnotation = () => {
+    if (!currentAnnotationRef.current || !annotationLayerRef.current) return;
+    
+    // Remove previous temporary annotation
+    const temp = annotationLayerRef.current.querySelector('[data-temp="true"]');
+    if (temp) temp.remove();
+    
+    const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+    g.setAttribute("data-temp", "true");
+    
+    const annotation = currentAnnotationRef.current;
+    if (annotation.type === 'arrow') {
+      const { start, end, color, strokeWidth } = annotation;
+      const dx = end.x - start.x;
+      const dy = end.y - start.y;
+      const angle = Math.atan2(dy, dx);
+      const arrowHeadSize = Math.max(10, (strokeWidth || annotationStrokeWidth) * 5);
+      
+      const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      line.setAttribute("x1", String(start.x));
+      line.setAttribute("y1", String(start.y));
+      line.setAttribute("x2", String(end.x));
+      line.setAttribute("y2", String(end.y));
+      line.setAttribute("stroke", color);
+      line.setAttribute("stroke-width", String(annotationStrokeWidth));
+      g.appendChild(line);
+      
+      const arrowHead = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+      const points = [
+        `${end.x},${end.y}`,
+        `${end.x - arrowHeadSize * Math.cos(angle - Math.PI / 6)},${end.y - arrowHeadSize * Math.sin(angle - Math.PI / 6)}`,
+        `${end.x - arrowHeadSize * Math.cos(angle + Math.PI / 6)},${end.y - arrowHeadSize * Math.sin(angle + Math.PI / 6)}`
+      ].join(' ');
+      arrowHead.setAttribute("points", points);
+      arrowHead.setAttribute("fill", color);
+      g.appendChild(arrowHead);
+    } else if (annotation.type === 'rectangle') {
+      const { start, end, color } = annotation;
+      const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+      const x = Math.min(start.x, end.x);
+      const y = Math.min(start.y, end.y);
+      const width = Math.abs(end.x - start.x);
+      const height = Math.abs(end.y - start.y);
+      rect.setAttribute("x", String(x));
+      rect.setAttribute("y", String(y));
+      rect.setAttribute("width", String(width));
+      rect.setAttribute("height", String(height));
+      rect.setAttribute("fill", "none");
+      rect.setAttribute("stroke", color);
+      rect.setAttribute("stroke-width", String(annotationStrokeWidth));
+      g.appendChild(rect);
+    } else if (annotation.type === 'text') {
+      const { start, end, color } = annotation;
+      const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+      const x = Math.min(start.x, end.x);
+      const y = Math.min(start.y, end.y);
+      const width = Math.abs(end.x - start.x);
+      const height = Math.abs(end.y - start.y);
+      rect.setAttribute("x", String(x));
+      rect.setAttribute("y", String(y));
+      rect.setAttribute("width", String(width));
+      rect.setAttribute("height", String(height));
+      rect.setAttribute("fill", "none");
+      rect.setAttribute("stroke", color);
+      rect.setAttribute("stroke-width", String(annotationStrokeWidth));
+      g.appendChild(rect);
+    }
+    
+    annotationLayerRef.current.appendChild(g);
+  };
+
+  const handleUndo = () => {
+    if (annotationHistory.length === 0) return;
+    const previous = annotationHistory[annotationHistory.length - 1];
+    setAnnotations(previous);
+    setAnnotationHistory(prev => prev.slice(0, -1));
+    
+    // Re-render all annotations
+    if (annotationLayerRef.current) {
+      annotationLayerRef.current.innerHTML = '';
+      previous.forEach(renderAnnotation);
+    }
+  };
+
+  const handleClearAnnotations = () => {
+    setAnnotations(prev => {
+      setAnnotationHistory(history => [...history, [...prev]]);
+      if (annotationLayerRef.current) {
+        annotationLayerRef.current.innerHTML = '';
+      }
+      return [];
+    });
+  };
+
+  const handleAnnotationDone = () => {
+    handleExport();
+  };
+
+  const handleToolbarPointerDown = (e: React.PointerEvent) => {
+    if (!toolbarRef.current) return;
+    const target = e.target as HTMLElement;
+    // Don't drag if clicking on interactive elements
+    if (target.closest('button') || target.closest('input') || target.closest('select')) {
+      return;
+    }
+    setIsDraggingToolbar(true);
+    const rect = toolbarRef.current.getBoundingClientRect();
+    const parentRect = toolbarRef.current.parentElement?.getBoundingClientRect();
+    if (parentRect) {
+      setToolbarDragStart({ 
+        x: e.clientX - (parentRect.left + parentRect.width / 2) - toolbarPosition.x, 
+        y: e.clientY - (parentRect.top + parentRect.height) - toolbarPosition.y
+      });
+    }
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
+  useEffect(() => {
+    const handleToolbarPointerMove = (e: PointerEvent) => {
+      if (isDraggingToolbar && toolbarRef.current) {
+        const parentRect = toolbarRef.current.parentElement?.getBoundingClientRect();
+        if (parentRect) {
+          setToolbarPosition({
+            x: e.clientX - (parentRect.left + parentRect.width / 2) - toolbarDragStart.x,
+            y: e.clientY - (parentRect.top + parentRect.height) - toolbarDragStart.y
+          });
+        }
+      }
+    };
+
+    const handleToolbarPointerUp = () => {
+      setIsDraggingToolbar(false);
+    };
+
+    if (isDraggingToolbar) {
+      window.addEventListener('pointermove', handleToolbarPointerMove);
+      window.addEventListener('pointerup', handleToolbarPointerUp);
+      return () => {
+        window.removeEventListener('pointermove', handleToolbarPointerMove);
+        window.removeEventListener('pointerup', handleToolbarPointerUp);
+      };
+    }
+  }, [isDraggingToolbar, toolbarDragStart]);
+
+  // Close text input when switching tools
+  useEffect(() => {
+    if (annotationMode !== 'text' && textInputVisible) {
+      // Clear the temporary selection box
+      if (annotationLayerRef.current) {
+        const temp = annotationLayerRef.current.querySelector('[data-temp="true"]');
+        if (temp) temp.remove();
+      }
+      if (currentAnnotationRef.current) {
+        currentAnnotationRef.current = null;
+      }
+      setTextInputVisible(false);
+      setTextInputValue('');
+    }
+  }, [annotationMode, textInputVisible]);
+
+  // Re-render annotations when they change
+  useEffect(() => {
+    if (!annotationLayerRef.current) return;
+    annotationLayerRef.current.innerHTML = '';
+    annotations.forEach(ann => {
+      renderAnnotation(ann);
+    });
+  }, [annotations]);
+
   const COLORS = ['#ef4444', '#f97316', '#eab308', '#22c55e', '#3b82f6', '#a855f7'];
 
   return (
@@ -691,7 +1229,7 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
         </div>
 
         <div className="flex-grow p-2 lg:p-4 overflow-y-auto space-y-3 lg:space-y-5 overscroll-contain">
-           <div>
+           <div className={`transition-opacity duration-300 ${annotationMode !== 'none' ? 'opacity-30 pointer-events-none' : 'opacity-100'}`}>
              <h3 className="text-[10px] lg:text-[11px] font-mono text-gray-500 dark:text-zinc-500 mb-1.5 uppercase tracking-wider">{t.blockMarking}</h3>
              <div className="flex gap-2 bg-gray-100 dark:bg-black/30 p-1 rounded-lg border border-gray-200 dark:border-transparent">
                 <button onClick={() => setMarkMode('add')} className={`flex-1 py-1 lg:py-2 px-1 lg:px-2 rounded text-[10px] lg:text-xs font-bold font-tech transition-all ${markMode === 'add' ? 'bg-ghoul-red text-white shadow-md' : 'text-gray-500 dark:text-zinc-500 hover:bg-black/5 dark:hover:bg-white/5'}`}>
@@ -703,7 +1241,7 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
              </div>
            </div>
 
-           <div className={`transition-opacity duration-300 ${markMode === 'remove' ? 'opacity-30 pointer-events-none' : 'opacity-100'}`}>
+           <div className={`transition-opacity duration-300 ${annotationMode !== 'none' || markMode === 'remove' ? 'opacity-30 pointer-events-none' : 'opacity-100'}`}>
              <h3 className="text-[10px] lg:text-[11px] font-mono text-gray-500 dark:text-zinc-500 mb-1.5 uppercase tracking-wider">{t.markerColor}</h3>
              <div className="grid grid-cols-6 lg:grid-cols-4 gap-1.5 lg:gap-2">
                {COLORS.map(c => (
@@ -788,8 +1326,256 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
           <g id="highlight-layer"></g>
           <g id="building-layer"></g>
           <g id="label-layer"></g>
+          <g id="annotation-layer"></g>
         </svg>
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(transparent_50%,var(--map-bg)_100%)] opacity-50"></div>
+        
+        {/* Custom Text Input */}
+        {textInputVisible && (
+          <div
+            data-text-input-container
+            className="absolute z-40 bg-white dark:bg-[#18181b] rounded-lg shadow-2xl border border-gray-200 dark:border-zinc-800 p-2 pointer-events-auto"
+            style={{
+              left: `${textInputPosition.x}px`,
+              top: `${textInputPosition.y}px`,
+              transform: 'translate(-50%, 0)'
+            }}
+            onClick={(e) => {
+              e.stopPropagation();
+              e.preventDefault();
+            }}
+            onPointerDown={(e) => {
+              e.stopPropagation();
+              e.preventDefault();
+            }}
+            onMouseDown={(e) => {
+              e.stopPropagation();
+              e.preventDefault();
+            }}
+            onTouchStart={(e) => {
+              e.stopPropagation();
+              e.preventDefault();
+            }}
+          >
+            <input
+              ref={textInputRef}
+              type="text"
+              value={textInputValue}
+              onChange={(e) => setTextInputValue(e.target.value)}
+              onKeyDown={(e) => {
+                e.stopPropagation();
+                if (e.key === 'Enter') {
+                  if (textInputValue.trim() && currentAnnotationRef.current && currentAnnotationRef.current.textBox) {
+                    const textBox = currentAnnotationRef.current.textBox;
+                    addAnnotation({ 
+                      type: 'text', 
+                      start: textBox.start,
+                      end: textBox.end,
+                      x: textBox.centerX, 
+                      y: textBox.bottomY, 
+                      text: textInputValue.trim(), 
+                      color: annotationColor, 
+                      fontSize: annotationFontSize 
+                    });
+                    // Clear the temporary selection box
+                    if (annotationLayerRef.current) {
+                      const temp = annotationLayerRef.current.querySelector('[data-temp="true"]');
+                      if (temp) temp.remove();
+                    }
+                    currentAnnotationRef.current = null;
+                  }
+                  setTextInputVisible(false);
+                  setTextInputValue('');
+                } else if (e.key === 'Escape') {
+                  // Clear the temporary selection box
+                  if (annotationLayerRef.current) {
+                    const temp = annotationLayerRef.current.querySelector('[data-temp="true"]');
+                    if (temp) temp.remove();
+                  }
+                  if (currentAnnotationRef.current) {
+                    currentAnnotationRef.current = null;
+                  }
+                  setTextInputVisible(false);
+                  setTextInputValue('');
+                }
+              }}
+              onBlur={(e) => {
+                // Use a longer delay to check if focus moved to another element
+                setTimeout(() => {
+                  // Check if the input or its container still has focus
+                  const activeElement = document.activeElement;
+                  const container = e.currentTarget.parentElement;
+                  
+                  // Only close if focus is not on the input or its container
+                  if (activeElement !== e.currentTarget && 
+                      (!container || !container.contains(activeElement))) {
+                    // Double check that we're not in the middle of a click
+                    if (!textInputRef.current?.matches(':focus')) {
+                      // Clear the temporary selection box
+                      if (annotationLayerRef.current) {
+                        const temp = annotationLayerRef.current.querySelector('[data-temp="true"]');
+                        if (temp) temp.remove();
+                      }
+                      if (currentAnnotationRef.current) {
+                        currentAnnotationRef.current = null;
+                      }
+                      setTextInputVisible(false);
+                      setTextInputValue('');
+                    }
+                  }
+                }, 300);
+              }}
+              onFocus={(e) => {
+                e.stopPropagation();
+              }}
+              onClick={(e) => {
+                e.stopPropagation();
+                e.preventDefault();
+              }}
+              onPointerDown={(e) => {
+                e.stopPropagation();
+                e.preventDefault();
+              }}
+              onMouseDown={(e) => {
+                e.stopPropagation();
+                e.preventDefault();
+              }}
+              onTouchStart={(e) => {
+                e.stopPropagation();
+                e.preventDefault();
+              }}
+              className="px-3 py-2 text-sm bg-transparent border border-gray-300 dark:border-zinc-700 rounded text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-ghoul-red min-w-[200px]"
+              placeholder="Enter text..."
+              autoFocus
+            />
+          </div>
+        )}
+
+        {/* Draggable Annotation Toolbar */}
+        <div
+          ref={toolbarRef}
+          className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white dark:bg-[#18181b] rounded-lg shadow-2xl border border-gray-200 dark:border-zinc-800 p-2 z-30 select-none"
+          style={{
+            transform: `translate(${toolbarPosition.x}px, ${toolbarPosition.y}px) translate(-50%, 0)`,
+            touchAction: 'none'
+          }}
+        >
+          <div className="flex items-center gap-2 flex-wrap">
+            {/* Drag handle */}
+            <div
+              onPointerDown={handleToolbarPointerDown}
+              className="cursor-grab active:cursor-grabbing p-1 text-gray-400 dark:text-zinc-500 hover:text-gray-600 dark:hover:text-zinc-300"
+            >
+              <GripVertical size={16} />
+            </div>
+            
+            {/* Divider */}
+            <div className="w-px h-8 bg-gray-300 dark:bg-zinc-700"></div>
+            {/* Tool buttons */}
+            <button 
+              onClick={() => setAnnotationMode(annotationMode === 'arrow' ? 'none' : 'arrow')} 
+              className={`p-2 rounded transition-all ${annotationMode === 'arrow' ? 'bg-ghoul-red text-white shadow-md' : 'bg-gray-100 dark:bg-black/30 text-gray-500 dark:text-zinc-500 hover:bg-black/5 dark:hover:bg-white/5'}`}
+              title={aT.addArrow}
+            >
+              <ArrowRight size={16} />
+            </button>
+            <button 
+              onClick={() => setAnnotationMode(annotationMode === 'rectangle' ? 'none' : 'rectangle')} 
+              className={`p-2 rounded transition-all ${annotationMode === 'rectangle' ? 'bg-ghoul-red text-white shadow-md' : 'bg-gray-100 dark:bg-black/30 text-gray-500 dark:text-zinc-500 hover:bg-black/5 dark:hover:bg-white/5'}`}
+              title={aT.addRectangle}
+            >
+              <Square size={16} />
+            </button>
+            <button 
+              onClick={() => setAnnotationMode(annotationMode === 'text' ? 'none' : 'text')} 
+              className={`p-2 rounded transition-all ${annotationMode === 'text' ? 'bg-ghoul-red text-white shadow-md' : 'bg-gray-100 dark:bg-black/30 text-gray-500 dark:text-zinc-500 hover:bg-black/5 dark:hover:bg-white/5'}`}
+              title={aT.addText}
+            >
+              <Type size={16} />
+            </button>
+            <button 
+              onClick={() => setAnnotationMode(annotationMode === 'sketch' ? 'none' : 'sketch')} 
+              className={`p-2 rounded transition-all ${annotationMode === 'sketch' ? 'bg-ghoul-red text-white shadow-md' : 'bg-gray-100 dark:bg-black/30 text-gray-500 dark:text-zinc-500 hover:bg-black/5 dark:hover:bg-white/5'}`}
+              title={aT.startSketching}
+            >
+              <Pencil size={16} />
+            </button>
+            <button 
+              onClick={() => setAnnotationMode(annotationMode === 'eraser' ? 'none' : 'eraser')} 
+              className={`p-2 rounded transition-all ${annotationMode === 'eraser' ? 'bg-ghoul-red text-white shadow-md' : 'bg-gray-100 dark:bg-black/30 text-gray-500 dark:text-zinc-500 hover:bg-black/5 dark:hover:bg-white/5'}`}
+              title="Eraser"
+            >
+              <Eraser size={16} />
+            </button>
+            
+            {/* Divider */}
+            <div className="w-px h-8 bg-gray-300 dark:bg-zinc-700"></div>
+            
+            {/* Color picker */}
+            <div className="relative w-8 h-8 rounded-full border-2 border-gray-300 dark:border-zinc-700 overflow-hidden cursor-pointer">
+              <div className="absolute inset-0" style={{ backgroundColor: annotationColor }}></div>
+              <input 
+                type="color" 
+                className="opacity-0 absolute inset-0 w-full h-full cursor-pointer" 
+                value={annotationColor}
+                onChange={(e) => setAnnotationColor(e.target.value)} 
+              />
+            </div>
+            
+            {/* Font size control */}
+            <div className="flex items-center gap-1">
+              <Type size={14} className="text-gray-500 dark:text-zinc-500" />
+              <input
+                type="number"
+                min="8"
+                max="48"
+                value={annotationFontSize}
+                onChange={(e) => setAnnotationFontSize(Number(e.target.value))}
+                className="w-12 px-1 py-1 text-xs rounded border border-gray-300 dark:border-zinc-700 bg-white dark:bg-black/30 text-gray-900 dark:text-white"
+              />
+            </div>
+            
+            {/* Stroke width control */}
+            <div className="flex items-center gap-1">
+              <div className="w-4 h-4 border-2 border-gray-500 dark:border-zinc-400"></div>
+              <input
+                type="number"
+                min="1"
+                max="10"
+                value={annotationStrokeWidth}
+                onChange={(e) => setAnnotationStrokeWidth(Number(e.target.value))}
+                className="w-12 px-1 py-1 text-xs rounded border border-gray-300 dark:border-zinc-700 bg-white dark:bg-black/30 text-gray-900 dark:text-white"
+              />
+            </div>
+            
+            {/* Divider */}
+            <div className="w-px h-8 bg-gray-300 dark:bg-zinc-700"></div>
+            
+            {/* Action buttons */}
+            <button 
+              onClick={handleUndo} 
+              disabled={annotationHistory.length === 0}
+              className={`p-2 rounded transition-all ${annotationHistory.length === 0 ? 'opacity-30 cursor-not-allowed' : 'hover:bg-black/5 dark:hover:bg-white/5'} bg-gray-100 dark:bg-black/30 text-gray-500 dark:text-zinc-500`}
+              title={aT.undo}
+            >
+              <Undo2 size={16} />
+            </button>
+            <button 
+              onClick={handleClearAnnotations} 
+              className="p-2 rounded transition-all bg-gray-100 dark:bg-black/30 text-gray-500 dark:text-zinc-500 hover:bg-black/5 dark:hover:bg-white/5"
+              title={aT.clear}
+            >
+              <RotateCcw size={16} />
+            </button>
+            <button 
+              onClick={handleAnnotationDone} 
+              className="p-2 rounded transition-all bg-green-600 text-white hover:bg-green-700 shadow-md"
+              title={aT.done}
+            >
+              <CheckCircle size={16} />
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

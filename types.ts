@@ -110,6 +110,18 @@ export interface Translation {
         q2: string;
         q3: string;
       };
+      annotation: {
+        title: string;
+        addArrow: string;
+        addRectangle: string;
+        addText: string;
+        startSketching: string;
+        drag: string;
+        selectColor: string;
+        undo: string;
+        clear: string;
+        done: string;
+      };
     };
     calcTitle: string;
     currentLvl: string;
