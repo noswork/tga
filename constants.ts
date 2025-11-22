@@ -235,11 +235,11 @@ export const translations: Record<Lang, Translation> = {
       rewards: '任務獎勵',
     },
     footer: {
-      credits: '非官方粉絲資料庫',
-      disclaimer: '非官方粉絲專案',
+      credits: '非官方資料庫',
+      disclaimer: '非官方專案',
       license: '授權：MIT',
       designedBy: '設計者',
-      established: '成立於 2024',
+      established: '成立於 2025',
     },
   },
 };

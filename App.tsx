@@ -72,6 +72,64 @@ const App: React.FC = () => {
     document.title = translations[lang].title;
   }, [lang]);
 
+  // Update meta tags for URL preview (Open Graph & Twitter Cards)
+  useEffect(() => {
+    const t = translations[lang];
+    const baseUrl = window.location.origin;
+    
+    // Helper function to update or create meta tag
+    const updateMetaTag = (property: string, content: string, isProperty = true) => {
+      const selector = isProperty ? `meta[property="${property}"]` : `meta[name="${property}"]`;
+      let meta = document.querySelector(selector) as HTMLMetaElement;
+      
+      if (!meta) {
+        meta = document.createElement('meta');
+        if (isProperty) {
+          meta.setAttribute('property', property);
+        } else {
+          meta.setAttribute('name', property);
+        }
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+
+    // Update title and description based on language
+    const title = lang === Lang.ZH 
+      ? `${t.title} | Tokyo Ghoul: Awakening`
+      : `${t.title} | 東京喰種：覺醒`;
+    
+    const description = lang === Lang.ZH
+      ? `非官方東京喰種Awakening工具。Unofficial Tokyo Ghoul Awakening tools.`
+      : `Unofficial Tokyo Ghoul Awakening tools. 非官方東京喰種Awakening工具。`;
+
+    // Update primary meta tags
+    updateMetaTag('title', title, false);
+    updateMetaTag('description', description, false);
+
+    // Update Open Graph tags
+    updateMetaTag('og:title', title);
+    updateMetaTag('og:description', description);
+    updateMetaTag('og:url', baseUrl);
+    updateMetaTag('og:image', `${baseUrl}/assets/favicon/favicon.ico`);
+    updateMetaTag('og:locale', lang === Lang.ZH ? 'zh_TW' : 'en_US');
+
+    // Update Twitter Card tags
+    updateMetaTag('twitter:title', title, false);
+    updateMetaTag('twitter:description', description, false);
+    updateMetaTag('twitter:url', baseUrl, false);
+    updateMetaTag('twitter:image', `${baseUrl}/assets/favicon/favicon.ico`, false);
+
+    // Update canonical URL
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', baseUrl);
+  }, [lang]);
+
   const toggleTheme = () => {
     setIsDark(prev => {
       const newValue = !prev;
