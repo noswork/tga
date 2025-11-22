@@ -5,6 +5,7 @@ import { Lang, ChatMessage, TerminalMode } from '../types';
 import { translations } from '../constants';
 import { generateGhoulResponse } from '../services/geminiService';
 import { Trash2, AlertTriangle, Terminal as TerminalIcon, Cpu, Activity, Power, Zap, ExternalLink, Gamepad2, Feather, Globe } from 'lucide-react';
+import { getMessagesForMode, saveMessagesForMode } from '../utils/storage';
 
 interface TerminalProps {
   lang: Lang;
@@ -140,17 +141,78 @@ export const Terminal: React.FC<TerminalProps> = ({ lang, messages, setMessages 
   const [mode, setMode] = useState<TerminalMode>('GAME');
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const previousModeRef = useRef<TerminalMode>(mode);
+  const isInitialLoadRef = useRef(true);
+  const messagesRef = useRef<ChatMessage[]>(messages);
+  const isSwitchingModeRef = useRef(false);
 
-  // Initialize welcome messages ONLY if history is empty
+  // Keep messagesRef in sync with messages prop
   useEffect(() => {
-    if (messages.length === 0) {
-      setMessages([
-        { role: 'model', text: t.welcome, timestamp: Date.now() - 2000 },
-        { role: 'model', text: t.connecting, timestamp: Date.now() - 1000 },
-        { role: 'model', text: t.connected, timestamp: Date.now() }
-      ]);
+    messagesRef.current = messages;
+  }, [messages]);
+
+  // Load messages for current mode from localStorage on mount
+  useEffect(() => {
+    if (isInitialLoadRef.current) {
+      const storedMessages = getMessagesForMode(mode);
+      if (storedMessages.length > 0) {
+        setMessages(storedMessages);
+        messagesRef.current = storedMessages;
+      } else {
+        // Initialize welcome messages ONLY if history is empty for this mode
+        const welcomeMessages = [
+          { role: 'model' as const, text: t.welcome, timestamp: Date.now() - 2000 },
+          { role: 'model' as const, text: t.connecting, timestamp: Date.now() - 1000 },
+          { role: 'model' as const, text: t.connected, timestamp: Date.now() }
+        ];
+        setMessages(welcomeMessages);
+        messagesRef.current = welcomeMessages;
+      }
+      isInitialLoadRef.current = false;
+      previousModeRef.current = mode;
     }
-  }, [lang, t, messages.length, setMessages]);
+  }, [mode, t, setMessages]);
+
+  // Handle mode change: save current mode's messages, load new mode's messages
+  useEffect(() => {
+    if (!isInitialLoadRef.current && previousModeRef.current !== mode) {
+      isSwitchingModeRef.current = true;
+      
+      // Save previous mode's messages before switching (use ref to get current messages)
+      const currentMessages = messagesRef.current;
+      saveMessagesForMode(previousModeRef.current, currentMessages);
+      
+      // Load new mode's messages
+      const storedMessages = getMessagesForMode(mode);
+      if (storedMessages.length > 0) {
+        setMessages(storedMessages);
+        messagesRef.current = storedMessages;
+      } else {
+        // Initialize welcome messages for new mode if no history exists
+        const welcomeMessages = [
+          { role: 'model' as const, text: t.welcome, timestamp: Date.now() - 2000 },
+          { role: 'model' as const, text: t.connecting, timestamp: Date.now() - 1000 },
+          { role: 'model' as const, text: t.connected, timestamp: Date.now() }
+        ];
+        setMessages(welcomeMessages);
+        messagesRef.current = welcomeMessages;
+      }
+      
+      previousModeRef.current = mode;
+      
+      // Reset switching flag after state updates complete
+      setTimeout(() => {
+        isSwitchingModeRef.current = false;
+      }, 0);
+    }
+  }, [mode, t, setMessages]);
+
+  // Save messages to localStorage whenever they change (but not during initial load or mode switch)
+  useEffect(() => {
+    if (!isInitialLoadRef.current && !isSwitchingModeRef.current && messages.length > 0) {
+      saveMessagesForMode(mode, messages);
+    }
+  }, [messages, mode]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -207,9 +269,13 @@ export const Terminal: React.FC<TerminalProps> = ({ lang, messages, setMessages 
   };
 
   const clearTerminal = () => {
-    setMessages([
-       { role: 'model', text: lang === Lang.EN ? 'LOGS CLEARED. SYSTEM READY.' : '記錄已清除。系統就緒。', timestamp: Date.now() }
-    ]);
+    const clearedMessage: ChatMessage = {
+      role: 'model',
+      text: lang === Lang.EN ? 'LOGS CLEARED. SYSTEM READY.' : '記錄已清除。系統就緒。',
+      timestamp: Date.now()
+    };
+    setMessages([clearedMessage]);
+    saveMessagesForMode(mode, [clearedMessage]);
     inputRef.current?.focus();
   };
 
@@ -262,7 +328,9 @@ export const Terminal: React.FC<TerminalProps> = ({ lang, messages, setMessages 
            {(Object.keys(modeConfig) as TerminalMode[]).map((m) => (
              <button
                key={m}
-               onClick={() => setMode(m)}
+               onClick={() => {
+                 setMode(m);
+               }}
                className={`flex items-center gap-2 px-4 py-2 text-xs font-bold font-tech uppercase transition-all duration-300 whitespace-nowrap ${
                  mode === m 
                    ? `bg-gray-800 ${modeConfig[m].color} shadow-inner` 

@@ -271,14 +271,25 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
     hoverLabelGroup.appendChild(labelText);
     labelLayer.appendChild(hoverLabelGroup);
 
-    try {
-      const saved = localStorage.getItem('stronghold-marks');
-      if (saved) {
-        JSON.parse(saved).forEach((m: any) => createMark(m.x, m.y, m.color));
-      }
-    } catch (e) {}
-
     applyTransform();
+
+    // Load saved marks after cellMap is fully initialized
+    // Use setTimeout to ensure DOM is ready
+    setTimeout(() => {
+      try {
+        const saved = localStorage.getItem('stronghold-marks');
+        if (saved) {
+          const marks = JSON.parse(saved);
+          marks.forEach((m: any) => {
+            if (m && typeof m.x === 'number' && typeof m.y === 'number' && m.color) {
+              createMark(m.x, m.y, m.color);
+            }
+          });
+        }
+      } catch (e) {
+        console.warn('Failed to load saved marks:', e);
+      }
+    }, 0);
   }, []);
 
   const createMark = (x: number, y: number, color: string) => {

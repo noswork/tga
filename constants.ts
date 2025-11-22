@@ -1,8 +1,11 @@
 
-import { Lang, Translation, Character, Mission } from './types';
+import { Lang, Translation, Character } from './types';
 
 export const translations: Record<Lang, Translation> = {
   [Lang.EN]: {
+    title: 'Tokyo Ghoul: Awakening',
+    brandTitle: 'Tokyo Ghoul',
+    brandSubtitle: 'Awakening',
     nav: {
       home: 'HUB',
       characters: 'DATABASE',
@@ -108,6 +111,9 @@ export const translations: Record<Lang, Translation> = {
     },
   },
   [Lang.ZH]: {
+    title: '東京喰種：覺醒',
+    brandTitle: '東京喰種',
+    brandSubtitle: '覺醒',
     nav: {
       home: '中心',
       characters: '檔案庫',
@@ -297,33 +303,3 @@ export const charactersData: Character[] = [
   }
 ];
 
-export const missionsData: Mission[] = [
-  {
-    id: 'm1',
-    title: 'Investigate 20th Ward',
-    difficulty: 'Easy',
-    description: 'Reports of binge eating in the area. Scout for potential threats.',
-    rewards: ['1000 Gold', '10 RC Cells']
-  },
-  {
-    id: 'm2',
-    title: 'Suppress Aogiri Tree',
-    difficulty: 'Hard',
-    description: 'Aogiri members spotted gathering. Disperse them immediately.',
-    rewards: ['5000 Gold', '50 RC Cells', 'Rare Material']
-  },
-  {
-    id: 'm3',
-    title: 'One-Eyed Owl Containment',
-    difficulty: 'Nightmare',
-    description: 'SSS-rated ghoul detected. All units converge.',
-    rewards: ['50000 Gold', '500 RC Cells', 'SSR Weapon Blueprint']
-  },
-  {
-     id: 'm4',
-     title: 'Gourmet\'s Dinner',
-     difficulty: 'Normal',
-     description: 'Tsukiyama is hosting a "dinner party". Infiltrate and rescue hostages.',
-     rewards: ['2500 Gold', '25 RC Cells']
-  }
-];

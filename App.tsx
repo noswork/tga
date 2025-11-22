@@ -8,24 +8,77 @@ import { Terminal } from './components/Terminal';
 import { Footer } from './components/Footer';
 import { CharacterGallery } from './components/CharacterGallery';
 import { GameTools } from './components/GameTools';
+import { 
+  detectBrowserLanguage, 
+  getStoredLanguage, 
+  saveLanguage, 
+  getStoredTheme, 
+  saveTheme,
+  getStoredActiveSection,
+  saveActiveSection
+} from './utils/storage';
 
 const App: React.FC = () => {
-  const [lang, setLang] = useState<Lang>(Lang.ZH);
-  const [activeSection, setActiveSection] = useState<ViewSection>('home');
-  const [isDark, setIsDark] = useState(true);
+  // Initialize language: check localStorage first, then browser language, default to ZH
+  const [lang, setLang] = useState<Lang>(() => {
+    const stored = getStoredLanguage();
+    if (stored !== null) return stored;
+    return detectBrowserLanguage();
+  });
+  
+  // Initialize active section: check localStorage first, default to 'home'
+  const [activeSection, setActiveSection] = useState<ViewSection>(() => {
+    const stored = getStoredActiveSection();
+    return stored || 'home';
+  });
+  
+  // Initialize theme: check localStorage first, default to true (dark)
+  const [isDark, setIsDark] = useState<boolean>(() => {
+    const stored = getStoredTheme();
+    if (stored !== null) return stored;
+    return true;
+  });
   
   // Lifted state for Terminal history persistence
   const [terminalMessages, setTerminalMessages] = useState<ChatMessage[]>([]);
 
+  // Save language to localStorage whenever it changes
   useEffect(() => {
+    saveLanguage(lang);
+  }, [lang]);
+
+  // Save theme to localStorage whenever it changes
+  useEffect(() => {
+    saveTheme(isDark);
+  }, [isDark]);
+
+  // Save active section to localStorage whenever it changes
+  useEffect(() => {
+    saveActiveSection(activeSection);
+  }, [activeSection]);
+
+  // Sync dark mode class with isDark state
+  useEffect(() => {
+    const html = document.documentElement;
     if (isDark) {
-      document.documentElement.classList.add('dark');
+      html.classList.add('dark');
     } else {
-      document.documentElement.classList.remove('dark');
+      html.classList.remove('dark');
     }
   }, [isDark]);
 
-  const toggleTheme = () => setIsDark(!isDark);
+  // Update document title based on language
+  useEffect(() => {
+    document.title = translations[lang].title;
+  }, [lang]);
+
+  const toggleTheme = () => {
+    setIsDark(prev => {
+      const newValue = !prev;
+      saveTheme(newValue);
+      return newValue;
+    });
+  };
 
   return (
     <div className="h-screen w-full flex flex-col font-tech bg-ccg-light dark:bg-ghoul-black text-gray-900 dark:text-ccg-white selection:bg-ghoul-red selection:text-white dark:selection:text-black overflow-hidden transition-colors duration-300">

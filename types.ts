@@ -40,6 +40,9 @@ export interface Mission {
 }
 
 export interface Translation {
+  title: string;
+  brandTitle: string;
+  brandSubtitle: string;
   nav: {
     home: string;
     characters: string;

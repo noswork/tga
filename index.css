@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@variant dark (&:is(.dark, .dark *));
+
 @theme {
   --color-ghoul-black: #18181b;
   --color-ghoul-dark: #27272a;

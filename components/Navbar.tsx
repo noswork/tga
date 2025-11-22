@@ -14,31 +14,33 @@ interface NavbarProps {
 
 // Custom Kakugan Icon
 const KakuganIcon = ({ isActive }: { isActive: boolean }) => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-all duration-500">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-all duration-500" style={{ pointerEvents: 'none' }}>
     {/* Sclera */}
     <path 
       d="M12 5C7 5 2.73 8.11 1 12C2.73 15.89 7 19 12 19C17 19 21.27 15.89 23 12C21.27 8.11 17 5 12 5Z" 
       className={isActive ? "fill-black stroke-red-600" : "fill-white stroke-gray-400"} 
       strokeWidth="1.5"
+      style={{ pointerEvents: 'none' }}
     />
     {/* Iris */}
     <circle 
       cx="12" cy="12" r="4" 
-      className={isActive ? "fill-red-600" : "fill-gray-400"} 
+      className={isActive ? "fill-red-600" : "fill-gray-400"}
+      style={{ pointerEvents: 'none' }}
     />
     {/* Veins (Visible only when active) */}
     {isActive && (
       <>
-        <path d="M16 12L20 10" stroke="#EF4444" strokeWidth="1" />
-        <path d="M8 12L4 14" stroke="#EF4444" strokeWidth="1" />
-        <path d="M12 8L11 6" stroke="#EF4444" strokeWidth="1" />
+        <path d="M16 12L20 10" stroke="#EF4444" strokeWidth="1" style={{ pointerEvents: 'none' }} />
+        <path d="M8 12L4 14" stroke="#EF4444" strokeWidth="1" style={{ pointerEvents: 'none' }} />
+        <path d="M12 8L11 6" stroke="#EF4444" strokeWidth="1" style={{ pointerEvents: 'none' }} />
       </>
     )}
   </svg>
 );
 
 export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, activeSection, setActiveSection, isDark, toggleTheme }) => {
-  const t = translations[lang].nav;
+  const t = translations[lang];
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   const toggleLang = () => {
@@ -46,10 +48,10 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, activeSection, se
   };
 
   const navItems = [
-    { id: 'home' as ViewSection, icon: Home, label: t.home },
-    { id: 'characters' as ViewSection, icon: Database, label: t.characters },
-    { id: 'tools' as ViewSection, icon: Wrench, label: t.tools },
-    { id: 'terminal' as ViewSection, icon: TerminalIcon, label: t.terminal },
+    { id: 'home' as ViewSection, icon: Home, label: t.nav.home },
+    { id: 'characters' as ViewSection, icon: Database, label: t.nav.characters },
+    { id: 'tools' as ViewSection, icon: Wrench, label: t.nav.tools },
+    { id: 'terminal' as ViewSection, icon: TerminalIcon, label: t.nav.terminal },
   ];
 
   return (
@@ -61,8 +63,8 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, activeSection, se
           onClick={() => setActiveSection('home')}
         >
            <div className="flex flex-col justify-center drop-shadow-lg">
-             <span className="text-2xl font-bold text-black dark:text-white tracking-tighter group-hover:text-ghoul-red transition-colors font-ghoul uppercase leading-none text-shadow-sm">Tokyo Ghoul</span>
-             <span className="text-[10px] tracking-[0.6em] uppercase text-ghoul-red font-mono mt-1 font-bold text-shadow-sm">Awakening</span>
+             <span className="text-2xl font-bold text-black dark:text-white tracking-tighter group-hover:text-ghoul-red transition-colors font-ghoul uppercase leading-none text-shadow-sm">{t.brandTitle}</span>
+             <span className="text-[10px] tracking-[0.6em] uppercase text-ghoul-red font-mono mt-1 font-bold text-shadow-sm">{t.brandSubtitle}</span>
            </div>
         </div>
 
@@ -99,6 +101,8 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, activeSection, se
               onClick={toggleTheme}
               className="group relative p-2 rounded-full hover:bg-white/10 transition-colors duration-300 backdrop-blur-sm"
               title="Toggle Kakugan"
+              style={{ pointerEvents: 'auto' }}
+              type="button"
             >
               <KakuganIcon isActive={isDark} />
             </button>
@@ -110,6 +114,8 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, activeSection, se
            <button 
             onClick={toggleTheme}
             className="p-1 bg-black/20 rounded-full backdrop-blur-sm"
+            style={{ pointerEvents: 'auto' }}
+            type="button"
           >
             <KakuganIcon isActive={isDark} />
           </button>

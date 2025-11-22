@@ -1,17 +1,29 @@
 
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tokyo Ghoul: Awakening</title>
+    <link rel="icon" type="image/x-icon" href="./public/assets/favicon/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&family=Shippori+Mincho+B1:wght@400;500;600;700;800&family=Nosifer&display=swap" rel="stylesheet">
     <style>
-      html,
-      body {
+      html {
         background-color: #f5f5f5;
+        overflow-x: hidden;
+        transition: background-color 0.3s, color 0.3s;
+        font-family: 'Rajdhani', sans-serif;
+        cursor: url('/assets/cursor/arrow.png') 0 0, url('/assets/cursor/hand.png') 0 0, auto !important;
+      }
+
+      html.dark {
+        background-color: #18181b;
+      }
+
+      body {
+        background-color: transparent;
         color: #1a1a1a;
         overflow-x: hidden;
         transition: background-color 0.3s, color 0.3s;
@@ -19,8 +31,7 @@
         cursor: url('/assets/cursor/arrow.png') 0 0, url('/assets/cursor/hand.png') 0 0, auto !important;
       }
 
-      .dark body {
-        background-color: #18181b;
+      html.dark body {
         color: #e5e5e5;
       }
 
@@ -31,7 +42,7 @@
       ::-webkit-scrollbar-track {
         background: #e5e5e5; 
       }
-      .dark ::-webkit-scrollbar-track {
+      html.dark ::-webkit-scrollbar-track {
         background: #18181b;
       }
       
@@ -39,7 +50,7 @@
         background: #999; 
         border-radius: 0px;
       }
-      .dark ::-webkit-scrollbar-thumb {
+      html.dark ::-webkit-scrollbar-thumb {
         background: #52525b;
       }
 
@@ -67,7 +78,7 @@
       .text-glow {
         text-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
       }
-      .dark .text-glow {
+      html.dark .text-glow {
         text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
       }
       
@@ -104,7 +115,7 @@
         --grid-line-color: #e4e4e7; /* Zinc 200 */
       }
 
-      .dark {
+      html.dark {
         /* Dark Mode Overrides (Ghoul/Night Style) */
         --hex-stroke: #52525b; /* Zinc 600 - Increased contrast (Lighter grey on dark bg) */
         --hex-fill: rgba(24, 24, 27, 0.5);
@@ -178,7 +189,7 @@
         pointer-events: none;
         text-shadow: 0 0 4px rgba(0,0,0,0.1);
       }
-      .dark .map-label-text {
+      html.dark .map-label-text {
          text-shadow: 0 0 4px rgba(0,0,0,0.5);
       }
 
@@ -401,7 +412,10 @@
     
     // 點擊事件後強制設置
     function handleClick(e) {
-      setCursor(e.target, true);
+      // 異步設置游標，避免干擾 React 的事件處理
+      setTimeout(() => {
+        setCursor(e.target, true);
+      }, 0);
     }
     
     // 右鍵菜單事件
@@ -425,10 +439,11 @@
       document.addEventListener('mousemove', handleMouseMove, true); // 使用捕獲階段
       document.addEventListener('mouseenter', handleMouseEnter, true);
       document.addEventListener('mouseleave', handleMouseLeave, true);
-      document.addEventListener('click', handleClick, true);
+      // 使用冒泡階段處理點擊事件，避免干擾 React 的合成事件系統
+      document.addEventListener('click', handleClick, false);
       document.addEventListener('contextmenu', handleContextMenu, true);
-      document.addEventListener('mousedown', handleClick, true);
-      document.addEventListener('mouseup', handleClick, true);
+      document.addEventListener('mousedown', handleClick, false);
+      document.addEventListener('mouseup', handleClick, false);
     }
     
     if (document.readyState === 'loading') {
