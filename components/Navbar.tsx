@@ -1,7 +1,7 @@
 import React from 'react';
 import { Lang, ViewSection } from '../types';
 import { translations } from '../constants';
-import { Terminal as TerminalIcon, Home, Database, Wrench, Menu, X } from 'lucide-react';
+import { Terminal as TerminalIcon, Home, Database, Wrench, Menu, X, Eye } from 'lucide-react';
 
 interface NavbarProps {
   lang: Lang;
@@ -51,6 +51,7 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, activeSection, se
     { id: 'home' as ViewSection, icon: Home, label: t.nav.home },
     { id: 'characters' as ViewSection, icon: Database, label: t.nav.characters },
     { id: 'tools' as ViewSection, icon: Wrench, label: t.nav.tools },
+    { id: 'ghoulInsight' as ViewSection, icon: Eye, label: t.nav.insight },
     { id: 'terminal' as ViewSection, icon: TerminalIcon, label: t.nav.terminal },
   ];
 

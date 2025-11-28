@@ -1,4 +1,3 @@
-
 import { Lang, Translation, Character } from './types';
 
 export const translations: Record<Lang, Translation> = {
@@ -10,7 +9,10 @@ export const translations: Record<Lang, Translation> = {
       home: 'HUB',
       characters: 'DATABASE',
       tools: 'UTILS',
+      lab: 'GHOUL LAB',
       terminal: 'TERMINAL',
+      toybox: 'RC ARCADE',
+      insight: 'GHOUL INSIGHT',
     },
     hero: {
       title: 'TOKYO GHOUL',
@@ -20,14 +22,14 @@ export const translations: Record<Lang, Translation> = {
       statsLabel: 'SYSTEM_MONITORING',
       testSection: {
         quotes: [
-          "I am a ghoul.",
+          'I am a ghoul.',
           "All suffering in the world is born from an individual's incompetence.",
           "I won't forgive anyone who threatens my peace.",
-          "The only way to change is to cast away who you are."
+          'The only way to change is to cast away who you are.'
         ],
-        question: "What is 1000 minus 7?",
-        clickPrompt: "CLICK TO SUBTRACT",
-        mentalStatus: "MENTAL STABILITY: CRITICAL",
+        question: 'What is 1000 minus 7?',
+        clickPrompt: 'CLICK TO SUBTRACT',
+        mentalStatus: 'MENTAL STABILITY: CRITICAL',
       }
     },
     characters: {
@@ -121,6 +123,110 @@ export const translations: Record<Lang, Translation> = {
       designedBy: 'DESIGNED BY',
       established: 'ESTABLISHED 2024',
     },
+    ghoulLab: {
+      title: 'GHOUL LAB // AI CLASSIFIER',
+      subtitle: 'Upload any face, let NOS infer RC density and assign an official rating per the Tokyo Ghoul Wiki scale.',
+      uploadHint: 'DROP IMAGE OR CLICK TO UPLOAD',
+      dropLabel: 'Drag a portrait, kakuja shot, or quinque snapshot.',
+      analyzing: 'Running RC density inference...',
+      analyzeCta: 'RECALIBRATE',
+      ratingHeader: 'SUBJECT VERDICT',
+      abilityHeader: 'SIGNATURE TRAITS',
+      legendHeader: 'RATING TABLE REFERENCE',
+      quoteLabel: 'FIELD QUOTE',
+      errorNoImage: 'Provide an image before asking for judgment.',
+      errorInvalidFile: 'Only image formats are accepted by the CCG scanners.',
+      errorGeneric: 'Signal interfered with the RC feed. Try again.',
+      quotePool: [
+        '「I am a ghoul。」 — Ken Kaneki',
+        '"The world is not wrong. It is just... broken." — Kaneki',
+        '"If an angel existed, I would only cut off its wings." — Juuzou Suzuya',
+        '"I can’t go back to being the person I once was." — Touka Kirishima',
+        '"You’re either predators or prey." — Shuu Tsukiyama',
+        '"Justice isn’t about doing what’s right. It’s about choosing what’s right." — Koutarou Amon'
+      ],
+    },
+    toybox: {
+      title: 'KAKUGAN ARCADE // MINI EXPERIMENT',
+      subtitle: 'Slot in any portrait and NOS will spit out a cheeky ghoul rating anchored to the official Tokyo Ghoul wiki scale.',
+      uploadCta: 'LOAD IMAGE',
+      dropHint: 'Drag an investigator badge, ghoul selfie, or random meme. No scroll, only chaos.',
+      analyzing: 'Crunching RC residue...',
+      analyzeAgain: 'SPIN AGAIN',
+      deckLabel: 'Arcade Verdict',
+      ratingDial: 'Rating Dial',
+      appetiteLabel: 'Appetite Forecast',
+      threatLabel: 'Threat Banter',
+      vibeLabel: 'Vibe Signal',
+      anticsLabel: 'Kagune Antics',
+      quoteLabel: 'Quote Seal',
+      quoteInstruction: 'Every roast ends with a canon line.',
+      legendLabel: 'Rating crib notes',
+      legendDesc: 'Scale reference from Tokyo Ghoul wiki (E → SSS).',
+      resultPlaceholder: 'Feed an image to ignite the arcade.',
+      playfulMeter: 'Playfulness meter',
+      quotePool: [
+        '"Coffee is just socially acceptable blood." — Touka Kirishima',
+        '"Numbers do not lie, especially RC counts." — Kishou Arima',
+        '"Predators make their own fun." — Shuu Tsukiyama',
+        '"Pain teaches faster than any mentor." — Ken Kaneki',
+        '"Justice tastes better with sugar." — Juuzou Suzuya',
+        '"Investigators gamble with breath, not chips." — Koutarou Amon'
+      ],
+    },
+    ghoulInsight: {
+      tabs: {
+        scanner: 'SCANNER',
+        scannerDesc: 'RC LIVE FEED',
+        database: 'DATABASE',
+        databaseDesc: 'CRITERIA DOCS',
+        archives: 'ARCHIVES',
+        archivesDesc: 'LOCKED',
+      },
+      scanner: {
+        liveFeed: 'LIVE_FEED // CAM_04',
+        uploadTarget: 'UPLOAD_TARGET',
+        uploadHint: 'Initiate RC scan procedure',
+        reset: 'RESET SCAN // RESET',
+        loadingTitle: 'DECRYPTING BIOMETRICS',
+        loadingSubtitle: 'Cross-referencing Cochlea detention records...',
+        loadingSearch: 'SEARCHING_GHOUL_REGISTRY...',
+        idleTitle: 'AWAITING INPUT DATA',
+        battlePower: 'Battle Power',
+        survivalRate: 'Survival Rate',
+        ward: 'Ward',
+        mask: 'Mask',
+        rcFactor: 'RC Factor',
+        analysisTitle: 'Target Analysis',
+        analysisMatchFound: 'MATCH FOUND',
+        countermeasure: 'Countermeasure // Extermination Protocol',
+      },
+      wiki: {
+        headerTitle: 'CCG DATABASE',
+        headerSubtitle: 'OFFICIAL RATING CRITERIA DOCUMENTATION',
+        definitionTitle: 'DEFINITION',
+        definitionBody1:
+          'Ratings are a system used by the Commission of Counter Ghoul to classify ghouls by individual ability and threat level.',
+        definitionBody2:
+          'Ghouls are evaluated based on strength, activity, influence, and hostility toward investigators. An older degree system was later converted to the current ratings.',
+        criteriaTitle: 'ASSESSMENT CRITERIA',
+        criteriaIntro: 'Ratings are set through evaluation of the ghoul’s individual ability and predation incidents.',
+        rankDescriptions: {
+          SSS: 'Criteria is unclear. The most powerful threat level.',
+          SS: 'Multiple Special Class Investigators are needed.',
+          S_PLUS: 'Equivalent to the ability of an average Special Class Investigator.',
+          S_MINUS: 'Equivalent to the ability of an average Associate Special Class Investigator.',
+          A: 'Comparable to a First Class Investigator. Usually set as a target.',
+          B: "Comparable to a Rank 1 to Rank 3 Investigator. Kagune mastered.",
+          C: "Smaller ability, usually can’t fight investigators. Attacks unarmed humans only.",
+        },
+        sideTitle: 'CLASSIFIED_INFO',
+        sideChartTitleLine1: 'THREAT LEVEL',
+        sideChartTitleLine2: 'CHART',
+        chartNote:
+          '*In some cases, a tilde (~) is added to the base rating. This indicates that the ghoul is estimated to be at least that strong, but the rating may change once more is known about the subject.',
+      },
+    },
   },
   [Lang.ZH]: {
     title: '東京喰種：覺醒',
@@ -130,7 +236,10 @@ export const translations: Record<Lang, Translation> = {
       home: '中心',
       characters: '檔案庫',
       tools: '裝置',
+      lab: '喰種鑑識',
       terminal: '終端',
+      toybox: '小玩意',
+      insight: '喰種分析儀',
     },
     hero: {
       title: '東京喰種',
@@ -140,14 +249,14 @@ export const translations: Record<Lang, Translation> = {
       statsLabel: '系統監控中',
       testSection: {
         quotes: [
-          "我是……喰種。",
-          "世上所有的不公，都是當事者能力不足所致。",
-          "我不會原諒任何威脅我平靜生活的人。",
-          "寧願被別人傷害，也不願傷害別人。"
+          '我是……喰種。',
+          '世上所有的不公，都是當事者能力不足所致。',
+          '我不會原諒任何威脅我平靜生活的人。',
+          '寧願被別人傷害，也不願傷害別人。'
         ],
-        question: "1000 減 7 是多少？",
-        clickPrompt: "點擊進行扣除",
-        mentalStatus: "精神狀態：臨界點",
+        question: '1000 減 7 是多少？',
+        clickPrompt: '點擊進行扣除',
+        mentalStatus: '精神狀態：臨界點',
       }
     },
     characters: {
@@ -241,6 +350,109 @@ export const translations: Record<Lang, Translation> = {
       designedBy: '設計者',
       established: '成立於 2025',
     },
+    ghoulLab: {
+      title: '喰種鑑識 // AI 評測',
+      subtitle: '上傳任何臉部/赫者影像，讓 NOS 依照東京喰種 Wiki 等級準則給出 RC 評級與戰力分析。',
+      uploadHint: '拖曳或點擊上傳影像',
+      dropLabel: '丟進任意人像、赫者或 Quinque 戰鬥照。',
+      analyzing: 'RC 密度分析中…',
+      analyzeCta: '重新掃描',
+      ratingHeader: '判定結果',
+      abilityHeader: '特徵亮點',
+      legendHeader: '等級對照',
+      quoteLabel: '語錄封印',
+      errorNoImage: '請先提供影像，才能啟動掃描。',
+      errorInvalidFile: '系統僅接受影像格式。',
+      errorGeneric: 'RC 訊號被干擾了，請再試一次。',
+      quotePool: [
+        '「我是喰種。」—— 金木研',
+        '「這世界沒有錯，只是破碎了。」—— 金木研',
+        '「若有天使，我也會砍下它的翅膀。」—— 鈴屋什造',
+        '「我無法回到從前的自己。」—— 霧嶋董香',
+        '「獵物或獵人，只有二選一。」—— 月山習',
+        '「正義不是做對的事，而是堅持你認為對的。」—— 亞門鋼太朗'
+      ],
+    },
+    toybox: {
+      title: '赫眼遊戲室 // 小玩意分頁',
+      subtitle: '把任意臉孔塞進來，讓 NOS 依據官方 Tokyo Ghoul Rating Scale 給出惡趣味判決。',
+      uploadCta: '投放影像',
+      dropHint: '拖曳 CCG 證件、喰種自拍，或任何迷因照。畫面不滾動，只剩戲劇張力。',
+      analyzing: '正在啃食 RC 殘渣…',
+      analyzeAgain: '再抽一次',
+      deckLabel: '街機判決',
+      ratingDial: '等級錶頭',
+      appetiteLabel: '食慾推估',
+      threatLabel: '威脅吐槽',
+      vibeLabel: '氣場訊號',
+      anticsLabel: '赫子惡作劇',
+      quoteLabel: '語錄封條',
+      quoteInstruction: '每份評語都要由角色語錄收尾。',
+      legendLabel: '等級小抄',
+      legendDesc: '依據 Tokyo Ghoul wiki 的 E → SSS 刻度。',
+      resultPlaceholder: '請餵圖像，街機才會亮起。',
+      playfulMeter: '惡趣味量表',
+      quotePool: [
+        '「咖啡只是文明版的血。」—— 霧嶋董香',
+        '「數字不會說謊，RC 也一樣。」—— 有馬貴將',
+        '「獵人自己創造樂趣。」—— 月山習',
+        '「疼痛是最快的導師。」—— 金木研',
+        '「正義要先加點糖才入口。」—— 鈴屋什造',
+        '「搜查官拿呼吸當賭注。」—— 亞門鋼太朗'
+      ],
+    },
+    ghoulInsight: {
+      tabs: {
+        scanner: '掃描模式',
+        scannerDesc: 'RC 即時掃描',
+        database: '資料庫',
+        databaseDesc: '評級準則文件',
+        archives: '封存檔案',
+        archivesDesc: '鎖定中',
+      },
+      scanner: {
+        liveFeed: 'LIVE_FEED // CAM_04',
+        uploadTarget: 'UPLOAD_TARGET',
+        uploadHint: '點擊或拖曳影像啟動 RC 掃描程序',
+        reset: 'RESET SCAN // 重置',
+        loadingTitle: '生體參數解密中',
+        loadingSubtitle: '正在比對庫克利亞收容所與 CCG 資料庫...',
+        loadingSearch: 'SEARCHING_GHOUL_REGISTRY...',
+        idleTitle: '等待輸入影像',
+        battlePower: '戰鬥力',
+        survivalRate: '人類生存率',
+        ward: '活動區域',
+        mask: '面具設計',
+        rcFactor: 'RC 指數',
+        analysisTitle: '目標分析',
+        analysisMatchFound: '資料匹配完成',
+        countermeasure: 'Countermeasure // 驅逐對策',
+      },
+      wiki: {
+        headerTitle: 'CCG DATABASE',
+        headerSubtitle: '官方威脅等級說明文件',
+        definitionTitle: '定義',
+        definitionBody1: '「評級」是 CCG 用來衡量喰種個體戰力與威脅程度的分級系統。',
+        definitionBody2:
+          '評估內容包含基礎戰鬥力、出沒頻率、社會影響力以及對搜查官的敵意。早期使用的是「等級」制，後來改為現在沿用的評級標準。',
+        criteriaTitle: '評估標準',
+        criteriaIntro: '評級會依據喰種的個體能力與獵食事件紀錄進行綜合判定。',
+        rankDescriptions: {
+          SSS: '基準不明。幾乎無法量化的災害級威脅。',
+          SS: '需要多名特等搜查官同時出動。',
+          S_PLUS: '大致相當於一般特等搜查官的實力。',
+          S_MINUS: '大致相當於準特等搜查官的實力。',
+          A: '大致相當於一等搜查官。多數鎖定目標落在此級。',
+          B: '相當於一到三等搜查官。多半已熟練赫子運用。',
+          C: '戰力較低，通常無法與裝備齊全的搜查官對抗，多以襲擊無武裝人類為主。',
+        },
+        sideTitle: 'CLASSIFIED_INFO',
+        sideChartTitleLine1: 'THREAT LEVEL',
+        sideChartTitleLine2: 'CHART',
+        chartNote:
+          '*部分對象的評級會加上 ~ 符號，代表其實力至少達到該級，後續隨情報更新仍有上修或調整空間。',
+      },
+    },
   },
 };
 
@@ -326,4 +538,3 @@ export const charactersData: Character[] = [
     ]
   }
 ];
-

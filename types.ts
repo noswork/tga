@@ -1,10 +1,16 @@
-
 export enum Lang {
   EN = 'en',
   ZH = 'zh'
 }
 
-export type ViewSection = 'home' | 'characters' | 'tools' | 'terminal';
+export type ViewSection =
+  | 'home'
+  | 'characters'
+  | 'tools'
+  | 'terminal'
+  | 'ghoulLab'
+  | 'toybox'
+  | 'ghoulInsight';
 
 export type TerminalMode = 'GAME' | 'CREATIVE' | 'SEARCH';
 
@@ -47,7 +53,10 @@ export interface Translation {
     home: string;
     characters: string;
     tools: string;
+    lab: string;
     terminal: string;
+    toybox: string;
+    insight: string;
   };
   hero: {
     title: string;
@@ -147,11 +156,98 @@ export interface Translation {
     rewards: string;
   };
   footer: {
-    credits: string; // Used for "UNOFFICIAL FAN DATABASE" label usually
+    credits: string;
     disclaimer: string;
     license: string;
     designedBy: string;
     established: string;
+  };
+  ghoulLab: {
+    title: string;
+    subtitle: string;
+    uploadHint: string;
+    dropLabel: string;
+    analyzing: string;
+    analyzeCta: string;
+    ratingHeader: string;
+    abilityHeader: string;
+    legendHeader: string;
+    quoteLabel: string;
+    errorNoImage: string;
+    errorInvalidFile: string;
+    errorGeneric: string;
+    quotePool: string[];
+  };
+  toybox: {
+    title: string;
+    subtitle: string;
+    uploadCta: string;
+    dropHint: string;
+    analyzing: string;
+    analyzeAgain: string;
+    deckLabel: string;
+    ratingDial: string;
+    appetiteLabel: string;
+    threatLabel: string;
+    vibeLabel: string;
+    anticsLabel: string;
+    quoteLabel: string;
+    quoteInstruction: string;
+    legendLabel: string;
+    legendDesc: string;
+    resultPlaceholder: string;
+    playfulMeter: string;
+    quotePool: string[];
+  };
+  ghoulInsight: {
+    tabs: {
+      scanner: string;
+      scannerDesc: string;
+      database: string;
+      databaseDesc: string;
+      archives: string;
+      archivesDesc: string;
+    };
+    scanner: {
+      liveFeed: string;
+      uploadTarget: string;
+      uploadHint: string;
+      reset: string;
+      loadingTitle: string;
+      loadingSubtitle: string;
+      loadingSearch: string;
+      idleTitle: string;
+      battlePower: string;
+      survivalRate: string;
+      ward: string;
+      mask: string;
+      rcFactor: string;
+      analysisTitle: string;
+      analysisMatchFound: string;
+      countermeasure: string;
+    };
+    wiki: {
+      headerTitle: string;
+      headerSubtitle: string;
+      definitionTitle: string;
+      definitionBody1: string;
+      definitionBody2: string;
+      criteriaTitle: string;
+      criteriaIntro: string;
+      rankDescriptions: {
+        SSS: string;
+        SS: string;
+        S_PLUS: string;
+        S_MINUS: string;
+        A: string;
+        B: string;
+        C: string;
+      };
+      sideTitle: string;
+      sideChartTitleLine1: string;
+      sideChartTitleLine2: string;
+      chartNote: string;
+    };
   };
 }
 
@@ -162,3 +258,47 @@ export interface ChatMessage {
   timestamp: number;
   sources?: { uri: string; title: string }[];
 }
+
+export type GhoulRatingRank = 'E' | 'D' | 'C' | 'B' | 'A' | 'S' | 'SS' | 'SSS';
+
+export interface GhoulLabReport {
+  alias: string;
+  rating: {
+    rank: GhoulRatingRank;
+    description: string;
+    threatLevel: string;
+    rcLevel: string;
+    countermeasure: string;
+  };
+  kaguneProfile: string;
+  abilityHighlights: string[];
+  temperament: string;
+  quote: string;
+}
+
+export enum GhoulThreatRating {
+  SSS = 'SSS',
+  SS = 'SS',
+  S_PLUS = 'S+',
+  S_MINUS = 'S-',
+  A = 'A',
+  B = 'B',
+  C = 'C',
+  UNKNOWN = '?'
+}
+
+export interface GhoulInsightAnalysis {
+  rating: GhoulThreatRating;
+  alias: string;
+  rcType: 'Ukaku (羽赫)' | 'Koukaku (甲赫)' | 'Rinkaku (鱗赫)' | 'Bikaku (尾赫)' | 'Unknown';
+  rcFactor: number;
+  battlePower: number;
+  commentary: string;
+  traits: string[];
+  maskDesign: string;
+  countermeasure: string;
+  survivalRate: string;
+  ward: string;
+}
+
+export type GhoulInsightTab = 'SCANNER' | 'DATABASE' | 'ARCHIVES';

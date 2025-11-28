@@ -86,11 +86,21 @@ export const saveMessagesForMode = (mode: TerminalMode, messages: ChatMessage[])
 // Active section storage
 import { ViewSection } from '../types';
 
+const VIEW_SECTIONS: ViewSection[] = [
+  'home',
+  'characters',
+  'tools',
+  'terminal',
+  'ghoulLab',
+  'toybox',
+  'ghoulInsight',
+];
+
 export const getStoredActiveSection = (): ViewSection | null => {
   if (typeof window === 'undefined') return null;
-  const stored = localStorage.getItem(STORAGE_KEYS.ACTIVE_SECTION);
-  if (stored === 'home' || stored === 'characters' || stored === 'tools' || stored === 'terminal') {
-    return stored as ViewSection;
+  const stored = localStorage.getItem(STORAGE_KEYS.ACTIVE_SECTION) as ViewSection | null;
+  if (stored && VIEW_SECTIONS.includes(stored)) {
+    return stored;
   }
   return null;
 };

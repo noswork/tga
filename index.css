@@ -83,3 +83,77 @@
   100% { opacity: 0.9; }
 }
 
+@keyframes rainbow-border {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes rainbow-text {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.rainbow-border {
+  animation: rainbow-border 3s linear infinite;
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3, #ff0000) 1;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+}
+
+.rainbow-text {
+  background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3, #ff0000);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: rainbow-bg 3s linear infinite;
+  display: inline-block;
+  line-height: 1.1;
+  position: relative;
+  /* 使用 padding 來防止邊緣被裁剪 */
+  padding: 2px 4px;
+  margin: -2px -4px;
+}
+
+@keyframes rainbow-bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+/* Custom Scrollbar for Ghoul Insight */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #52525b #18181b;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #18181b;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #52525b;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
+

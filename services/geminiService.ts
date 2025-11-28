@@ -1,6 +1,6 @@
 
 import { GoogleGenAI, GenerateContentResponse, Tool } from "@google/genai";
-import { TerminalMode } from "../types";
+import { GhoulLabReport, GhoulRatingRank, TerminalMode } from "../types";
 
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
@@ -172,4 +172,132 @@ export const generateGhoulResponse = async (
       : ">> 嚴重錯誤：檢測到 RC 細胞干擾。訊號丟失。"
     };
   }
+};
+
+type ImagePayload = {
+  data: string;
+  mimeType: string;
+};
+
+const ratingOrder: GhoulRatingRank[] = ['E', 'D', 'C', 'B', 'A', 'S', 'SS', 'SSS'];
+
+const descriptors = {
+  en: {
+    aliasPrefix: 'Subject',
+    rcLevels: ['Under 1000', '1,200', '1,800', '2,400', '3,500', '5,000', '7,200', '9,999+'],
+    countermeasures: [
+      'No action required',
+      '2nd Class duo',
+      '1st Class team',
+      'Special Class support',
+      'Special Class squad',
+      'SS strike team',
+      'CCG Reaper required',
+      'Evacuate ward',
+    ],
+    descriptions: [
+      'Barely registers on RC scanners.',
+      'Urban legend with limited threat.',
+      'Confirmed ghoul with predictable patterns.',
+      'Shows adaptive kagune growth.',
+      'Aggressive kagune behavior, requires special class.',
+      'Battlefield hazard with extreme RC surge.',
+      'Nightmare-tier predator with evolving kagune.',
+      'Apocalyptic entity. Zero containment rate.',
+    ],
+    temperament: ['Docile', 'Calculated', 'Restless', 'Unhinged'],
+    quotes: [
+      '"Even coffee tastes metallic now."',
+      '"Numbers don’t lie, investigators do."',
+      '"Pain is a better tutor than peace."',
+      '"All wards end in ashes sooner or later."',
+    ],
+  },
+  zh: {
+    aliasPrefix: '對象',
+    rcLevels: ['低於 1000', '1,200', '1,800', '2,400', '3,500', '5,000', '7,200', '9,999+'],
+    countermeasures: [
+      '無須處置',
+      '二等搜查官小隊',
+      '一等搜查官配置',
+      '特等支援',
+      '特等專案組',
+      'SS 清剿隊',
+      '白色死神出動',
+      '撤離整個區域',
+    ],
+    descriptions: [
+      'RC 反應幾乎為零。',
+      '都市傳說等級威脅。',
+      '已確認喰種，但可預測。',
+      '顯示適應性赫子增長。',
+      '攻擊性強烈，必須特等對應。',
+      '戰場級 RC 急遽飆升。',
+      '夢魘級獵食者，赫子持續進化。',
+      '世界終結級存在，無法收容。',
+    ],
+    temperament: ['溫馴', '算計型', '躁動', '失控'],
+    quotes: [
+      '「連咖啡都變得像血。」',
+      '「數字不會騙人，搜查官會。」',
+      '「疼痛比和平更會教人。」',
+      '「每個 ward 遲早都會燃燒。」',
+    ],
+  },
+};
+
+const abilitiesPool = [
+  'Rapid RC regeneration observed',
+  'Displays improvised quinque techniques',
+  'Adapts kagune density mid-combat',
+  'Exploits psychological trauma of targets',
+  'Manipulates battlefield debris into armor',
+  'Switches between offense and stealth instantly',
+];
+
+const zhAbilitiesPool = [
+  'RC 再生速度異常',
+  '會即席模仿昆克招式',
+  '戰鬥中調整赫子密度',
+  '善於利用獵物心理創傷',
+  '可操縱場地碎片形成護甲',
+  '於攻擊與潛行間無縫切換',
+];
+
+const localized = <T,>(lang: 'en' | 'zh', enValue: T, zhValue: T): T =>
+  lang === 'en' ? enValue : zhValue;
+
+export const analyzeGhoulImage = async (
+  image: ImagePayload,
+  lang: 'en' | 'zh'
+): Promise<GhoulLabReport> => {
+  const profile = descriptors[lang];
+  const seed = image.data.length + image.mimeType.length;
+  const rank = ratingOrder[seed % ratingOrder.length];
+  const abilitySource = lang === 'en' ? abilitiesPool : zhAbilitiesPool;
+
+  const pick = <T,>(arr: T[], offset: number) => arr[offset % arr.length];
+
+  return {
+    alias: `${profile.aliasPrefix} ${1000 + (seed % 9000)}`,
+    rating: {
+      rank,
+      description: pick(profile.descriptions, seed),
+      threatLevel: pick(profile.descriptions, seed + 1),
+      rcLevel: pick(profile.rcLevels, seed + 2),
+      countermeasure: pick(profile.countermeasures, seed + 3),
+    },
+    kaguneProfile: localized(
+      lang,
+      'Kagune signature indicates hybridization between Rinkaku spines and Ukaku crystallization.',
+      '赫子特徵顯示鱗赫脊骨與羽赫晶化的混種跡象。'
+    ),
+    abilityHighlights: [
+      pick(abilitySource, seed),
+      pick(abilitySource, seed + 1),
+      pick(abilitySource, seed + 2),
+    ],
+    temperament: pick(profile.temperament, seed + 4),
+    quote: pick(profile.quotes, seed + 5),
+  };
 };
