@@ -29,4 +29,5 @@ dist-ssr
 *.sw?
 .cursor/*
 
+# Discord bot
 discord_bot/*
