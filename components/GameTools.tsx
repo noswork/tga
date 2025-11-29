@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Lang } from '../types';
 import { translations } from '../constants';
 import { Map as MapIcon, Wrench, AlertOctagon, ChevronRight, Lock } from 'lucide-react';
@@ -12,6 +12,17 @@ interface GameToolsProps {
 export const GameTools: React.FC<GameToolsProps> = ({ lang }) => {
   const t = translations[lang].tools;
   const [activeTool, setActiveTool] = useState<string | null>(null);
+
+  useEffect(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      if (params.has('map')) {
+        setActiveTool('stronghold');
+      }
+    } catch {
+      // ignore URL parsing errors in non-browser environments
+    }
+  }, []);
 
   const tools = [
     {

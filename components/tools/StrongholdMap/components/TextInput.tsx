@@ -95,12 +95,16 @@ export const TextInput: React.FC<TextInputProps> = ({
           }
         }}
         onBlur={(e) => {
+          const inputEl = e.currentTarget;
+          const container = inputEl.parentElement;
+
           setTimeout(() => {
             const activeElement = document.activeElement;
-            const container = e.currentTarget.parentElement;
-            
-            if (activeElement !== e.currentTarget && 
-                (!container || !container.contains(activeElement))) {
+
+            if (
+              activeElement !== inputEl &&
+              (!container || !container.contains(activeElement))
+            ) {
               if (!textInputRef.current?.matches(':focus')) {
                 // Clear the temporary selection box
                 if (annotationLayerRef.current) {

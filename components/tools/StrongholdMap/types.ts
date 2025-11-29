@@ -56,3 +56,13 @@ export interface Annotation {
   };
 }
 
+export interface SharedMapState {
+  marks: {
+    x: number;
+    y: number;
+    color: string;
+  }[];
+  annotations: Annotation[];
+}
+
+

@@ -1,4 +1,5 @@
 import { MAP_CONFIG, HEX_DX, HEX_DY } from './config';
+import type { SharedMapState } from './types';
 
 export const keyFor = (x: number, y: number) => `${x},${y}`;
 
@@ -27,4 +28,56 @@ export const inBounds = (x: number, y: number) => {
 };
 
 export const computeCenter = (x: number, y: number) => ({ cx: x * HEX_DX, cy: y * (HEX_DY / 2) });
+
+// --- Sharing helpers ---
+
+const SHARE_PREFIX = 's:1:';
+
+const toBase64Url = (input: string) => {
+  // Encode UTF-8 safely before base64
+  const utf8 = encodeURIComponent(input).replace(/%([0-9A-F]{2})/g, (_, p1) =>
+    String.fromCharCode(parseInt(p1, 16))
+  );
+  const b64 = btoa(utf8);
+  return b64.replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/g, '');
+};
+
+const fromBase64Url = (input: string) => {
+  let b64 = input.replace(/-/g, '+').replace(/_/g, '/');
+  while (b64.length % 4 !== 0) {
+    b64 += '=';
+  }
+  const utf8 = atob(b64);
+  const percentEncoded = Array.from(utf8)
+    .map((c) => '%' + c.charCodeAt(0).toString(16).padStart(2, '0'))
+    .join('');
+  return decodeURIComponent(percentEncoded);
+};
+
+export const encodeMapShareState = (state: SharedMapState): string => {
+  try {
+    const json = JSON.stringify(state);
+    return SHARE_PREFIX + toBase64Url(json);
+  } catch (e) {
+    console.warn('encodeMapShareState failed', e);
+    return '';
+  }
+};
+
+export const decodeMapShareState = (token: string): SharedMapState | null => {
+  try {
+    if (!token || !token.startsWith(SHARE_PREFIX)) return null;
+    const raw = token.slice(SHARE_PREFIX.length);
+    const json = fromBase64Url(raw);
+    const parsed = JSON.parse(json);
+    if (!parsed || !Array.isArray(parsed.marks) || !Array.isArray(parsed.annotations)) {
+      return null;
+    }
+    return parsed as SharedMapState;
+  } catch (e) {
+    console.warn('decodeMapShareState failed', e);
+    return null;
+  }
+};
+
 

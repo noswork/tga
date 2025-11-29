@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { translations } from '../../../constants';
-import { StrongholdMapProps, MarkMode, AnnotationMode } from './types';
+import { StrongholdMapProps, MarkMode, AnnotationMode, SharedMapState } from './types';
 import { MAP_CONFIG, HEX_DX, HEX_DY, HEX_H, MAIN_CITY_CENTER, MAIN_CITY_CELLS, BUILDING_DATA, ICON_IMAGES, WATERMARK_TILES } from './config';
-import { keyFor, hexToRgba, inBounds, computeCenter } from './utils';
+import { keyFor, hexToRgba, inBounds, computeCenter, encodeMapShareState, decodeMapShareState } from './utils';
 import { useMapState } from './hooks/useMapState';
 import { useAnnotations } from './hooks/useAnnotations';
 import { ControlPanel } from './components/ControlPanel';
@@ -24,6 +24,8 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
   const [textInputVisible, setTextInputVisible] = useState(false);
   const [textInputPosition, setTextInputPosition] = useState({ x: 0, y: 0 });
   const [textInputValue, setTextInputValue] = useState('');
+  const [isSharing, setIsSharing] = useState(false);
+  const [shareMessage, setShareMessage] = useState<string | null>(null);
   const annotationLayerRef = useRef<SVGGElement>(null);
   const justCompletedTextDragRef = useRef(false);
   
@@ -196,17 +198,40 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
 
     setTimeout(() => {
       try {
-        const saved = localStorage.getItem('stronghold-marks');
-        if (saved) {
-          const marks = JSON.parse(saved);
-          marks.forEach((m: any) => {
-            if (m && typeof m.x === 'number' && typeof m.y === 'number' && m.color) {
-              createMark(m.x, m.y, m.color);
-            }
-          });
+        const params = new URLSearchParams(window.location.search);
+        const token = params.get('map');
+        const shared = token ? decodeMapShareState(token) : null;
+
+        if (shared) {
+          // Apply shared marks
+          if (Array.isArray(shared.marks)) {
+            shared.marks.forEach((m) => {
+              if (m && typeof m.x === 'number' && typeof m.y === 'number' && m.color) {
+                createMark(m.x, m.y, m.color);
+              }
+            });
+            // Persist shared marks locally for later sessions
+            localStorage.setItem('stronghold-marks', JSON.stringify(shared.marks));
+          }
+
+          // Apply shared annotations
+          if (Array.isArray(shared.annotations) && shared.annotations.length > 0) {
+            setAnnotationHistory([]); // reset history for a clean state
+            setAnnotations(shared.annotations);
+          }
+        } else {
+          const saved = localStorage.getItem('stronghold-marks');
+          if (saved) {
+            const marks = JSON.parse(saved);
+            marks.forEach((m: any) => {
+              if (m && typeof m.x === 'number' && typeof m.y === 'number' && m.color) {
+                createMark(m.x, m.y, m.color);
+              }
+            });
+          }
         }
       } catch (e) {
-        console.warn('Failed to load saved marks:', e);
+        console.warn('Failed to load saved marks or shared map:', e);
       }
     }, 0);
   }, []);
@@ -770,6 +795,53 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
     }
   };
 
+  const handleShare = async () => {
+    try {
+      setIsSharing(true);
+      const marks = Array.from(state.current.markedCells.values()).map((v) => ({
+        x: v.x,
+        y: v.y,
+        color: v.color,
+      }));
+
+      const payload: SharedMapState = {
+        marks,
+        annotations,
+      };
+
+      const token = encodeMapShareState(payload);
+      if (!token) {
+        throw new Error('Failed to encode share state');
+      }
+
+      const url = new URL(window.location.href);
+      url.searchParams.set('map', token);
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(url.toString());
+      } else {
+        // Fallback: create a temporary textarea
+        const textarea = document.createElement('textarea');
+        textarea.value = url.toString();
+        textarea.style.position = 'fixed';
+        textarea.style.left = '-9999px';
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+      }
+
+      setShareMessage(t.shareCopied);
+      setTimeout(() => setShareMessage(null), 3000);
+    } catch (e) {
+      console.error('Failed to generate share link', e);
+      setShareMessage(t.shareFailed);
+      setTimeout(() => setShareMessage(null), 4000);
+    } finally {
+      setIsSharing(false);
+    }
+  };
+
   const handleClearAll = () => {
     state.current.markedCells.forEach(v => removeMark(v.x, v.y));
     saveMarks();
@@ -818,6 +890,9 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
         onExport={handleExport}
         onClearAll={handleClearAll}
         annotationMode={annotationMode}
+        onShare={handleShare}
+        isSharing={isSharing}
+        shareMessage={shareMessage}
       />
 
       <div className="flex-1 relative bg-[var(--map-bg)] transition-colors duration-300 overflow-hidden cursor-crosshair select-none z-10 order-1 lg:order-2 min-h-0 overscroll-none">

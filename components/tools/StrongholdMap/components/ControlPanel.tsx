@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Target, Settings, Download, CheckCircle, Trash2, Eraser, Monitor } from 'lucide-react';
+import { X, Target, Settings, Download, CheckCircle, Trash2, Eraser, Monitor, Share2 } from 'lucide-react';
 import { Lang } from '../../../../types';
 import { translations } from '../../../../constants';
 import { MarkMode, AnnotationMode } from '../types';
@@ -18,6 +18,9 @@ interface ControlPanelProps {
   onExport: () => void;
   onClearAll: () => void;
   annotationMode: AnnotationMode;
+   onShare: () => void;
+   isSharing: boolean;
+   shareMessage?: string | null;
 }
 
 export const ControlPanel: React.FC<ControlPanelProps> = ({
@@ -33,6 +36,9 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
   onExport,
   onClearAll,
   annotationMode,
+  onShare,
+  isSharing,
+  shareMessage,
 }) => {
   const t = translations[lang].tools.map;
   const qT = t.quality;
@@ -101,7 +107,19 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
           <button onClick={onClearAll} className="w-full py-1.5 lg:py-2.5 rounded border border-red-500/30 dark:border-red-900/50 text-red-600 dark:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors text-[10px] lg:text-xs font-bold font-tech flex items-center justify-center gap-2">
             <Trash2 size={12} /> {t.clearAll}
           </button>
-          
+
+          <button
+            onClick={onShare}
+            disabled={isSharing}
+            className="w-full py-1.5 lg:py-2.5 rounded border border-blue-500/40 dark:border-blue-400/50 text-blue-600 dark:text-blue-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors text-[10px] lg:text-xs font-bold font-tech flex items-center justify-center gap-2"
+          >
+            <Share2 size={12} />
+            {isSharing ? t.sharing : t.shareLink}
+          </button>
+          <div className="text-[9px] text-gray-400 dark:text-zinc-500 text-right font-mono min-h-[1.25rem]">
+            {shareMessage || t.shareHint}
+          </div>
+
           <button onClick={onExport} disabled={isExporting} className="w-full py-2 lg:py-3 bg-ghoul-red text-white font-bold font-tech tracking-[0.2em] clip-button hover:bg-gray-900 dark:hover:bg-white hover:text-white dark:hover:text-black transition-colors flex items-center justify-center gap-2 shadow-lg shadow-red-900/20 text-[10px] lg:text-sm">
             {isExporting ? <span className="animate-pulse">{t.exporting}</span> : <><Download size={14} /> {t.exportMap}</>}
           </button>

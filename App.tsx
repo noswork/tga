@@ -53,6 +53,17 @@ const App: React.FC = () => {
   }, [activeSection]);
 
   useEffect(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      if (params.has('map')) {
+        setActiveSection('tools');
+      }
+    } catch {
+      // ignore URL parsing errors in non-browser environments
+    }
+  }, []);
+
+  useEffect(() => {
     const html = document.documentElement;
     if (isDark) {
       html.classList.add('dark');
