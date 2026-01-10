@@ -873,76 +873,16 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
         color: v.color,
       }));
 
-      // 生成地圖預覽圖（用於 Open Graph）
-      let previewImage = '';
-      try {
-        if (svgRef.current) {
-          const svgElement = svgRef.current;
-          const serializer = new XMLSerializer();
-          const clone = svgElement.cloneNode(true) as SVGSVGElement;
-
-          // 設定合適嘅預覽尺寸（1200x630 係 OG 圖片推薦尺寸）
-          const bbox = svgElement.getBBox();
-          const aspectRatio = bbox.width / bbox.height;
-          let previewWidth = 1200;
-          let previewHeight = Math.round(previewWidth / aspectRatio);
-
-          if (previewHeight > 630) {
-            previewHeight = 630;
-            previewWidth = Math.round(previewHeight * aspectRatio);
-          }
-
-          clone.setAttribute('width', String(previewWidth));
-          clone.setAttribute('height', String(previewHeight));
-          clone.setAttribute('viewBox', `${bbox.x} ${bbox.y} ${bbox.width} ${bbox.height}`);
-
-          const svgBlob = new Blob([serializer.serializeToString(clone)], { type: 'image/svg+xml' });
-          const svgUrl = URL.createObjectURL(svgBlob);
-
-          // 轉換 SVG 為 PNG
-          const img = new Image();
-          await new Promise((resolve, reject) => {
-            img.onload = resolve;
-            img.onerror = reject;
-            img.src = svgUrl;
-          });
-
-          const canvas = document.createElement('canvas');
-          canvas.width = previewWidth;
-          canvas.height = previewHeight;
-          const ctx = canvas.getContext('2d');
-
-          if (ctx) {
-            // 填充背景色（檢測當前主題）
-            const isDarkMode = document.documentElement.classList.contains('dark');
-            ctx.fillStyle = isDarkMode ? '#18181b' : '#ffffff';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            ctx.drawImage(img, 0, 0, previewWidth, previewHeight);
-
-            // 轉為 base64
-            previewImage = canvas.toDataURL('image/png', 0.8);
-          }
-
-          URL.revokeObjectURL(svgUrl);
-        }
-      } catch (e) {
-        console.warn('生成預覽圖失敗:', e);
-        // 繼續執行，只係冇預覽圖
-      }
-
       const payload: SharedMapState = {
         marks,
         annotations,
       };
 
-      // 呼叫 Cloudflare Worker API（包含預覽圖）
+      // 呼叫 Cloudflare Worker API
       const response = await fetch('https://tga-share.nossite.com/map/share', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...payload,
-          preview: previewImage, // 添加預覽圖
-        }),
+        body: JSON.stringify(payload),
       });
 
       if (!response.ok) {
