@@ -196,44 +196,113 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
 
     applyTransform();
 
-    setTimeout(() => {
+    // 從 localStorage 載入的輔助函數
+    const loadFromLocalStorage = () => {
+      try {
+        const saved = localStorage.getItem('stronghold-marks');
+        if (saved) {
+          const marks = JSON.parse(saved);
+          marks.forEach((m: any) => {
+            if (m && typeof m.x === 'number' && typeof m.y === 'number' && m.color) {
+              createMark(m.x, m.y, m.color);
+            }
+          });
+        }
+      } catch (e) {
+        console.warn('從 localStorage 載入標記失敗:', e);
+      }
+    };
+
+    // 從 URL 載入分享地圖的邏輯
+    const loadSharedMap = async () => {
       try {
         const params = new URLSearchParams(window.location.search);
+        const mapId = params.get('mapId');
+
+        if (mapId) {
+          console.log('🔍 嘗試載入分享地圖 ID:', mapId);
+          // 從 Cloudflare Worker API 載入分享地圖
+          try {
+            const response = await fetch(`https://tga-share.nossite.com/map/${mapId}`);
+
+            if (!response.ok) {
+              const errorData = await response.json();
+              console.warn('❌ 載入分享地圖失敗:', errorData.error);
+              // 載入失敗時嘗試從 localStorage 載入
+              loadFromLocalStorage();
+              return;
+            }
+
+            const result = await response.json();
+            console.log('📦 收到分享地圖資料:', result);
+            const shared: SharedMapState = result.data;
+
+            // 應用標記
+            if (shared.marks && Array.isArray(shared.marks)) {
+              console.log(`📍 開始應用 ${shared.marks.length} 個標記`);
+              shared.marks.forEach((m, index) => {
+                if (m && typeof m.x === 'number' && typeof m.y === 'number' && m.color) {
+                  createMark(m.x, m.y, m.color);
+                  console.log(`  ✓ 標記 ${index + 1}: (${m.x}, ${m.y}) - ${m.color}`);
+                }
+              });
+              // 保存到 localStorage
+              localStorage.setItem('stronghold-marks', JSON.stringify(shared.marks));
+            }
+
+            // 應用註解
+            if (shared.annotations && Array.isArray(shared.annotations) && shared.annotations.length > 0) {
+              console.log(`✏️ 開始應用 ${shared.annotations.length} 個註解`);
+              setAnnotationHistory([]); // 重置歷史記錄
+              setAnnotations(shared.annotations);
+            }
+
+            console.log('✅ 成功載入分享地圖 ID:', mapId);
+            return;
+          } catch (e) {
+            console.error('❌ 載入分享地圖時發生錯誤:', e);
+            // API 失敗時嘗試從 localStorage 載入
+            loadFromLocalStorage();
+            return;
+          }
+        }
+
+        // 檢查舊版 URL 格式（向後相容）
         const token = params.get('map');
         const shared = token ? decodeMapShareState(token) : null;
 
         if (shared) {
-          // Apply shared marks
+          console.log('📦 使用舊版 URL 格式載入地圖');
+          // 應用舊版分享標記
           if (Array.isArray(shared.marks)) {
             shared.marks.forEach((m) => {
               if (m && typeof m.x === 'number' && typeof m.y === 'number' && m.color) {
                 createMark(m.x, m.y, m.color);
               }
             });
-            // Persist shared marks locally for later sessions
             localStorage.setItem('stronghold-marks', JSON.stringify(shared.marks));
           }
 
-          // Apply shared annotations
+          // 應用舊版分享註解
           if (Array.isArray(shared.annotations) && shared.annotations.length > 0) {
-            setAnnotationHistory([]); // reset history for a clean state
+            setAnnotationHistory([]);
             setAnnotations(shared.annotations);
           }
         } else {
-          const saved = localStorage.getItem('stronghold-marks');
-          if (saved) {
-            const marks = JSON.parse(saved);
-            marks.forEach((m: any) => {
-              if (m && typeof m.x === 'number' && typeof m.y === 'number' && m.color) {
-                createMark(m.x, m.y, m.color);
-              }
-            });
-          }
+          // 沒有分享連結，從 localStorage 載入
+          console.log('💾 從 localStorage 載入地圖');
+          loadFromLocalStorage();
         }
       } catch (e) {
-        console.warn('Failed to load saved marks or shared map:', e);
+        console.warn('⚠️ 載入地圖時發生錯誤:', e);
+        loadFromLocalStorage();
       }
-    }, 0);
+    };
+
+    // 延遲執行確保 DOM 已準備好
+    setTimeout(() => {
+      loadSharedMap();
+    }, 100);
   }, []);
 
   const createMark = (x: number, y: number, color: string) => {
@@ -809,33 +878,62 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
         annotations,
       };
 
-      const token = encodeMapShareState(payload);
-      if (!token) {
-        throw new Error('Failed to encode share state');
+      // 呼叫 Cloudflare Worker API
+      const response = await fetch('https://tga-share.nossite.com/map/share', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || '分享失敗');
       }
 
-      const url = new URL(window.location.href);
-      url.searchParams.set('map', token);
+      const { url: shareUrl } = await response.json();
 
+      // 複製到剪貼簿
+      let copySuccess = false;
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        await navigator.clipboard.writeText(url.toString());
-      } else {
-        // Fallback: create a temporary textarea
-        const textarea = document.createElement('textarea');
-        textarea.value = url.toString();
-        textarea.style.position = 'fixed';
-        textarea.style.left = '-9999px';
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textarea);
+        try {
+          await navigator.clipboard.writeText(shareUrl);
+          copySuccess = true;
+        } catch (clipboardError) {
+          console.warn('Clipboard API 失敗，嘗試備用方案:', clipboardError);
+        }
       }
 
-      setShareMessage(t.shareCopied);
-      setTimeout(() => setShareMessage(null), 3000);
+      // Fallback 到舊方法
+      if (!copySuccess) {
+        try {
+          const textarea = document.createElement('textarea');
+          textarea.value = shareUrl;
+          textarea.style.position = 'fixed';
+          textarea.style.left = '-9999px';
+          textarea.setAttribute('readonly', '');
+          document.body.appendChild(textarea);
+
+          textarea.select();
+          textarea.setSelectionRange(0, shareUrl.length);
+
+          copySuccess = document.execCommand('copy');
+          document.body.removeChild(textarea);
+
+          if (!copySuccess) {
+            throw new Error('複製失敗');
+          }
+        } catch (fallbackError) {
+          console.error('備用複製方法失敗:', fallbackError);
+          throw new Error('無法複製至剪貼簿');
+        }
+      }
+
+      // 顯示成功訊息（包含短網址）
+      setShareMessage(`✓ 已複製短網址！\n${shareUrl}`);
+      setTimeout(() => setShareMessage(null), 5000);
     } catch (e) {
-      console.error('Failed to generate share link', e);
-      setShareMessage(t.shareFailed);
+      console.error('無法生成分享連結:', e);
+      setShareMessage(e instanceof Error ? e.message : '無法複製分享連結');
       setTimeout(() => setShareMessage(null), 4000);
     } finally {
       setIsSharing(false);

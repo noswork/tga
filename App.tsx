@@ -55,10 +55,18 @@ const App: React.FC = () => {
   useEffect(() => {
     try {
       const params = new URLSearchParams(window.location.search);
-      if (params.has('map')) {
+      const mapId = params.get('mapId');
+      const mapToken = params.get('map');
+
+      console.log('🔍 App.tsx 初始化檢查 URL 參數:', { mapId, mapToken });
+
+      // 支援新版 mapId 參數同舊版 map 參數
+      if (mapId || mapToken) {
+        console.log('✅ 檢測到地圖參數，切換到 tools section');
         setActiveSection('tools');
       }
-    } catch {
+    } catch (e) {
+      console.error('❌ URL 解析失敗:', e);
       // ignore URL parsing errors in non-browser environments
     }
   }, []);

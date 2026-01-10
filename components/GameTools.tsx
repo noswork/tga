@@ -16,7 +16,9 @@ export const GameTools: React.FC<GameToolsProps> = ({ lang }) => {
   useEffect(() => {
     try {
       const params = new URLSearchParams(window.location.search);
-      if (params.has('map')) {
+      // 支援新版 mapId 參數同舊版 map 參數
+      if (params.has('mapId') || params.has('map')) {
+        console.log('🗺️ GameTools: 檢測到地圖參數，自動打開 StrongholdMap');
         setActiveTool('stronghold');
       }
     } catch {
