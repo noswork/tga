@@ -32,14 +32,7 @@ export const useAnnotations = (
   const isDrawingRef = useRef(false);
   const currentAnnotationRef = useRef<any>(null);
   const sketchPathRef = useRef<SVGPathElement | null>(null);
-  const [isLayerReady, setIsLayerReady] = useState(false);
-
-  // 檢測 annotation layer 是否已經 mount
-  useEffect(() => {
-    if (annotationLayerRef.current && !isLayerReady) {
-      setIsLayerReady(true);
-    }
-  }, [annotationLayerRef.current, isLayerReady]);
+  const hasRenderedInitialRef = useRef(false);
 
   const addAnnotation = (annotation: Annotation) => {
     setAnnotations(prev => {
@@ -259,15 +252,51 @@ export const useAnnotations = (
     });
   };
 
-  // Re-render annotations when they change or when the layer is ready
+  // Re-render annotations when they change or on mount
   useEffect(() => {
     if (!annotationLayerRef.current) return;
-    console.log('🎨 重新渲染註解:', annotations.length);
+
+    // Force initial render if we haven't rendered yet and have annotations
+    if (!hasRenderedInitialRef.current && annotations.length > 0) {
+      console.log('🎨 初次渲染註解:', annotations.length);
+      hasRenderedInitialRef.current = true;
+    } else if (annotations.length > 0) {
+      console.log('🎨 重新渲染註解:', annotations.length);
+    }
+
     annotationLayerRef.current.innerHTML = '';
     annotations.forEach(ann => {
       renderAnnotation(ann);
     });
-  }, [annotations, isLayerReady]);
+  }, [annotations]);
+
+  // Polling mechanism to detect when layer ref becomes ready and render initial annotations
+  useEffect(() => {
+    if (hasRenderedInitialRef.current) return; // Already rendered
+    if (annotations.length === 0) return; // No annotations to render
+
+    let attempts = 0;
+    const maxAttempts = 50; // 50 * 20ms = 1 second max wait
+
+    const checkAndRender = () => {
+      if (annotationLayerRef.current && annotations.length > 0 && !hasRenderedInitialRef.current) {
+        console.log('🎨 Polling 偵測到 layer ready，渲染註解:', annotations.length);
+        hasRenderedInitialRef.current = true;
+        annotationLayerRef.current.innerHTML = '';
+        annotations.forEach(ann => {
+          renderAnnotation(ann);
+        });
+        return;
+      }
+
+      attempts++;
+      if (attempts < maxAttempts && !hasRenderedInitialRef.current) {
+        requestAnimationFrame(checkAndRender);
+      }
+    };
+
+    requestAnimationFrame(checkAndRender);
+  }, []); // Run only once on mount
 
   // Close text input when switching tools
   useEffect(() => {
