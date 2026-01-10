@@ -7,11 +7,39 @@ export const useAnnotations = (
   annotationSize: number,
   annotationLayerRef: React.RefObject<SVGGElement>
 ) => {
-  const [annotations, setAnnotations] = useState<Annotation[]>([]);
+  // 從 localStorage 載入註解（初始化時）
+  const [annotations, setAnnotations] = useState<Annotation[]>(() => {
+    try {
+      const saved = localStorage.getItem('stronghold-annotations');
+      if (saved) {
+        return JSON.parse(saved);
+      }
+    } catch (e) {
+      console.warn('載入註解失敗:', e);
+    }
+    return [];
+  });
   const [annotationHistory, setAnnotationHistory] = useState<Annotation[][]>([]);
+
+  // 當 annotations 改變時自動儲存到 localStorage
+  useEffect(() => {
+    try {
+      localStorage.setItem('stronghold-annotations', JSON.stringify(annotations));
+    } catch (e) {
+      console.warn('儲存註解失敗:', e);
+    }
+  }, [annotations]);
   const isDrawingRef = useRef(false);
   const currentAnnotationRef = useRef<any>(null);
   const sketchPathRef = useRef<SVGPathElement | null>(null);
+  const [isLayerReady, setIsLayerReady] = useState(false);
+
+  // 檢測 annotation layer 是否已經 mount
+  useEffect(() => {
+    if (annotationLayerRef.current && !isLayerReady) {
+      setIsLayerReady(true);
+    }
+  }, [annotationLayerRef.current, isLayerReady]);
 
   const addAnnotation = (annotation: Annotation) => {
     setAnnotations(prev => {
@@ -231,14 +259,15 @@ export const useAnnotations = (
     });
   };
 
-  // Re-render annotations when they change
+  // Re-render annotations when they change or when the layer is ready
   useEffect(() => {
     if (!annotationLayerRef.current) return;
+    console.log('🎨 重新渲染註解:', annotations.length);
     annotationLayerRef.current.innerHTML = '';
     annotations.forEach(ann => {
       renderAnnotation(ann);
     });
-  }, [annotations]);
+  }, [annotations, isLayerReady]);
 
   // Close text input when switching tools
   useEffect(() => {
