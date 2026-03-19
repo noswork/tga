@@ -39,6 +39,6 @@ scripts
 
 cloudflare
 
-tools
+/tools
 
 .playwright-mcp
