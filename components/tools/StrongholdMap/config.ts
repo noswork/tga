@@ -1,11 +1,7 @@
-// Icon Image URLs
-const cityIcon = '/assets/tools/StrongholdMap/city.png';
-const buildingIcon = '/assets/tools/StrongholdMap/building.png';
-const houseIcon = '/assets/tools/StrongholdMap/house.png';
-const hospitalIcon = '/assets/tools/StrongholdMap/hospital.png';
-const fortressIcon = '/assets/tools/StrongholdMap/fortress.png';
-const orgIcon = '/assets/tools/StrongholdMap/org.png';
-const blockIcon = '/assets/tools/StrongholdMap/block.png';
+export const STORAGE_KEYS = {
+  marks: 'stronghold-marks',
+  annotations: 'stronghold-annotations',
+} as const;
 
 // --- MAP CONFIGURATION ---
 export const MAP_CONFIG = {
@@ -62,13 +58,13 @@ export const BUILDING_DATA: Record<string, number[][]> = {
 };
 
 export const ICON_IMAGES: Record<string, string> = {
-  mainCity: cityIcon,
-  building: buildingIcon,
-  house: houseIcon,
-  hospital: hospitalIcon,
-  fortress: fortressIcon,
-  organization: orgIcon,
-  block: blockIcon
+  mainCity: '/assets/tools/StrongholdMap/city.png',
+  building: '/assets/tools/StrongholdMap/building.png',
+  house: '/assets/tools/StrongholdMap/house.png',
+  hospital: '/assets/tools/StrongholdMap/hospital.png',
+  fortress: '/assets/tools/StrongholdMap/fortress.png',
+  organization: '/assets/tools/StrongholdMap/org.png',
+  block: '/assets/tools/StrongholdMap/block.png',
 };
 
 export const WATERMARK_TILES = Array.from({ length: 300 });

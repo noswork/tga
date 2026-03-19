@@ -67,10 +67,19 @@ export const AnnotationToolbar: React.FC<AnnotationToolbarProps> = ({
     const handleToolbarPointerMove = (e: PointerEvent) => {
       if (isDraggingToolbar && toolbarRef.current) {
         const parentRect = toolbarRef.current.parentElement?.getBoundingClientRect();
+        const toolbarRect = toolbarRef.current.getBoundingClientRect();
         if (parentRect) {
+          const rawX = e.clientX - (parentRect.left + parentRect.width / 2) - toolbarDragStart.x;
+          const rawY = e.clientY - (parentRect.top + parentRect.height) - toolbarDragStart.y;
+          // Clamp so toolbar stays within viewport
+          const halfW = toolbarRect.width / 2;
+          const minX = -(parentRect.left + parentRect.width / 2 - halfW);
+          const maxX = window.innerWidth - (parentRect.left + parentRect.width / 2) - halfW;
+          const minY = -(parentRect.top + parentRect.height - toolbarRect.height);
+          const maxY = -(toolbarRect.height + 8);
           setToolbarPosition({
-            x: e.clientX - (parentRect.left + parentRect.width / 2) - toolbarDragStart.x,
-            y: e.clientY - (parentRect.top + parentRect.height) - toolbarDragStart.y
+            x: Math.min(Math.max(rawX, minX), maxX),
+            y: Math.min(Math.max(rawY, minY), maxY),
           });
         }
       }

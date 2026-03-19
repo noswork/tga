@@ -16,8 +16,8 @@ export interface MapState {
   startPointer: { x: number; y: number };
   lastPointer: { x: number; y: number };
   pointers: Map<number, {x: number, y: number}>;
-  cellMap: Map<string, any>;
-  markedCells: Map<string, any>;
+  cellMap: Map<string, CellData>;
+  markedCells: Map<string, MarkData>;
   lastHoveredKey: string | null;
   annotationStart: { x: number; y: number };
 }

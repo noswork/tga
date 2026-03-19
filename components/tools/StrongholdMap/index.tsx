@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { translations } from '../../../constants';
 import { StrongholdMapProps, MarkMode, AnnotationMode, SharedMapState } from './types';
-import { MAP_CONFIG, HEX_DX, HEX_DY, HEX_H, MAIN_CITY_CENTER, MAIN_CITY_CELLS, BUILDING_DATA, ICON_IMAGES, WATERMARK_TILES } from './config';
+import { MAP_CONFIG, HEX_DX, HEX_DY, HEX_H, MAIN_CITY_CENTER, MAIN_CITY_CELLS, BUILDING_DATA, ICON_IMAGES, WATERMARK_TILES, STORAGE_KEYS } from './config';
 import { keyFor, hexToRgba, inBounds, computeCenter, encodeMapShareState, decodeMapShareState } from './utils';
 import { useMapState } from './hooks/useMapState';
 import { useAnnotations } from './hooks/useAnnotations';
@@ -28,6 +28,8 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
   const [shareMessage, setShareMessage] = useState<string | null>(null);
   const annotationLayerRef = useRef<SVGGElement>(null);
   const justCompletedTextDragRef = useRef(false);
+  const layerRefsCache = useRef<Record<string, SVGGElement | null>>({});
+  const hoverLabelRef = useRef<SVGGElement | null>(null);
   
   const state = useMapState();
   const {
@@ -39,24 +41,28 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
     currentAnnotationRef,
     sketchPathRef,
     addAnnotation,
+    renderAnnotation,
     renderCurrentAnnotation,
     handleUndo,
     handleClearAnnotations,
-  } = useAnnotations(annotationMode, annotationColor, annotationSize, annotationLayerRef);
+  } = useAnnotations(annotationMode, annotationColor, annotationSize, annotationLayerRef, (msg) => {
+    setShareMessage(msg);
+    setTimeout(() => setShareMessage(null), 4000);
+  });
 
   const applyTransform = () => {
     const { scale, translate, lastHoveredKey } = state.current;
     const matrix = `matrix(${scale}, 0, 0, ${scale}, ${translate.x}, ${translate.y})`;
     if (!svgRef.current) return;
-    
+
     ['hex-layer', 'mark-layer', 'highlight-layer', 'building-layer', 'label-layer', 'annotation-layer'].forEach(id => {
-      const el = svgRef.current!.querySelector(`#${id}`);
-      if(el) el.setAttribute("transform", matrix);
+      const el = layerRefsCache.current[id] ?? svgRef.current!.querySelector(`#${id}`);
+      if (el) el.setAttribute("transform", matrix);
     });
-    
+
     if (lastHoveredKey && svgRef.current) {
        const cell = state.current.cellMap.get(lastHoveredKey);
-       const labelGroup = svgRef.current.querySelector('#hover-label');
+       const labelGroup = layerRefsCache.current['hover-label'] ?? svgRef.current.querySelector('#hover-label');
        if (cell && labelGroup && state.current.scale > 0) {
          labelGroup.setAttribute("transform", `translate(${cell.cx}, ${cell.cy}) scale(${1/state.current.scale})`);
        }
@@ -109,6 +115,16 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
     labelLayer.innerHTML = '';
     if (annotationLayer) annotationLayer.innerHTML = '';
     state.current.cellMap.clear();
+
+    // Cache layer refs for fast access in applyTransform
+    layerRefsCache.current = {
+      'hex-layer': hexLayer,
+      'mark-layer': markLayer,
+      'highlight-layer': highlightLayer,
+      'building-layer': buildingLayer,
+      'label-layer': labelLayer,
+      'annotation-layer': annotationLayer,
+    };
 
     const halfH = HEX_H / 2;
     const halfR = MAP_CONFIG.r / 2;
@@ -184,6 +200,7 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
     hoverLabelGroup.appendChild(labelBg);
     hoverLabelGroup.appendChild(labelText);
     labelLayer.appendChild(hoverLabelGroup);
+    hoverLabelRef.current = hoverLabelGroup;
 
     if (!annotationLayer) {
       const newAnnotationLayer = document.createElementNS("http://www.w3.org/2000/svg", "g");
@@ -194,12 +211,26 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
       annotationLayerRef.current = annotationLayer;
     }
 
+    // 初始渲染已儲存的 annotations（annotationLayerRef 剛設定好，useEffect 已錯過）
+    if (annotationLayerRef.current) {
+      const savedAnnotations = (() => {
+        try {
+          const saved = localStorage.getItem(STORAGE_KEYS.annotations);
+          return saved ? JSON.parse(saved) : [];
+        } catch { return []; }
+      })();
+      savedAnnotations.forEach((ann: any) => {
+        const el = annotationLayerRef.current!.querySelector(`[data-annotation-id="${ann.id}"]`);
+        if (!el) renderAnnotation(ann);
+      });
+    }
+
     applyTransform();
 
     // 從 localStorage 載入的輔助函數
     const loadFromLocalStorage = () => {
       try {
-        const saved = localStorage.getItem('stronghold-marks');
+        const saved = localStorage.getItem(STORAGE_KEYS.marks);
         if (saved) {
           const marks = JSON.parse(saved);
           marks.forEach((m: any) => {
@@ -220,44 +251,37 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
         const mapId = params.get('mapId');
 
         if (mapId) {
-          console.log('🔍 嘗試載入分享地圖 ID:', mapId);
           // 從 Cloudflare Worker API 載入分享地圖
           try {
-            const response = await fetch(`https://tga-share.nossite.com/map/${mapId}`);
+            const loadController = new AbortController();
+            const loadTimeout = setTimeout(() => loadController.abort(), 10000);
+            const response = await fetch(`https://tga-share.nossite.com/map/${mapId}`, { signal: loadController.signal });
+            clearTimeout(loadTimeout);
 
             if (!response.ok) {
               const errorData = await response.json();
               console.warn('❌ 載入分享地圖失敗:', errorData.error);
-              // 載入失敗時嘗試從 localStorage 載入
               loadFromLocalStorage();
               return;
             }
 
             const result = await response.json();
-            console.log('📦 收到分享地圖資料:', result);
             const shared: SharedMapState = result.data;
 
-            // 應用標記
             if (shared.marks && Array.isArray(shared.marks)) {
-              console.log(`📍 開始應用 ${shared.marks.length} 個標記`);
-              shared.marks.forEach((m, index) => {
+              shared.marks.forEach((m) => {
                 if (m && typeof m.x === 'number' && typeof m.y === 'number' && m.color) {
                   createMark(m.x, m.y, m.color);
-                  console.log(`  ✓ 標記 ${index + 1}: (${m.x}, ${m.y}) - ${m.color}`);
                 }
               });
-              // 保存到 localStorage
-              localStorage.setItem('stronghold-marks', JSON.stringify(shared.marks));
+              localStorage.setItem(STORAGE_KEYS.marks, JSON.stringify(shared.marks));
             }
 
-            // 應用註解
             if (shared.annotations && Array.isArray(shared.annotations) && shared.annotations.length > 0) {
-              console.log(`✏️ 開始應用 ${shared.annotations.length} 個註解`);
-              setAnnotationHistory([]); // 重置歷史記錄
+              setAnnotationHistory([]);
               setAnnotations(shared.annotations);
             }
 
-            console.log('✅ 成功載入分享地圖 ID:', mapId);
             return;
           } catch (e) {
             console.error('❌ 載入分享地圖時發生錯誤:', e);
@@ -272,15 +296,13 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
         const shared = token ? decodeMapShareState(token) : null;
 
         if (shared) {
-          console.log('📦 使用舊版 URL 格式載入地圖');
-          // 應用舊版分享標記
           if (Array.isArray(shared.marks)) {
             shared.marks.forEach((m) => {
               if (m && typeof m.x === 'number' && typeof m.y === 'number' && m.color) {
                 createMark(m.x, m.y, m.color);
               }
             });
-            localStorage.setItem('stronghold-marks', JSON.stringify(shared.marks));
+            localStorage.setItem(STORAGE_KEYS.marks, JSON.stringify(shared.marks));
           }
 
           // 應用舊版分享註解
@@ -289,8 +311,6 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
             setAnnotations(shared.annotations);
           }
         } else {
-          // 沒有分享連結，從 localStorage 載入
-          console.log('💾 從 localStorage 載入地圖');
           loadFromLocalStorage();
         }
       } catch (e) {
@@ -325,7 +345,7 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
     markPoly.style.stroke = hexToRgba(color, 0.94);
     markPoly.setAttribute("class", "hex-mark marked");
     
-    const markLayer = svgRef.current!.querySelector('#mark-layer');
+    const markLayer = layerRefsCache.current['mark-layer'];
     markLayer?.appendChild(markPoly);
     
     state.current.markedCells.set(key, { x, y, color, el: markPoly });
@@ -342,7 +362,7 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
 
   const saveMarks = () => {
     const arr = Array.from(state.current.markedCells.values()).map(v => ({x: v.x, y: v.y, color: v.color}));
-    localStorage.setItem('stronghold-marks', JSON.stringify(arr));
+    localStorage.setItem(STORAGE_KEYS.marks, JSON.stringify(arr));
   };
 
   const handlePointerDown = (e: React.PointerEvent) => {
@@ -408,11 +428,9 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
       
       if (svgRef.current) {
          svgRef.current.classList.add('hex-map', 'panning');
-         
-         const highlightLayer = svgRef.current.querySelector('#highlight-layer');
+         const highlightLayer = layerRefsCache.current['highlight-layer'];
          if (highlightLayer) highlightLayer.innerHTML = '';
-         const hoverLabel = svgRef.current.querySelector('#hover-label') as HTMLElement;
-         if (hoverLabel) hoverLabel.style.display = 'none';
+         if (hoverLabelRef.current) hoverLabelRef.current.style.display = 'none';
       }
     }
   };
@@ -461,8 +479,8 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
       const target = document.elementFromPoint(e.clientX, e.clientY);
       const group = target?.closest('.hex-group') as HTMLElement;
       
-      const highlightLayer = svgRef.current.querySelector('#highlight-layer') as SVGGElement;
-      const hoverLabel = svgRef.current.querySelector('#hover-label') as SVGGElement;
+      const highlightLayer = layerRefsCache.current['highlight-layer'] as SVGGElement;
+      const hoverLabel = hoverLabelRef.current as SVGGElement;
       const labelText = hoverLabel?.querySelector('text');
       const labelBg = hoverLabel?.querySelector('rect');
       
@@ -516,10 +534,9 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
         if (hoverLabel) hoverLabel.style.display = "none";
       }
     } else {
-       const highlightLayer = svgRef.current.querySelector('#highlight-layer');
+       const highlightLayer = layerRefsCache.current['highlight-layer'];
        if (highlightLayer) highlightLayer.innerHTML = '';
-       const hoverLabel = svgRef.current.querySelector('#hover-label') as HTMLElement;
-       if (hoverLabel) hoverLabel.style.display = "none";
+       if (hoverLabelRef.current) hoverLabelRef.current.style.display = "none";
     }
   };
 
@@ -554,8 +571,8 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
             
             if (svgRef.current) {
               const rect = svgRef.current.getBoundingClientRect();
-              const screenX = centerX * s.scale + s.translate.x;
-              const screenY = bottomY * s.scale + s.translate.y;
+              const screenX = centerX * s.scale + s.translate.x + rect.left;
+              const screenY = bottomY * s.scale + s.translate.y + rect.top;
               
               const spacing = Math.max(boxHeight * s.scale * 0.2, annotationSize * s.scale * 0.5, 20);
               
@@ -855,12 +872,16 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
       img.onerror = () => {
           console.error("Failed to load SVG blob as image");
           setIsExporting(false);
+          setShareMessage('✗ 匯出失敗');
+          setTimeout(() => setShareMessage(null), 4000);
           URL.revokeObjectURL(url);
       }
       img.src = url;
     } catch (e) {
       console.error("Export failed", e);
       setIsExporting(false);
+      setShareMessage('✗ 匯出失敗');
+      setTimeout(() => setShareMessage(null), 4000);
     }
   };
 
@@ -879,11 +900,15 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
       };
 
       // 呼叫 Cloudflare Worker API
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 10000);
       const response = await fetch('https://tga-share.nossite.com/map/share', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
+        signal: controller.signal,
       });
+      clearTimeout(timeout);
 
       if (!response.ok) {
         const errorData = await response.json();
