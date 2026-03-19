@@ -1,4 +1,5 @@
 import { Lang, Translation, Character } from './types';
+import heroesJson from './gamedata/heroes.json';
 
 export const translations: Record<Lang, Translation> = {
   [Lang.EN]: {
@@ -466,85 +467,4 @@ export const translations: Record<Lang, Translation> = {
   },
 };
 
-export const charactersData: Character[] = [
-  {
-    id: 'kaneki-ssr',
-    name: 'Ken Kaneki (Awakened)',
-    rarity: 'SSR',
-    category: 'Anteiku',
-    type: 'Rinkaku',
-    description: 'Subject possesses extreme regeneration capabilities and multiple kagune tentacles. High threat level. Analysis indicates mental instability potentially increasing combat efficacy.',
-    stats: { atk: 2500, def: 1200, spd: 180 },
-    skills: [
-      { name: 'Centipede Thrash', type: 'Active', description: 'Deals 300% damage to a single target and inflicts Bleed.' },
-      { name: 'Half-Kakuja', type: 'Passive', description: 'Increases ATK by 20% when HP is below 50%.' },
-      { name: 'Regeneration', type: 'Passive', description: 'Recovers 5% HP at the start of each turn.' }
-    ]
-  },
-  {
-    id: 'touka-sr',
-    name: 'Touka Kirishima',
-    rarity: 'SR',
-    category: 'Anteiku',
-    type: 'Ukaku',
-    description: 'High mobility subject. Specializes in crystallized projectiles. Engagement advised at close range, though subject demonstrates high agility. Stamina depletion observed in prolonged combat.',
-    stats: { atk: 1800, def: 900, spd: 220 },
-    skills: [
-      { name: 'Shard Barrage', type: 'Active', description: 'Deals AoE damage to front row enemies.' },
-      { name: 'Evasion Instinct', type: 'Passive', description: '25% chance to dodge incoming attacks.' }
-    ]
-  },
-  {
-    id: 'arima-ssr',
-    name: 'Kishou Arima',
-    rarity: 'SSR',
-    category: 'CCG',
-    type: 'Quinque',
-    description: 'Special Class Investigator. Wields IXA. Combat capability exceeds all known ghoul ratings. The "White Reaper" of the CCG.',
-    stats: { atk: 2800, def: 1500, spd: 200 },
-    skills: [
-      { name: 'IXA: Shield Mode', type: 'Active', description: 'Nullifies the next 3 attacks received.' },
-      { name: 'Narukami Blast', type: 'Active', description: 'Deals massive electrical damage ignoring 50% DEF.' },
-      { name: 'CCG Reaper', type: 'Passive', description: 'Crit Rate +30% against Ghoul type enemies.' }
-    ]
-  },
-  {
-    id: 'jason-sr',
-    name: 'Yamori (Jason)',
-    rarity: 'SR',
-    category: 'Aogiri',
-    type: 'Rinkaku',
-    description: 'Sadistic tendencies. Physical strength increases as injury severity rises. Founder of the White Suits.',
-    stats: { atk: 2100, def: 1800, spd: 110 },
-    skills: [
-      { name: 'Torture Logic', type: 'Active', description: 'Stuns target for 1 turn. Increases own ATK.' },
-      { name: 'Half-Kakuja (Incomplete)', type: 'Passive', description: 'Boosts DEF by 15% each turn.' }
-    ]
-  },
-  {
-    id: 'amon-r',
-    name: 'Koutarou Amon',
-    rarity: 'R',
-    category: 'CCG',
-    type: 'Quinque',
-    description: 'First Class Investigator. High durability. Uses heavy quinque "Dojima". Possesses strong sense of justice.',
-    stats: { atk: 1200, def: 1400, spd: 130 },
-    skills: [
-      { name: 'Dojima Smash', type: 'Active', description: 'Deals physical damage and lowers enemy DEF.' },
-      { name: 'Justice', type: 'Passive', description: 'Increases damage against Ghoul type enemies.' }
-    ]
-  },
-  {
-    id: 'tsukiyama-sr',
-    name: 'Shuu Tsukiyama',
-    rarity: 'SR',
-    category: 'No Org',
-    type: 'Koukaku',
-    description: 'Subject "Gourmet". Excellent defensive capabilities via spiral kagune. Obsessed with specific prey.',
-    stats: { atk: 1500, def: 2200, spd: 100 },
-    skills: [
-      { name: 'Spiral Guard', type: 'Active', description: 'Taunts all enemies and raises self DEF by 50%.' },
-      { name: 'Refined Taste', type: 'Passive', description: 'Heals self for 10% of damage dealt.' }
-    ]
-  }
-];
+export const charactersData: Character[] = heroesJson as Character[];

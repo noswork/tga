@@ -1,247 +1,366 @@
-
 import React, { useState } from 'react';
-import { Lang, Character, CharacterCategory } from '../types';
+import { createPortal } from 'react-dom';
+import { Lang, Character, ActiveSkill, PassiveSkill, EffectSegment } from '../types';
 import { translations, charactersData } from '../constants';
-import { Shield, Zap, Crosshair, Sword, Activity, Database, X, Star, Lock, Sparkles, Flame, AlertTriangle } from 'lucide-react';
+import { Shield, Sword, Database, X, Flame, Sparkles, Star } from 'lucide-react';
 
 interface CharacterGalleryProps {
   lang: Lang;
+  onSwitchToCells: () => void;
 }
 
-const TypeIcon = ({ type, size = 18 }: { type: Character['type']; size?: number }) => {
-  switch (type) {
-    case 'Ukaku': return <Zap className="text-yellow-600 dark:text-yellow-500" size={size} />;
-    case 'Koukaku': return <Shield className="text-blue-600 dark:text-blue-500" size={size} />;
-    case 'Rinkaku': return <Activity className="text-red-600 dark:text-red-500" size={size} />;
-    case 'Bikaku': return <Sword className="text-green-600 dark:text-green-500" size={size} />;
-    case 'Quinque': return <Crosshair className="text-gray-500 dark:text-gray-300" size={size} />;
-    default: return null;
-  }
+type FilterCategory = 'ALL' | 'No Organization' | 'CCG Higher Rank Investigator' | 'CCG Lower Rank Investigator' | 'Aogiri Tree' | 'Anteiku';
+type RarityFilter = 'ALL' | 'SP' | 'SSR' | 'SR' | 'R';
+type SkillTab = 'active' | 'passive' | 'talent';
+
+const RARITY_COLOR: Record<string, string> = {
+  SP:  'text-pink-400 border-pink-400',
+  SSR: 'text-yellow-400 border-yellow-400',
+  SR:  'text-purple-400 border-purple-400',
+  R:   'text-blue-400 border-blue-400',
 };
 
-export const CharacterGallery: React.FC<CharacterGalleryProps> = ({ lang }) => {
-  const t = translations[lang].characters;
-  const [filter, setFilter] = useState<'ALL' | CharacterCategory>('ALL');
-  const [selectedChar, setSelectedChar] = useState<Character | null>(null);
-  const [activeTab, setActiveTab] = useState<'active' | 'passive'>('active');
 
-  // Temporarily empty data
-  const filteredData: Character[] = [];
+const SUBTYPE_LABEL: Record<string, string> = {
+  passive: '被動',
+  rank:    'Rank',
+  gift:    '潛能升級',
+};
 
-  const activeSkill = selectedChar?.skills.find(s => s.type === 'Active');
-  const passiveSkills = selectedChar?.skills.filter(s => s.type === 'Passive') || [];
+const SUBTYPE_COLOR: Record<string, string> = {
+  passive: 'text-gray-400 border-gray-600',
+  rank:    'text-yellow-400 border-yellow-700',
+  gift:    'text-pink-400 border-pink-700',
+};
 
-  // Render the skill detailed modal
-  if (selectedChar) {
-    return (
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-0 md:p-4 animate-in fade-in zoom-in-95 duration-300">
-        {/* Backdrop */}
-        <div 
-          className="absolute inset-0 bg-black/80 backdrop-blur-sm"
-          onClick={() => setSelectedChar(null)}
-        ></div>
-        
-        {/* Modal Container */}
-        <div className="relative w-full max-w-5xl max-h-[90vh] aspect-video md:aspect-[16/9] md:h-auto h-full flex flex-col shadow-2xl overflow-hidden bg-[#2c2f38]">
-           
-           {/* Top Bar */}
-           <div className="h-10 md:h-12 bg-[#1a1c23] flex items-center justify-between px-4 border-b border-[#3a3d4a] relative z-20 flex-shrink-0">
-              <div className="flex items-center gap-2">
-                <h2 className="text-lg md:text-xl font-serif font-bold text-white tracking-widest">{t.skillDetails}</h2>
-                <div className="text-[10px] font-tech text-gray-500 uppercase tracking-wider hidden md:block">TOKYO GHOUL</div>
-              </div>
-              <button 
-                onClick={() => setSelectedChar(null)}
-                className="text-gray-400 hover:text-red-500 transition-colors"
-              >
-                <X size={24} strokeWidth={3} />
-              </button>
-           </div>
+const LV_LABELS = ['一級', '二級', '三級', '四級', '五級'];
+const TIER_LABELS = ['一級', '二級', '三級'];
 
-           {/* Content Body */}
-           <div className="flex flex-grow relative overflow-hidden">
-              
-              {/* Left Sidebar */}
-              <div className="w-14 md:w-16 bg-[#22252e] flex flex-col relative z-10 border-r border-[#1a1c23] flex-shrink-0">
-                <div className="mt-0">
-                   {/* Active Tab Button */}
-                   <button 
-                     onClick={() => setActiveTab('active')}
-                     className={`w-full h-14 md:h-16 relative text-left transition-all duration-300 group flex items-center justify-center ${
-                       activeTab === 'active' ? 'bg-[#8a0000]' : 'bg-[#1a1c23] hover:bg-[#2a2d36]'
-                     }`}
-                   >
-                      <div className="relative z-10">
-                         <Sword size={20} className={activeTab === 'active' ? 'text-white' : 'text-gray-500'} />
-                      </div>
-                      {activeTab === 'active' && (
-                         <div className="absolute right-0 top-0 h-full w-1 bg-red-500"></div>
-                      )}
-                   </button>
+const ORG_DISPLAY: Record<string, Record<string, string>> = {
+  en: {
+    'ALL':           'ALL',
+    'No Organization':        'No Organization',
+    'CCG Higher Rank Investigator': 'CCG Higher Rank Investigator',
+    'CCG Lower Rank Investigator':  'CCG Lower Rank Investigator',
+    'Aogiri Tree':   'Aogiri Tree',
+    'Anteiku':       'Anteiku',
+  },
+  zh: {
+    'ALL':           '全部',
+    'No Organization':        '無組織',
+    'CCG Higher Rank Investigator': 'CCG 上位搜查官',
+    'CCG Lower Rank Investigator':  'CCG 下位搜查官',
+    'Aogiri Tree':   '青桐樹',
+    'Anteiku':       '安定區',
+  },
+};
 
-                   {/* Passive Tab Button */}
-                   <button 
-                     onClick={() => setActiveTab('passive')}
-                     className={`w-full h-14 md:h-16 relative text-left transition-all duration-300 group border-t border-[#1a1c23] flex items-center justify-center ${
-                       activeTab === 'passive' ? 'bg-[#8a0000]' : 'bg-[#1a1c23] hover:bg-[#2a2d36]'
-                     }`}
-                   >
-                      <div className="relative z-10">
-                         <Shield size={20} className={activeTab === 'passive' ? 'text-white' : 'text-gray-500'} />
-                      </div>
-                      {activeTab === 'passive' && (
-                         <div className="absolute right-0 top-0 h-full w-1 bg-red-500"></div>
-                      )}
-                   </button>
+function heroImg(id: string, type: 'head' | 'bg' | 'frame', rarity?: string) {
+  if (type === 'head')  return `/assets/heroes/head/${id}_head.png`;
+  if (type === 'bg')    return `/assets/heroes/bg/TYJS_bg_head_${rarity}.png`;
+  if (type === 'frame') return `/assets/heroes/frame/TYJS_frame_head_${rarity}.png`;
+  return '';
+}
+
+const EffectText: React.FC<{ segments: EffectSegment[] }> = ({ segments }) => (
+  <span>
+    {segments.map((seg, i) =>
+      seg.isEffect
+        ? <span key={i} className="text-red-400 font-semibold">{seg.text}</span>
+        : <span key={i}>{seg.text}</span>
+    )}
+  </span>
+);
+
+function collectEffects(segments: EffectSegment[]): { name: string; desc: string }[] {
+  const seen = new Set<string>();
+  const out: { name: string; desc: string }[] = [];
+  for (const seg of segments) {
+    if (seg.isEffect && seg.effectName && seg.effectDesc && !seen.has(seg.effectName)) {
+      seen.add(seg.effectName);
+      out.push({ name: seg.effectName, desc: seg.effectDesc });
+    }
+  }
+  return out;
+}
+
+const EffectDefs: React.FC<{ segments: EffectSegment[] }> = ({ segments }) => {
+  const defs = collectEffects(segments);
+  if (defs.length === 0) return null;
+  return (
+    <div className="mt-2 space-y-1">
+      {defs.map(d => (
+        <p key={d.name} className="text-red-400 text-xs italic leading-snug">
+          ＊{d.name}：{d.desc}
+        </p>
+      ))}
+    </div>
+  );
+};
+
+const HeroCard: React.FC<{ char: Character; onClick: () => void }> = ({ char, onClick }) => {
+  const r = char.rarity as string;
+  return (
+    <button
+      onClick={onClick}
+      className={`relative flex flex-col w-28 md:w-32 appearance-none border-0 p-0 hover:scale-105 transition-transform duration-200 [background:transparent]`}
+    >
+      <div className="relative w-full aspect-square">
+        <img src={heroImg(char.id, 'bg', r)} alt="" className="absolute inset-0 w-full h-full object-fill" onError={e => (e.currentTarget.style.display='none')} />
+        <img src={heroImg(char.id, 'head')} alt={char.name} className="absolute inset-[3%] w-[94%] h-[94%] object-contain translate-x-[-3%]" onError={e => (e.currentTarget.style.display='none')} />
+        <img src={heroImg(char.id, 'frame', r)} alt="" className="absolute inset-0 w-full h-full object-fill pointer-events-none" onError={e => (e.currentTarget.style.display='none')} />
+        <div className={`absolute top-1 left-1 text-[8px] font-bold border px-1 py-0.5 rounded bg-black/60 ${RARITY_COLOR[r]}`}>{r}</div>
+      </div>
+      <div className="w-full px-0.5 pt-0.5 pb-1">
+        {char.title && <p className="text-[9px] leading-tight truncate text-center text-gray-500 dark:text-gray-400">{char.title}</p>}
+        <p className="text-[11px] leading-tight truncate text-center font-semibold text-gray-800 dark:text-white">{char.name}</p>
+      </div>
+    </button>
+  );
+};
+
+const CharModal: React.FC<{ char: Character; lang: Lang; onClose: () => void }> = ({ char, lang, onClose }) => {
+  const [activeTab, setActiveTab] = useState<SkillTab>('active');
+  const [activeLv, setActiveLv] = useState<Record<number, number>>({});
+  const r = char.rarity as string;
+
+  return createPortal(
+    <>
+      {/* backdrop covers full screen */}
+      <div
+        className="fixed inset-0 z-40"
+        style={{ background: 'rgba(0,0,0,0.75)', backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }}
+        onClick={onClose}
+      />
+      {/* navbar blur overlay */}
+      <div
+        className="fixed inset-x-0 top-0 z-50 pointer-events-none"
+        style={{ height: '96px', backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }}
+      />
+      {/* modal panel */}
+      <div
+        className="fixed inset-x-0 bottom-0 z-50 flex items-end justify-center md:items-center md:px-4"
+        style={{ top: '96px' }}
+      >
+        <div
+          className="relative w-full max-w-2xl flex flex-col shadow-2xl bg-white dark:bg-[#1a1c23] rounded-t-xl md:rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden md:mb-4"
+          style={{ maxHeight: 'calc(100vh - 96px - 16px)' }}
+        >
+          {/* Header */}
+          <div className="flex-shrink-0 bg-gray-50 dark:bg-[#111318] border-b border-gray-200 dark:border-gray-700">
+            <div className="flex items-center justify-between px-4 py-3 gap-3">
+              <div className="flex items-center gap-3 min-w-0">
+                <div className="relative w-12 h-12 flex-shrink-0 rounded-lg overflow-hidden">
+                  <img src={heroImg(char.id, 'bg', r)} alt="" className="absolute inset-0 w-full h-full object-cover" onError={e => (e.currentTarget.style.display='none')} />
+                  <img src={heroImg(char.id, 'head')} alt="" className="absolute inset-0 w-full h-full object-cover" onError={e => (e.currentTarget.style.display='none')} />
+                  <img src={heroImg(char.id, 'frame', r)} alt="" className="absolute inset-0 w-full h-full object-contain pointer-events-none" onError={e => (e.currentTarget.style.display='none')} />
+                </div>
+                <div className="min-w-0">
+                  {char.title && <p className="text-gray-600 dark:text-gray-400 text-xs leading-tight">【{char.title}】</p>}
+                  <h2 className="text-gray-900 dark:text-white font-bold text-lg leading-tight truncate">{char.name}</h2>
+                  <div className="flex items-center gap-2 mt-0.5 flex-wrap">
+                    <span className={`text-xs font-bold border px-1.5 rounded ${RARITY_COLOR[r]}`}>{r}</span>
+                    <span className="text-gray-500 text-xs">#{char.id}</span>
+                    <span className="text-gray-600 dark:text-gray-400 text-xs">{ORG_DISPLAY[lang]?.[char.organization] ?? char.organization}</span>
+                  </div>
                 </div>
               </div>
+              <button onClick={onClose} className="flex-shrink-0 text-gray-400 hover:text-red-500 transition-colors p-2 rounded hover:bg-white/5">
+                <X size={22} strokeWidth={2.5} />
+              </button>
+            </div>
 
-              {/* Main Content Area */}
-              <div className="flex-grow bg-[#e5e7eb] dark:bg-[#e5e7eb] relative overflow-y-auto p-2 md:p-4">
-                {/* Grid Background */}
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#d1d5db_1px,transparent_1px),linear-gradient(to_bottom,#d1d5db_1px,transparent_1px)] bg-[size:20px_20px] opacity-40 pointer-events-none"></div>
-                
-                <div className="relative z-10 h-full flex flex-col">
-                   
-                   {/* ACTIVE SKILL VIEW */}
-                   {activeTab === 'active' && activeSkill && (
-                     <div className="h-full flex flex-col justify-center gap-2 md:gap-4 animate-in fade-in slide-in-from-right-4 duration-300">
-                        
-                        {/* Evolution Cards */}
-                        <div className="flex-grow-0 flex items-center justify-center">
-                           <div className="flex items-center gap-2 overflow-x-auto pb-2 w-full justify-center">
-                              {[1, 2, 3].map((star) => (
-                                <React.Fragment key={star}>
-                                  {/* Card */}
-                                  <div className="flex flex-col items-center gap-1 min-w-[80px]">
-                                     <div className={`relative w-28 h-40 rounded-md overflow-hidden border-2 shadow-xl transition-transform duration-500 hover:scale-105 flex-shrink-0 ${
-                                       star === 3 ? 'border-purple-500 shadow-purple-500/30' : 
-                                       star === 2 ? 'border-yellow-500 shadow-yellow-500/30' : 'border-gray-400'
-                                     }`}>
-                                        <div className="absolute inset-0 bg-gray-800 flex items-center justify-center overflow-hidden">
-                                            <div className={`w-full h-full opacity-80 bg-gradient-to-b ${
-                                              star === 3 ? 'from-purple-900 to-black' : 
-                                              star === 2 ? 'from-yellow-900 to-black' : 'from-gray-700 to-black'
-                                            }`}></div>
-                                            <TypeIcon type={selectedChar.type} size={32} />
-                                        </div>
-                                        
-                                        {/* Star Badge */}
-                                        <div className="absolute bottom-1 left-1/2 -translate-x-1/2 flex gap-0.5">
-                                           {[...Array(star)].map((_, i) => (
-                                             <Star key={i} size={8} className="fill-yellow-400 text-yellow-400" />
-                                           ))}
-                                        </div>
-                                        
-                                        {/* Type Badge */}
-                                        <div className="absolute top-1 right-1 bg-red-600 rounded-full p-0.5">
-                                           <Sword size={10} className="text-white" />
-                                        </div>
-                                     </div>
-                                  </div>
-                                </React.Fragment>
-                              ))}
-                           </div>
+            {/* Stats */}
+            <div className="flex divide-x divide-gray-200 dark:divide-gray-700 border-t border-gray-200 dark:border-gray-700">
+              <div className="flex-1 flex flex-col items-center py-2">
+                <span className="text-[10px] text-green-400 font-tech tracking-wider">HP</span>
+                <span className="text-gray-900 dark:text-white font-bold text-sm">{char.stats.hp.toLocaleString()}</span>
+              </div>
+              <div className="flex-1 flex flex-col items-center py-2">
+                <span className="text-[10px] text-red-400 font-tech tracking-wider">ATK</span>
+                <span className="text-gray-900 dark:text-white font-bold text-sm">{char.stats.atk.toLocaleString()}</span>
+              </div>
+              <div className="flex-1 flex flex-col items-center py-2">
+                <span className="text-[10px] text-blue-400 font-tech tracking-wider">DEF</span>
+                <span className="text-gray-900 dark:text-white font-bold text-sm">{char.stats.def.toLocaleString()}</span>
+              </div>
+            </div>
+
+            {/* Tabs */}
+            <div className="flex border-t border-gray-200 dark:border-gray-700">
+              {(['active', 'passive', 'talent'] as SkillTab[]).map(tab => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`flex-1 py-2.5 text-sm font-tech font-bold tracking-wider flex items-center justify-center gap-1.5 transition-colors ${activeTab === tab ? 'bg-[#8a0000] text-white' : 'text-gray-500 dark:text-gray-500 hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5'}`}
+                >
+                  {tab === 'active' && <><Sword size={13} /> 主動</>}
+                  {tab === 'passive' && <><Shield size={13} /> 被動</>}
+                  {tab === 'talent' && <><Star size={13} /> 天賦</>}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Scrollable content */}
+          <div className="flex-grow overflow-y-auto p-4 space-y-3">
+
+            {activeTab === 'active' && (
+              char.activeSkills.length === 0
+                ? <p className="text-gray-500 text-sm text-center py-8">無主動技能</p>
+                : (char.activeSkills as ActiveSkill[]).map(skill => {
+                    const curLv = activeLv[skill.skillNum] ?? skill.levels.length - 1;
+                    const curLevel = skill.levels[curLv];
+                    return (
+                      <div key={skill.skillNum} className="bg-gray-100 dark:bg-[#22252e] border border-gray-200 dark:border-gray-700 rounded p-4">
+                        <div className="flex items-center justify-between mb-3 gap-2">
+                          <div className="flex items-center gap-2">
+                            <Sword size={15} className="text-red-500 flex-shrink-0" />
+                            <span className="text-gray-900 dark:text-white font-bold text-sm">主動技能 #{skill.skillNum}</span>
+                          </div>
+                          <div className="flex gap-1 flex-shrink-0">
+                            {skill.levels.map((_, idx) => (
+                              <button
+                                key={idx}
+                                onClick={() => setActiveLv(prev => ({ ...prev, [skill.skillNum]: idx }))}
+                                className={`px-2.5 py-1 rounded text-xs font-bold transition-colors ${curLv === idx ? 'bg-red-700 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-gray-600'}`}
+                              >
+                                {LV_LABELS[idx] ?? `Lv${idx + 1}`}
+                              </button>
+                            ))}
+                          </div>
                         </div>
+                        <p className="text-gray-700 dark:text-gray-200 text-sm leading-relaxed">
+                          <EffectText segments={curLevel.effects} />
+                        </p>
+                        <EffectDefs segments={curLevel.effects} />
+                      </div>
+                    );
+                  })
+            )}
 
-                        {/* Description Box */}
-                        <div className="bg-[#18181b] border border-gray-700 p-3 md:p-4 relative rounded-sm shadow-2xl mx-auto max-w-lg w-full">
-                           <div className="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-red-600"></div>
-                           <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-red-600"></div>
-                           
-                           <div className="text-center">
-                              <h4 className="text-white font-bold text-sm md:text-base mb-1">{activeSkill.name}</h4>
-                              <p className="text-gray-300 font-tech text-xs md:text-sm leading-relaxed">
-                                 {activeSkill.description.split(' ').map((word, i) => {
-                                   if (word.includes('%') || word.length > 8) {
-                                     return <span key={i} className="text-yellow-500 font-bold mx-1">{word}</span>
-                                   }
-                                   return <span key={i} className="mx-1">{word}</span>
-                                 })}
-                              </p>
-                              <div className="mt-2 text-[10px] text-gray-500 font-tech border-t border-gray-800 pt-1">
-                                 *Max Dmg 250% at 3 <Star size={8} className="inline" />
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                   )}
+            {activeTab === 'passive' && (
+              char.passiveSkills.length === 0
+                ? <p className="text-gray-500 text-sm text-center py-8">無被動技能</p>
+                : (char.passiveSkills as PassiveSkill[]).map((skill, idx) => (
+                    <div key={idx} className="bg-gray-100 dark:bg-[#22252e] border border-gray-200 dark:border-gray-700 rounded p-4">
+                      <div className="flex items-center gap-2 mb-2 flex-wrap">
+                        {idx % 2 === 0
+                          ? <Flame size={15} className="text-orange-400 flex-shrink-0" />
+                          : <Sparkles size={15} className="text-purple-400 flex-shrink-0" />}
+                        <span className="text-gray-900 dark:text-white font-bold text-sm">{skill.name}</span>
+                        <span className={`ml-auto text-xs border px-1.5 py-0.5 rounded flex-shrink-0 ${SUBTYPE_COLOR[skill.subtype]}`}>
+                          {SUBTYPE_LABEL[skill.subtype]}
+                        </span>
+                      </div>
+                      <p className="text-gray-700 dark:text-gray-200 text-sm leading-relaxed">
+                        <EffectText segments={skill.effects} />
+                      </p>
+                      <EffectDefs segments={skill.effects} />
+                    </div>
+                  ))
+            )}
 
-                   {/* PASSIVE SKILL VIEW */}
-                   {activeTab === 'passive' && (
-                     <div className="flex flex-col gap-2 h-full overflow-y-auto pr-1 animate-in fade-in slide-in-from-bottom-4 duration-300">
-                        {passiveSkills.map((skill, idx) => (
-                          <div key={idx} className="bg-[#1f2229] border border-gray-700 rounded-lg overflow-hidden shadow-lg shrink-0">
-                             <div className="p-2 md:p-3 flex items-center gap-3">
-                                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-red-900 to-black border-2 border-red-700 flex items-center justify-center shrink-0">
-                                   {idx % 2 === 0 ? <Flame size={18} className="text-white" /> : <Sparkles size={18} className="text-white" />}
-                                </div>
-                                <div className="flex-grow">
-                                   <div className="flex justify-between items-center mb-0.5">
-                                      <h4 className="text-white font-bold text-sm">{skill.name}</h4>
-                                      <span className="text-gray-400 text-[9px] font-tech border border-gray-600 px-1 rounded">{t.unlocked}</span>
-                                   </div>
-                                   <div className="h-px w-full bg-gradient-to-r from-red-800/50 to-transparent mb-1"></div>
-                                   <p className="text-gray-300 text-[10px] md:text-xs leading-snug font-sans">
-                                      {skill.description}
-                                   </p>
-                                </div>
-                             </div>
+            {activeTab === 'talent' && (
+              char.tiers.length === 0
+                ? <p className="text-gray-500 text-sm text-center py-8">無天賦資料</p>
+                : char.tiers.map(tier => (
+                    <div key={tier.tier} className="bg-gray-100 dark:bg-[#22252e] border border-gray-200 dark:border-gray-700 rounded overflow-hidden">
+                      <div className="bg-gray-200 dark:bg-[#111318] px-4 py-2 border-b border-gray-300 dark:border-gray-700">
+                        <span className="text-yellow-400 font-bold text-sm tracking-wider">
+                          {TIER_LABELS[tier.tier - 1] ?? `Tier ${tier.tier}`}
+                        </span>
+                      </div>
+                      <div className="p-3 space-y-2">
+                        {tier.effects.map((effect, idx) => (
+                          <div key={idx} className="flex gap-3 items-start">
+                            <span className="text-gray-500 text-xs font-tech mt-0.5 flex-shrink-0">#{idx + 1}</span>
+                            <p className="text-gray-700 dark:text-gray-200 text-sm leading-relaxed">{effect.description}</p>
                           </div>
                         ))}
-                     </div>
-                   )}
-                </div>
-              </div>
-           </div>
+                      </div>
+                    </div>
+                  ))
+            )}
+          </div>
         </div>
       </div>
-    );
-  }
+    </>,
+    document.body
+  );
+};
 
-  const filters: (CharacterCategory | 'ALL')[] = ['ALL', 'CCG', 'Anteiku', 'Aogiri', 'No Org'];
+export const CharacterGallery: React.FC<CharacterGalleryProps> = ({ lang, onSwitchToCells }) => {
+  const t = translations[lang].characters;
+  const [orgFilter, setOrgFilter] = useState<FilterCategory>('ALL');
+  const [rarityFilter, setRarityFilter] = useState<RarityFilter>('ALL');
+  const [selectedChar, setSelectedChar] = useState<Character | null>(null);
+
+  const orgFilters: FilterCategory[] = ['ALL', 'No Organization', 'CCG Higher Rank Investigator', 'CCG Lower Rank Investigator', 'Aogiri Tree', 'Anteiku'];
+  const rarityFilters: RarityFilter[] = ['ALL', 'SP', 'SSR', 'SR', 'R'];
+
+  const filteredData = charactersData.filter((c: Character) => {
+    const orgMatch = orgFilter === 'ALL' || c.organization === orgFilter;
+    const rarityMatch = rarityFilter === 'ALL' || c.rarity === rarityFilter;
+    return orgMatch && rarityMatch;
+  });
 
   return (
-    <div className="w-full max-w-7xl mx-auto animate-in fade-in duration-700">
-      {/* Header Section */}
-      <div className="mb-12 flex flex-col md:flex-row justify-between items-end gap-6 border-b border-gray-300 dark:border-ghoul-red/30 pb-6">
-        <div>
-          <h2 className="text-4xl font-serif font-bold text-black dark:text-white tracking-widest mb-2 flex items-center gap-3">
-             <Database className="text-ghoul-red" /> {t.title}
-          </h2>
-          <div className="text-xs font-tech text-gray-500 tracking-[0.3em]">{t.ccgDatabase}</div>
-        </div>
-        
-        <div className="flex flex-wrap gap-2">
-          {filters.map((type) => (
-            <button
-              key={type}
-              onClick={() => setFilter(type)}
-              className={`px-4 py-2 text-xs font-tech font-bold border uppercase tracking-wider transition-all clip-button ${
-                filter === type 
-                  ? 'bg-ghoul-red border-ghoul-red text-white shadow-lg shadow-ghoul-red/20' 
-                  : 'bg-transparent text-gray-500 border-gray-300 dark:border-gray-800 hover:border-gray-500'
-              }`}
-            >
-              {type}
-            </button>
-          ))}
-        </div>
-      </div>
+    <>
+      {selectedChar && <CharModal char={selectedChar} lang={lang} onClose={() => setSelectedChar(null)} />}
 
-      {/* Empty State */}
-      <div className="flex flex-col items-center justify-center min-h-[400px] border-2 border-dashed border-gray-300 dark:border-gray-800 rounded-lg bg-gray-50/50 dark:bg-black/20">
-        <div className="relative">
-          <Database size={64} className="text-gray-300 dark:text-gray-700 mb-6" />
-          <AlertTriangle size={24} className="absolute -bottom-2 -right-2 text-ghoul-red animate-pulse" />
+      <div className="w-full max-w-7xl mx-auto animate-in fade-in duration-700">
+        {/* Header */}
+        <div className="mb-6 flex flex-col md:flex-row justify-between items-end gap-4 border-b border-gray-300 dark:border-ghoul-red/30 pb-6">
+          <div>
+            <h2 className="text-4xl font-serif font-bold text-black dark:text-white tracking-widest mb-2 flex items-center gap-3">
+              <Database className="text-ghoul-red" /> {t.title}
+            </h2>
+            <div className="text-xs font-tech text-gray-500 tracking-[0.3em]">{t.ccgDatabase}</div>
+            <div className="text-xs text-gray-400 mt-1">Data credit: <a href="https://twitter.com/kevinchatmajo1" target="_blank" rel="noopener noreferrer" className="text-ghoul-red hover:underline">@kevinchatmajo1</a></div>
+          </div>
+          <div className="flex items-center gap-3">
+            <div className="text-sm font-tech text-gray-400">{filteredData.length} / {charactersData.length} {lang === 'zh' ? '角色' : 'SUBJECTS'}</div>
+            <button onClick={onSwitchToCells} className="px-3 py-1.5 text-xs font-tech font-bold border border-gray-600 text-gray-400 hover:border-gray-300 hover:text-white transition-all rounded-sm uppercase tracking-wider">
+              {lang === 'zh' ? 'RC 細胞 →' : 'RC CELLS →'}
+            </button>
+          </div>
         </div>
-        <p className="text-2xl font-tech font-bold text-gray-400 dark:text-gray-600 tracking-[0.5em] mb-2">{t.offline}</p>
-        <div className="flex items-center gap-2">
-          <div className="w-2 h-2 bg-ghoul-red rounded-full animate-pulse"></div>
-          <p className="text-xs font-tech text-ghoul-red tracking-widest">{t.terminated}</p>
+
+        {/* Filters */}
+        <div className="mb-5 space-y-2">
+          <div className="flex flex-wrap gap-2">
+            {orgFilters.map((f: FilterCategory) => (
+              <button key={f} onClick={() => setOrgFilter(f)}
+                className={`px-4 py-1.5 text-xs font-tech font-bold border uppercase tracking-wider transition-all rounded-sm ${orgFilter === f ? 'bg-ghoul-red border-ghoul-red text-white' : 'bg-transparent text-gray-500 border-gray-700 hover:border-gray-400 hover:text-gray-300'}`}>
+                {ORG_DISPLAY[lang]?.[f] ?? f}
+              </button>
+            ))}
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {rarityFilters.map((r: RarityFilter) => (
+              <button key={r} onClick={() => setRarityFilter(r)}
+                className={`px-4 py-1.5 text-xs font-tech font-bold border uppercase tracking-wider transition-all rounded-sm ${rarityFilter === r ? (r === 'ALL' ? 'bg-ghoul-red border-ghoul-red text-white' : `${RARITY_COLOR[r]} bg-black/40`) : 'bg-transparent text-gray-500 border-gray-700 hover:border-gray-400 hover:text-gray-300'}`}>
+                {r}
+              </button>
+            ))}
+          </div>
         </div>
-        <p className="mt-4 text-gray-400 font-serif italic opacity-60">{t.noData}</p>
+
+        {/* Grid */}
+        {filteredData.length === 0 ? (
+          <div className="flex flex-col items-center justify-center min-h-[300px] border-2 border-dashed border-gray-700 rounded-lg">
+            <Database size={48} className="text-gray-700 mb-4" />
+            <p className="text-gray-500 font-tech tracking-widest text-sm">NO SUBJECTS FOUND</p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(112px,1fr))] gap-4 px-2">
+            {filteredData.map((char: Character) => (
+              <HeroCard key={char.id} char={char} onClick={() => setSelectedChar(char)} />
+            ))}
+          </div>
+        )}
       </div>
-    </div>
+    </>
   );
 };

@@ -1,0 +1,2660 @@
+[
+  {
+    "id": "Equip_Special_1076_Atk",
+    "imgFile": "Equip_Special_1076_Atk.png",
+    "name": "強襲細胞【紅焰孤翼】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【紅焰孤翼】",
+    "uniqueSkillSegments": [
+      {
+        "text": "我方安定區角色基本能力值增加20%，我方回合開始時使敵方生命值最低的角色獲得1回合",
+        "isEffect": false
+      },
+      {
+        "text": "標記",
+        "isEffect": true
+      },
+      {
+        "text": "效果，自己對帶有標記的目標造成傷害增加30%，並且必定暴擊",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "標記": "死亡時使敵方全體技能升級"
+    }
+  },
+  {
+    "id": "Equip_Special_1134_Atk",
+    "imgFile": "Equip_Special_1134_Atk.png",
+    "name": "強襲細胞【往日】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【往日】",
+    "uniqueSkillSegments": [
+      {
+        "text": "戰鬥開始時，使我方全體免疫所有Weak效果，並使最大生命值增加16%，使我方無組織角色造成傷害時吸血率增加至1.5倍。當自己獲得入侵時，同時獲得2回合",
+        "isEffect": false
+      },
+      {
+        "text": "不羈之怒",
+        "isEffect": true
+      }
+    ],
+    "effectDefs": {
+      "不羈之怒": "使自己解除並免疫所有減益效果，自己造成傷害時，使我方全體解除1個減益效果，並回復各自已損失生命值20%的生命，該回復不受回復率影響"
+    }
+  },
+  {
+    "id": "Equip_Special_1074_Hp",
+    "imgFile": "Equip_Special_1074_Hp.png",
+    "name": "再生細胞【新proto（暴走）】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【新proto（暴走）】",
+    "uniqueSkillSegments": [
+      {
+        "text": "我方回合開始時使我方攻擊力最高的角色在1回合內獲得",
+        "isEffect": false
+      },
+      {
+        "text": "協助",
+        "isEffect": true
+      },
+      {
+        "text": "效果，帶有協助效果的角色釋放主動技能攻擊時，解除",
+        "isEffect": false
+      },
+      {
+        "text": "協助",
+        "isEffect": true
+      },
+      {
+        "text": "效果，並額外造成施加者基礎攻擊力210%的傷害",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "協助": "解除時，使我方全體基本能力值增加6%，最多增加至12%"
+    }
+  },
+  {
+    "id": "Equip_Special_1133_Atk",
+    "imgFile": "Equip_Special_1133_Atk.png",
+    "name": "強襲細胞【體育祭】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【體育祭】",
+    "uniqueSkillSegments": [
+      {
+        "text": "戰鬥開始時，使自己獲得3個",
+        "isEffect": false
+      },
+      {
+        "text": "熱血",
+        "isEffect": true
+      },
+      {
+        "text": "，我方回合結束時，如果本回合使用的主動技能都為全體技能，使敵方全體受到全體技能傷害增加10%，限疊加2次，同時自己立即釋放1級主動技能",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "熱血": "暴擊防禦增加5%"
+    }
+  },
+  {
+    "id": "Equip_Special_1016_Def",
+    "imgFile": "Equip_Special_1016_Def.png",
+    "name": "防衛細胞【不殺之梟】",
+    "rarity": 6,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【不殺之梟】",
+    "uniqueSkillSegments": [
+      {
+        "text": "在據點爭奪和無盡試煉中生效，戰鬥開始時，賦予自己",
+        "isEffect": false
+      },
+      {
+        "text": "安定區守護",
+        "isEffect": true
+      },
+      {
+        "text": "效果，當自己受到傷害時，使我方全體安定區角色基本能力值增加3%，限疊加4層，當自己死亡時，使我方全體安定區角色技能等級上升至3級，並解除所有減益和Weak效果",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "安定區守護": "將所有攻擊引導給自己，我方安定區角色受到傷害減少15%"
+    }
+  },
+  {
+    "id": "Equip_Special_1077_Atk",
+    "imgFile": "Equip_Special_1077_Atk.png",
+    "name": "強襲細胞【MM氏】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【MM氏】",
+    "uniqueSkillSegments": [
+      {
+        "text": "無盡試煉中生效，使我方全體免疫致死效果，並使我方全體基本能力值增加20%，生命相關能力增加10%。我方回合開始時，使除自己之外的我方角色1回合內獲得各自已損失生命值30%的護盾",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1098_Atk",
+    "imgFile": "Equip_Special_1098_Atk.png",
+    "name": "強襲細胞【七夕】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【七夕】",
+    "uniqueSkillSegments": [
+      {
+        "text": "【援助也生效】當自己使用主動技能攻擊時，如果自己當前生命值低於60%，使自己1回合內所有能力值增加4%，如果本次攻擊的敵方目標存在生命值低於40%的目標時，使本次技能傷害增加10%",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1042_Hp",
+    "imgFile": "Equip_Special_1042_Hp.png",
+    "name": "再生細胞【長髮搜查官】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【長髮搜查官】",
+    "uniqueSkillSegments": [
+      {
+        "text": "我方回合開始時，賦予我方全體1回合內基本能力值增加10%的效果，1回合內使自己獲得已損失生命值30%的護盾。戰鬥開始時，使我方攻擊力最高的CCG角色受到單體傷害減少30%",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1013_Hp",
+    "imgFile": "Equip_Special_1013_Hp.png",
+    "name": "再生細胞【以父之志】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【以父之志】",
+    "uniqueSkillSegments": [
+      {
+        "text": "我方CCG角色生命值首次低於70%時，賦予敵方全體1回合內阻斷效果。我方CCG角色生命值首次低於50%時，使其受到的下一次主動技能傷害減少60%，受到的下一次非主動技能傷害減少60%",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "阻斷": "使目標主動技能的額外效果失效，持續1回合"
+    }
+  },
+  {
+    "id": "Equip_Special_1056_Atk",
+    "imgFile": "Equip_Special_1056_Atk.png",
+    "name": "強襲細胞【鮮血盛宴】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【鮮血盛宴】",
+    "uniqueSkillSegments": [
+      {
+        "text": "戰鬥開始時，使自己獲得無組織標籤，並使我方無組織或安定區角色基本能力值增加8%，當鮮血達到上限使用主動技能時，本次技能必定暴擊",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1027_Def",
+    "imgFile": "Equip_Special_1027_Def.png",
+    "name": "防衛細胞【黑犬】",
+    "rarity": 6,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【黑犬】",
+    "uniqueSkillSegments": [
+      {
+        "text": "暴擊率增加50%，使用主動技能後，使敵方全體解除1個增益效果，並依自己當前暴擊率，每有10%暴擊率，使敵方全體1回合內暴擊防禦減少4%，最多減少40%。我方回合開始時，使敵方攻擊力最高的角色Weak值加1",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1025_Hp",
+    "imgFile": "Equip_Special_1025_Hp.png",
+    "name": "再生細胞【面具師】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【面具師】",
+    "uniqueSkillSegments": [
+      {
+        "text": "在PVE戰鬥中，當自己對目標造成致命傷害時，使目標生命值固定爲1，並使目標下一次受到主動技能傷害增加15%，限疊加3次，我方回合開始時，使我方攻擊力最高的角色技能等級上升",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1099_Hp",
+    "imgFile": "Equip_Special_1099_Hp.png",
+    "name": "再生細胞【七夕】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【七夕】",
+    "uniqueSkillSegments": [
+      {
+        "text": "【補位也生效】在首回合敵方使用主動技能前，使敵方全體1回合內所有能力值減少4%，限疊加3次，自己從補位登場後，使我方場上初始生命值最高的角色1回合內生命值不會低於1",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1030_Hp",
+    "imgFile": "Equip_Special_1030_Hp.png",
+    "name": "再生細胞【強力再生】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【強力再生】",
+    "uniqueSkillSegments": [
+      {
+        "text": "使自己基本能力值增加12%，攻擊力增加8%，自己受到攻擊時，獲得",
+        "isEffect": false
+      },
+      {
+        "text": "勇進",
+        "isEffect": true
+      },
+      {
+        "text": "效果，限疊加3次，",
+        "isEffect": false
+      },
+      {
+        "text": "勇進",
+        "isEffect": true
+      },
+      {
+        "text": "達到上限時，對敵方全體造成攻擊力220%的傷害，並解除所有",
+        "isEffect": false
+      },
+      {
+        "text": "勇進",
+        "isEffect": true
+      },
+      {
+        "text": "效果",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "勇進": "非主動技能傷害增加20%"
+    }
+  },
+  {
+    "id": "Equip_Special_1014_Hp",
+    "imgFile": "Equip_Special_1014_Hp.png",
+    "name": "再生細胞【寡言的強者】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【寡言的強者】",
+    "uniqueSkillSegments": [
+      {
+        "text": "【補位也生效】當我方角色受到敵方角色主動技能攻擊後，使該角色下一次主動技能傷害增加6%，限疊加3層",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1079_Atk",
+    "imgFile": "Equip_Special_1079_Atk.png",
+    "name": "強襲細胞【夏日祭】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【夏日祭】",
+    "uniqueSkillSegments": [
+      {
+        "text": "當自己的堅毅效果解除時，使自己攻擊相關能力增加15%，賦予自己4個",
+        "isEffect": false
+      },
+      {
+        "text": "奮戰",
+        "isEffect": true
+      },
+      {
+        "text": "，並使自己攻擊時，對敵方全體額外造成自己攻擊力數值120%的傷害",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "奮戰": "破擊率增加4%，造成傷害增加5%"
+    }
+  },
+  {
+    "id": "Equip_Special_1015_Atk",
+    "imgFile": "Equip_Special_1015_Atk.png",
+    "name": "強襲細胞【新proto】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【新proto】",
+    "uniqueSkillSegments": [
+      {
+        "text": "【補位也生效】戰鬥開始時，使我方全體技屬性和CCG角色獲得",
+        "isEffect": false
+      },
+      {
+        "text": "號令",
+        "isEffect": true
+      },
+      {
+        "text": "，當自己從補位登場後，使敵方全體所有技能等級下降至1級",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "號令": "攻擊時額外造成施加者基礎攻擊力數值180%的傷害"
+    }
+  },
+  {
+    "id": "Equip_Special_1039_Hp",
+    "imgFile": "Equip_Special_1039_Hp.png",
+    "name": "再生細胞【尾巴兄弟】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【尾巴兄弟】",
+    "uniqueSkillSegments": [
+      {
+        "text": "僅PVE生效，使我方青桐樹角色最大生命值增加16%，格擋率增加12%。我方瓶兄使用主動技能後，解除我方全體的致死效果，並對使我方全體回復瓶弟最大生命值10%的生命值。",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1038_Atk",
+    "imgFile": "Equip_Special_1038_Atk.png",
+    "name": "強襲細胞【尾巴兄弟】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【尾巴兄弟】",
+    "uniqueSkillSegments": [
+      {
+        "text": "僅在PVE中生效，使我方青桐樹角色基本能力值增加10%，該效果對自己和我方的瓶弟翻倍。我方青桐樹角色使用主動技能後，自己立即對敵方全體造成攻擊力120%的傷害，如果使用技能的是瓶弟，則本次技能傷害係數增加50%",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1071_Hp",
+    "imgFile": "Equip_Special_1071_Hp.png",
+    "name": "再生細胞【強者】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【強者】",
+    "uniqueSkillSegments": [
+      {
+        "text": "自己使用主動技能攻擊時，使我方全體回復造成傷害量10%的生命值，自己死亡前，對敵方生命值最低的敵人造成攻擊力220%的",
+        "isEffect": false
+      },
+      {
+        "text": "輾壓",
+        "isEffect": true
+      },
+      {
+        "text": "傷害，本次攻擊視為主動技能，如果本次攻擊成功擊殺目標，避免本次死亡，限1次",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "輾壓": "本次技能造成傷害時，使技能係數增加當前破擊率數值的80%"
+    }
+  },
+  {
+    "id": "Equip_Special_1041_Def",
+    "imgFile": "Equip_Special_1041_Def.png",
+    "name": "防衛細胞【戰場紳士】",
+    "rarity": 6,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【戰場紳士】",
+    "uniqueSkillSegments": [
+      {
+        "text": "戰鬥開始時，我方每有一個CCG角色，使自己獲得一個",
+        "isEffect": false
+      },
+      {
+        "text": "充能",
+        "isEffect": true
+      },
+      {
+        "text": "效果。我方CCG角色使用單體主動技能攻擊時，自己對目標造成攻擊力210%的傷害。",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "充能": "基本能力值增加6%"
+    }
+  },
+  {
+    "id": "Equip_Special_1004_Hp",
+    "imgFile": "Equip_Special_1004_Hp.png",
+    "name": "再生細胞【美食家】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【美食家】",
+    "uniqueSkillSegments": [
+      {
+        "text": "使我方無組織角色最大生命值增加6%，對自身效果翻倍。受到傷害時，自己獲得受到傷害量30%的護盾，並使我方全體無組織角色攻擊時造成月山最大生命值10%額外傷害，持續一回合",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1012_Atk",
+    "imgFile": "Equip_Special_1012_Atk.png",
+    "name": "強襲細胞【傑森】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【傑森】",
+    "uniqueSkillSegments": [
+      {
+        "text": "在組織週挑戰中，使用能量卡時，使自己下一次主動技能傷害增加5%，限疊加3層。敵方角色每使用3次主動技能，使自己的攻擊相關能力增加8%， 最多增加至24%",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1075_Def",
+    "imgFile": "Equip_Special_1075_Def.png",
+    "name": "防衛細胞【新proto（暴走）】",
+    "rarity": 6,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【新proto（暴走）】",
+    "uniqueSkillSegments": [
+      {
+        "text": "戰鬥開始後，首回合內自己受到致命傷害時，使自己獲得1回合內生命值固定為1的效果並使敵方全體1回合內主動技能傷害減少40%，自己死亡時賦予我方全體1回合內最大生命值15%的護盾",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1035_Hp",
+    "imgFile": "Equip_Special_1035_Hp.png",
+    "name": "再生細胞【矚目的新星】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【矚目的新星】",
+    "uniqueSkillSegments": [
+      {
+        "text": "在PVE中，我方每有1個CCG角色，使我方全體基本能力值增加5%，並使自己最大生命值額外增加8%，當自己獲得護盾時，對隨機一名敵人造成攻擊力150%的",
+        "isEffect": false
+      },
+      {
+        "text": "穿刺",
+        "isEffect": true
+      },
+      {
+        "text": "傷害，額外造成自己最大生命值數值25%的傷害，每回合限觸發4次",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "穿刺": "無視目標的防禦力"
+    }
+  },
+  {
+    "id": "Equip_Special_1087_Atk",
+    "imgFile": "Equip_Special_1087_Atk.png",
+    "name": "強襲細胞【聖誕節】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【聖誕節】",
+    "uniqueSkillSegments": [
+      {
+        "text": "在無盡試煉戰鬥中，當我方回合開始時，賦予敵方全體1回合內",
+        "isEffect": false
+      },
+      {
+        "text": "麻木",
+        "isEffect": true
+      },
+      {
+        "text": "效果，當敵方角色進入無法行動狀態時，使我方全體技能等級上升，每回合限觸發1次",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "麻木": "受到傷害增加5%，造成傷害減少10%"
+    }
+  },
+  {
+    "id": "Equip_Special_1006_Hp",
+    "imgFile": "Equip_Special_1006_Hp.png",
+    "name": "再生細胞【反叛之翼】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【反叛之翼】",
+    "uniqueSkillSegments": [
+      {
+        "text": "使我方青桐樹角色吸血率增加40%，當自己使用主動技能前，損失自己10%當前生命值，解除敵方全體所有增益、姿勢和護盾效果，並使本次技能額外對目標造成自己攻擊力數值50%的傷害",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1010_Hp",
+    "imgFile": "Equip_Special_1010_Hp.png",
+    "name": "再生細胞【庫因克狂人】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【庫因克狂人】",
+    "uniqueSkillSegments": [
+      {
+        "text": "【補位也生效】在PVE中，使得我方CCG角色基本能力值增加10%，我方CCG角色對青桐樹角色造成傷害時，額外造成目標最大生命值10%的傷害，最多不能超過攻擊者最大生命值的50%",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1005_Atk",
+    "imgFile": "Equip_Special_1005_Atk.png",
+    "name": "強襲細胞【赤焰孤翼】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【赤焰孤翼】",
+    "uniqueSkillSegments": [
+      {
+        "text": "當我方帶有",
+        "isEffect": false
+      },
+      {
+        "text": "魅惑",
+        "isEffect": true
+      },
+      {
+        "text": "效果的角色死亡時，使自己獲得以下效果：解除所有減益效果，最大生命值增加30%並且所有屬性無法被減少至基礎值以下，獲得2回合",
+        "isEffect": false
+      },
+      {
+        "text": "魅惑",
+        "isEffect": true
+      },
+      {
+        "text": "效果，回復自己最大生命值的50%",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "魅惑": "受到傷害減少40%，將所有攻擊引導給自己，使自己受到傷害時獲得本次傷害量25%的護盾並記錄本次獲得的護盾量，自己造成傷害時額外造成本效果累積獲得護盾量50%的傷害"
+    }
+  },
+  {
+    "id": "Equip_Special_1090_Hp",
+    "imgFile": "Equip_Special_1090_Hp.png",
+    "name": "再生細胞【營救】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【營救】",
+    "uniqueSkillSegments": [
+      {
+        "text": "在PVP中，戰鬥開始時，1回合內賦予我方全體",
+        "isEffect": false
+      },
+      {
+        "text": "超援助",
+        "isEffect": true
+      },
+      {
+        "text": "效果，我方安定區或無組織角色使用3次主動技能後，使自己技能等級上升，並使自己下一次主動技能無視目標防禦力和格擋率",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "超援助": "造成傷害增加20%，受到傷害減少8%，獲得時減少1點Weak值"
+    }
+  },
+  {
+    "id": "Equip_Special_1026_Def",
+    "imgFile": "Equip_Special_1026_Def.png",
+    "name": "防衛細胞【魔猿】",
+    "rarity": 6,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【魔猿】",
+    "uniqueSkillSegments": [
+      {
+        "text": "【補位也生效】在勢力挑戰中，使我方安定區角色基本能力值增加30%，我方安定區角色在單個回合內受到的所有傷害不能超過自己最大生命值的40%",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1043_Atk",
+    "imgFile": "Equip_Special_1043_Atk.png",
+    "name": "強襲細胞【復仇使者】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【復仇使者】",
+    "uniqueSkillSegments": [
+      {
+        "text": "在連鎖戰役戰鬥中，戰鬥開始時，使自己獲得3層",
+        "isEffect": false
+      },
+      {
+        "text": "充能",
+        "isEffect": true
+      },
+      {
+        "text": "效果，每層",
+        "isEffect": false
+      },
+      {
+        "text": "充能",
+        "isEffect": true
+      },
+      {
+        "text": "使自己破擊率增加15%，當我方回合開始時，如果自己帶有充能效果，使我方角色技能等級提升",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "充能": "基本能力值增加6%"
+    }
+  },
+  {
+    "id": "Equip_Special_1011_Hp",
+    "imgFile": "Equip_Special_1011_Hp.png",
+    "name": "再生細胞【新翼雛蝶】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【新翼雛蝶】",
+    "uniqueSkillSegments": [
+      {
+        "text": "在PVE戰鬥中，使我方安定區角色生命相關能力增加30%，當自己對我方角色進行治療時，如果目標帶有致死效果，1回合內賦予目標最大生命值8%的護盾",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1104_Hp",
+    "imgFile": "Equip_Special_1104_Hp.png",
+    "name": "再生細胞【復活節】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【復活節】",
+    "uniqueSkillSegments": [
+      {
+        "text": "戰鬥開始時，賦予敵方全體2回合內",
+        "isEffect": false
+      },
+      {
+        "text": "氣絕",
+        "isEffect": true
+      },
+      {
+        "text": "效果，當敵方目標的易爆效果引爆後，賦予目標3回合內破擊率和格擋率減少15%的效果，當帶有",
+        "isEffect": false
+      },
+      {
+        "text": "氣絕",
+        "isEffect": true
+      },
+      {
+        "text": "效果的敵人死亡時，自己技能等級上升",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "氣絕": "回復率減少80%、再生率、吸血率減少40%"
+    }
+  },
+  {
+    "id": "Equip_Special_1101_Atk",
+    "imgFile": "Equip_Special_1101_Atk.png",
+    "name": "強襲細胞【半年慶】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【半年慶】",
+    "uniqueSkillSegments": [
+      {
+        "text": "戰鬥開始時，賦予敵方全體",
+        "isEffect": false
+      },
+      {
+        "text": "超感電",
+        "isEffect": true
+      },
+      {
+        "text": "效果，當自己獲得3個",
+        "isEffect": false
+      },
+      {
+        "text": "放電",
+        "isEffect": true
+      },
+      {
+        "text": "時，立即並對敵方全體造成120%的",
+        "isEffect": false
+      },
+      {
+        "text": "電擊",
+        "isEffect": true
+      },
+      {
+        "text": "傷害",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "超感電": "暴擊抵抗減少10%，受到傷害時，額外受到施加者攻擊力100%的傷害"
+    }
+  },
+  {
+    "id": "Equip_Special_1025_Atk",
+    "imgFile": "Equip_Special_1025_Atk.png",
+    "name": "強襲細胞【面具師】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【面具師】",
+    "uniqueSkillSegments": [
+      {
+        "text": "當我方回合結束時，如果本回合自己使用過主動技能，立即自動使用所有必殺技能量卡，每使用1張必殺技能量卡，使我方全攻擊力最高的角色下一次使用主動技能傷害增加30%，最多增加至150%",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1023_Atk",
+    "imgFile": "Equip_Special_1023_Atk.png",
+    "name": "強襲細胞【赤舌連殺手】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【赤舌連殺手】",
+    "uniqueSkillSegments": [
+      {
+        "text": "【補位也生效】戰鬥開始時，我方每有1個CCG角色，2回合內賦予敵方全體1個",
+        "isEffect": false
+      },
+      {
+        "text": "灼燒",
+        "isEffect": true
+      },
+      {
+        "text": "效果，本",
+        "isEffect": false
+      },
+      {
+        "text": "灼燒",
+        "isEffect": true
+      },
+      {
+        "text": "效果限疊加4層，我方CCG角色對敵方造成傷害時，敵方每有1個",
+        "isEffect": false
+      },
+      {
+        "text": "灼燒",
+        "isEffect": true
+      },
+      {
+        "text": "效果，額外造成攻擊力數值30%的傷害",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "灼燒": "回合開始時，受到賦予者攻擊力數值15%的傷害"
+    }
+  },
+  {
+    "id": "Equip_Special_1020_Def",
+    "imgFile": "Equip_Special_1020_Def.png",
+    "name": "防衛細胞【沉寂的復仇者】",
+    "rarity": 6,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【沉寂的復仇者】",
+    "uniqueSkillSegments": [
+      {
+        "text": "我方回合開始時，使自己和我方上回合受到傷害量超過最大生命值50%的角色獲得受到下次傷害固定為1的效果，並獲得1回合內各自最大生命值15%的護盾",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1046_Hp",
+    "imgFile": "Equip_Special_1046_Hp.png",
+    "name": "再生細胞【監獄長】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【監獄長】",
+    "uniqueSkillSegments": [
+      {
+        "text": "在無盡試煉中，使我方CCG角色基本能力值增加30%，並將主動技能的",
+        "isEffect": false
+      },
+      {
+        "text": "包裹",
+        "isEffect": true
+      },
+      {
+        "text": "效果從減益效果變為固有效果，無法被解除和免疫",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "包裹": "使目標無法行動，帶有效果期間受到的傷害增加12%"
+    }
+  },
+  {
+    "id": "Equip_Special_1123_Def",
+    "imgFile": "Equip_Special_1123_Def.png",
+    "name": "防衛細胞【蠍1/56】",
+    "rarity": 6,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【蠍1/56】",
+    "uniqueSkillSegments": [
+      {
+        "text": "戰鬥開始時，使敵方全體獲得1層",
+        "isEffect": false
+      },
+      {
+        "text": "追獵",
+        "isEffect": true
+      },
+      {
+        "text": "效果，敵方每獲得1個",
+        "isEffect": false
+      },
+      {
+        "text": "追獵",
+        "isEffect": true
+      },
+      {
+        "text": "效果，使我方CCG角色防禦力增加1%，暴擊防禦增加3%，限16次，當敵方角色首次獲得",
+        "isEffect": false
+      },
+      {
+        "text": "收割",
+        "isEffect": true
+      },
+      {
+        "text": "效果時，獲得下一次受到傷害時增加1點Weak值的效果",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "追獵": "回復率降低20%，再生率、吸血率降低12%，最大生命值降低4%"
+    }
+  },
+  {
+    "id": "Equip_Special_1052_Hp",
+    "imgFile": "Equip_Special_1052_Hp.png",
+    "name": "再生細胞【兔子】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【兔子】",
+    "uniqueSkillSegments": [
+      {
+        "text": "【補位也生效】在競技場中，使我方安定區角色首回合受到傷害減少30%，我方安定區角色造成傷害時，賦予目標1回合內最大生命值減少8%的效果，自己造成傷害時減少最大生命值效果翻倍",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1033_Atk",
+    "imgFile": "Equip_Special_1033_Atk.png",
+    "name": "強襲細胞【絕對力量】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【絕對力量】",
+    "uniqueSkillSegments": [
+      {
+        "text": "在連鎖戰役戰鬥中，使自己的基本能力值增加35%，並且免疫致死效果，在自己受到傷害後，使自己下一次主動技能傷害增加30%，限疊加5層",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1031_Def",
+    "imgFile": "Equip_Special_1031_Def.png",
+    "name": "防衛細胞【HelterSkelter】",
+    "rarity": 6,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【HelterSkelter】",
+    "uniqueSkillSegments": [
+      {
+        "text": "在積分挑戰、組織週挑戰和角色活動的BOSS挑戰中，依自己使用的主動技能等級使我方全體獲得以下效果（效果可疊加）：1級：造成傷害增加10%，2級：暴擊率增加10%，3級：獲得力量解放效果",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1060_Atk",
+    "imgFile": "Equip_Special_1060_Atk.png",
+    "name": "強襲細胞【正義雙刃】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【正義雙刃】",
+    "uniqueSkillSegments": [
+      {
+        "text": "【補位也生效】在PVE戰鬥中，使我方CCG角色基本能力值增加12%，自己的暴擊率每3%，使我方其他CCG角色暴擊率增加3%，暴擊傷害增加5%",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1055_Def",
+    "imgFile": "Equip_Special_1055_Def.png",
+    "name": "防衛細胞【成長的少女】",
+    "rarity": 6,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【成長的少女】",
+    "uniqueSkillSegments": [
+      {
+        "text": "使自己免疫阻斷效果，戰鬥開始時，自己立即釋放1級主動技能，並使我方安定區角色首回合受到傷害減少10%",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1037_Hp",
+    "imgFile": "Equip_Special_1037_Hp.png",
+    "name": "再生細胞【戀愛中的人妖】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【戀愛中的人妖】",
+    "uniqueSkillSegments": [
+      {
+        "text": "在PVE戰鬥中，自己使用主動技能時，額外損失自己最大生命值的10%，並賦予我方初始攻擊力最高的角色攻擊相關能力增加10%、下一次主動技能造成傷害增加20%的效果，限疊加3層",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1032_Atk",
+    "imgFile": "Equip_Special_1032_Atk.png",
+    "name": "強襲細胞【新proto】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【新proto】",
+    "uniqueSkillSegments": [
+      {
+        "text": "在蜈蚣金木討伐戰中，使我方全體全體角色（含隊友）最大生命值增加40%。自己受到傷害時，受到傷害量的30%轉化為我方全體的護盾，持續2回合，每回合自己首次使用主動技能時，使目標增加1點Weak值",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1007_Atk",
+    "imgFile": "Equip_Special_1007_Atk.png",
+    "name": "強襲細胞【覺醒】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【覺醒】",
+    "uniqueSkillSegments": [
+      {
+        "text": "在組織週挑戰中，我方回合開始時使自己獲得1個",
+        "isEffect": false
+      },
+      {
+        "text": "狂亂",
+        "isEffect": true
+      },
+      {
+        "text": "效果，自己造成剋制屬性傷害增加60%",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "狂亂": "攻擊相關能力提高3%，限疊加3層"
+    }
+  },
+  {
+    "id": "Equip_Special_1003_Hp",
+    "imgFile": "Equip_Special_1003_Hp.png",
+    "name": "再生細胞【CCG異端份子】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【CCG異端份子】",
+    "uniqueSkillSegments": [
+      {
+        "text": "在勢力挑戰中，使我方CCG角色基本能力值增加30%，當自己造成傷害時，使我方全體回復傷害量40%的生命值",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1050_Atk",
+    "imgFile": "Equip_Special_1050_Atk.png",
+    "name": "強襲細胞【CCG的死神】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【CCG的死神】",
+    "uniqueSkillSegments": [
+      {
+        "text": "使我方CCG角色基本能力值增加12%。當自己造成傷害時，如果自己帶有護盾效果，則對目標額外造成自己攻擊力數值30%的額外傷害。當自己立起盾牌期間，我方其他角色受到傷害的50%由自己承擔",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1017_Def",
+    "imgFile": "Equip_Special_1017_Def.png",
+    "name": "防衛細胞【繃帶下的謎團】",
+    "rarity": 6,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【繃帶下的謎團】",
+    "uniqueSkillSegments": [
+      {
+        "text": "在區域突破中，使我方全體基本能力值增加40%，我方角色持有警戒的閃避效果期間當前生命值不能低於1點，並且暴擊率增加40%，我方角色的警戒效果解除時，回復該角色已損失生命值50%的生命值",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1084_Hp",
+    "imgFile": "Equip_Special_1084_Hp.png",
+    "name": "再生細胞【小說家】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【小說家】",
+    "uniqueSkillSegments": [
+      {
+        "text": "使我方無組織角色和帶有聚焦的角色當前生命值每少20%，防禦力增加5%、格擋率增加3%，自己使用技能後，1回合內賦予我方無組織角色和帶有聚焦效果的角色基本能力值增加6%的效果",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1073_Atk",
+    "imgFile": "Equip_Special_1073_Atk.png",
+    "name": "強襲細胞【笛口貳】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【笛口貳】",
+    "uniqueSkillSegments": [
+      {
+        "text": "【補位也生效】我方角色使用技能攻擊時，如果攻擊者當前生命值低於50%，該技能額外造成目標最大生命值8%的傷害，該傷害不能超過攻擊者攻擊力數值的300%",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1072_Hp",
+    "imgFile": "Equip_Special_1072_Hp.png",
+    "name": "再生細胞【堂島·改】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【堂島·改】",
+    "uniqueSkillSegments": [
+      {
+        "text": "自己使用主動技能攻擊後，使目標造成傷害時，使目標造成的最終傷害量減少20%，最多減少40%，場上最多一個敵人持有該效果",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1080_Atk",
+    "imgFile": "Equip_Special_1080_Atk.png",
+    "name": "強襲細胞【戰鬥服】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【戰鬥服】",
+    "uniqueSkillSegments": [
+      {
+        "text": "【補位也生效】使我方青桐樹角色最大生命值增加20%，防禦相關能力增加15%，我方角色受到持有畏懼效果的敵人攻擊時，使該角色生命相關能力增加5%，每個角色限4次",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1058_Def",
+    "imgFile": "Equip_Special_1058_Def.png",
+    "name": "防衛細胞【逐力之翼】",
+    "rarity": 6,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【逐力之翼】",
+    "uniqueSkillSegments": [
+      {
+        "text": "帶有絕命效果的敵人受到傷害增加40%，當帶有絕命效果的敵人首次生命值低於20%時，使敵方全體2回合內所有能力值減少8%",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1073_Hp",
+    "imgFile": "Equip_Special_1073_Hp.png",
+    "name": "再生細胞【笛口貳】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【笛口貳】",
+    "uniqueSkillSegments": [
+      {
+        "text": "【補位也生效】戰鬥開始時，賦予自己3個",
+        "isEffect": false
+      },
+      {
+        "text": "專注",
+        "isEffect": true
+      },
+      {
+        "text": "效果，當我方CCG角色受到傷害時，消耗一個專注效果，使本次受到傷害減少30%，當我方CCG角色造成傷害時，消耗一個專注效果，使本次造成傷害增加30%",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "專注": "無特殊效果"
+    }
+  },
+  {
+    "id": "Equip_Special_1032_Hp",
+    "imgFile": "Equip_Special_1032_Hp.png",
+    "name": "再生細胞【新proto】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【新proto】",
+    "uniqueSkillSegments": [
+      {
+        "text": "戰鬥開始時，1回合內擺出挑釁敵人的姿勢，並賦予自己2個下一次受到傷害固定為1的效果",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1031_Hp",
+    "imgFile": "Equip_Special_1031_Hp.png",
+    "name": "再生細胞【HelterSkelter】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【HelterSkelter】",
+    "uniqueSkillSegments": [
+      {
+        "text": "使我方力屬性角色釋放主動技能時，依技能等級賦予該角色額外效果，1級時造成傷害增加8%，2級時造成傷害增加10%，3級時造成傷害增加12%",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1001_Hp",
+    "imgFile": "Equip_Special_1001_Hp.png",
+    "name": "再生細胞【暴食狂】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【暴食狂】",
+    "uniqueSkillSegments": [
+      {
+        "text": "PVP中，我方【無組織】角色每回合首次受到主動技能傷害為1",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1081_Def",
+    "imgFile": "Equip_Special_1081_Def.png",
+    "name": "防衛細胞【可靠的夥伴】",
+    "rarity": 6,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【可靠的夥伴】",
+    "uniqueSkillSegments": [
+      {
+        "text": "當自己帶有守望效果或攻擊帶有封鎖效果的敵人時，使自己造成傷害時無視目標防禦並必定暴擊",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1040_Def",
+    "imgFile": "Equip_Special_1040_Def.png",
+    "name": "防衛細胞【佑女之母】",
+    "rarity": 6,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【佑女之母】",
+    "uniqueSkillSegments": [
+      {
+        "text": "【補位也生效】當安定區角色死亡時，賦予場上其他安定區角色所有能力值增加2%、下一次主動技能造成傷害增加15%的效果",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1015_Def",
+    "imgFile": "Equip_Special_1015_Def.png",
+    "name": "防衛細胞【新proto】",
+    "rarity": 6,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【新proto】",
+    "uniqueSkillSegments": [
+      {
+        "text": "【補位也生效】戰鬥開始時，使我方技屬性角色所有能力值增加6%，並使其技能等級提升",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1004_Def",
+    "imgFile": "Equip_Special_1004_Def.png",
+    "name": "防衛細胞【美食家】",
+    "rarity": 6,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【美食家】",
+    "uniqueSkillSegments": [
+      {
+        "text": "當自己獲得護盾時，賦予我方全體無組織角色3回合內基本能力值增加6%的效果，最多增加至30%",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1036_Atk",
+    "imgFile": "Equip_Special_1036_Atk.png",
+    "name": "強襲細胞【愛哭鬼】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【愛哭鬼】",
+    "uniqueSkillSegments": [
+      {
+        "text": "【僅PVP生效】對目標造成傷害時，如果自己不被目標的屬性剋制，使目標技能等級下降",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1027_Atk",
+    "imgFile": "Equip_Special_1027_Atk.png",
+    "name": "強襲細胞【黑犬】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【黑犬】",
+    "uniqueSkillSegments": [
+      {
+        "text": "攻擊帶有Weak效果的敵人時，無視目標防禦，並在攻擊後，使目標下一次受到主動技能傷害增加35%",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1016_Atk",
+    "imgFile": "Equip_Special_1016_Atk.png",
+    "name": "強襲細胞【不殺之梟】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【不殺之梟】",
+    "uniqueSkillSegments": [
+      {
+        "text": "造成傷害時，如果自己帶有燃血效果，使目標1回合內所有能力值減少4%",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1014_Atk",
+    "imgFile": "Equip_Special_1014_Atk.png",
+    "name": "強襲細胞【寡言的強者】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【寡言的強者】",
+    "uniqueSkillSegments": [
+      {
+        "text": "【補位也生效】我方角色使用主動技能並造成傷害時，如果目標帶有所有能力值減少的效果，額外造成傷害量15%的傷害",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1076_Def",
+    "imgFile": "Equip_Special_1076_Def.png",
+    "name": "防衛細胞【紅焰孤翼】",
+    "rarity": 6,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【紅焰孤翼】",
+    "uniqueSkillSegments": [
+      {
+        "text": "對敵方角色造成傷害時，賦予目標2回合內",
+        "isEffect": false
+      },
+      {
+        "text": "致死",
+        "isEffect": true
+      },
+      {
+        "text": "效果",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "致死": "無法觸發所有回復效果"
+    }
+  },
+  {
+    "id": "Equip_Special_1065_Atk",
+    "imgFile": "Equip_Special_1065_Atk.png",
+    "name": "強襲細胞【百足】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【百足】",
+    "uniqueSkillSegments": [
+      {
+        "text": "對目標造成暴擊傷害時，額外對其他敵方角色造成本次技能傷害量10%的傷害",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1042_Def",
+    "imgFile": "Equip_Special_1042_Def.png",
+    "name": "防衛細胞【長髮搜查官】",
+    "rarity": 6,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【長髮搜查官】",
+    "uniqueSkillSegments": [
+      {
+        "text": "我方CCG角色使用技能後，1回合內使我方全體獲得各自最大生命2%的護盾",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1041_Atk",
+    "imgFile": "Equip_Special_1041_Atk.png",
+    "name": "強襲細胞【戰場紳士】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【戰場紳士】",
+    "uniqueSkillSegments": [
+      {
+        "text": "我方角色每有1個充能效果，使我方CCG角色基本能力值增加6%",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1030_Atk",
+    "imgFile": "Equip_Special_1030_Atk.png",
+    "name": "強襲細胞【強力再生】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【強力再生】",
+    "uniqueSkillSegments": [
+      {
+        "text": "對帶有",
+        "isEffect": false
+      },
+      {
+        "text": "血穿",
+        "isEffect": true
+      },
+      {
+        "text": "的敵人造成傷害增加20%，並在戰鬥開始時，賦予敵方全體1回合內",
+        "isEffect": false
+      },
+      {
+        "text": "血穿",
+        "isEffect": true
+      },
+      {
+        "text": "效果",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "血穿": "2回合內受到傷害時，額外受到等同於賦予血穿者攻擊力數值10%的傷害"
+    }
+  },
+  {
+    "id": "Equip_Special_1019_Hp",
+    "imgFile": "Equip_Special_1019_Hp.png",
+    "name": "再生細胞【純白之罩】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【純白之罩】",
+    "uniqueSkillSegments": [
+      {
+        "text": "戰鬥開始時，若安久黑奈【漆黑之罩】在場，則使安久奈白【純白之罩】和安久黑奈【漆黑之罩】首回合受到的傷害固定為1",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1018_Hp",
+    "imgFile": "Equip_Special_1018_Hp.png",
+    "name": "再生細胞【漆黑之罩】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【漆黑之罩】",
+    "uniqueSkillSegments": [
+      {
+        "text": "我方回合開始時，若安久奈白【純白之罩】在場，則安久奈白【純白之罩】和安久黑奈【漆黑之罩】技能均升為3級，且攻擊相關能力增加10%，持續1回合",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1016_Hp",
+    "imgFile": "Equip_Special_1016_Hp.png",
+    "name": "再生細胞【不殺之梟】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【不殺之梟】",
+    "uniqueSkillSegments": [
+      {
+        "text": "每當自己獲得2個蓄能效果，賦予自己1回合內",
+        "isEffect": false
+      },
+      {
+        "text": "燃血",
+        "isEffect": true
+      },
+      {
+        "text": "效果，若已處於燃血效果，回復自己已損失生命值15%的生命值",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "燃血": "造成傷害時額外造成傷害量25%的傷害"
+    }
+  },
+  {
+    "id": "Equip_Special_1013_Def",
+    "imgFile": "Equip_Special_1013_Def.png",
+    "name": "防衛細胞【以父之志】",
+    "rarity": 6,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【以父之志】",
+    "uniqueSkillSegments": [
+      {
+        "text": "戰鬥開始後，使自己1回合內免疫阻斷效果",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1007_Hp",
+    "imgFile": "Equip_Special_1007_Hp.png",
+    "name": "再生細胞【覺醒】",
+    "rarity": 6,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【覺醒】",
+    "uniqueSkillSegments": [
+      {
+        "text": "我方回合開始時，若自身有狂亂效果，賦予自己1回合內每次受到的傷害不能超過自身最大生命的18%的效果",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1003_Def",
+    "imgFile": "Equip_Special_1003_Def.png",
+    "name": "防衛細胞【CCG異端份子】",
+    "rarity": 6,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【CCG異端份子】",
+    "uniqueSkillSegments": [
+      {
+        "text": "戰鬥開始後，使我方首個死亡的CCG角色以10%的最大生命值復活，並使其本回合內生命值不會低於1，下回合自己額外獲得2個",
+        "isEffect": false
+      },
+      {
+        "text": "強化印記",
+        "isEffect": true
+      },
+      {
+        "text": "，限1次",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "強化印記": "基本能力值增加3%"
+    }
+  },
+  {
+    "id": "Equip_Special_1002_Def",
+    "imgFile": "Equip_Special_1002_Def.png",
+    "name": "防衛細胞【鳴神】",
+    "rarity": 6,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【鳴神】",
+    "uniqueSkillSegments": [
+      {
+        "text": "每獲得3層雷電，使自己下次受到傷害固定為1",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Special_1002_Atk",
+    "imgFile": "Equip_Special_1002_Atk.png",
+    "name": "強襲細胞【鳴神】",
+    "rarity": 6,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【鳴神】",
+    "uniqueSkillSegments": [
+      {
+        "text": "戰鬥開始時立刻獲得5層",
+        "isEffect": false
+      },
+      {
+        "text": "雷電",
+        "isEffect": true
+      },
+      {
+        "text": "，每層雷電增加自身6%的最大生命值",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "雷電": "主動技能造成傷害增加7%"
+    }
+  },
+  {
+    "id": "Equip_Hp_T4",
+    "imgFile": "Equip_Hp_T4.png",
+    "name": "再生細胞．知",
+    "rarity": 5,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可在極大程度上提升生命值，且知屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T4",
+    "imgFile": "Equip_Def_T4.png",
+    "name": "防衛細胞．知",
+    "rarity": 5,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可在極大程度上提升防禦力，且知屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T4",
+    "imgFile": "Equip_Atk_T4.png",
+    "name": "強襲細胞．知",
+    "rarity": 5,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可在極大程度上提升攻擊力，且知屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp_T4",
+    "imgFile": "Equip_Hp_T4.png",
+    "name": "再生細胞．知",
+    "rarity": 4,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可大幅提升生命值，且知屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T4",
+    "imgFile": "Equip_Def_T4.png",
+    "name": "防衛細胞．知",
+    "rarity": 4,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可大幅提升防禦力，且知屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T4",
+    "imgFile": "Equip_Atk_T4.png",
+    "name": "強襲細胞．知",
+    "rarity": 4,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可大幅提升攻擊力，且知屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp_T4",
+    "imgFile": "Equip_Hp_T4.png",
+    "name": "再生細胞．知",
+    "rarity": 3,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可提升生命值，且知屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T4",
+    "imgFile": "Equip_Def_T4.png",
+    "name": "防衛細胞．知",
+    "rarity": 3,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可提升防禦力，且知屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T4",
+    "imgFile": "Equip_Atk_T4.png",
+    "name": "強襲細胞．知",
+    "rarity": 3,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可提升攻擊力，且知屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp_T4",
+    "imgFile": "Equip_Hp_T4.png",
+    "name": "再生細胞．知",
+    "rarity": 2,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可提升生命值，且知屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T4",
+    "imgFile": "Equip_Def_T4.png",
+    "name": "防衛細胞．知",
+    "rarity": 2,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可提升防禦力，且知屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T4",
+    "imgFile": "Equip_Atk_T4.png",
+    "name": "強襲細胞．知",
+    "rarity": 2,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可提升攻擊力，且知屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp_T4",
+    "imgFile": "Equip_Hp_T4.png",
+    "name": "再生細胞．知",
+    "rarity": 1,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可小幅提升生命值，且知屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T4",
+    "imgFile": "Equip_Def_T4.png",
+    "name": "防衛細胞．知",
+    "rarity": 1,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可小幅提升防禦力，且知屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T4",
+    "imgFile": "Equip_Atk_T4.png",
+    "name": "強襲細胞．知",
+    "rarity": 1,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可小幅提升攻擊力，且知屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp_T3",
+    "imgFile": "Equip_Hp_T3.png",
+    "name": "再生細胞．心",
+    "rarity": 5,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可在極大程度上提升生命值，且心屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T3",
+    "imgFile": "Equip_Def_T3.png",
+    "name": "防衛細胞．心",
+    "rarity": 5,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可在極大程度上提升防禦力，且心屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T3",
+    "imgFile": "Equip_Atk_T3.png",
+    "name": "強襲細胞．心",
+    "rarity": 5,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可在極大程度上提升攻擊力，且心屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp_T3",
+    "imgFile": "Equip_Hp_T3.png",
+    "name": "再生細胞．心",
+    "rarity": 4,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可大幅提升生命值，且心屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T3",
+    "imgFile": "Equip_Def_T3.png",
+    "name": "防衛細胞．心",
+    "rarity": 4,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可大幅提升防禦力，且心屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T3",
+    "imgFile": "Equip_Atk_T3.png",
+    "name": "強襲細胞．心",
+    "rarity": 4,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可大幅提升攻擊力，且心屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp_T3",
+    "imgFile": "Equip_Hp_T3.png",
+    "name": "再生細胞．心",
+    "rarity": 3,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可提升生命值，且心屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T3",
+    "imgFile": "Equip_Def_T3.png",
+    "name": "防衛細胞．心",
+    "rarity": 3,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可提升防禦力，且心屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T3",
+    "imgFile": "Equip_Atk_T3.png",
+    "name": "強襲細胞．心",
+    "rarity": 3,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可提升攻擊力，且心屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp_T3",
+    "imgFile": "Equip_Hp_T3.png",
+    "name": "再生細胞．心",
+    "rarity": 2,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可提升生命值，且心屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T3",
+    "imgFile": "Equip_Def_T3.png",
+    "name": "防衛細胞．心",
+    "rarity": 2,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可提升防禦力，且心屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T3",
+    "imgFile": "Equip_Atk_T3.png",
+    "name": "強襲細胞．心",
+    "rarity": 2,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可提升攻擊力，且心屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp_T3",
+    "imgFile": "Equip_Hp_T3.png",
+    "name": "再生細胞．心",
+    "rarity": 1,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可小幅提升生命值，且心屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T3",
+    "imgFile": "Equip_Def_T3.png",
+    "name": "防衛細胞．心",
+    "rarity": 1,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可小幅提升防禦力，且心屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T3",
+    "imgFile": "Equip_Atk_T3.png",
+    "name": "強襲細胞．心",
+    "rarity": 1,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可小幅提升攻擊力，且心屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp_T2",
+    "imgFile": "Equip_Hp_T2.png",
+    "name": "再生細胞．速",
+    "rarity": 5,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可在極大程度上提升生命值，且速屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T2",
+    "imgFile": "Equip_Def_T2.png",
+    "name": "防衛細胞．速",
+    "rarity": 5,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可在極大程度上提升防禦力，且速屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T2",
+    "imgFile": "Equip_Atk_T2.png",
+    "name": "強襲細胞．速",
+    "rarity": 5,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可在極大程度上提升攻擊力，且速屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp_T2",
+    "imgFile": "Equip_Hp_T2.png",
+    "name": "再生細胞．速",
+    "rarity": 4,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可大幅提升生命值，且速屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T2",
+    "imgFile": "Equip_Def_T2.png",
+    "name": "防衛細胞．速",
+    "rarity": 4,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可大幅提升防禦力，且速屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T2",
+    "imgFile": "Equip_Atk_T2.png",
+    "name": "強襲細胞．速",
+    "rarity": 4,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可大幅提升攻擊力，且速屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp_T2",
+    "imgFile": "Equip_Hp_T2.png",
+    "name": "再生細胞．速",
+    "rarity": 3,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可提升生命值，且速屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T2",
+    "imgFile": "Equip_Def_T2.png",
+    "name": "防衛細胞．速",
+    "rarity": 3,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可提升防禦力，且速屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T2",
+    "imgFile": "Equip_Atk_T2.png",
+    "name": "強襲細胞．速",
+    "rarity": 3,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可提升攻擊力，且速屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp_T2",
+    "imgFile": "Equip_Hp_T2.png",
+    "name": "再生細胞．速",
+    "rarity": 2,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可提升生命值，且速屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T2",
+    "imgFile": "Equip_Def_T2.png",
+    "name": "防衛細胞．速",
+    "rarity": 2,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可提升防禦力，且速屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T2",
+    "imgFile": "Equip_Atk_T2.png",
+    "name": "強襲細胞．速",
+    "rarity": 2,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可提升攻擊力，且速屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp_T2",
+    "imgFile": "Equip_Hp_T2.png",
+    "name": "再生細胞．速",
+    "rarity": 1,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可小幅提升生命值，且速屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T2",
+    "imgFile": "Equip_Def_T2.png",
+    "name": "防衛細胞．速",
+    "rarity": 1,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可小幅提升防禦力，且速屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T2",
+    "imgFile": "Equip_Atk_T2.png",
+    "name": "強襲細胞．速",
+    "rarity": 1,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可小幅提升攻擊力，且速屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp_T1",
+    "imgFile": "Equip_Hp_T1.png",
+    "name": "再生細胞．技",
+    "rarity": 5,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可在極大程度上提升生命值，且技屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T1",
+    "imgFile": "Equip_Def_T1.png",
+    "name": "防衛細胞．技",
+    "rarity": 5,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可在極大程度上提升防禦力，且技屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T1",
+    "imgFile": "Equip_Atk_T1.png",
+    "name": "強襲細胞．技",
+    "rarity": 5,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可在極大程度上提升攻擊力，且技屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp_T1",
+    "imgFile": "Equip_Hp_T1.png",
+    "name": "再生細胞．技",
+    "rarity": 4,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可大幅提升生命值，且技屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T1",
+    "imgFile": "Equip_Def_T1.png",
+    "name": "防衛細胞．技",
+    "rarity": 4,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可大幅提升防禦力，且技屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T1",
+    "imgFile": "Equip_Atk_T1.png",
+    "name": "強襲細胞．技",
+    "rarity": 4,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可大幅提升攻擊力，且技屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp_T1",
+    "imgFile": "Equip_Hp_T1.png",
+    "name": "再生細胞．技",
+    "rarity": 3,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可提升生命值，且技屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T1",
+    "imgFile": "Equip_Def_T1.png",
+    "name": "防衛細胞．技",
+    "rarity": 3,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可提升防禦力，且技屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T1",
+    "imgFile": "Equip_Atk_T1.png",
+    "name": "強襲細胞．技",
+    "rarity": 3,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可提升攻擊力，且技屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp_T1",
+    "imgFile": "Equip_Hp_T1.png",
+    "name": "再生細胞．技",
+    "rarity": 2,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可提升生命值，且技屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T1",
+    "imgFile": "Equip_Def_T1.png",
+    "name": "防衛細胞．技",
+    "rarity": 2,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可提升防禦力，且技屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T1",
+    "imgFile": "Equip_Atk_T1.png",
+    "name": "強襲細胞．技",
+    "rarity": 2,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可提升攻擊力，且技屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp_T1",
+    "imgFile": "Equip_Hp_T1.png",
+    "name": "再生細胞．技",
+    "rarity": 1,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可小幅提升生命值，且技屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T1",
+    "imgFile": "Equip_Def_T1.png",
+    "name": "防衛細胞．技",
+    "rarity": 1,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可小幅提升防禦力，且技屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T1",
+    "imgFile": "Equip_Atk_T1.png",
+    "name": "強襲細胞．技",
+    "rarity": 1,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可小幅提升攻擊力，且技屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp_T0",
+    "imgFile": "Equip_Hp_T0.png",
+    "name": "再生細胞．力",
+    "rarity": 5,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可在極大程度上提升生命值，且力屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T0",
+    "imgFile": "Equip_Def_T0.png",
+    "name": "防衛細胞．力",
+    "rarity": 5,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可在極大程度上提升防禦力，且力屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T0",
+    "imgFile": "Equip_Atk_T0.png",
+    "name": "強襲細胞．力",
+    "rarity": 5,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可在極大程度上提升攻擊力，且力屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp_T0",
+    "imgFile": "Equip_Hp_T0.png",
+    "name": "再生細胞．力",
+    "rarity": 4,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可大幅提升生命值，且力屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T0",
+    "imgFile": "Equip_Def_T0.png",
+    "name": "防衛細胞．力",
+    "rarity": 4,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可大幅提升防禦力，且力屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T0",
+    "imgFile": "Equip_Atk_T0.png",
+    "name": "強襲細胞．力",
+    "rarity": 4,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可大幅提升攻擊力，且力屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp_T0",
+    "imgFile": "Equip_Hp_T0.png",
+    "name": "再生細胞．力",
+    "rarity": 3,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可提升生命值，且力屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T0",
+    "imgFile": "Equip_Def_T0.png",
+    "name": "防衛細胞．力",
+    "rarity": 3,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可提升防禦力，且力屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T0",
+    "imgFile": "Equip_Atk_T0.png",
+    "name": "強襲細胞．力",
+    "rarity": 3,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可提升攻擊力，且力屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp_T0",
+    "imgFile": "Equip_Hp_T0.png",
+    "name": "再生細胞．力",
+    "rarity": 2,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可提升生命值，且力屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T0",
+    "imgFile": "Equip_Def_T0.png",
+    "name": "防衛細胞．力",
+    "rarity": 2,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可提升防禦力，且力屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T0",
+    "imgFile": "Equip_Atk_T0.png",
+    "name": "強襲細胞．力",
+    "rarity": 2,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可提升攻擊力，且力屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp_T0",
+    "imgFile": "Equip_Hp_T0.png",
+    "name": "再生細胞．力",
+    "rarity": 1,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可小幅提升生命值，且力屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def_T0",
+    "imgFile": "Equip_Def_T0.png",
+    "name": "防衛細胞．力",
+    "rarity": 1,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可小幅提升防禦力，且力屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk_T0",
+    "imgFile": "Equip_Atk_T0.png",
+    "name": "強襲細胞．力",
+    "rarity": 1,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可小幅提升攻擊力，且力屬性角色裝備後還會獲得額外效果",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp",
+    "imgFile": "Equip_Hp.png",
+    "name": "再生細胞",
+    "rarity": 5,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def",
+    "imgFile": "Equip_Def.png",
+    "name": "防衛細胞",
+    "rarity": 5,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk",
+    "imgFile": "Equip_Atk.png",
+    "name": "強襲細胞",
+    "rarity": 5,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp",
+    "imgFile": "Equip_Hp.png",
+    "name": "再生細胞",
+    "rarity": 4,
+    "statType": "Hp",
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可大幅提升生命值",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def",
+    "imgFile": "Equip_Def.png",
+    "name": "防衛細胞",
+    "rarity": 4,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可大幅提升防禦力",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk",
+    "imgFile": "Equip_Atk.png",
+    "name": "強襲細胞",
+    "rarity": 4,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可大幅提升攻擊力",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp",
+    "imgFile": "Equip_Hp.png",
+    "name": "再生細胞",
+    "rarity": 3,
+    "statType": "Hp",
+    "description": "側重提升生存能力的Rc細胞，角色裝備後可提升生命值",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def",
+    "imgFile": "Equip_Def.png",
+    "name": "防衛細胞",
+    "rarity": 3,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可提升防禦力",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk",
+    "imgFile": "Equip_Atk.png",
+    "name": "強襲細胞",
+    "rarity": 3,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可提升攻擊力",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp",
+    "imgFile": "Equip_Hp.png",
+    "name": "再生細胞",
+    "rarity": 2,
+    "statType": "Hp",
+    "description": "側重提升生存能力的Rc細胞，角色裝備後可提升生命值",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def",
+    "imgFile": "Equip_Def.png",
+    "name": "防衛細胞",
+    "rarity": 2,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可提升防禦力",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk",
+    "imgFile": "Equip_Atk.png",
+    "name": "強襲細胞",
+    "rarity": 2,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可提升攻擊力",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Hp",
+    "imgFile": "Equip_Hp.png",
+    "name": "再生細胞",
+    "rarity": 1,
+    "statType": "Hp",
+    "description": "側重提升生存能力的Rc細胞，角色裝備後可小幅提升生命值",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Def",
+    "imgFile": "Equip_Def.png",
+    "name": "防衛細胞",
+    "rarity": 1,
+    "statType": "Def",
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可小幅提升防禦力",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  },
+  {
+    "id": "Equip_Atk",
+    "imgFile": "Equip_Atk.png",
+    "name": "強襲細胞",
+    "rarity": 1,
+    "statType": "Atk",
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可小幅提升攻擊力",
+    "uniqueSkillName": null,
+    "uniqueSkillSegments": null,
+    "effectDefs": null
+  }
+]

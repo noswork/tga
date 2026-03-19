@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import { Lang, ChatMessage, TerminalMode } from '../types';
 import { translations } from '../constants';
 import { generateGhoulResponse } from '../services/geminiService';
-import { Trash2, AlertTriangle, Terminal as TerminalIcon, Cpu, Activity, Power, Zap, ExternalLink, Gamepad2, Feather, Globe } from 'lucide-react';
+import { Trash2, Terminal as TerminalIcon, Activity, Power, Zap, ExternalLink, Globe } from 'lucide-react';
 import { getMessagesForMode, saveMessagesForMode } from '../utils/storage';
 
 interface TerminalProps {
@@ -280,24 +280,12 @@ export const Terminal: React.FC<TerminalProps> = ({ lang, messages, setMessages 
   };
 
   const modeConfig = {
-    GAME: { 
-      icon: Gamepad2, 
+    GAME: {
+      icon: Globe,
       label: lang === Lang.EN ? 'GAME DATA' : '遊戲資料',
       color: 'text-green-500',
       bg: 'bg-green-500/10 border-green-500/50'
     },
-    CREATIVE: { 
-      icon: Feather, 
-      label: lang === Lang.EN ? 'STORY MODE' : '創作模式',
-      color: 'text-purple-500',
-      bg: 'bg-purple-500/10 border-purple-500/50'
-    },
-    SEARCH: { 
-      icon: Globe, 
-      label: lang === Lang.EN ? 'NET SEARCH' : '網絡搜尋',
-      color: 'text-blue-500',
-      bg: 'bg-blue-500/10 border-blue-500/50'
-    }
   };
 
   return (

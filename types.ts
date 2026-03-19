@@ -9,10 +9,21 @@ export type ViewSection =
   | 'tools'
   | 'terminal'
   | 'ghoulLab'
-  | 'toybox'
-  | 'ghoulInsight';
+  | 'toybox';
 
-export type TerminalMode = 'GAME' | 'CREATIVE' | 'SEARCH';
+export interface Cell {
+  id: string;
+  imgFile: string;
+  name: string;
+  rarity: number;
+  statType: string;
+  description: string;
+  uniqueSkillName: string | null;
+  uniqueSkillSegments: { text: string; isEffect: boolean }[] | null;
+  effectDefs: Record<string, string> | null;
+}
+
+export type TerminalMode = 'GAME';
 
 export interface Skill {
   name: string;
@@ -20,21 +31,61 @@ export interface Skill {
   description: string;
 }
 
-export type CharacterCategory = 'CCG' | 'Anteiku' | 'Aogiri' | 'No Org';
+export interface EffectSegment {
+  text: string;
+  isEffect: boolean;
+  effectName?: string;
+  effectDesc?: string;
+}
+
+export interface ActiveSkillLevel {
+  lv: number;
+  name: string;
+  description: string;
+  effects: EffectSegment[];
+}
+
+export interface ActiveSkill {
+  type: 'Active';
+  skillNum: number;
+  levels: ActiveSkillLevel[];
+}
+
+export interface PassiveSkill {
+  type: 'Passive';
+  subtype: 'passive' | 'rank' | 'gift';
+  name: string;
+  description: string;
+  effects: EffectSegment[];
+}
+
+export interface TierEffect {
+  description: string;
+}
+
+export interface Tier {
+  tier: number;
+  effects: TierEffect[];
+}
+
+export type CharacterCategory = 'No Organization' | 'CCG Higher Rank Investigator' | 'CCG Lower Rank Investigator' | 'Aogiri Tree' | 'Anteiku' | 'Boss' | 'Cadre';
 
 export interface Character {
   id: string;
+  title: string;
   name: string;
-  rarity: 'SSR' | 'SR' | 'R';
-  category: CharacterCategory;
-  type: 'Ukaku' | 'Koukaku' | 'Rinkaku' | 'Bikaku' | 'Quinque';
-  description: string;
+  fullName: string;
+  rarity: 'SP' | 'SSR' | 'SR' | 'R';
+  organization: CharacterCategory;
   stats: {
+    hp: number;
     atk: number;
     def: number;
-    spd: number;
   };
-  skills: Skill[];
+  activeSkills: ActiveSkill[];
+  passiveSkills: PassiveSkill[];
+  tiers: Tier[];
+  effectDefs: Record<string, string>;
 }
 
 export interface Mission {

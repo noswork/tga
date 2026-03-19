@@ -1,7 +1,7 @@
 import React from 'react';
 import { Lang, ViewSection } from '../types';
 import { translations } from '../constants';
-import { Terminal as TerminalIcon, Home, Database, Wrench, Menu, X, Eye } from 'lucide-react';
+import { Terminal as TerminalIcon, Home, Database, Wrench, Menu, X } from 'lucide-react';
 
 interface NavbarProps {
   lang: Lang;
@@ -51,12 +51,11 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, activeSection, se
     { id: 'home' as ViewSection, icon: Home, label: t.nav.home },
     { id: 'characters' as ViewSection, icon: Database, label: t.nav.characters },
     { id: 'tools' as ViewSection, icon: Wrench, label: t.nav.tools },
-    { id: 'ghoulInsight' as ViewSection, icon: Eye, label: t.nav.insight },
     { id: 'terminal' as ViewSection, icon: TerminalIcon, label: t.nav.terminal },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-black/80 via-black/40 to-transparent transition-all duration-500">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-white/90 via-white/50 to-transparent dark:from-black/80 dark:via-black/40 dark:to-transparent transition-all duration-500">
       <div className="container mx-auto px-4 h-24 flex items-center justify-between">
         {/* Logo */}
         <div 
@@ -76,9 +75,9 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, activeSection, se
               key={item.id}
               onClick={() => setActiveSection(item.id)}
               className={`relative px-6 py-2 font-mono text-xs font-bold uppercase tracking-widest transition-all duration-300 clip-button backdrop-blur-sm ${
-                activeSection === item.id 
-                  ? 'bg-ghoul-red/90 text-white shadow-[0_0_15px_rgba(255,0,0,0.4)]' 
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                activeSection === item.id
+                  ? 'bg-ghoul-red/90 text-white shadow-[0_0_15px_rgba(255,0,0,0.4)]'
+                  : 'bg-black/10 dark:bg-white/10 text-gray-700 dark:text-gray-300 hover:bg-black/20 dark:hover:bg-white/20 hover:text-black dark:hover:text-white'
               }`}
             >
               <div className="flex items-center gap-2">

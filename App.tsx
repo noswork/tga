@@ -6,10 +6,10 @@ import { Hero } from './components/Hero';
 import { Terminal } from './components/Terminal';
 import { Footer } from './components/Footer';
 import { CharacterGallery } from './components/CharacterGallery';
+import { CellGallery } from './components/CellGallery';
 import { GameTools } from './components/GameTools';
 import { GhoulLab } from './components/GhoulLab';
 import { GhoulToybox } from './components/GhoulToybox';
-import { GhoulInsight } from './components/GhoulInsight';
 import {
   detectBrowserLanguage,
   getStoredLanguage,
@@ -146,8 +146,7 @@ const App: React.FC = () => {
   const shouldLockScroll =
     activeSection === 'terminal' ||
     activeSection === 'ghoulLab' ||
-    activeSection === 'toybox' ||
-    activeSection === 'ghoulInsight';
+    activeSection === 'toybox';
 
   return (
     <div className="h-screen w-full flex flex-col font-tech bg-ccg-light dark:bg-ghoul-black text-gray-900 dark:text-ccg-white selection:bg-ghoul-red selection:text-white dark:selection:text-black overflow-hidden transition-colors duration-300">
@@ -166,8 +165,8 @@ const App: React.FC = () => {
       />
 
       <main className={`flex-grow z-10 w-full h-full relative ${
-        shouldLockScroll ? 'overflow-hidden' : 'overflow-y-auto snap-y snap-mandatory scroll-smooth no-scrollbar'
-      }`}>
+        shouldLockScroll ? 'overflow-hidden' : 'overflow-y-scroll snap-y snap-mandatory scroll-smooth no-scrollbar'
+      }`} style={{ scrollbarGutter: 'stable' }}>
         {activeSection === 'home' && (
           <>
             <Hero lang={lang} onEnterTerminal={() => setActiveSection('characters')} />
@@ -180,7 +179,16 @@ const App: React.FC = () => {
         {activeSection === 'characters' && (
           <div className="min-h-screen pt-24 w-full snap-start flex flex-col justify-between">
             <div className="flex-grow container mx-auto px-4">
-              <CharacterGallery lang={lang} />
+              <CharacterGallery lang={lang} onSwitchToCells={() => setActiveSection('cells' as any)} />
+            </div>
+            <Footer lang={lang} />
+          </div>
+        )}
+
+        {(activeSection as any) === 'cells' && (
+          <div className="min-h-screen pt-24 w-full snap-start flex flex-col justify-between">
+            <div className="flex-grow container mx-auto px-4">
+              <CellGallery lang={lang} onSwitchToChars={() => setActiveSection('characters')} />
             </div>
             <Footer lang={lang} />
           </div>
@@ -198,15 +206,6 @@ const App: React.FC = () => {
         {activeSection === 'ghoulLab' && (
           <div className="h-full pt-24 w-full flex">
             <GhoulLab lang={lang} />
-          </div>
-        )}
-
-        {activeSection === 'ghoulInsight' && (
-          <div className="h-screen pt-24 w-full flex flex-col">
-            <div className="flex-1 w-full flex min-h-0 overflow-hidden">
-              <GhoulInsight lang={lang} />
-            </div>
-            <Footer lang={lang} />
           </div>
         )}
 

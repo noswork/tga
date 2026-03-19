@@ -1,11 +1,11 @@
-// Icon Image URLs - Import images using Vite's asset handling
-import cityIcon from '../../../assets/tools/StrongholdMap/city.png';
-import buildingIcon from '../../../assets/tools/StrongholdMap/building.png';
-import houseIcon from '../../../assets/tools/StrongholdMap/house.png';
-import hospitalIcon from '../../../assets/tools/StrongholdMap/hospital.png';
-import fortressIcon from '../../../assets/tools/StrongholdMap/fortress.png';
-import orgIcon from '../../../assets/tools/StrongholdMap/org.png';
-import blockIcon from '../../../assets/tools/StrongholdMap/block.png';
+// Icon Image URLs
+const cityIcon = '/assets/tools/StrongholdMap/city.png';
+const buildingIcon = '/assets/tools/StrongholdMap/building.png';
+const houseIcon = '/assets/tools/StrongholdMap/house.png';
+const hospitalIcon = '/assets/tools/StrongholdMap/hospital.png';
+const fortressIcon = '/assets/tools/StrongholdMap/fortress.png';
+const orgIcon = '/assets/tools/StrongholdMap/org.png';
+const blockIcon = '/assets/tools/StrongholdMap/block.png';
 
 // --- MAP CONFIGURATION ---
 export const MAP_CONFIG = {
