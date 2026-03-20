@@ -80,6 +80,7 @@ export const translations: Record<Lang, Translation> = {
         markerColor: 'MARKER COLOR',
         liveFeed: 'LIVE FEED',
         sectorInfo: 'SECTOR 20 // WARD 11\nRC DENSITY: HIGH',
+        mapVersion: 'MAP VERSION',
         quality: {
           title: 'EXPORT QUALITY',
           q1: 'Standard',
@@ -312,6 +313,7 @@ export const translations: Record<Lang, Translation> = {
         markerColor: '標記顏色',
         liveFeed: '實時監控',
         sectorInfo: '第 20 區 // 11 支部\nRC 濃度：高',
+        mapVersion: '地圖版本',
         quality: {
           title: '導出畫質',
           q1: '標準',

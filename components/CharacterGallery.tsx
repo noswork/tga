@@ -20,6 +20,14 @@ const RARITY_COLOR: Record<string, string> = {
   R:   'text-blue-400 border-blue-400',
 };
 
+const TACTIC_COLOR: Record<string, string> = {
+  輸出: 'text-red-400 border-red-600',
+  輔助: 'text-cyan-400 border-cyan-600',
+  控制: 'text-purple-400 border-purple-600',
+  均衡: 'text-blue-400 border-blue-600',
+  爆發: 'text-orange-400 border-orange-600',
+};
+
 
 const SUBTYPE_LABEL: Record<string, string> = {
   passive: '被動',
@@ -109,7 +117,13 @@ const HeroCard: React.FC<{ char: Character; onClick: () => void }> = ({ char, on
         <img src={heroImg(char.id, 'bg', r)} alt="" className="absolute inset-0 w-full h-full object-fill" onError={e => (e.currentTarget.style.display='none')} />
         <img src={heroImg(char.id, 'head')} alt={char.name} className="absolute inset-[3%] w-[94%] h-[94%] object-contain translate-x-[-3%]" onError={e => (e.currentTarget.style.display='none')} />
         <img src={heroImg(char.id, 'frame', r)} alt="" className="absolute inset-0 w-full h-full object-fill pointer-events-none" onError={e => (e.currentTarget.style.display='none')} />
-        <div className={`absolute top-1 left-1 text-[8px] font-bold border px-1 py-0.5 rounded bg-black/60 ${RARITY_COLOR[r]}`}>{r}</div>
+        {char.attribute && (
+          <img
+            src={`/assets/heroes/attribute/${{ 力:'str', 技:'skl', 速:'spd', 心:'psy', 知:'wit' }[char.attribute]}.png`}
+            alt={char.attribute}
+            className="absolute top-0 right-0 w-8 h-8 object-contain"
+          />
+        )}
       </div>
       <div className="w-full px-0.5 pt-0.5 pb-1">
         {char.title && <p className="text-[9px] leading-tight truncate text-center text-gray-500 dark:text-gray-400">{char.title}</p>}
@@ -154,12 +168,22 @@ const CharModal: React.FC<{ char: Character; lang: Lang; onClose: () => void }> 
                   <img src={heroImg(char.id, 'bg', r)} alt="" className="absolute inset-0 w-full h-full object-cover" onError={e => (e.currentTarget.style.display='none')} />
                   <img src={heroImg(char.id, 'head')} alt="" className="absolute inset-0 w-full h-full object-cover" onError={e => (e.currentTarget.style.display='none')} />
                   <img src={heroImg(char.id, 'frame', r)} alt="" className="absolute inset-0 w-full h-full object-contain pointer-events-none" onError={e => (e.currentTarget.style.display='none')} />
+                  {char.attribute && (
+                    <img
+                      src={`/assets/heroes/attribute/${{ 力:'str', 技:'skl', 速:'spd', 心:'psy', 知:'wit' }[char.attribute]}.png`}
+                      alt={char.attribute}
+                      className="absolute top-0 right-0 w-5 h-5 object-contain"
+                    />
+                  )}
                 </div>
                 <div className="min-w-0">
                   {char.title && <p className="text-gray-600 dark:text-gray-400 text-xs leading-tight">【{char.title}】</p>}
                   <h2 className="text-gray-900 dark:text-white font-bold text-lg leading-tight truncate">{char.name}</h2>
                   <div className="flex items-center gap-2 mt-0.5 flex-wrap">
                     <span className={`text-xs font-bold border px-1.5 rounded ${RARITY_COLOR[r]}`}>{r}</span>
+                    {char.tactic && (
+                      <span className={`text-xs font-bold border px-1.5 rounded ${TACTIC_COLOR[char.tactic]}`}>{char.tactic}</span>
+                    )}
                     <span className="text-gray-500 text-xs">#{char.id}</span>
                     <span className="text-gray-600 dark:text-gray-400 text-xs">{ORG_DISPLAY[lang]?.[char.organization] ?? char.organization}</span>
                   </div>
@@ -173,18 +197,35 @@ const CharModal: React.FC<{ char: Character; lang: Lang; onClose: () => void }> 
             {/* Stats */}
             <div className="flex divide-x divide-gray-200 dark:divide-gray-700 border-t border-gray-200 dark:border-gray-700">
               <div className="flex-1 flex flex-col items-center py-2">
-                <span className="text-[10px] text-green-400 font-tech tracking-wider">HP</span>
+                <span className="text-xs text-green-400 font-tech tracking-wider">HP</span>
                 <span className="text-gray-900 dark:text-white font-bold text-sm">{char.stats.hp.toLocaleString()}</span>
               </div>
               <div className="flex-1 flex flex-col items-center py-2">
-                <span className="text-[10px] text-red-400 font-tech tracking-wider">ATK</span>
+                <span className="text-xs text-red-400 font-tech tracking-wider">ATK</span>
                 <span className="text-gray-900 dark:text-white font-bold text-sm">{char.stats.atk.toLocaleString()}</span>
               </div>
               <div className="flex-1 flex flex-col items-center py-2">
-                <span className="text-[10px] text-blue-400 font-tech tracking-wider">DEF</span>
+                <span className="text-xs text-blue-400 font-tech tracking-wider">DEF</span>
                 <span className="text-gray-900 dark:text-white font-bold text-sm">{char.stats.def.toLocaleString()}</span>
               </div>
             </div>
+            {/* CP row */}
+            {char.baseCp && (
+              <div className="flex divide-x divide-gray-200 dark:divide-gray-700 border-t border-gray-200 dark:border-gray-700">
+                <div className="flex-1 flex flex-col items-center py-2">
+                  <span className="text-xs text-gray-400 font-tech tracking-wider">基礎 CP</span>
+                  <span className="text-gray-900 dark:text-white font-bold text-sm">{char.baseCp.toLocaleString()}</span>
+                </div>
+                <div className="flex-1 flex flex-col items-center py-2">
+                  <span className="text-xs text-yellow-400 font-tech tracking-wider">3x CP</span>
+                  <span className="text-gray-900 dark:text-white font-bold text-sm">{char.cellCp3x?.toLocaleString()}</span>
+                </div>
+                <div className="flex-1 flex flex-col items-center py-2">
+                  <span className="text-xs text-orange-400 font-tech tracking-wider">4x CP</span>
+                  <span className="text-gray-900 dark:text-white font-bold text-sm">{char.cellCp4x?.toLocaleString()}</span>
+                </div>
+              </div>
+            )}
 
             {/* Tabs */}
             <div className="flex border-t border-gray-200 dark:border-gray-700">

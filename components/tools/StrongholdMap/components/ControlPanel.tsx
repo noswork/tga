@@ -2,8 +2,8 @@ import React from 'react';
 import { X, Target, Settings, Download, CheckCircle, Trash2, Eraser, Monitor, Share2 } from 'lucide-react';
 import { Lang } from '../../../../types';
 import { translations } from '../../../../constants';
-import { MarkMode, AnnotationMode } from '../types';
-import { COLORS, SIZE_OPTIONS } from '../config';
+import { MarkMode, AnnotationMode, MapVersion } from '../types';
+import { COLORS } from '../config';
 
 interface ControlPanelProps {
   lang: Lang;
@@ -18,9 +18,11 @@ interface ControlPanelProps {
   onExport: () => void;
   onClearAll: () => void;
   annotationMode: AnnotationMode;
-   onShare: () => void;
-   isSharing: boolean;
-   shareMessage?: string | null;
+  onShare: () => void;
+  isSharing: boolean;
+  shareMessage?: string | null;
+  mapVersion: MapVersion;
+  setMapVersion: (version: MapVersion) => void;
 }
 
 export const ControlPanel: React.FC<ControlPanelProps> = ({
@@ -39,6 +41,8 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
   onShare,
   isSharing,
   shareMessage,
+  mapVersion,
+  setMapVersion,
 }) => {
   const t = translations[lang].tools.map;
   const qT = t.quality;
@@ -104,6 +108,30 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
         </div>
 
         <div className="pt-2 lg:pt-3 space-y-2 lg:space-y-3">
+          {/* Map Version Selector */}
+          <div className="pb-2 lg:pb-3 border-b border-gray-200 dark:border-zinc-800">
+            <h3 className="text-[10px] lg:text-[11px] font-mono text-gray-500 dark:text-zinc-500 mb-1.5 uppercase tracking-wider">{t.mapVersion}</h3>
+            <div className="flex gap-1.5">
+              {(['v1', 'v2', 'v3'] as const).map((v) => {
+                const isAvailable = true;
+                return (
+                  <button
+                    key={v}
+                    onClick={() => isAvailable && setMapVersion(v)}
+                    disabled={!isAvailable}
+                    className={`flex-1 py-1 rounded text-[10px] font-bold font-mono transition-all border uppercase
+                      ${mapVersion === v && isAvailable ? 'bg-ghoul-red text-white border-red-500' : ''}
+                      ${!isAvailable ? 'opacity-30 cursor-not-allowed text-gray-400 border-gray-200 dark:border-zinc-800' : ''}
+                      ${isAvailable && mapVersion !== v ? 'bg-transparent text-gray-500 border-gray-300 dark:border-zinc-700 hover:bg-black/5 dark:hover:bg-white/5' : ''}
+                    `}
+                  >
+                    {v}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
           <button onClick={onClearAll} className="w-full py-1.5 lg:py-2.5 rounded border border-red-500/30 dark:border-red-900/50 text-red-600 dark:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors text-[10px] lg:text-xs font-bold font-tech flex items-center justify-center gap-2">
             <Trash2 size={12} /> {t.clearAll}
           </button>

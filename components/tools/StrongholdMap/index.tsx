@@ -1,17 +1,57 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { translations } from '../../../constants';
-import { StrongholdMapProps, MarkMode, AnnotationMode, SharedMapState } from './types';
-import { MAP_CONFIG, HEX_DX, HEX_DY, HEX_H, MAIN_CITY_CENTER, MAIN_CITY_CELLS, BUILDING_DATA, ICON_IMAGES, WATERMARK_TILES, STORAGE_KEYS } from './config';
-import { keyFor, hexToRgba, inBounds, computeCenter, encodeMapShareState, decodeMapShareState } from './utils';
+import { StrongholdMapProps, MarkMode, AnnotationMode, SharedMapState, MapVersion } from './types';
+import { V3_MAP_CONFIG, V3_HEX_DX, V3_HEX_DY, V3_HEX_H, V3_MAIN_CITY_CENTER, V3_MAIN_CITY_CELLS, V3_BUILDING_DATA, V3_ICON_IMAGES, WATERMARK_TILES, STORAGE_KEYS, V1_MAP_CONFIG, V1_HEX_DX, V1_HEX_DY, V1_HEX_H, V1_MAIN_CITY_CENTER, V1_MAIN_CITY_CELLS, V1_BUILDING_DATA, V1_ICON_IMAGES, V2_MAP_CONFIG, V2_HEX_DX, V2_HEX_DY, V2_HEX_H, V2_MAIN_CITY_CENTER, V2_MAIN_CITY_CELLS, V2_BUILDING_DATA, V2_ICON_IMAGES } from './config';
+import { keyFor, hexToRgba, inBounds, computeCenter, decodeMapShareState } from './utils';
 import { useMapState } from './hooks/useMapState';
 import { useAnnotations } from './hooks/useAnnotations';
 import { ControlPanel } from './components/ControlPanel';
 import { AnnotationToolbar } from './components/AnnotationToolbar';
 import { TextInput } from './components/TextInput';
 
+const getMapConfig = (v: MapVersion) => {
+  if (v === 'v1') return V1_MAP_CONFIG;
+  if (v === 'v2') return V2_MAP_CONFIG;
+  return V3_MAP_CONFIG;
+};
+const getHexDx = (v: MapVersion) => {
+  if (v === 'v1') return V1_HEX_DX;
+  if (v === 'v2') return V2_HEX_DX;
+  return V3_HEX_DX;
+};
+const getHexDy = (v: MapVersion) => {
+  if (v === 'v1') return V1_HEX_DY;
+  if (v === 'v2') return V2_HEX_DY;
+  return V3_HEX_DY;
+};
+const getHexH = (v: MapVersion) => {
+  if (v === 'v1') return V1_HEX_H;
+  if (v === 'v2') return V2_HEX_H;
+  return V3_HEX_H;
+};
+const getMainCityCells = (v: MapVersion) => {
+  if (v === 'v1') return V1_MAIN_CITY_CELLS;
+  if (v === 'v2') return V2_MAIN_CITY_CELLS;
+  return V3_MAIN_CITY_CELLS;
+};
+const getMainCityCenter = (v: MapVersion) => {
+  if (v === 'v1') return V1_MAIN_CITY_CENTER;
+  if (v === 'v2') return V2_MAIN_CITY_CENTER;
+  return V3_MAIN_CITY_CENTER;
+};
+const getBuildingData = (v: MapVersion) => {
+  if (v === 'v1') return V1_BUILDING_DATA;
+  if (v === 'v2') return V2_BUILDING_DATA;
+  return V3_BUILDING_DATA;
+};
+const getIconImages = (v: MapVersion) => {
+  if (v === 'v1') return V1_ICON_IMAGES;
+  if (v === 'v2') return V2_ICON_IMAGES;
+  return V3_ICON_IMAGES;
+};
+
 export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) => {
   const t = translations[lang].tools.map;
-  const qT = t.quality;
   const aT = t.annotation;
   const svgRef = useRef<SVGSVGElement>(null);
   const [markMode, setMarkMode] = useState<MarkMode>('add');
@@ -26,6 +66,24 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
   const [textInputValue, setTextInputValue] = useState('');
   const [isSharing, setIsSharing] = useState(false);
   const [shareMessage, setShareMessage] = useState<string | null>(null);
+  const [mapVersion, setMapVersionState] = useState<MapVersion>(() => {
+    return (localStorage.getItem(STORAGE_KEYS.mapVersion) as MapVersion) || 'v3';
+  });
+
+  const setMapVersion = (v: MapVersion) => {
+    localStorage.setItem(STORAGE_KEYS.mapVersion, v);
+    setMapVersionState(v);
+    const center = getMainCityCenter(v);
+    const { cx, cy } = computeCenter(center.x, center.y, v);
+    const cfg = getMapConfig(v);
+    const svgRect = svgRef.current?.getBoundingClientRect();
+    if (svgRect) {
+      state.current.scale = cfg.minScale;
+      state.current.translate.x = svgRect.width / 2 - cx * cfg.minScale;
+      state.current.translate.y = svgRect.height / 2 - cy * cfg.minScale;
+      requestAnimationFrame(applyTransform);
+    }
+  };
   const annotationLayerRef = useRef<SVGGElement>(null);
   const justCompletedTextDragRef = useRef(false);
   const layerRefsCache = useRef<Record<string, SVGGElement | null>>({});
@@ -78,7 +136,8 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
       const s = state.current;
       const intensity = 1.1;
       const direction = e.deltaY < 0 ? intensity : 1 / intensity;
-      const targetScale = Math.min(Math.max(s.scale * direction, MAP_CONFIG.minScale), MAP_CONFIG.maxScale);
+      const cfg = getMapConfig(mapVersion);
+      const targetScale = Math.min(Math.max(s.scale * direction, cfg.minScale), cfg.maxScale);
       
       const rect = svg.getBoundingClientRect();
       const mx = e.clientX - rect.left;
@@ -126,18 +185,27 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
       'annotation-layer': annotationLayer,
     };
 
-    const halfH = HEX_H / 2;
-    const halfR = MAP_CONFIG.r / 2;
-    const points = `${MAP_CONFIG.r},0 ${halfR},${halfH} ${-halfR},${halfH} ${-MAP_CONFIG.r},0 ${-halfR},${-halfH} ${halfR},${-halfH}`;
+    const cfg = getMapConfig(mapVersion);
+    const halfH = getHexH(mapVersion) / 2;
+    const r = cfg.r;
+    const halfR = r / 2;
+    const points = `${r},0 ${halfR},${halfH} ${-halfR},${halfH} ${-r},0 ${-halfR},${-halfH} ${halfR},${-halfH}`;
     const hexFragment = document.createDocumentFragment();
 
-    for (let y = 0; y <= MAP_CONFIG.maxOdd.y; y++) {
+    const maxEven = cfg.maxEven;
+    const maxOdd = cfg.maxOdd;
+    const inBounds = (x: number, y: number) => {
+      if (y % 2 === 0) return x >= 0 && x <= maxEven.x && y >= 0 && y <= maxEven.y;
+      return x >= 0 && x <= maxOdd.x && y >= 0 && y <= maxOdd.y;
+    };
+
+    for (let y = 0; y <= maxOdd.y; y++) {
       const startX = y % 2 === 0 ? 0 : 1;
-      const maxX = y % 2 === 0 ? MAP_CONFIG.maxEven.x : MAP_CONFIG.maxOdd.x;
+      const maxX = y % 2 === 0 ? maxEven.x : maxOdd.x;
       
       for (let x = startX; x <= maxX; x += 2) {
         if (!inBounds(x, y)) continue;
-        const { cx, cy } = computeCenter(x, y);
+        const { cx, cy } = computeCenter(x, y, mapVersion);
         
         const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
         group.setAttribute("class", "hex-group");
@@ -158,8 +226,13 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
     }
     hexLayer.appendChild(hexFragment);
 
-    for (const [type, coords] of Object.entries(BUILDING_DATA)) {
-      const imageUrl = ICON_IMAGES[type];
+    const buildingData = getBuildingData(mapVersion);
+    const iconImages = getIconImages(mapVersion);
+    const mainCityCenter = getMainCityCenter(mapVersion);
+    const mainCityCells = getMainCityCells(mapVersion);
+
+    for (const [type, coords] of Object.entries(buildingData)) {
+      const imageUrl = iconImages[type];
       if (!imageUrl) continue;
 
       coords.forEach(([x, y]) => {
@@ -168,7 +241,7 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
         if (!cell) return;
 
         let size = 60;
-        if (type === 'mainCity') size = 90;
+        if (type === 'mainCity' || type === 'city') size = 90;
         if (type === 'block') size = 50;
 
         const image = document.createElementNS("http://www.w3.org/2000/svg", "image");
@@ -323,7 +396,7 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
     setTimeout(() => {
       loadSharedMap();
     }, 100);
-  }, []);
+  }, [mapVersion]);
 
   const createMark = (x: number, y: number, color: string) => {
     const key = keyFor(x, y);
@@ -491,13 +564,13 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
         let y = Number(group.dataset.y);
         const key = keyFor(x, y);
         
-        const isMainCity = MAIN_CITY_CELLS.has(key);
+        const isMainCity = V3_MAIN_CITY_CELLS.has(key);
         let displayKey = key;
         let highlightKeys = [key];
 
         if (isMainCity) {
-          displayKey = keyFor(MAIN_CITY_CENTER.x, MAIN_CITY_CENTER.y);
-          highlightKeys = Array.from(MAIN_CITY_CELLS);
+          displayKey = keyFor(V3_MAIN_CITY_CENTER.x, V3_MAIN_CITY_CENTER.y);
+          highlightKeys = Array.from(V3_MAIN_CITY_CELLS);
         }
 
         s.lastHoveredKey = displayKey;
@@ -681,8 +754,8 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
     let y = Number(group.dataset.y);
     let keysToProcess = [keyFor(x, y)];
 
-    if (MAIN_CITY_CELLS.has(keyFor(x, y))) {
-      keysToProcess = Array.from(MAIN_CITY_CELLS);
+    if (getMainCityCells(mapVersion).has(keyFor(x, y))) {
+      keysToProcess = Array.from(getMainCityCells(mapVersion));
     }
 
     keysToProcess.forEach(k => {
@@ -708,7 +781,7 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
     const processRemoval = (x: number, y: number) => {
       const key = keyFor(x, y);
       let keysToProcess = [key];
-      if (MAIN_CITY_CELLS.has(key)) keysToProcess = Array.from(MAIN_CITY_CELLS);
+      if (V3_MAIN_CITY_CELLS.has(key)) keysToProcess = Array.from(V3_MAIN_CITY_CELLS);
       let removedAny = false;
       keysToProcess.forEach(k => {
         const [kx, ky] = k.split(',').map(Number);
@@ -738,7 +811,7 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
     const wy = (my - s.translate.y) / s.scale;
     let closest = null;
     let minDst = Infinity;
-    const HIT_RADIUS = MAP_CONFIG.r * 2.0; 
+    const HIT_RADIUS = getMapConfig(mapVersion).r * 2.0; 
 
     for (const mark of s.markedCells.values()) {
         const cell = s.cellMap.get(keyFor(mark.x, mark.y));
@@ -800,8 +873,11 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
       }
 
       const scale = exportQuality; 
-      const w = (MAP_CONFIG.maxEven.x + 4) * HEX_DX;
-      const h = (MAP_CONFIG.maxOdd.y + 4) * (HEX_DY/2);
+      const currentMapConfig = getMapConfig(mapVersion);
+      const currentHexDx = getHexDx(mapVersion);
+      const currentHexDy = getHexDy(mapVersion);
+      const w = (currentMapConfig.maxEven.x + 4) * currentHexDx;
+      const h = (currentMapConfig.maxOdd.y + 4) * (currentHexDy / 2);
       
       clone.setAttribute("viewBox", `-100 -100 ${w} ${h}`);
       clone.setAttribute("width", String(w * scale));
@@ -1016,6 +1092,8 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
         onShare={handleShare}
         isSharing={isSharing}
         shareMessage={shareMessage}
+        mapVersion={mapVersion}
+        setMapVersion={setMapVersion}
       />
 
       <div className="flex-1 relative bg-[var(--map-bg)] transition-colors duration-300 overflow-hidden cursor-crosshair select-none z-10 order-1 lg:order-2 min-h-0 overscroll-none">

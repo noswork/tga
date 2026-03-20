@@ -1,5 +1,5 @@
-import { MAP_CONFIG, HEX_DX, HEX_DY } from './config';
-import type { SharedMapState } from './types';
+import { V3_MAP_CONFIG, V3_HEX_DX, V3_HEX_DY, V1_HEX_DX, V1_HEX_DY, V2_HEX_DX, V2_HEX_DY } from './config';
+import type { SharedMapState, MapVersion } from './types';
 
 export const keyFor = (x: number, y: number) => `${x},${y}`;
 
@@ -21,13 +21,24 @@ export const hexToRgba = (hex: string, alpha: number) => {
   return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 };
 
-export const inBounds = (x: number, y: number) => {
+export const inBounds = (x: number, y: number, version?: MapVersion) => {
   if ((x + y) % 2 !== 0) return false;
-  if (x % 2 === 0) return x >= 0 && x <= MAP_CONFIG.maxEven.x && y >= 0 && y <= MAP_CONFIG.maxEven.y;
-  return x >= 1 && x <= MAP_CONFIG.maxOdd.x && y >= 1 && y <= MAP_CONFIG.maxOdd.y;
+  const cfg = version === 'v1' ? {
+    maxEven: { x: 18, y: 32 },
+    maxOdd: { x: 17, y: 33 },
+  } : {
+    maxEven: V3_MAP_CONFIG.maxEven,
+    maxOdd: V3_MAP_CONFIG.maxOdd,
+  };
+  if (x % 2 === 0) return x >= 0 && x <= cfg.maxEven.x && y >= 0 && y <= cfg.maxEven.y;
+  return x >= 1 && x <= cfg.maxOdd.x && y >= 1 && y <= cfg.maxOdd.y;
 };
 
-export const computeCenter = (x: number, y: number) => ({ cx: x * HEX_DX, cy: y * (HEX_DY / 2) });
+export const computeCenter = (x: number, y: number, version?: MapVersion) => {
+  const dx = version === 'v1' ? V1_HEX_DX : version === 'v2' ? V2_HEX_DX : V3_HEX_DX;
+  const dy = version === 'v1' ? V1_HEX_DY : version === 'v2' ? V2_HEX_DY : V3_HEX_DY;
+  return { cx: x * dx, cy: y * (dy / 2) };
+};
 
 // --- Sharing helpers ---
 

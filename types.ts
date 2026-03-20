@@ -82,6 +82,11 @@ export interface Character {
     atk: number;
     def: number;
   };
+  attribute?: '力' | '技' | '速' | '心' | '知';
+  tactic?: '輸出' | '輔助' | '控制' | '均衡' | '爆發';
+  baseCp?: number;
+  cellCp3x?: number;
+  cellCp4x?: number;
   activeSkills: ActiveSkill[];
   passiveSkills: PassiveSkill[];
   tiers: Tier[];
@@ -164,6 +169,12 @@ export interface Translation {
       markerColor: string;
       liveFeed: string;
       sectorInfo: string;
+      shareLink: string;
+      sharing: string;
+      shareHint: string;
+      shareCopied: string;
+      shareFailed: string;
+      mapVersion: string;
       quality: {
         title: string;
         q1: string;

@@ -11,6 +11,11 @@
       "atk": 33515,
       "def": 22973
     },
+    "attribute": "技",
+    "tactic": "輸出",
+    "baseCp": 186771,
+    "cellCp3x": 210869,
+    "cellCp4x": 213016,
     "activeSkills": [
       {
         "type": "Active",
@@ -234,6 +239,11 @@
       "atk": 34954,
       "def": 24503
     },
+    "attribute": "力",
+    "tactic": "爆發",
+    "baseCp": 192630,
+    "cellCp3x": 217082,
+    "cellCp4x": 224440,
     "activeSkills": [
       {
         "type": "Active",
@@ -541,6 +551,11 @@
       "atk": 34954,
       "def": 22209
     },
+    "attribute": "技",
+    "tactic": "輸出",
+    "baseCp": 191215,
+    "cellCp3x": 215588,
+    "cellCp4x": 221984,
     "activeSkills": [
       {
         "type": "Active",
@@ -906,6 +921,11 @@
       "atk": 29775,
       "def": 23738
     },
+    "attribute": "力",
+    "tactic": "均衡",
+    "baseCp": 188007,
+    "cellCp3x": 212178,
+    "cellCp4x": 219427,
     "activeSkills": [
       {
         "type": "Active",
@@ -1140,6 +1160,11 @@
       "atk": 35242,
       "def": 27561
     },
+    "attribute": "技",
+    "tactic": "均衡",
+    "baseCp": 204484,
+    "cellCp3x": 229493,
+    "cellCp4x": 230023,
     "activeSkills": [
       {
         "type": "Active",
@@ -1487,6 +1512,11 @@
       "atk": 35530,
       "def": 22719
     },
+    "attribute": "力",
+    "tactic": "輸出",
+    "baseCp": 191864,
+    "cellCp3x": 216275,
+    "cellCp4x": 218640,
     "activeSkills": [
       {
         "type": "Active",
@@ -1772,6 +1802,11 @@
       "atk": 35242,
       "def": 21699
     },
+    "attribute": "速",
+    "tactic": "輸出",
+    "baseCp": 189492,
+    "cellCp3x": 213764,
+    "cellCp4x": 220106,
     "activeSkills": [
       {
         "type": "Active",
@@ -2403,6 +2438,11 @@
       "atk": 34091,
       "def": 22464
     },
+    "attribute": "力",
+    "tactic": "輸出",
+    "baseCp": 186780,
+    "cellCp3x": 210896,
+    "cellCp4x": 213262,
     "activeSkills": [
       {
         "type": "Active",
@@ -2626,6 +2666,11 @@
       "atk": 34379,
       "def": 21189
     },
+    "attribute": "技",
+    "tactic": "均衡",
+    "baseCp": 187492,
+    "cellCp3x": 211648,
+    "cellCp4x": 214054,
     "activeSkills": [
       {
         "type": "Active",
@@ -2849,6 +2894,11 @@
       "atk": 34379,
       "def": 23228
     },
+    "attribute": "力",
+    "tactic": "控制",
+    "baseCp": 187524,
+    "cellCp3x": 211679,
+    "cellCp4x": 214168,
     "activeSkills": [
       {
         "type": "Active",
@@ -3072,6 +3122,11 @@
       "atk": 34091,
       "def": 25012
     },
+    "attribute": "速",
+    "tactic": "控制",
+    "baseCp": 191684,
+    "cellCp3x": 216079,
+    "cellCp4x": 220683,
     "activeSkills": [
       {
         "type": "Active",
@@ -3306,6 +3361,11 @@
       "atk": 32364,
       "def": 25522
     },
+    "attribute": "速",
+    "tactic": "輔助",
+    "baseCp": 189445,
+    "cellCp3x": 213706,
+    "cellCp4x": 219616,
     "activeSkills": [
       {
         "type": "Active",
@@ -3529,6 +3589,11 @@
       "atk": 33228,
       "def": 21444
     },
+    "attribute": "技",
+    "tactic": "控制",
+    "baseCp": 187365,
+    "cellCp3x": 211505,
+    "cellCp4x": 217057,
     "activeSkills": [
       {
         "type": "Active",
@@ -3742,6 +3807,11 @@
       "atk": 32077,
       "def": 25012
     },
+    "attribute": "技",
+    "tactic": "均衡",
+    "baseCp": 194449,
+    "cellCp3x": 218991,
+    "cellCp4x": 229708,
     "activeSkills": [
       {
         "type": "Active",
@@ -4088,6 +4158,11 @@
       "atk": 32940,
       "def": 24503
     },
+    "attribute": "技",
+    "tactic": "輔助",
+    "baseCp": 196145,
+    "cellCp3x": 220684,
+    "cellCp4x": 225258,
     "activeSkills": [
       {
         "type": "Active",
@@ -4311,6 +4386,11 @@
       "atk": 32364,
       "def": 24757
     },
+    "attribute": "速",
+    "tactic": "輸出",
+    "baseCp": 187262,
+    "cellCp3x": 211403,
+    "cellCp4x": 212596,
     "activeSkills": [
       {
         "type": "Active",
@@ -4534,6 +4614,11 @@
       "atk": 32364,
       "def": 24757
     },
+    "attribute": "速",
+    "tactic": "輸出",
+    "baseCp": 187262,
+    "cellCp3x": 211403,
+    "cellCp4x": 212596,
     "activeSkills": [
       {
         "type": "Active",
@@ -4747,6 +4832,11 @@
       "atk": 34379,
       "def": 26542
     },
+    "attribute": "速",
+    "tactic": "輸出",
+    "baseCp": 198231,
+    "cellCp3x": 222944,
+    "cellCp4x": 228349,
     "activeSkills": [
       {
         "type": "Active",
@@ -5257,6 +5347,11 @@
       "atk": 39846,
       "def": 26796
     },
+    "attribute": "知",
+    "tactic": "爆發",
+    "baseCp": 204019,
+    "cellCp3x": 229013,
+    "cellCp4x": 227545,
     "activeSkills": [
       {
         "type": "Active",
@@ -5673,6 +5768,11 @@
       "atk": 34091,
       "def": 22973
     },
+    "attribute": "速",
+    "tactic": "控制",
+    "baseCp": 186855,
+    "cellCp3x": 210971,
+    "cellCp4x": 213905,
     "activeSkills": [
       {
         "type": "Active",
@@ -5937,6 +6037,11 @@
       "atk": 31501,
       "def": 22719
     },
+    "attribute": "速",
+    "tactic": "輔助",
+    "baseCp": 189255,
+    "cellCp3x": 213460,
+    "cellCp4x": 220088,
     "activeSkills": [
       {
         "type": "Active",
@@ -6128,6 +6233,11 @@
       "atk": 33515,
       "def": 23738
     },
+    "attribute": "力",
+    "tactic": "控制",
+    "baseCp": 186791,
+    "cellCp3x": 210909,
+    "cellCp4x": 215033,
     "activeSkills": [
       {
         "type": "Active",
@@ -6351,6 +6461,11 @@
       "atk": 34379,
       "def": 21444
     },
+    "attribute": "速",
+    "tactic": "均衡",
+    "baseCp": 187083,
+    "cellCp3x": 211219,
+    "cellCp4x": 220179,
     "activeSkills": [
       {
         "type": "Active",
@@ -6898,6 +7013,11 @@
       "atk": 33803,
       "def": 19660
     },
+    "attribute": "速",
+    "tactic": "輸出",
+    "baseCp": 186946,
+    "cellCp3x": 211064,
+    "cellCp4x": 216948,
     "activeSkills": [
       {
         "type": "Active",
@@ -7142,6 +7262,11 @@
       "atk": 27185,
       "def": 25522
     },
+    "attribute": "力",
+    "tactic": "輔助",
+    "baseCp": 187830,
+    "cellCp3x": 211989,
+    "cellCp4x": 218379,
     "activeSkills": [
       {
         "type": "Active",
@@ -7333,6 +7458,11 @@
       "atk": 30926,
       "def": 24757
     },
+    "attribute": "技",
+    "tactic": "均衡",
+    "baseCp": 188136,
+    "cellCp3x": 212282,
+    "cellCp4x": 217737,
     "activeSkills": [
       {
         "type": "Active",
@@ -7556,6 +7686,11 @@
       "atk": 32940,
       "def": 24503
     },
+    "attribute": "技",
+    "tactic": "均衡",
+    "baseCp": 187019,
+    "cellCp3x": 211138,
+    "cellCp4x": 213282,
     "activeSkills": [
       {
         "type": "Active",
@@ -8003,6 +8138,11 @@
       "atk": 32077,
       "def": 25267
     },
+    "attribute": "技",
+    "tactic": "爆發",
+    "baseCp": 187301,
+    "cellCp3x": 211443,
+    "cellCp4x": 213682,
     "activeSkills": [
       {
         "type": "Active",
@@ -8226,6 +8366,11 @@
       "atk": 33803,
       "def": 23228
     },
+    "attribute": "技",
+    "tactic": "均衡",
+    "baseCp": 186749,
+    "cellCp3x": 210866,
+    "cellCp4x": 213575,
     "activeSkills": [
       {
         "type": "Active",
@@ -8449,6 +8594,11 @@
       "atk": 29487,
       "def": 25012
     },
+    "attribute": "速",
+    "tactic": "輔助",
+    "baseCp": 187224,
+    "cellCp3x": 211335,
+    "cellCp4x": 213619,
     "activeSkills": [
       {
         "type": "Active",
@@ -8640,6 +8790,11 @@
       "atk": 32364,
       "def": 24503
     },
+    "attribute": "力",
+    "tactic": "輸出",
+    "baseCp": 186473,
+    "cellCp3x": 210574,
+    "cellCp4x": 213263,
     "activeSkills": [
       {
         "type": "Active",
@@ -8863,6 +9018,11 @@
       "atk": 32652,
       "def": 25522
     },
+    "attribute": "技",
+    "tactic": "輸出",
+    "baseCp": 186413,
+    "cellCp3x": 210513,
+    "cellCp4x": 212946,
     "activeSkills": [
       {
         "type": "Active",
@@ -9086,6 +9246,11 @@
       "atk": 30350,
       "def": 26287
     },
+    "attribute": "技",
+    "tactic": "輔助",
+    "baseCp": 188689,
+    "cellCp3x": 212896,
+    "cellCp4x": 216073,
     "activeSkills": [
       {
         "type": "Active",
@@ -9309,6 +9474,11 @@
       "atk": 35242,
       "def": 21954
     },
+    "attribute": "力",
+    "tactic": "均衡",
+    "baseCp": 186397,
+    "cellCp3x": 210489,
+    "cellCp4x": 216388,
     "activeSkills": [
       {
         "type": "Active",
@@ -9594,6 +9764,11 @@
       "atk": 33228,
       "def": 23738
     },
+    "attribute": "速",
+    "tactic": "均衡",
+    "baseCp": 186864,
+    "cellCp3x": 210983,
+    "cellCp4x": 216299,
     "activeSkills": [
       {
         "type": "Active",
@@ -9817,6 +9992,11 @@
       "atk": 34666,
       "def": 23483
     },
+    "attribute": "力",
+    "tactic": "爆發",
+    "baseCp": 187022,
+    "cellCp3x": 211156,
+    "cellCp4x": 213765,
     "activeSkills": [
       {
         "type": "Active",
@@ -10395,6 +10575,11 @@
       "atk": 32940,
       "def": 24248
     },
+    "attribute": "技",
+    "tactic": "控制",
+    "baseCp": 187022,
+    "cellCp3x": 211141,
+    "cellCp4x": 213344,
     "activeSkills": [
       {
         "type": "Active",
@@ -11094,6 +11279,11 @@
       "atk": 34954,
       "def": 22973
     },
+    "attribute": "心",
+    "tactic": "均衡",
+    "baseCp": 202383,
+    "cellCp3x": 227275,
+    "cellCp4x": 229589,
     "activeSkills": [
       {
         "type": "Active",
@@ -11317,6 +11507,11 @@
       "atk": 34954,
       "def": 24757
     },
+    "attribute": "速",
+    "tactic": "爆發",
+    "baseCp": 192399,
+    "cellCp3x": 216831,
+    "cellCp4x": 218917,
     "activeSkills": [
       {
         "type": "Active",
@@ -11864,6 +12059,11 @@
       "atk": 30926,
       "def": 29345
     },
+    "attribute": "速",
+    "tactic": "輔助",
+    "baseCp": 200173,
+    "cellCp3x": 224937,
+    "cellCp4x": 227920,
     "activeSkills": [
       {
         "type": "Active",
@@ -12117,6 +12317,11 @@
       "atk": 37544,
       "def": 27051
     },
+    "attribute": "心",
+    "tactic": "爆發",
+    "baseCp": 207113,
+    "cellCp3x": 232271,
+    "cellCp4x": 234452,
     "activeSkills": [
       {
         "type": "Active",
@@ -12436,6 +12641,11 @@
       "atk": 35817,
       "def": 26796
     },
+    "attribute": "心",
+    "tactic": "輸出",
+    "baseCp": 204392,
+    "cellCp3x": 229400,
+    "cellCp4x": 230263,
     "activeSkills": [
       {
         "type": "Active",
@@ -12787,6 +12997,11 @@
       "atk": 33803,
       "def": 22719
     },
+    "attribute": "力",
+    "tactic": "爆發",
+    "baseCp": 186960,
+    "cellCp3x": 211077,
+    "cellCp4x": 213236,
     "activeSkills": [
       {
         "type": "Active",
@@ -13496,6 +13711,11 @@
       "atk": 35817,
       "def": 26287
     },
+    "attribute": "知",
+    "tactic": "輸出",
+    "baseCp": 204171,
+    "cellCp3x": 229159,
+    "cellCp4x": 230143,
     "activeSkills": [
       {
         "type": "Active",
@@ -14628,6 +14848,11 @@
       "atk": 35817,
       "def": 27816
     },
+    "attribute": "知",
+    "tactic": "爆發",
+    "baseCp": 205736,
+    "cellCp3x": 230823,
+    "cellCp4x": 232754,
     "activeSkills": [
       {
         "type": "Active",
@@ -14990,6 +15215,11 @@
       "atk": 35530,
       "def": 28835
     },
+    "attribute": "心",
+    "tactic": "均衡",
+    "baseCp": 205312,
+    "cellCp3x": 230360,
+    "cellCp4x": 230776,
     "activeSkills": [
       {
         "type": "Active",
@@ -15307,6 +15537,11 @@
       "atk": 34091,
       "def": 27816
     },
+    "attribute": "速",
+    "tactic": "輔助",
+    "baseCp": 202616,
+    "cellCp3x": 227509,
+    "cellCp4x": 229434,
     "activeSkills": [
       {
         "type": "Active",
@@ -15561,6 +15796,11 @@
       "atk": 35702,
       "def": 27357
     },
+    "attribute": "速",
+    "tactic": "控制",
+    "baseCp": 203344,
+    "cellCp3x": 228312,
+    "cellCp4x": 230498,
     "activeSkills": [
       {
         "type": "Active",
@@ -15908,6 +16148,11 @@
       "atk": 34289,
       "def": 27555
     },
+    "attribute": "技",
+    "tactic": "輔助",
+    "baseCp": 204036,
+    "cellCp3x": 229033,
+    "cellCp4x": 231127,
     "activeSkills": [
       {
         "type": "Active",
@@ -16195,6 +16440,11 @@
       "atk": 33228,
       "def": 22719
     },
+    "attribute": "力",
+    "tactic": "爆發",
+    "baseCp": 187568,
+    "cellCp3x": 211727,
+    "cellCp4x": 214606,
     "activeSkills": [
       {
         "type": "Active",
@@ -16439,6 +16689,11 @@
       "atk": 34954,
       "def": 27561
     },
+    "attribute": "速",
+    "tactic": "均衡",
+    "baseCp": 201377,
+    "cellCp3x": 226247,
+    "cellCp4x": 228457,
     "activeSkills": [
       {
         "type": "Active",
@@ -16821,6 +17076,11 @@
       "atk": 34148,
       "def": 28198
     },
+    "attribute": "技",
+    "tactic": "輔助",
+    "baseCp": 203849,
+    "cellCp3x": 228844,
+    "cellCp4x": 227376,
     "activeSkills": [
       {
         "type": "Active",
@@ -17151,6 +17411,11 @@
       "atk": 35040,
       "def": 27343
     },
+    "attribute": "力",
+    "tactic": "均衡",
+    "baseCp": 203960,
+    "cellCp3x": 228969,
+    "cellCp4x": 230815,
     "activeSkills": [
       {
         "type": "Active",
@@ -17471,6 +17736,11 @@
       "atk": 33228,
       "def": 25522
     },
+    "attribute": "力",
+    "tactic": "輔助",
+    "baseCp": 195657,
+    "cellCp3x": 220215,
+    "cellCp4x": 222914,
     "activeSkills": [
       {
         "type": "Active",
@@ -17762,6 +18032,11 @@
       "atk": 33515,
       "def": 25012
     },
+    "attribute": "速",
+    "tactic": "控制",
+    "baseCp": 194782,
+    "cellCp3x": 219339,
+    "cellCp4x": 221309,
     "activeSkills": [
       {
         "type": "Active",
@@ -18128,6 +18403,11 @@
       "atk": 35271,
       "def": 28020
     },
+    "attribute": "力",
+    "tactic": "控制",
+    "baseCp": 203620,
+    "cellCp3x": 228619,
+    "cellCp4x": 227150,
     "activeSkills": [
       {
         "type": "Active",
@@ -18485,6 +18765,11 @@
       "atk": 32652,
       "def": 27816
     },
+    "attribute": "力",
+    "tactic": "輔助",
+    "baseCp": 200972,
+    "cellCp3x": 225790,
+    "cellCp4x": 227337,
     "activeSkills": [
       {
         "type": "Active",
@@ -18848,6 +19133,11 @@
       "atk": 35242,
       "def": 25267
     },
+    "attribute": "力",
+    "tactic": "控制",
+    "baseCp": 194112,
+    "cellCp3x": 218643,
+    "cellCp4x": 221052,
     "activeSkills": [
       {
         "type": "Active",
@@ -19221,6 +19511,11 @@
       "atk": 34091,
       "def": 23738
     },
+    "attribute": "速",
+    "tactic": "均衡",
+    "baseCp": 192192,
+    "cellCp3x": 216627,
+    "cellCp4x": 215299,
     "activeSkills": [
       {
         "type": "Active",
@@ -19564,6 +19859,11 @@
       "atk": 33803,
       "def": 27306
     },
+    "attribute": "力",
+    "tactic": "均衡",
+    "baseCp": 202350,
+    "cellCp3x": 227245,
+    "cellCp4x": 225802,
     "activeSkills": [
       {
         "type": "Active",
@@ -19839,6 +20139,11 @@
       "atk": 33688,
       "def": 28351
     },
+    "attribute": "技",
+    "tactic": "輔助",
+    "baseCp": 203796,
+    "cellCp3x": 228788,
+    "cellCp4x": 229831,
     "activeSkills": [
       {
         "type": "Active",
@@ -20126,6 +20431,11 @@
       "atk": 32767,
       "def": 28606
     },
+    "attribute": "速",
+    "tactic": "輔助",
+    "baseCp": 203628,
+    "cellCp3x": 228570,
+    "cellCp4x": 227115,
     "activeSkills": [
       {
         "type": "Active",
@@ -20460,6 +20770,11 @@
       "atk": 34868,
       "def": 28096
     },
+    "attribute": "力",
+    "tactic": "均衡",
+    "baseCp": 203646,
+    "cellCp3x": 228636,
+    "cellCp4x": 227169,
     "activeSkills": [
       {
         "type": "Active",
@@ -20735,6 +21050,11 @@
       "atk": 34983,
       "def": 27586
     },
+    "attribute": "速",
+    "tactic": "均衡",
+    "baseCp": 203738,
+    "cellCp3x": 228736,
+    "cellCp4x": 231244,
     "activeSkills": [
       {
         "type": "Active",
@@ -21052,6 +21372,11 @@
       "atk": 34120,
       "def": 28173
     },
+    "attribute": "力",
+    "tactic": "輔助",
+    "baseCp": 203753,
+    "cellCp3x": 228744,
+    "cellCp4x": 230890,
     "activeSkills": [
       {
         "type": "Active",
@@ -21360,6 +21685,11 @@
       "atk": 35184,
       "def": 27586
     },
+    "attribute": "技",
+    "tactic": "輸出",
+    "baseCp": 203423,
+    "cellCp3x": 228393,
+    "cellCp4x": 226931,
     "activeSkills": [
       {
         "type": "Active",
@@ -21661,6 +21991,11 @@
       "atk": 36738,
       "def": 26618
     },
+    "attribute": "技",
+    "tactic": "爆發",
+    "baseCp": 203568,
+    "cellCp3x": 228561,
+    "cellCp4x": 230550,
     "activeSkills": [
       {
         "type": "Active",
@@ -22065,6 +22400,11 @@
       "atk": 35616,
       "def": 26414
     },
+    "attribute": "技",
+    "tactic": "爆發",
+    "baseCp": 202623,
+    "cellCp3x": 227560,
+    "cellCp4x": 229669,
     "activeSkills": [
       {
         "type": "Active",
@@ -22330,6 +22670,11 @@
       "atk": 35443,
       "def": 27113
     },
+    "attribute": "速",
+    "tactic": "輸出",
+    "baseCp": 202500,
+    "cellCp3x": 227424,
+    "cellCp4x": 225973,
     "activeSkills": [
       {
         "type": "Active",
@@ -22701,6 +23046,11 @@
       "atk": 36968,
       "def": 27510
     },
+    "attribute": "知",
+    "tactic": "輸出",
+    "baseCp": 207145,
+    "cellCp3x": 232310,
+    "cellCp4x": 230799,
     "activeSkills": [
       {
         "type": "Active",
@@ -23045,6 +23395,11 @@
       "atk": 34350,
       "def": 28759
     },
+    "attribute": "技",
+    "tactic": "輔助",
+    "baseCp": 206740,
+    "cellCp3x": 231836,
+    "cellCp4x": 230343,
     "activeSkills": [
       {
         "type": "Active",
@@ -23300,6 +23655,11 @@
       "atk": 36220,
       "def": 27077
     },
+    "attribute": "技",
+    "tactic": "輸出",
+    "baseCp": 203716,
+    "cellCp3x": 228718,
+    "cellCp4x": 227248,
     "activeSkills": [
       {
         "type": "Active",
@@ -23628,6 +23988,11 @@
       "atk": 35299,
       "def": 27535
     },
+    "attribute": "速",
+    "tactic": "控制",
+    "baseCp": 203967,
+    "cellCp3x": 228972,
+    "cellCp4x": 230694,
     "activeSkills": [
       {
         "type": "Active",
@@ -23926,6 +24291,11 @@
       "atk": 37371,
       "def": 28020
     },
+    "attribute": "心",
+    "tactic": "輸出",
+    "baseCp": 209159,
+    "cellCp3x": 234397,
+    "cellCp4x": 232868,
     "activeSkills": [
       {
         "type": "Active",
@@ -24261,6 +24631,11 @@
       "atk": 37256,
       "def": 27586
     },
+    "attribute": "知",
+    "tactic": "輸出",
+    "baseCp": 207176,
+    "cellCp3x": 232342,
+    "cellCp4x": 230831,
     "activeSkills": [
       {
         "type": "Active",
@@ -24579,6 +24954,11 @@
       "atk": 33372,
       "def": 29523
     },
+    "attribute": "心",
+    "tactic": "輔助",
+    "baseCp": 209511,
+    "cellCp3x": 234714,
+    "cellCp4x": 233194,
     "activeSkills": [
       {
         "type": "Active",
@@ -24908,6 +25288,11 @@
       "atk": 34062,
       "def": 29014
     },
+    "attribute": "力",
+    "tactic": "輔助",
+    "baseCp": 206641,
+    "cellCp3x": 231750,
+    "cellCp4x": 230253,
     "activeSkills": [
       {
         "type": "Active",
@@ -25162,6 +25547,11 @@
       "atk": 36767,
       "def": 28555
     },
+    "attribute": "技",
+    "tactic": "輸出",
+    "baseCp": 207923,
+    "cellCp3x": 233129,
+    "cellCp4x": 231608,
     "activeSkills": [
       {
         "type": "Active",
@@ -25465,6 +25855,11 @@
       "atk": 34005,
       "def": 28300
     },
+    "attribute": "技",
+    "tactic": "控制",
+    "baseCp": 204407,
+    "cellCp3x": 229404,
+    "cellCp4x": 227935,
     "activeSkills": [
       {
         "type": "Active",
@@ -25813,6 +26208,11 @@
       "atk": 35904,
       "def": 27281
     },
+    "attribute": "速",
+    "tactic": "輸出",
+    "baseCp": 204496,
+    "cellCp3x": 229513,
+    "cellCp4x": 232032,
     "activeSkills": [
       {
         "type": "Active",
@@ -26137,6 +26537,11 @@
       "atk": 36824,
       "def": 28493
     },
+    "attribute": "心",
+    "tactic": "輸出",
+    "baseCp": 208157,
+    "cellCp3x": 233377,
+    "cellCp4x": 231852,
     "activeSkills": [
       {
         "type": "Active",
@@ -26435,6 +26840,11 @@
       "atk": 37026,
       "def": 27688
     },
+    "attribute": "知",
+    "tactic": "輸出",
+    "baseCp": 208607,
+    "cellCp3x": 233812,
+    "cellCp4x": 232291,
     "activeSkills": [
       {
         "type": "Active",
@@ -26722,6 +27132,11 @@
       "atk": 32796,
       "def": 28784
     },
+    "attribute": "力",
+    "tactic": "輔助",
+    "baseCp": 204999,
+    "cellCp3x": 229990,
+    "cellCp4x": 228523,
     "activeSkills": [
       {
         "type": "Active",
@@ -26913,6 +27328,11 @@
       "atk": 34062,
       "def": 28504
     },
+    "attribute": "速",
+    "tactic": "輔助",
+    "baseCp": 205505,
+    "cellCp3x": 230548,
+    "cellCp4x": 229068,
     "activeSkills": [
       {
         "type": "Active",
@@ -27188,6 +27608,11 @@
       "atk": 36163,
       "def": 27890
     },
+    "attribute": "力",
+    "tactic": "輸出",
+    "baseCp": 206334,
+    "cellCp3x": 231444,
+    "cellCp4x": 229947,
     "activeSkills": [
       {
         "type": "Active",
@@ -27534,6 +27959,11 @@
       "atk": 35386,
       "def": 28316
     },
+    "attribute": "速",
+    "tactic": "均衡",
+    "baseCp": 206323,
+    "cellCp3x": 231423,
+    "cellCp4x": 229928,
     "activeSkills": [
       {
         "type": "Active",
@@ -27891,6 +28321,11 @@
       "atk": 35731,
       "def": 28045
     },
+    "attribute": "力",
+    "tactic": "均衡",
+    "baseCp": 206940,
+    "cellCp3x": 232063,
+    "cellCp4x": 230563,
     "activeSkills": [
       {
         "type": "Active",
@@ -28204,6 +28639,11 @@
       "atk": 36422,
       "def": 28096
     },
+    "attribute": "速",
+    "tactic": "輸出",
+    "baseCp": 207497,
+    "cellCp3x": 232656,
+    "cellCp4x": 231147,
     "activeSkills": [
       {
         "type": "Active",
@@ -28551,6 +28991,11 @@
       "atk": 33285,
       "def": 29523
     },
+    "attribute": "速",
+    "tactic": "輔助",
+    "baseCp": 208335,
+    "cellCp3x": 233504,
+    "cellCp4x": 231992,
     "activeSkills": [
       {
         "type": "Active",
@@ -28826,6 +29271,11 @@
       "atk": 35040,
       "def": 29192
     },
+    "attribute": "技",
+    "tactic": "輔助",
+    "baseCp": 208099,
+    "cellCp3x": 233278,
+    "cellCp4x": 231764,
     "activeSkills": [
       {
         "type": "Active",
@@ -29070,6 +29520,11 @@
       "atk": 33141,
       "def": 29218
     },
+    "attribute": "技",
+    "tactic": "輔助",
+    "baseCp": 209048,
+    "cellCp3x": 234210,
+    "cellCp4x": 232700,
     "activeSkills": [
       {
         "type": "Active",
@@ -29366,6 +29821,11 @@
       "atk": 33630,
       "def": 29218
     },
+    "attribute": "力",
+    "tactic": "輔助",
+    "baseCp": 207791,
+    "cellCp3x": 232947,
+    "cellCp4x": 231438,
     "activeSkills": [
       {
         "type": "Active",
@@ -29603,6 +30063,11 @@
       "atk": 38465,
       "def": 28682
     },
+    "attribute": "知",
+    "tactic": "輸出",
+    "baseCp": 212336,
+    "cellCp3x": 237733,
+    "cellCp4x": 236164,
     "activeSkills": [
       {
         "type": "Active",
@@ -29886,6 +30351,11 @@
       "atk": 39126,
       "def": 28555
     },
+    "attribute": "知",
+    "tactic": "輸出",
+    "baseCp": 212895,
+    "cellCp3x": 238316,
+    "cellCp4x": 236741,
     "activeSkills": [
       {
         "type": "Active",
@@ -30174,6 +30644,11 @@
       "atk": 34868,
       "def": 28224
     },
+    "attribute": "速",
+    "tactic": "均衡",
+    "baseCp": 208601,
+    "cellCp3x": 233795,
+    "cellCp4x": 232277,
     "activeSkills": [
       {
         "type": "Active",
@@ -30482,6 +30957,11 @@
       "atk": 33889,
       "def": 28912
     },
+    "attribute": "力",
+    "tactic": "輔助",
+    "baseCp": 208886,
+    "cellCp3x": 234043,
+    "cellCp4x": 232534,
     "activeSkills": [
       {
         "type": "Active",
@@ -31029,6 +31509,11 @@
       "atk": 38925,
       "def": 28402
     },
+    "attribute": "心",
+    "tactic": "輸出",
+    "baseCp": 213519,
+    "cellCp3x": 238963,
+    "cellCp4x": 237383,
     "activeSkills": [
       {
         "type": "Active",
