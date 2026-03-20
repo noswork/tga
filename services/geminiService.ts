@@ -58,7 +58,7 @@ GAME DATABASE:
 ${gameDb}
 
 INSTRUCTIONS:
-1. Answer questions about characters, RC cells, stats, skills, and game mechanics.
+1. Answer questions about characters, RC cells, stats, skills, CP, and game mechanics.
 2. If a character or cell is not in the database, search online for "Tokyo Ghoul: Awakening" data.
 3. Format stats with bold text and lists for readability.
 
@@ -74,7 +74,7 @@ RESTRICTIONS:
 ${gameDb}
 
 指令：
-1. 回答角色、RC 細胞、數值、技能及遊戲機制相關問題。
+1. 回答角色、RC 細胞、數值、技能、戰力(CP)及遊戲機制相關問題。
 2. 若資料庫中找不到，請搜尋「東京喰種：Awakening」相關資料補充。
 3. 使用粗體和列表格式顯示數值，方便閱讀。
 
