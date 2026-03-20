@@ -14,7 +14,7 @@ function buildGameDatabase(): string {
       `主動技能#${s.skillNum}(最高級): ${s.levels[s.levels.length - 1]?.description ?? ''}`
     ).join('; ');
     const passive = h.passiveSkills.map(s => `${s.name}[${s.subtype}]: ${s.description}`).join('; ');
-    return `[角色] ${h.rarity} ${h.title ? h.title + ' ' : ''}${h.name} | 組織:${h.organization} | HP:${h.stats.hp} ATK:${h.stats.atk} DEF:${h.stats.def} | ${active} | ${passive}`;
+    return `[角色] ${h.rarity} ${h.title ? h.title + ' ' : ''}${h.name} | 組織:${h.organization} | 屬性:${h.attribute ?? '?'} 戰術:${h.tactic ?? '?'} | 基礎戰力:${h.baseCp ?? '?'} 3x細胞戰力:${h.cellCp3x ?? '?'} 4x細胞戰力:${h.cellCp4x ?? '?'} | HP:${h.stats.hp} ATK:${h.stats.atk} DEF:${h.stats.def} | ${active} | ${passive}`;
   });
 
   const cellLines = cells.map(c => {
