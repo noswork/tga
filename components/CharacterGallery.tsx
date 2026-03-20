@@ -213,15 +213,15 @@ const CharModal: React.FC<{ char: Character; lang: Lang; onClose: () => void }> 
             {char.baseCp && (
               <div className="flex divide-x divide-gray-200 dark:divide-gray-700 border-t border-gray-200 dark:border-gray-700">
                 <div className="flex-1 flex flex-col items-center py-2">
-                  <span className="text-xs text-gray-400 font-tech tracking-wider">基礎 CP</span>
+                  <span className="text-xs text-gray-400 font-tech tracking-wider">基礎戰力</span>
                   <span className="text-gray-900 dark:text-white font-bold text-sm">{char.baseCp.toLocaleString()}</span>
                 </div>
                 <div className="flex-1 flex flex-col items-center py-2">
-                  <span className="text-xs text-yellow-400 font-tech tracking-wider">3x CP</span>
+                  <span className="text-xs text-yellow-400 font-tech tracking-wider">3x 細胞</span>
                   <span className="text-gray-900 dark:text-white font-bold text-sm">{char.cellCp3x?.toLocaleString()}</span>
                 </div>
                 <div className="flex-1 flex flex-col items-center py-2">
-                  <span className="text-xs text-orange-400 font-tech tracking-wider">4x CP</span>
+                  <span className="text-xs text-orange-400 font-tech tracking-wider">4x 細胞</span>
                   <span className="text-gray-900 dark:text-white font-bold text-sm">{char.cellCp4x?.toLocaleString()}</span>
                 </div>
               </div>
