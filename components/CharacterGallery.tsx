@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { Lang, Character, ActiveSkill, PassiveSkill, EffectSegment } from '../types';
+import { Lang, Character, ActiveSkill, PassiveSkill, EffectSegment, Cell } from '../types';
 import { translations, charactersData } from '../constants';
 import { Shield, Sword, Database, X, Flame, Sparkles, Star } from 'lucide-react';
+import cellsData from '../gamedata/cells.json';
 
 interface CharacterGalleryProps {
   lang: Lang;
   onSwitchToCells: () => void;
+  initialCharId?: string | null;
+  onClearInitialChar?: () => void;
+  onOpenCell: (cellId: string) => void;
 }
 
 type FilterCategory = 'ALL' | 'No Organization' | 'CCG Higher Rank Investigator' | 'CCG Lower Rank Investigator' | 'Aogiri Tree' | 'Anteiku';
@@ -68,6 +72,13 @@ function heroImg(id: string, type: 'head' | 'bg' | 'frame', rarity?: string) {
   if (type === 'bg')    return `/assets/heroes/bg/TYJS_bg_head_${rarity}.png`;
   if (type === 'frame') return `/assets/heroes/frame/TYJS_frame_head_${rarity}.png`;
   return '';
+}
+
+function getCellsForChar(charId: string): Cell[] {
+  return (cellsData as Cell[]).filter(c => {
+    const m = c.id.match(/Equip_Special_(\d+)_/);
+    return m ? m[1] === charId : false;
+  });
 }
 
 const EffectText: React.FC<{ segments: EffectSegment[] }> = ({ segments }) => (
@@ -133,10 +144,11 @@ const HeroCard: React.FC<{ char: Character; onClick: () => void }> = ({ char, on
   );
 };
 
-const CharModal: React.FC<{ char: Character; lang: Lang; onClose: () => void }> = ({ char, lang, onClose }) => {
+const CharModal: React.FC<{ char: Character; lang: Lang; onClose: () => void; onOpenCell: (cellId: string) => void }> = ({ char, lang, onClose, onOpenCell }) => {
   const [activeTab, setActiveTab] = useState<SkillTab>('active');
   const [activeLv, setActiveLv] = useState<Record<number, number>>({});
   const r = char.rarity as string;
+  const exclusiveCells = getCellsForChar(char.id);
 
   return createPortal(
     <>
@@ -324,6 +336,31 @@ const CharModal: React.FC<{ char: Character; lang: Lang; onClose: () => void }> 
                   ))
             )}
           </div>
+
+          {/* Exclusive Cells */}
+          {exclusiveCells.length > 0 && (
+            <div className="flex-shrink-0 border-t border-gray-200 dark:border-gray-700 px-4 py-3">
+              <p className="text-xs font-bold text-gray-500 dark:text-gray-400 mb-2 tracking-wider">專屬細胞</p>
+              <div className="flex gap-2 flex-wrap">
+                {exclusiveCells.map(cell => (
+                  <button
+                    key={cell.id}
+                    onClick={() => { onClose(); onOpenCell(cell.id); }}
+                    className="flex flex-col items-center gap-1 hover:scale-110 transition-transform"
+                    title={cell.name}
+                  >
+                    <img
+                      src={`/assets/cells-icon/${cell.imgFile}`}
+                      alt={cell.name}
+                      className="w-12 h-12 object-contain"
+                      onError={e => (e.currentTarget.style.opacity = '0.3')}
+                    />
+                    <span className="text-[9px] text-gray-500 dark:text-gray-400">{cell.statType}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </>,
@@ -331,11 +368,19 @@ const CharModal: React.FC<{ char: Character; lang: Lang; onClose: () => void }> 
   );
 };
 
-export const CharacterGallery: React.FC<CharacterGalleryProps> = ({ lang, onSwitchToCells }) => {
+export const CharacterGallery: React.FC<CharacterGalleryProps> = ({ lang, onSwitchToCells, initialCharId, onClearInitialChar, onOpenCell }) => {
   const t = translations[lang].characters;
   const [orgFilter, setOrgFilter] = useState<FilterCategory>('ALL');
   const [rarityFilter, setRarityFilter] = useState<RarityFilter>('ALL');
   const [selectedChar, setSelectedChar] = useState<Character | null>(null);
+
+  useEffect(() => {
+    if (initialCharId) {
+      const char = (charactersData as Character[]).find(c => c.id === initialCharId);
+      if (char) setSelectedChar(char);
+      onClearInitialChar?.();
+    }
+  }, [initialCharId]);
 
   const orgFilters: FilterCategory[] = ['ALL', 'No Organization', 'CCG Higher Rank Investigator', 'CCG Lower Rank Investigator', 'Aogiri Tree', 'Anteiku'];
   const rarityFilters: RarityFilter[] = ['ALL', 'SP', 'SSR', 'SR', 'R'];
@@ -348,7 +393,7 @@ export const CharacterGallery: React.FC<CharacterGalleryProps> = ({ lang, onSwit
 
   return (
     <>
-      {selectedChar && <CharModal char={selectedChar} lang={lang} onClose={() => setSelectedChar(null)} />}
+      {selectedChar && <CharModal char={selectedChar} lang={lang} onClose={() => setSelectedChar(null)} onOpenCell={onOpenCell} />}
 
       <div className="w-full max-w-7xl mx-auto animate-in fade-in duration-700">
         {/* Header */}

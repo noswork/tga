@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { Lang, Cell } from '../types';
+import { Lang, Cell, Character } from '../types';
 import { Database, X, Zap, Shield, Heart } from 'lucide-react';
 import cellsData from '../gamedata/cells.json';
+import heroesData from '../gamedata/heroes.json';
 
 interface CellGalleryProps {
   lang: Lang;
   onSwitchToChars: () => void;
+  initialCellId?: string | null;
+  onClearInitialCell?: () => void;
+  onOpenChar: (charId: string) => void;
 }
 
 type RarityFilter = 'ALL' | 1 | 2 | 3 | 4 | 5 | 6;
@@ -44,6 +48,12 @@ const STAT_VAL_ZH = (v: string | null | undefined): string => {
   if (!v) return '—';
   return v.replace(/ATK/g, '攻擊力').replace(/DEF/g, '防禦力').replace(/HP/g, '生命值');
 };
+
+function getCharForCell(cellId: string): Character | undefined {
+  const m = cellId.match(/Equip_Special_(\d+)_/);
+  if (!m) return undefined;
+  return (heroesData as Character[]).find(h => h.id === m[1]);
+}
 
 const TITLE: Record<Lang, string> = { en: 'RC CELLS', zh: 'RC 細胞' };
 const SUBTITLE: Record<Lang, string> = { en: 'CELL DATABASE', zh: 'RC 細胞資料庫' };
@@ -97,8 +107,10 @@ const CellCard: React.FC<{ cell: Cell; onClick: () => void }> = ({ cell, onClick
   </button>
 );
 
-const CellModal: React.FC<{ cell: Cell; lang: Lang; onClose: () => void }> = ({ cell, lang, onClose }) => (
-  createPortal(
+const CellModal: React.FC<{ cell: Cell; lang: Lang; onClose: () => void; onOpenChar: (charId: string) => void }> = ({ cell, lang, onClose, onOpenChar }) => {
+  const owner = getCharForCell(cell.id);
+  const ATTR_IMG: Record<string, string> = { 力:'str', 技:'skl', 速:'spd', 心:'psy', 知:'wit' };
+  return createPortal(
     <>
       <div className="fixed inset-0 z-40" style={{ background: 'rgba(0,0,0,0.75)', backdropFilter: 'blur(4px)' }} onClick={onClose} />
       <div className="fixed inset-x-0 top-0 z-50 pointer-events-none" style={{ height: '96px', backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }} />
@@ -138,7 +150,6 @@ const CellModal: React.FC<{ cell: Cell; lang: Lang; onClose: () => void }> = ({ 
             {/* Stats */}
             {cell.baseStat != null && (
               <div className="bg-gray-100 dark:bg-[#22252e] border border-gray-200 dark:border-gray-700 rounded p-3 space-y-2">
-                {/* Base stat */}
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-semibold text-gray-500 dark:text-gray-400">加成</span>
                   <span className={`text-base font-bold ${STAT_COLOR[cell.statType]}`}>{cell.baseStat.toLocaleString()}</span>
@@ -156,6 +167,31 @@ const CellModal: React.FC<{ cell: Cell; lang: Lang; onClose: () => void }> = ({ 
                 </div>
               </div>
             )}
+
+            {/* Owner character */}
+            {owner && (
+              <div className="bg-gray-100 dark:bg-[#22252e] border border-gray-200 dark:border-gray-700 rounded p-3">
+                <p className="text-xs font-bold text-gray-500 dark:text-gray-400 mb-2 tracking-wider">專屬角色</p>
+                <button
+                  onClick={() => { onClose(); onOpenChar(owner.id); }}
+                  className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+                >
+                  <div className="relative w-12 h-12 flex-shrink-0 rounded overflow-hidden">
+                    <img src={`/assets/heroes/bg/TYJS_bg_head_${owner.rarity}.png`} alt="" className="absolute inset-0 w-full h-full object-cover" onError={e => (e.currentTarget.style.display='none')} />
+                    <img src={`/assets/heroes/head/${owner.id}_head.png`} alt={owner.name} className="absolute inset-0 w-full h-full object-cover" onError={e => (e.currentTarget.style.display='none')} />
+                    <img src={`/assets/heroes/frame/TYJS_frame_head_${owner.rarity}.png`} alt="" className="absolute inset-0 w-full h-full object-contain pointer-events-none" onError={e => (e.currentTarget.style.display='none')} />
+                    {owner.attribute && (
+                      <img src={`/assets/heroes/attribute/${ATTR_IMG[owner.attribute]}.png`} alt={owner.attribute} className="absolute top-0 right-0 w-4 h-4 object-contain" onError={e => (e.currentTarget.style.display='none')} />
+                    )}
+                  </div>
+                  <div className="text-left">
+                    {owner.title && <p className="text-xs text-gray-500 dark:text-gray-400">【{owner.title}】</p>}
+                    <p className="text-sm font-bold text-gray-900 dark:text-white">{owner.name}</p>
+                  </div>
+                </button>
+              </div>
+            )}
+
             {cell.uniqueSkillSegments && (
               <div className="bg-gray-100 dark:bg-[#22252e] border border-yellow-400/50 dark:border-yellow-700/50 rounded p-3">
                 <p className="text-yellow-600 dark:text-yellow-400 text-xs font-bold mb-1 tracking-wider">{UNIQUE_SKILL[lang]}</p>
@@ -173,12 +209,20 @@ const CellModal: React.FC<{ cell: Cell; lang: Lang; onClose: () => void }> = ({ 
       </div>
     </>,
     document.body
-  )
-);
+  );
+};
 
-export const CellGallery: React.FC<CellGalleryProps> = ({ lang, onSwitchToChars }) => {
+export const CellGallery: React.FC<CellGalleryProps> = ({ lang, onSwitchToChars, initialCellId, onClearInitialCell, onOpenChar }) => {
   const [rarityFilter, setRarityFilter] = useState<RarityFilter>('ALL');
   const [selectedCell, setSelectedCell] = useState<Cell | null>(null);
+
+  useEffect(() => {
+    if (initialCellId) {
+      const cell = (cellsData as Cell[]).find(c => c.id === initialCellId);
+      if (cell) setSelectedCell(cell);
+      onClearInitialCell?.();
+    }
+  }, [initialCellId]);
 
   const cells = cellsData as Cell[];
   const rarityFilters: RarityFilter[] = ['ALL', 6, 5, 4, 3, 2, 1];
@@ -186,7 +230,7 @@ export const CellGallery: React.FC<CellGalleryProps> = ({ lang, onSwitchToChars 
 
   return (
     <>
-      {selectedCell && <CellModal cell={selectedCell} lang={lang} onClose={() => setSelectedCell(null)} />}
+      {selectedCell && <CellModal cell={selectedCell} lang={lang} onClose={() => setSelectedCell(null)} onOpenChar={onOpenChar} />}
 
       <div className="w-full max-w-7xl mx-auto animate-in fade-in duration-700">
         {/* Header */}

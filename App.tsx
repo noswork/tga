@@ -39,6 +39,8 @@ const App: React.FC = () => {
   });
 
   const [terminalMessages, setTerminalMessages] = useState<ChatMessage[]>([]);
+  const [initialCellId, setInitialCellId] = useState<string | null>(null);
+  const [initialCharId, setInitialCharId] = useState<string | null>(null);
 
   useEffect(() => {
     saveLanguage(lang);
@@ -179,7 +181,13 @@ const App: React.FC = () => {
         {activeSection === 'characters' && (
           <div className="min-h-screen pt-24 w-full snap-start flex flex-col justify-between">
             <div className="flex-grow container mx-auto px-4">
-              <CharacterGallery lang={lang} onSwitchToCells={() => setActiveSection('cells' as any)} />
+              <CharacterGallery
+                lang={lang}
+                onSwitchToCells={() => setActiveSection('cells' as any)}
+                initialCharId={initialCharId}
+                onClearInitialChar={() => setInitialCharId(null)}
+                onOpenCell={(cellId) => { setInitialCellId(cellId); setActiveSection('cells' as any); }}
+              />
             </div>
             <Footer lang={lang} />
           </div>
@@ -188,7 +196,13 @@ const App: React.FC = () => {
         {(activeSection as any) === 'cells' && (
           <div className="min-h-screen pt-24 w-full snap-start flex flex-col justify-between">
             <div className="flex-grow container mx-auto px-4">
-              <CellGallery lang={lang} onSwitchToChars={() => setActiveSection('characters')} />
+              <CellGallery
+                lang={lang}
+                onSwitchToChars={() => setActiveSection('characters')}
+                initialCellId={initialCellId}
+                onClearInitialCell={() => setInitialCellId(null)}
+                onOpenChar={(charId) => { setInitialCharId(charId); setActiveSection('characters'); }}
+              />
             </div>
             <Footer lang={lang} />
           </div>
