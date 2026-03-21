@@ -113,11 +113,11 @@ const CellModal: React.FC<{ cell: Cell; lang: Lang; onClose: () => void; onOpenC
   return createPortal(
     <>
       <div className="fixed inset-0 z-40" style={{ background: 'rgba(0,0,0,0.75)', backdropFilter: 'blur(4px)' }} onClick={onClose} />
-      <div className="fixed inset-x-0 top-0 z-50 pointer-events-none" style={{ height: '96px', backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }} />
-      <div className="fixed inset-x-0 bottom-0 z-50 flex items-end justify-center md:items-center md:px-4" style={{ top: '96px' }}>
+      <div className="fixed inset-x-0 top-0 z-50 pointer-events-none" style={{ height: 'var(--navbar-h)', backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }} />
+      <div className="fixed inset-x-0 bottom-0 z-50 flex items-end justify-center md:items-center md:px-4" style={{ top: 'var(--navbar-h)' }}>
         <div
           className="relative w-full max-w-lg flex flex-col shadow-2xl bg-white dark:bg-[#1a1c23] rounded-t-xl md:rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden md:mb-4"
-          style={{ maxHeight: 'calc(100vh - 96px - 16px)' }}
+          style={{ maxHeight: 'calc(100vh - var(--navbar-h) - 16px)' }}
         >
           {/* Header */}
           <div className="flex-shrink-0 bg-gray-50 dark:bg-[#111318] border-b border-gray-200 dark:border-gray-700 px-4 py-3 flex items-center gap-3">
@@ -236,7 +236,7 @@ export const CellGallery: React.FC<CellGalleryProps> = ({ lang, onSwitchToChars,
         {/* Header */}
         <div className="mb-6 flex flex-col md:flex-row justify-between items-end gap-4 border-b border-gray-300 dark:border-ghoul-red/30 pb-6">
           <div>
-            <h2 className="text-4xl font-serif font-bold text-black dark:text-white tracking-widest mb-2 flex items-center gap-3">
+            <h2 className="text-2xl md:text-4xl font-serif font-bold text-black dark:text-white tracking-widest mb-2 flex items-center gap-3">
               <Database className="text-ghoul-red" /> {TITLE[lang]}
             </h2>
             <div className="text-xs font-tech text-gray-500 tracking-[0.3em]">{SUBTITLE[lang]}</div>
@@ -256,7 +256,7 @@ export const CellGallery: React.FC<CellGalleryProps> = ({ lang, onSwitchToChars,
             <button
               key={String(r)}
               onClick={() => setRarityFilter(r)}
-              className={`px-4 py-1.5 text-xs font-tech font-bold border uppercase tracking-wider transition-all rounded-sm ${
+              className={`px-3 py-2 text-xs font-tech font-bold border uppercase tracking-wider transition-all rounded-sm ${
                 rarityFilter === r
                   ? r === 'ALL' ? 'bg-ghoul-red border-ghoul-red text-white' : `${RARITY_COLOR[r as number]} bg-black/40`
                   : 'bg-transparent text-gray-500 border-gray-700 hover:border-gray-400 hover:text-gray-300'
@@ -274,7 +274,7 @@ export const CellGallery: React.FC<CellGalleryProps> = ({ lang, onSwitchToChars,
             <p className="text-gray-500 font-tech tracking-widest text-sm">NO CELLS FOUND</p>
           </div>
         ) : (
-          <div className="grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] gap-4 px-2">
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(80px,1fr))] md:grid-cols-[repeat(auto-fill,minmax(120px,1fr))] gap-3 md:gap-4 px-2">
             {filtered.map((cell, i) => (
               <CellCard key={`${cell.id}-${i}`} cell={cell} onClick={() => setSelectedCell(cell)} />
             ))}

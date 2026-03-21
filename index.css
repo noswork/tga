@@ -2,6 +2,15 @@
 
 @variant dark (&:is(.dark, .dark *));
 
+:root {
+  --navbar-h: 56px;
+}
+@media (min-width: 768px) {
+  :root {
+    --navbar-h: 96px;
+  }
+}
+
 @theme {
   --color-ghoul-black: #18181b;
   --color-ghoul-dark: #27272a;

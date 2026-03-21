@@ -56,7 +56,7 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, activeSection, se
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-white/90 via-white/50 to-transparent dark:from-black/80 dark:via-black/40 dark:to-transparent transition-all duration-500">
-      <div className="container mx-auto px-4 h-24 flex items-center justify-between">
+      <div className="container mx-auto px-4 h-14 md:h-24 flex items-center justify-between">
         {/* Logo */}
         <div 
           className="flex items-center cursor-pointer group" 
@@ -133,7 +133,7 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, activeSection, se
 
       {/* Mobile Nav Dropdown */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-black/95 border-b border-ghoul-red/50 backdrop-blur-xl absolute w-full z-50 shadow-xl">
+        <div className="md:hidden bg-black/95 border-b border-ghoul-red/50 backdrop-blur-xl absolute w-full z-50 shadow-xl max-h-[calc(100vh-56px)] overflow-y-auto">
           <div className="flex flex-col p-6 space-y-4">
             {navItems.map((item) => (
               <button 

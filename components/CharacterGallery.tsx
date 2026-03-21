@@ -161,16 +161,16 @@ const CharModal: React.FC<{ char: Character; lang: Lang; onClose: () => void; on
       {/* navbar blur overlay */}
       <div
         className="fixed inset-x-0 top-0 z-50 pointer-events-none"
-        style={{ height: '96px', backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }}
+        style={{ height: 'var(--navbar-h)', backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }}
       />
       {/* modal panel */}
       <div
         className="fixed inset-x-0 bottom-0 z-50 flex items-end justify-center md:items-center md:px-4"
-        style={{ top: '96px' }}
+        style={{ top: 'var(--navbar-h)' }}
       >
         <div
           className="relative w-full max-w-2xl flex flex-col shadow-2xl bg-white dark:bg-[#1a1c23] rounded-t-xl md:rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden md:mb-4"
-          style={{ maxHeight: 'calc(100vh - 96px - 16px)' }}
+          style={{ maxHeight: 'calc(100vh - var(--navbar-h) - 16px)' }}
         >
           {/* Header */}
           <div className="flex-shrink-0 bg-gray-50 dark:bg-[#111318] border-b border-gray-200 dark:border-gray-700">
@@ -399,7 +399,7 @@ export const CharacterGallery: React.FC<CharacterGalleryProps> = ({ lang, onSwit
         {/* Header */}
         <div className="mb-6 flex flex-col md:flex-row justify-between items-end gap-4 border-b border-gray-300 dark:border-ghoul-red/30 pb-6">
           <div>
-            <h2 className="text-4xl font-serif font-bold text-black dark:text-white tracking-widest mb-2 flex items-center gap-3">
+            <h2 className="text-2xl md:text-4xl font-serif font-bold text-black dark:text-white tracking-widest mb-2 flex items-center gap-3">
               <Database className="text-ghoul-red" /> {t.title}
             </h2>
             <div className="text-xs font-tech text-gray-500 tracking-[0.3em]">{t.ccgDatabase}</div>
@@ -418,7 +418,7 @@ export const CharacterGallery: React.FC<CharacterGalleryProps> = ({ lang, onSwit
           <div className="flex flex-wrap gap-2">
             {orgFilters.map((f: FilterCategory) => (
               <button key={f} onClick={() => setOrgFilter(f)}
-                className={`px-4 py-1.5 text-xs font-tech font-bold border uppercase tracking-wider transition-all rounded-sm ${orgFilter === f ? 'bg-ghoul-red border-ghoul-red text-white' : 'bg-transparent text-gray-500 border-gray-700 hover:border-gray-400 hover:text-gray-300'}`}>
+                className={`px-3 py-2 text-xs font-tech font-bold border uppercase tracking-wider transition-all rounded-sm ${orgFilter === f ? 'bg-ghoul-red border-ghoul-red text-white' : 'bg-transparent text-gray-500 border-gray-700 hover:border-gray-400 hover:text-gray-300'}`}>
                 {ORG_DISPLAY[lang]?.[f] ?? f}
               </button>
             ))}
@@ -426,7 +426,7 @@ export const CharacterGallery: React.FC<CharacterGalleryProps> = ({ lang, onSwit
           <div className="flex flex-wrap gap-2">
             {rarityFilters.map((r: RarityFilter) => (
               <button key={r} onClick={() => setRarityFilter(r)}
-                className={`px-4 py-1.5 text-xs font-tech font-bold border uppercase tracking-wider transition-all rounded-sm ${rarityFilter === r ? (r === 'ALL' ? 'bg-ghoul-red border-ghoul-red text-white' : `${RARITY_COLOR[r]} bg-black/40`) : 'bg-transparent text-gray-500 border-gray-700 hover:border-gray-400 hover:text-gray-300'}`}>
+                className={`px-3 py-2 text-xs font-tech font-bold border uppercase tracking-wider transition-all rounded-sm ${rarityFilter === r ? (r === 'ALL' ? 'bg-ghoul-red border-ghoul-red text-white' : `${RARITY_COLOR[r]} bg-black/40`) : 'bg-transparent text-gray-500 border-gray-700 hover:border-gray-400 hover:text-gray-300'}`}>
                 {r}
               </button>
             ))}
@@ -440,7 +440,7 @@ export const CharacterGallery: React.FC<CharacterGalleryProps> = ({ lang, onSwit
             <p className="text-gray-500 font-tech tracking-widest text-sm">NO SUBJECTS FOUND</p>
           </div>
         ) : (
-          <div className="grid grid-cols-[repeat(auto-fill,minmax(112px,1fr))] gap-4 px-2">
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(80px,1fr))] md:grid-cols-[repeat(auto-fill,minmax(112px,1fr))] gap-3 md:gap-4 px-2">
             {filteredData.map((char: Character) => (
               <HeroCard key={char.id} char={char} onClick={() => setSelectedChar(char)} />
             ))}

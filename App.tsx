@@ -179,7 +179,7 @@ const App: React.FC = () => {
         )}
 
         {activeSection === 'characters' && (
-          <div className="min-h-screen pt-24 w-full snap-start flex flex-col justify-between">
+          <div className="min-h-screen pt-14 md:pt-24 w-full snap-start flex flex-col justify-between">
             <div className="flex-grow container mx-auto px-4">
               <CharacterGallery
                 lang={lang}
@@ -194,7 +194,7 @@ const App: React.FC = () => {
         )}
 
         {(activeSection as any) === 'cells' && (
-          <div className="min-h-screen pt-24 w-full snap-start flex flex-col justify-between">
+          <div className="min-h-screen pt-14 md:pt-24 w-full snap-start flex flex-col justify-between">
             <div className="flex-grow container mx-auto px-4">
               <CellGallery
                 lang={lang}
@@ -209,7 +209,7 @@ const App: React.FC = () => {
         )}
 
         {activeSection === 'tools' && (
-          <div className="min-h-screen pt-24 w-full snap-start flex flex-col justify-between">
+          <div className="min-h-screen pt-14 md:pt-24 w-full snap-start flex flex-col justify-between">
             <div className="flex-grow w-full flex flex-col">
               <GameTools lang={lang} />
             </div>
@@ -218,19 +218,19 @@ const App: React.FC = () => {
         )}
 
         {activeSection === 'ghoulLab' && (
-          <div className="h-full pt-24 w-full flex">
+          <div className="h-full pt-14 md:pt-24 w-full flex">
             <GhoulLab lang={lang} />
           </div>
         )}
 
         {activeSection === 'toybox' && (
-          <div className="h-full pt-24 w-full flex">
+          <div className="h-full pt-14 md:pt-24 w-full flex">
             <GhoulToybox lang={lang} />
           </div>
         )}
 
         {activeSection === 'terminal' && (
-          <div className="h-full pt-24 pb-0 w-full flex flex-col">
+          <div className="h-full pt-14 md:pt-24 pb-0 w-full flex flex-col">
             <div className="flex-grow container mx-auto px-4 overflow-hidden">
               <Terminal
                 lang={lang}
