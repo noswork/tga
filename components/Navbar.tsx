@@ -1,7 +1,7 @@
 import React from 'react';
 import { Lang, ViewSection } from '../types';
 import { translations } from '../constants';
-import { Terminal as TerminalIcon, Home, Database, Wrench, Menu, X } from 'lucide-react';
+import { Terminal as TerminalIcon, Home, Database, Wrench, Menu, X, Eye } from 'lucide-react';
 
 interface NavbarProps {
   lang: Lang;
@@ -42,6 +42,16 @@ const KakuganIcon = ({ isActive }: { isActive: boolean }) => (
 export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, activeSection, setActiveSection, isDark, toggleTheme }) => {
   const t = translations[lang];
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const [viewCount, setViewCount] = React.useState<number | null>(null);
+
+  React.useEffect(() => {
+    const url = import.meta.env.VITE_COUNTER_URL;
+    if (!url) return;
+    fetch(`${url}/count`, { method: 'POST' })
+      .then(r => r.json())
+      .then((data: { count: number }) => setViewCount(data.count))
+      .catch(() => {});
+  }, []);
 
   const toggleLang = () => {
     setLang(lang === Lang.EN ? Lang.ZH : Lang.EN);
@@ -65,6 +75,11 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, activeSection, se
            <div className="flex flex-col justify-center drop-shadow-lg">
              <span className="text-2xl font-bold text-black dark:text-white tracking-tighter group-hover:text-ghoul-red transition-colors font-ghoul uppercase leading-none text-shadow-sm">{t.brandTitle}</span>
              <span className="text-[10px] tracking-[0.6em] uppercase text-ghoul-red font-mono mt-1 font-bold text-shadow-sm">{t.brandSubtitle}</span>
+             {viewCount !== null && (
+               <span className="flex items-center gap-1 text-[9px] text-gray-400 font-mono mt-0.5 tracking-wider">
+                 <Eye size={9} className="opacity-60" />{viewCount.toLocaleString()} VIEWS
+               </span>
+             )}
            </div>
         </div>
 
