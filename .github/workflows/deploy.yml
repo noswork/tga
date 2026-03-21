@@ -35,6 +35,7 @@ jobs:
         run: npm run build
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          VITE_COUNTER_URL: ${{ secrets.VITE_COUNTER_URL }}
       
       - name: Copy CNAME to dist
         run: cp CNAME dist/CNAME
