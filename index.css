@@ -148,6 +148,20 @@
   scrollbar-color: #52525b #18181b;
 }
 
+/* RC Cell rank bar shimmer */
+@keyframes rc-shimmer {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(400%); }
+}
+.rc-bar-shimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.18) 50%, transparent 100%);
+  width: 30%;
+  animation: rc-shimmer 2.4s ease-in-out infinite;
+  pointer-events: none;
+}
+
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
 }

@@ -3,6 +3,7 @@ import { GoogleGenAI, GenerateContentResponse, Tool } from "@google/genai";
 import { GhoulLabReport, GhoulRatingRank, TerminalMode, Character, Cell } from "../types";
 import heroesJson from "../gamedata/heroes.json";
 import cellsJson from "../gamedata/cells.json";
+import { calcBaseCp, calcCellCp3x, calcCellCp4x } from "../utils/cpCalc";
 
 // ── Build compact game database string for GAME mode ──────────
 function buildGameDatabase(): string {
@@ -14,7 +15,12 @@ function buildGameDatabase(): string {
       `主動技能#${s.skillNum}(最高級): ${s.levels[s.levels.length - 1]?.description ?? ''}`
     ).join('; ');
     const passive = h.passiveSkills.map(s => `${s.name}[${s.subtype}]: ${s.description}`).join('; ');
-    return `[角色] ${h.rarity} ${h.title ? h.title + ' ' : ''}${h.name} | 組織:${h.organization} | 屬性:${h.attribute ?? '?'} 戰術:${h.tactic ?? '?'} | 基礎戰力:${h.baseCp ?? '?'} 3x細胞戰力:${h.cellCp3x ?? '?'} 4x細胞戰力:${h.cellCp4x ?? '?'} | HP:${h.stats.hp} ATK:${h.stats.atk} DEF:${h.stats.def} | ${active} | ${passive}`;
+    const { atk, def, hp } = h.stats;
+    const arenaCP = (h as Character).strategicArenaCP;
+    const baseCp = arenaCP != null ? calcBaseCp(arenaCP, atk, def, hp) : null;
+    const cp3x = arenaCP != null ? calcCellCp3x(arenaCP, atk, def, hp) : null;
+    const cp4x = arenaCP != null ? calcCellCp4x(arenaCP, atk, def, hp) : null;
+    return `[角色] ${h.rarity} ${h.title ? h.title + ' ' : ''}${h.name} | 組織:${h.organization} | 屬性:${(h as Character).attribute ?? '?'} 戰術:${(h as Character).tactic ?? '?'} | 基礎戰力:${baseCp ?? '?'} 3x細胞戰力:${cp3x ?? '?'} 4x細胞戰力:${cp4x ?? '?'} | HP:${hp} ATK:${atk} DEF:${def} | ${active} | ${passive}`;
   });
 
   const cellLines = cells.map(c => {

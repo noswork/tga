@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { Lang, Character, ActiveSkill, PassiveSkill, EffectSegment, Cell } from '../types';
 import { translations, charactersData } from '../constants';
-import { Shield, Sword, Database, X, Flame, Sparkles, Star } from 'lucide-react';
+import { Shield, Sword, Database, X, Flame, Sparkles, Star, LayoutGrid, Trophy } from 'lucide-react';
 import cellsData from '../gamedata/cells.json';
+import { calcBaseCp, calcCellCp3x, calcCellCp4x } from '../utils/cpCalc';
 
 interface CharacterGalleryProps {
   lang: Lang;
@@ -16,11 +17,37 @@ interface CharacterGalleryProps {
 type FilterCategory = 'ALL' | 'No Organization' | 'CCG Higher Rank Investigator' | 'CCG Lower Rank Investigator' | 'Aogiri Tree' | 'Anteiku';
 type RarityFilter = 'ALL' | 'SP' | 'SSR' | 'SR' | 'R';
 type SkillTab = 'active' | 'passive' | 'talent';
+type ViewMode = 'grid' | 'rank';
+type RankMetric = 'baseCp' | 'arenaCP' | 'cellCp3x' | 'cellCp4x' | 'atk' | 'def' | 'hp';
+
+const RANK_METRICS: { key: RankMetric; label: string; color: string; glow: string; gradFrom: string; gradTo: string }[] = [
+  { key: 'baseCp',   label: '基礎戰力',   color: 'text-red-400',    glow: '0 0 8px rgba(239,68,68,0.7)',   gradFrom: '#7f1d1d', gradTo: '#ef4444' },
+  { key: 'arenaCP',  label: '競技場戰力', color: 'text-pink-400',   glow: '0 0 8px rgba(236,72,153,0.7)',  gradFrom: '#831843', gradTo: '#ec4899' },
+  { key: 'cellCp3x', label: '3x細胞戰力', color: 'text-yellow-400', glow: '0 0 8px rgba(234,179,8,0.7)',   gradFrom: '#713f12', gradTo: '#eab308' },
+  { key: 'cellCp4x', label: '4x細胞戰力', color: 'text-orange-400', glow: '0 0 8px rgba(249,115,22,0.7)',  gradFrom: '#7c2d12', gradTo: '#f97316' },
+  { key: 'atk',      label: 'ATK',        color: 'text-orange-300', glow: '0 0 8px rgba(253,186,116,0.7)', gradFrom: '#7c2d12', gradTo: '#fdba74' },
+  { key: 'def',      label: 'DEF',        color: 'text-blue-400',   glow: '0 0 8px rgba(96,165,250,0.7)',  gradFrom: '#1e3a5f', gradTo: '#60a5fa' },
+  { key: 'hp',       label: 'HP',         color: 'text-green-400',  glow: '0 0 8px rgba(74,222,128,0.7)',  gradFrom: '#14532d', gradTo: '#4ade80' },
+];
+
+function getCharValue(char: Character, metric: RankMetric): number | null {
+  const { atk, def, hp } = char.stats;
+  const arenaCP = char.strategicArenaCP ?? null;
+  switch (metric) {
+    case 'baseCp':   return arenaCP != null ? calcBaseCp(arenaCP, atk, def, hp) : null;
+    case 'arenaCP':  return arenaCP;
+    case 'cellCp3x': return arenaCP != null ? calcCellCp3x(arenaCP, atk, def, hp) : null;
+    case 'cellCp4x': return arenaCP != null ? calcCellCp4x(arenaCP, atk, def, hp) : null;
+    case 'atk':      return atk;
+    case 'def':      return def;
+    case 'hp':       return hp;
+  }
+}
 
 const RARITY_COLOR: Record<string, string> = {
   SP:  'text-pink-400 border-pink-400',
-  SSR: 'text-yellow-400 border-yellow-400',
-  SR:  'text-purple-400 border-purple-400',
+  SSR: 'text-purple-400 border-purple-400',
+  SR:  'text-yellow-400 border-yellow-400',
   R:   'text-blue-400 border-blue-400',
 };
 
@@ -222,22 +249,29 @@ const CharModal: React.FC<{ char: Character; lang: Lang; onClose: () => void; on
               </div>
             </div>
             {/* CP row */}
-            {char.baseCp && (
-              <div className="flex divide-x divide-gray-200 dark:divide-gray-700 border-t border-gray-200 dark:border-gray-700">
-                <div className="flex-1 flex flex-col items-center py-2">
-                  <span className="text-xs text-gray-400 font-tech tracking-wider">基礎戰力</span>
-                  <span className="text-gray-900 dark:text-white font-bold text-sm">{char.baseCp.toLocaleString()}</span>
+            {char.strategicArenaCP != null && (() => {
+              const { atk, def, hp } = char.stats;
+              const arenaCP = char.strategicArenaCP!;
+              const baseCp = calcBaseCp(arenaCP, atk, def, hp);
+              const cp3x = calcCellCp3x(arenaCP, atk, def, hp);
+              const cp4x = calcCellCp4x(arenaCP, atk, def, hp);
+              return (
+                <div className="flex divide-x divide-gray-200 dark:divide-gray-700 border-t border-gray-200 dark:border-gray-700">
+                  <div className="flex-1 flex flex-col items-center py-2">
+                    <span className="text-xs text-gray-400 font-tech tracking-wider">基礎戰力</span>
+                    <span className="text-gray-900 dark:text-white font-bold text-sm">{baseCp.toLocaleString()}</span>
+                  </div>
+                  <div className="flex-1 flex flex-col items-center py-2">
+                    <span className="text-xs text-yellow-400 font-tech tracking-wider">3x細胞戰力</span>
+                    <span className="text-gray-900 dark:text-white font-bold text-sm">{cp3x.toLocaleString()}</span>
+                  </div>
+                  <div className="flex-1 flex flex-col items-center py-2">
+                    <span className="text-xs text-orange-400 font-tech tracking-wider">4x細胞戰力</span>
+                    <span className="text-gray-900 dark:text-white font-bold text-sm">{cp4x.toLocaleString()}</span>
+                  </div>
                 </div>
-                <div className="flex-1 flex flex-col items-center py-2">
-                  <span className="text-xs text-yellow-400 font-tech tracking-wider">3x細胞戰力</span>
-                  <span className="text-gray-900 dark:text-white font-bold text-sm">{char.cellCp3x?.toLocaleString()}</span>
-                </div>
-                <div className="flex-1 flex flex-col items-center py-2">
-                  <span className="text-xs text-orange-400 font-tech tracking-wider">4x細胞戰力</span>
-                  <span className="text-gray-900 dark:text-white font-bold text-sm">{char.cellCp4x?.toLocaleString()}</span>
-                </div>
-              </div>
-            )}
+              );
+            })()}
 
             {/* Tabs */}
             <div className="flex border-t border-gray-200 dark:border-gray-700">
@@ -373,6 +407,15 @@ export const CharacterGallery: React.FC<CharacterGalleryProps> = ({ lang, onSwit
   const [orgFilter, setOrgFilter] = useState<FilterCategory>('ALL');
   const [rarityFilter, setRarityFilter] = useState<RarityFilter>('ALL');
   const [selectedChar, setSelectedChar] = useState<Character | null>(null);
+  const [viewMode, setViewMode] = useState<ViewMode>('grid');
+  const [rankMetric, setRankMetric] = useState<RankMetric>('baseCp');
+  const [barReady, setBarReady] = useState(false);
+
+  useEffect(() => {
+    setBarReady(false);
+    const id = requestAnimationFrame(() => requestAnimationFrame(() => setBarReady(true)));
+    return () => cancelAnimationFrame(id);
+  }, [rankMetric, viewMode]);
 
   useEffect(() => {
     if (initialCharId) {
@@ -407,44 +450,149 @@ export const CharacterGallery: React.FC<CharacterGalleryProps> = ({ lang, onSwit
           </div>
           <div className="flex items-center gap-3">
             <div className="text-sm font-tech text-gray-400">{filteredData.length} / {charactersData.length} {lang === 'zh' ? '角色' : 'SUBJECTS'}</div>
+            <div className="flex border border-gray-600 rounded-sm overflow-hidden">
+              <button onClick={() => setViewMode('grid')} className={`px-2.5 py-1.5 transition-all ${viewMode === 'grid' ? 'bg-ghoul-red text-white' : 'text-gray-400 hover:text-white'}`} title="卡片模式">
+                <LayoutGrid size={14} />
+              </button>
+              <button onClick={() => setViewMode('rank')} className={`px-2.5 py-1.5 border-l border-gray-600 transition-all ${viewMode === 'rank' ? 'bg-ghoul-red text-white' : 'text-gray-400 hover:text-white'}`} title="排名模式">
+                <Trophy size={14} />
+              </button>
+            </div>
             <button onClick={onSwitchToCells} className="px-3 py-1.5 text-xs font-tech font-bold border border-gray-600 text-gray-400 hover:border-gray-300 hover:text-white transition-all rounded-sm uppercase tracking-wider">
               {lang === 'zh' ? 'RC 細胞 →' : 'RC CELLS →'}
             </button>
           </div>
         </div>
 
-        {/* Filters */}
-        <div className="mb-5 space-y-2">
-          <div className="flex flex-wrap gap-2">
-            {orgFilters.map((f: FilterCategory) => (
-              <button key={f} onClick={() => setOrgFilter(f)}
-                className={`px-3 py-2 text-xs font-tech font-bold border uppercase tracking-wider transition-all rounded-sm ${orgFilter === f ? 'bg-ghoul-red border-ghoul-red text-white' : 'bg-transparent text-gray-500 border-gray-700 hover:border-gray-400 hover:text-gray-300'}`}>
-                {ORG_DISPLAY[lang]?.[f] ?? f}
-              </button>
-            ))}
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {rarityFilters.map((r: RarityFilter) => (
-              <button key={r} onClick={() => setRarityFilter(r)}
-                className={`px-3 py-2 text-xs font-tech font-bold border uppercase tracking-wider transition-all rounded-sm ${rarityFilter === r ? (r === 'ALL' ? 'bg-ghoul-red border-ghoul-red text-white' : `${RARITY_COLOR[r]} bg-black/40`) : 'bg-transparent text-gray-500 border-gray-700 hover:border-gray-400 hover:text-gray-300'}`}>
-                {r}
-              </button>
-            ))}
-          </div>
-        </div>
+        {viewMode === 'grid' ? (
+          <>
+            {/* Filters */}
+            <div className="mb-5 space-y-2">
+              <div className="flex flex-wrap gap-2">
+                {orgFilters.map((f: FilterCategory) => (
+                  <button key={f} onClick={() => setOrgFilter(f)}
+                    className={`px-3 py-2 text-xs font-tech font-bold border uppercase tracking-wider transition-all rounded-sm ${orgFilter === f ? 'bg-ghoul-red border-ghoul-red text-white' : 'bg-transparent text-gray-500 border-gray-700 hover:border-gray-400 hover:text-gray-300'}`}>
+                    {ORG_DISPLAY[lang]?.[f] ?? f}
+                  </button>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {rarityFilters.map((r: RarityFilter) => (
+                  <button key={r} onClick={() => setRarityFilter(r)}
+                    className={`px-3 py-2 text-xs font-tech font-bold border uppercase tracking-wider transition-all rounded-sm ${rarityFilter === r ? (r === 'ALL' ? 'bg-ghoul-red border-ghoul-red text-white' : `${RARITY_COLOR[r]} bg-black/40`) : 'bg-transparent text-gray-500 border-gray-700 hover:border-gray-400 hover:text-gray-300'}`}>
+                    {r}
+                  </button>
+                ))}
+              </div>
+            </div>
 
-        {/* Grid */}
-        {filteredData.length === 0 ? (
-          <div className="flex flex-col items-center justify-center min-h-[300px] border-2 border-dashed border-gray-700 rounded-lg">
-            <Database size={48} className="text-gray-700 mb-4" />
-            <p className="text-gray-500 font-tech tracking-widest text-sm">NO SUBJECTS FOUND</p>
-          </div>
+            {/* Grid */}
+            {filteredData.length === 0 ? (
+              <div className="flex flex-col items-center justify-center min-h-[300px] border-2 border-dashed border-gray-700 rounded-lg">
+                <Database size={48} className="text-gray-700 mb-4" />
+                <p className="text-gray-500 font-tech tracking-widest text-sm">NO SUBJECTS FOUND</p>
+              </div>
+            ) : (
+              <div className="grid grid-cols-[repeat(auto-fill,minmax(80px,1fr))] md:grid-cols-[repeat(auto-fill,minmax(112px,1fr))] gap-3 md:gap-4 px-2">
+                {filteredData.map((char: Character) => (
+                  <HeroCard key={char.id} char={char} onClick={() => setSelectedChar(char)} />
+                ))}
+              </div>
+            )}
+          </>
         ) : (
-          <div className="grid grid-cols-[repeat(auto-fill,minmax(80px,1fr))] md:grid-cols-[repeat(auto-fill,minmax(112px,1fr))] gap-3 md:gap-4 px-2">
-            {filteredData.map((char: Character) => (
-              <HeroCard key={char.id} char={char} onClick={() => setSelectedChar(char)} />
-            ))}
-          </div>
+          <>
+            {/* Rank metric selector */}
+            <div className="mb-5 flex flex-wrap gap-2">
+              {RANK_METRICS.map(m => (
+                <button key={m.key} onClick={() => setRankMetric(m.key)}
+                  className={`px-3 py-2 text-xs font-tech font-bold border uppercase tracking-wider transition-all rounded-sm ${rankMetric === m.key ? `border-ghoul-red bg-ghoul-red/20 ${m.color}` : 'bg-transparent text-gray-500 border-gray-700 hover:border-gray-400 hover:text-gray-300'}`}>
+                  {m.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Rank list */}
+            {(() => {
+              const metric = RANK_METRICS.find(m => m.key === rankMetric)!;
+              const allChars = [...(charactersData as Character[])];
+              const withVal = allChars.map(c => ({ c, val: getCharValue(c, rankMetric) }));
+              const sorted = withVal.sort((a, b) => {
+                if (a.val == null && b.val == null) return 0;
+                if (a.val == null) return 1;
+                if (b.val == null) return -1;
+                return b.val - a.val;
+              });
+              const maxVal = sorted[0]?.val ?? 1;
+              const MEDAL = ['🥇', '🥈', '🥉'];
+              return (
+                <div className="border border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden">
+                  {sorted.map(({ c, val }, idx) => {
+                    const pct = val != null && maxVal ? (val / maxVal) * 100 : 0;
+                    const rank = idx + 1;
+                    const rarity = c.rarity as keyof typeof RARITY_COLOR;
+                    return (
+                      <div key={c.id} onClick={() => setSelectedChar(c)}
+                        className="flex items-center gap-3 px-3 py-2.5 cursor-pointer border-b border-gray-100 dark:border-gray-800 last:border-b-0 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+                        {/* Rank number */}
+                        <div className="w-8 text-center flex-shrink-0">
+                          {rank <= 3
+                            ? <span className="text-base leading-none">{MEDAL[rank - 1]}</span>
+                            : <span className="text-xs font-tech text-gray-400">#{rank}</span>}
+                        </div>
+                        {/* Avatar */}
+                        <div className="relative w-10 h-10 flex-shrink-0 rounded overflow-hidden">
+                          <img src={`/assets/heroes/bg/TYJS_bg_head_${c.rarity}.png`} className="absolute inset-0 w-full h-full object-cover" />
+                          <img src={`/assets/heroes/head/${c.id}_head.png`} className="absolute inset-0 w-full h-full object-cover" />
+                          <img src={`/assets/heroes/frame/TYJS_frame_head_${c.rarity}.png`} className="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+                        </div>
+                        {/* Name */}
+                        <div className="flex-shrink-0 w-32 md:w-44">
+                          <div className="text-xs text-gray-400 truncate">{c.title}</div>
+                          <div className="text-sm font-semibold text-gray-900 dark:text-white truncate">{c.name}</div>
+                          <div className="flex items-center gap-1 mt-0.5">
+                            <span className={`text-[10px] font-tech font-bold ${RARITY_COLOR[rarity] ?? 'text-gray-400'}`}>{c.rarity}</span>
+                            {c.tactic && <span className="text-[10px] text-gray-500">{c.tactic}</span>}
+                          </div>
+                        </div>
+                        {/* Bar + value */}
+                        <div className="flex-1 flex items-center gap-3 min-w-0">
+                          {/* RC Cell bar */}
+                          <div className="flex-1 relative" style={{ height: '10px' }}>
+                            {/* Track: dark with RC measurement ticks */}
+                            <div className="absolute inset-0 border border-red-950/40"
+                              style={{
+                                background: '#07000a',
+                                backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(180,0,0,0.25) 19px, rgba(180,0,0,0.25) 20px)',
+                              }} />
+                            {/* Fill */}
+                            {val != null && (
+                              <div className="absolute inset-y-0 left-0 overflow-hidden"
+                                style={{
+                                  width: `${barReady ? pct : 0}%`,
+                                  transition: `width 1.2s cubic-bezier(0.22,1,0.36,1) ${Math.min(idx * 12, 600)}ms`,
+                                  clipPath: 'polygon(0 0, calc(100% - 5px) 0, 100% 50%, calc(100% - 5px) 100%, 0 100%)',
+                                  background: `linear-gradient(90deg, ${metric.gradFrom} 0%, ${metric.gradTo} 85%, #fff 100%)`,
+                                  boxShadow: pct > 5 ? metric.glow : 'none',
+                                }}>
+                                {/* Shimmer */}
+                                <div className="rc-bar-shimmer" />
+                              </div>
+                            )}
+                            {/* RC label on track */}
+                            <div className="absolute right-1.5 top-1/2 -translate-y-1/2 text-[7px] font-tech tracking-widest text-red-950/60 pointer-events-none select-none">RC</div>
+                          </div>
+                          <div className={`flex-shrink-0 text-sm font-bold font-tech w-20 text-right ${metric.color}`}>
+                            {val != null ? val.toLocaleString() : <span className="text-gray-500 font-normal">—</span>}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              );
+            })()}
+          </>
         )}
       </div>
     </>

@@ -13,9 +13,7 @@
     },
     "attribute": "技",
     "tactic": "輸出",
-    "baseCp": 186771,
-    "cellCp3x": 210869,
-    "cellCp4x": 213016,
+    "strategicArenaCP": 213837,
     "activeSkills": [
       {
         "type": "Active",
@@ -241,9 +239,7 @@
     },
     "attribute": "力",
     "tactic": "爆發",
-    "baseCp": 192630,
-    "cellCp3x": 217082,
-    "cellCp4x": 224440,
+    "strategicArenaCP": 224898,
     "activeSkills": [
       {
         "type": "Active",
@@ -553,9 +549,7 @@
     },
     "attribute": "技",
     "tactic": "輸出",
-    "baseCp": 191215,
-    "cellCp3x": 215588,
-    "cellCp4x": 221984,
+    "strategicArenaCP": 222471,
     "activeSkills": [
       {
         "type": "Active",
@@ -923,9 +917,7 @@
     },
     "attribute": "力",
     "tactic": "均衡",
-    "baseCp": 188007,
-    "cellCp3x": 212178,
-    "cellCp4x": 219427,
+    "strategicArenaCP": 220396,
     "activeSkills": [
       {
         "type": "Active",
@@ -1162,9 +1154,7 @@
     },
     "attribute": "技",
     "tactic": "均衡",
-    "baseCp": 204484,
-    "cellCp3x": 229493,
-    "cellCp4x": 230023,
+    "strategicArenaCP": 231003,
     "activeSkills": [
       {
         "type": "Active",
@@ -1514,9 +1504,7 @@
     },
     "attribute": "力",
     "tactic": "輸出",
-    "baseCp": 191864,
-    "cellCp3x": 216275,
-    "cellCp4x": 218640,
+    "strategicArenaCP": 219490,
     "activeSkills": [
       {
         "type": "Active",
@@ -1804,9 +1792,7 @@
     },
     "attribute": "速",
     "tactic": "輸出",
-    "baseCp": 189492,
-    "cellCp3x": 213764,
-    "cellCp4x": 220106,
+    "strategicArenaCP": 220439,
     "activeSkills": [
       {
         "type": "Active",
@@ -2251,7 +2237,8 @@
     "effectDefs": {
       "積蓄": "自己生命值低於30%時，造成的傷害增加20%",
       "挑釁": "將所有攻擊引導給自己"
-    }
+    },
+    "strategicArenaCP": null
   },
   {
     "id": "1009",
@@ -2424,7 +2411,8 @@
     "effectDefs": {
       "弱點": "如果目標帶有減益效果，造成的傷害增加15%",
       "致死": "無法觸發所有回復效果"
-    }
+    },
+    "strategicArenaCP": null
   },
   {
     "id": "1010",
@@ -2440,9 +2428,7 @@
     },
     "attribute": "力",
     "tactic": "輸出",
-    "baseCp": 186780,
-    "cellCp3x": 210896,
-    "cellCp4x": 213262,
+    "strategicArenaCP": 214083,
     "activeSkills": [
       {
         "type": "Active",
@@ -2668,9 +2654,7 @@
     },
     "attribute": "技",
     "tactic": "均衡",
-    "baseCp": 187492,
-    "cellCp3x": 211648,
-    "cellCp4x": 214054,
+    "strategicArenaCP": 214855,
     "activeSkills": [
       {
         "type": "Active",
@@ -2896,9 +2880,7 @@
     },
     "attribute": "力",
     "tactic": "控制",
-    "baseCp": 187524,
-    "cellCp3x": 211679,
-    "cellCp4x": 214168,
+    "strategicArenaCP": 214949,
     "activeSkills": [
       {
         "type": "Active",
@@ -3124,9 +3106,7 @@
     },
     "attribute": "速",
     "tactic": "控制",
-    "baseCp": 191684,
-    "cellCp3x": 216079,
-    "cellCp4x": 220683,
+    "strategicArenaCP": 221156,
     "activeSkills": [
       {
         "type": "Active",
@@ -3363,9 +3343,7 @@
     },
     "attribute": "速",
     "tactic": "輔助",
-    "baseCp": 189445,
-    "cellCp3x": 213706,
-    "cellCp4x": 219616,
+    "strategicArenaCP": 220024,
     "activeSkills": [
       {
         "type": "Active",
@@ -3591,9 +3569,7 @@
     },
     "attribute": "技",
     "tactic": "控制",
-    "baseCp": 187365,
-    "cellCp3x": 211505,
-    "cellCp4x": 217057,
+    "strategicArenaCP": 217525,
     "activeSkills": [
       {
         "type": "Active",
@@ -3809,9 +3785,7 @@
     },
     "attribute": "技",
     "tactic": "均衡",
-    "baseCp": 194449,
-    "cellCp3x": 218991,
-    "cellCp4x": 229708,
+    "strategicArenaCP": 229708,
     "activeSkills": [
       {
         "type": "Active",
@@ -4160,9 +4134,7 @@
     },
     "attribute": "技",
     "tactic": "輔助",
-    "baseCp": 196145,
-    "cellCp3x": 220684,
-    "cellCp4x": 225258,
+    "strategicArenaCP": 226224,
     "activeSkills": [
       {
         "type": "Active",
@@ -4388,9 +4360,7 @@
     },
     "attribute": "速",
     "tactic": "輸出",
-    "baseCp": 187262,
-    "cellCp3x": 211403,
-    "cellCp4x": 212596,
+    "strategicArenaCP": 213433,
     "activeSkills": [
       {
         "type": "Active",
@@ -4616,9 +4586,7 @@
     },
     "attribute": "速",
     "tactic": "輸出",
-    "baseCp": 187262,
-    "cellCp3x": 211403,
-    "cellCp4x": 212596,
+    "strategicArenaCP": 213433,
     "activeSkills": [
       {
         "type": "Active",
@@ -4834,9 +4802,7 @@
     },
     "attribute": "速",
     "tactic": "輸出",
-    "baseCp": 198231,
-    "cellCp3x": 222944,
-    "cellCp4x": 228349,
+    "strategicArenaCP": 229319,
     "activeSkills": [
       {
         "type": "Active",
@@ -5349,9 +5315,7 @@
     },
     "attribute": "知",
     "tactic": "爆發",
-    "baseCp": 204019,
-    "cellCp3x": 229013,
-    "cellCp4x": 227545,
+    "strategicArenaCP": 229013,
     "activeSkills": [
       {
         "type": "Active",
@@ -5754,7 +5718,8 @@
     "tiers": [],
     "effectDefs": {
       "積蓄": "自己生命值低於30%時，造成的傷害增加20%"
-    }
+    },
+    "strategicArenaCP": null
   },
   {
     "id": "1023",
@@ -5770,9 +5735,7 @@
     },
     "attribute": "速",
     "tactic": "控制",
-    "baseCp": 186855,
-    "cellCp3x": 210971,
-    "cellCp4x": 213905,
+    "strategicArenaCP": 214681,
     "activeSkills": [
       {
         "type": "Active",
@@ -6039,9 +6002,7 @@
     },
     "attribute": "速",
     "tactic": "輔助",
-    "baseCp": 189255,
-    "cellCp3x": 213460,
-    "cellCp4x": 220088,
+    "strategicArenaCP": 220441,
     "activeSkills": [
       {
         "type": "Active",
@@ -6235,9 +6196,7 @@
     },
     "attribute": "力",
     "tactic": "控制",
-    "baseCp": 186791,
-    "cellCp3x": 210909,
-    "cellCp4x": 215033,
+    "strategicArenaCP": 215909,
     "activeSkills": [
       {
         "type": "Active",
@@ -6463,9 +6422,7 @@
     },
     "attribute": "速",
     "tactic": "均衡",
-    "baseCp": 187083,
-    "cellCp3x": 211219,
-    "cellCp4x": 220179,
+    "strategicArenaCP": 220627,
     "activeSkills": [
       {
         "type": "Active",
@@ -6837,7 +6794,8 @@
     "tiers": [],
     "effectDefs": {
       "增幅": "如果自己帶有增益效果，造成的傷害增加15%"
-    }
+    },
+    "strategicArenaCP": null
   },
   {
     "id": "1029",
@@ -6999,7 +6957,8 @@
     "tiers": [],
     "effectDefs": {
       "弱點": "如果目標帶有減益效果，造成的傷害增加15%"
-    }
+    },
+    "strategicArenaCP": null
   },
   {
     "id": "1030",
@@ -7015,9 +6974,7 @@
     },
     "attribute": "速",
     "tactic": "輸出",
-    "baseCp": 186946,
-    "cellCp3x": 211064,
-    "cellCp4x": 216948,
+    "strategicArenaCP": 217242,
     "activeSkills": [
       {
         "type": "Active",
@@ -7264,9 +7221,7 @@
     },
     "attribute": "力",
     "tactic": "輔助",
-    "baseCp": 187830,
-    "cellCp3x": 211989,
-    "cellCp4x": 218379,
+    "strategicArenaCP": 218738,
     "activeSkills": [
       {
         "type": "Active",
@@ -7460,9 +7415,7 @@
     },
     "attribute": "技",
     "tactic": "均衡",
-    "baseCp": 188136,
-    "cellCp3x": 212282,
-    "cellCp4x": 217737,
+    "strategicArenaCP": 218130,
     "activeSkills": [
       {
         "type": "Active",
@@ -7688,9 +7641,7 @@
     },
     "attribute": "技",
     "tactic": "均衡",
-    "baseCp": 187019,
-    "cellCp3x": 211138,
-    "cellCp4x": 213282,
+    "strategicArenaCP": 214078,
     "activeSkills": [
       {
         "type": "Active",
@@ -8124,7 +8075,8 @@
     "tiers": [],
     "effectDefs": {
       "弱點": "如果目標帶有減益效果，造成的傷害增加15%"
-    }
+    },
+    "strategicArenaCP": null
   },
   {
     "id": "1035",
@@ -8140,9 +8092,7 @@
     },
     "attribute": "技",
     "tactic": "爆發",
-    "baseCp": 187301,
-    "cellCp3x": 211443,
-    "cellCp4x": 213682,
+    "strategicArenaCP": 214524,
     "activeSkills": [
       {
         "type": "Active",
@@ -8368,9 +8318,7 @@
     },
     "attribute": "技",
     "tactic": "均衡",
-    "baseCp": 186749,
-    "cellCp3x": 210866,
-    "cellCp4x": 213575,
+    "strategicArenaCP": 214356,
     "activeSkills": [
       {
         "type": "Active",
@@ -8596,9 +8544,7 @@
     },
     "attribute": "速",
     "tactic": "輔助",
-    "baseCp": 187224,
-    "cellCp3x": 211335,
-    "cellCp4x": 213619,
+    "strategicArenaCP": 214413,
     "activeSkills": [
       {
         "type": "Active",
@@ -8792,9 +8738,7 @@
     },
     "attribute": "力",
     "tactic": "輸出",
-    "baseCp": 186473,
-    "cellCp3x": 210574,
-    "cellCp4x": 213263,
+    "strategicArenaCP": 214064,
     "activeSkills": [
       {
         "type": "Active",
@@ -9020,9 +8964,7 @@
     },
     "attribute": "技",
     "tactic": "輸出",
-    "baseCp": 186413,
-    "cellCp3x": 210513,
-    "cellCp4x": 212946,
+    "strategicArenaCP": 213802,
     "activeSkills": [
       {
         "type": "Active",
@@ -9248,9 +9190,7 @@
     },
     "attribute": "技",
     "tactic": "輔助",
-    "baseCp": 188689,
-    "cellCp3x": 212896,
-    "cellCp4x": 216073,
+    "strategicArenaCP": 216922,
     "activeSkills": [
       {
         "type": "Active",
@@ -9476,9 +9416,7 @@
     },
     "attribute": "力",
     "tactic": "均衡",
-    "baseCp": 186397,
-    "cellCp3x": 210489,
-    "cellCp4x": 216388,
+    "strategicArenaCP": 216801,
     "activeSkills": [
       {
         "type": "Active",
@@ -9766,9 +9704,7 @@
     },
     "attribute": "速",
     "tactic": "均衡",
-    "baseCp": 186864,
-    "cellCp3x": 210983,
-    "cellCp4x": 216299,
+    "strategicArenaCP": 216757,
     "activeSkills": [
       {
         "type": "Active",
@@ -9994,9 +9930,7 @@
     },
     "attribute": "力",
     "tactic": "爆發",
-    "baseCp": 187022,
-    "cellCp3x": 211156,
-    "cellCp4x": 213765,
+    "strategicArenaCP": 214536,
     "activeSkills": [
       {
         "type": "Active",
@@ -10399,7 +10333,8 @@
     "tiers": [],
     "effectDefs": {
       "先制": "對生命值高於70%的敵人造成的傷害增加25%"
-    }
+    },
+    "strategicArenaCP": null
   },
   {
     "id": "1045",
@@ -10561,7 +10496,8 @@
     "tiers": [],
     "effectDefs": {
       "弱點": "如果目標帶有減益效果，造成的傷害增加15%"
-    }
+    },
+    "strategicArenaCP": null
   },
   {
     "id": "1046",
@@ -10577,9 +10513,7 @@
     },
     "attribute": "技",
     "tactic": "控制",
-    "baseCp": 187022,
-    "cellCp3x": 211141,
-    "cellCp4x": 213344,
+    "strategicArenaCP": 214180,
     "activeSkills": [
       {
         "type": "Active",
@@ -10941,7 +10875,8 @@
     "tiers": [],
     "effectDefs": {
       "穿刺": "無視目標的防禦力"
-    }
+    },
+    "strategicArenaCP": null
   },
   {
     "id": "1048",
@@ -11103,7 +11038,8 @@
     "tiers": [],
     "effectDefs": {
       "先制": "對生命值高於70%的敵人造成的傷害增加25%"
-    }
+    },
+    "strategicArenaCP": null
   },
   {
     "id": "1049",
@@ -11265,7 +11201,8 @@
     "tiers": [],
     "effectDefs": {
       "死亡": "對生命低於25%的敵人造成的傷害增加30%"
-    }
+    },
+    "strategicArenaCP": null
   },
   {
     "id": "1050",
@@ -11281,9 +11218,7 @@
     },
     "attribute": "心",
     "tactic": "均衡",
-    "baseCp": 202383,
-    "cellCp3x": 227275,
-    "cellCp4x": 229589,
+    "strategicArenaCP": 230545,
     "activeSkills": [
       {
         "type": "Active",
@@ -11509,9 +11444,7 @@
     },
     "attribute": "速",
     "tactic": "爆發",
-    "baseCp": 192399,
-    "cellCp3x": 216831,
-    "cellCp4x": 218917,
+    "strategicArenaCP": 219797,
     "activeSkills": [
       {
         "type": "Active",
@@ -11883,7 +11816,8 @@
     "tiers": [],
     "effectDefs": {
       "先制": "對生命值高於70%的敵人造成的傷害增加25%"
-    }
+    },
+    "strategicArenaCP": null
   },
   {
     "id": "1054",
@@ -12045,7 +11979,8 @@
     "tiers": [],
     "effectDefs": {
       "弱點": "如果目標帶有減益效果，造成的傷害增加15%"
-    }
+    },
+    "strategicArenaCP": null
   },
   {
     "id": "1055",
@@ -12061,9 +11996,7 @@
     },
     "attribute": "速",
     "tactic": "輔助",
-    "baseCp": 200173,
-    "cellCp3x": 224937,
-    "cellCp4x": 227920,
+    "strategicArenaCP": 228848,
     "activeSkills": [
       {
         "type": "Active",
@@ -12319,9 +12252,7 @@
     },
     "attribute": "心",
     "tactic": "爆發",
-    "baseCp": 207113,
-    "cellCp3x": 232271,
-    "cellCp4x": 234452,
+    "strategicArenaCP": 235431,
     "activeSkills": [
       {
         "type": "Active",
@@ -12643,9 +12574,7 @@
     },
     "attribute": "心",
     "tactic": "輸出",
-    "baseCp": 204392,
-    "cellCp3x": 229400,
-    "cellCp4x": 230263,
+    "strategicArenaCP": 231302,
     "activeSkills": [
       {
         "type": "Active",
@@ -12999,9 +12928,7 @@
     },
     "attribute": "力",
     "tactic": "爆發",
-    "baseCp": 186960,
-    "cellCp3x": 211077,
-    "cellCp4x": 213236,
+    "strategicArenaCP": 214017,
     "activeSkills": [
       {
         "type": "Active",
@@ -13373,7 +13300,8 @@
     "tiers": [],
     "effectDefs": {
       "增幅": "如果自己帶有增益效果，造成的傷害增加15%"
-    }
+    },
+    "strategicArenaCP": null
   },
   {
     "id": "1062",
@@ -13535,7 +13463,8 @@
     "tiers": [],
     "effectDefs": {
       "穿刺": "無視目標的防禦力"
-    }
+    },
+    "strategicArenaCP": null
   },
   {
     "id": "1063",
@@ -13697,7 +13626,8 @@
     "tiers": [],
     "effectDefs": {
       "弱點": "如果目標帶有減益效果，造成的傷害增加15%"
-    }
+    },
+    "strategicArenaCP": null
   },
   {
     "id": "1065",
@@ -13713,9 +13643,7 @@
     },
     "attribute": "知",
     "tactic": "輸出",
-    "baseCp": 204171,
-    "cellCp3x": 229159,
-    "cellCp4x": 230143,
+    "strategicArenaCP": 231109,
     "activeSkills": [
       {
         "type": "Active",
@@ -14186,7 +14114,8 @@
     "tiers": [],
     "effectDefs": {
       "增幅": "如果自己帶有增益效果，造成的傷害增加15%"
-    }
+    },
+    "strategicArenaCP": null
   },
   {
     "id": "1067",
@@ -14348,7 +14277,8 @@
     "tiers": [],
     "effectDefs": {
       "增幅": "如果自己帶有增益效果，造成的傷害增加15%"
-    }
+    },
+    "strategicArenaCP": null
   },
   {
     "id": "1068",
@@ -14510,7 +14440,8 @@
     "tiers": [],
     "effectDefs": {
       "弱點": "如果目標帶有減益效果，造成的傷害增加15%"
-    }
+    },
+    "strategicArenaCP": null
   },
   {
     "id": "1069",
@@ -14672,7 +14603,8 @@
     "tiers": [],
     "effectDefs": {
       "弱點": "如果目標帶有減益效果，造成的傷害增加15%"
-    }
+    },
+    "strategicArenaCP": null
   },
   {
     "id": "1070",
@@ -14834,7 +14766,8 @@
     "tiers": [],
     "effectDefs": {
       "弱點": "如果目標帶有減益效果，造成的傷害增加15%"
-    }
+    },
+    "strategicArenaCP": null
   },
   {
     "id": "1071",
@@ -14850,9 +14783,7 @@
     },
     "attribute": "知",
     "tactic": "爆發",
-    "baseCp": 205736,
-    "cellCp3x": 230823,
-    "cellCp4x": 232754,
+    "strategicArenaCP": 233707,
     "activeSkills": [
       {
         "type": "Active",
@@ -15217,9 +15148,7 @@
     },
     "attribute": "心",
     "tactic": "均衡",
-    "baseCp": 205312,
-    "cellCp3x": 230360,
-    "cellCp4x": 230776,
+    "strategicArenaCP": 231745,
     "activeSkills": [
       {
         "type": "Active",
@@ -15539,9 +15468,7 @@
     },
     "attribute": "速",
     "tactic": "輔助",
-    "baseCp": 202616,
-    "cellCp3x": 227509,
-    "cellCp4x": 229434,
+    "strategicArenaCP": 229886,
     "activeSkills": [
       {
         "type": "Active",
@@ -15798,9 +15725,7 @@
     },
     "attribute": "速",
     "tactic": "控制",
-    "baseCp": 203344,
-    "cellCp3x": 228312,
-    "cellCp4x": 230498,
+    "strategicArenaCP": 231440,
     "activeSkills": [
       {
         "type": "Active",
@@ -16150,9 +16075,7 @@
     },
     "attribute": "技",
     "tactic": "輔助",
-    "baseCp": 204036,
-    "cellCp3x": 229033,
-    "cellCp4x": 231127,
+    "strategicArenaCP": 232148,
     "activeSkills": [
       {
         "type": "Active",
@@ -16442,9 +16365,7 @@
     },
     "attribute": "力",
     "tactic": "爆發",
-    "baseCp": 187568,
-    "cellCp3x": 211727,
-    "cellCp4x": 214606,
+    "strategicArenaCP": 215512,
     "activeSkills": [
       {
         "type": "Active",
@@ -16691,9 +16612,7 @@
     },
     "attribute": "速",
     "tactic": "均衡",
-    "baseCp": 201377,
-    "cellCp3x": 226247,
-    "cellCp4x": 228457,
+    "strategicArenaCP": 229407,
     "activeSkills": [
       {
         "type": "Active",
@@ -17078,9 +16997,7 @@
     },
     "attribute": "技",
     "tactic": "輔助",
-    "baseCp": 203849,
-    "cellCp3x": 228844,
-    "cellCp4x": 227376,
+    "strategicArenaCP": 228844,
     "activeSkills": [
       {
         "type": "Active",
@@ -17413,9 +17330,7 @@
     },
     "attribute": "力",
     "tactic": "均衡",
-    "baseCp": 203960,
-    "cellCp3x": 228969,
-    "cellCp4x": 230815,
+    "strategicArenaCP": 231799,
     "activeSkills": [
       {
         "type": "Active",
@@ -17738,9 +17653,7 @@
     },
     "attribute": "力",
     "tactic": "輔助",
-    "baseCp": 195657,
-    "cellCp3x": 220215,
-    "cellCp4x": 222914,
+    "strategicArenaCP": 223815,
     "activeSkills": [
       {
         "type": "Active",
@@ -18034,9 +17947,7 @@
     },
     "attribute": "速",
     "tactic": "控制",
-    "baseCp": 194782,
-    "cellCp3x": 219339,
-    "cellCp4x": 221309,
+    "strategicArenaCP": 222270,
     "activeSkills": [
       {
         "type": "Active",
@@ -18405,9 +18316,7 @@
     },
     "attribute": "力",
     "tactic": "控制",
-    "baseCp": 203620,
-    "cellCp3x": 228619,
-    "cellCp4x": 227150,
+    "strategicArenaCP": 228619,
     "activeSkills": [
       {
         "type": "Active",
@@ -18767,9 +18676,7 @@
     },
     "attribute": "力",
     "tactic": "輔助",
-    "baseCp": 200972,
-    "cellCp3x": 225790,
-    "cellCp4x": 227337,
+    "strategicArenaCP": 228238,
     "activeSkills": [
       {
         "type": "Active",
@@ -19135,9 +19042,7 @@
     },
     "attribute": "力",
     "tactic": "控制",
-    "baseCp": 194112,
-    "cellCp3x": 218643,
-    "cellCp4x": 221052,
+    "strategicArenaCP": 221913,
     "activeSkills": [
       {
         "type": "Active",
@@ -19513,9 +19418,7 @@
     },
     "attribute": "速",
     "tactic": "均衡",
-    "baseCp": 192192,
-    "cellCp3x": 216627,
-    "cellCp4x": 215299,
+    "strategicArenaCP": 216627,
     "activeSkills": [
       {
         "type": "Active",
@@ -19861,9 +19764,7 @@
     },
     "attribute": "力",
     "tactic": "均衡",
-    "baseCp": 202350,
-    "cellCp3x": 227245,
-    "cellCp4x": 225802,
+    "strategicArenaCP": 227245,
     "activeSkills": [
       {
         "type": "Active",
@@ -20141,9 +20042,7 @@
     },
     "attribute": "技",
     "tactic": "輔助",
-    "baseCp": 203796,
-    "cellCp3x": 228788,
-    "cellCp4x": 229831,
+    "strategicArenaCP": 230760,
     "activeSkills": [
       {
         "type": "Active",
@@ -20433,9 +20332,7 @@
     },
     "attribute": "速",
     "tactic": "輔助",
-    "baseCp": 203628,
-    "cellCp3x": 228570,
-    "cellCp4x": 227115,
+    "strategicArenaCP": 228570,
     "activeSkills": [
       {
         "type": "Active",
@@ -20772,9 +20669,7 @@
     },
     "attribute": "力",
     "tactic": "均衡",
-    "baseCp": 203646,
-    "cellCp3x": 228636,
-    "cellCp4x": 227169,
+    "strategicArenaCP": 228636,
     "activeSkills": [
       {
         "type": "Active",
@@ -21052,9 +20947,7 @@
     },
     "attribute": "速",
     "tactic": "均衡",
-    "baseCp": 203738,
-    "cellCp3x": 228736,
-    "cellCp4x": 231244,
+    "strategicArenaCP": 232226,
     "activeSkills": [
       {
         "type": "Active",
@@ -21374,9 +21267,7 @@
     },
     "attribute": "力",
     "tactic": "輔助",
-    "baseCp": 203753,
-    "cellCp3x": 228744,
-    "cellCp4x": 230890,
+    "strategicArenaCP": 231822,
     "activeSkills": [
       {
         "type": "Active",
@@ -21687,9 +21578,7 @@
     },
     "attribute": "技",
     "tactic": "輸出",
-    "baseCp": 203423,
-    "cellCp3x": 228393,
-    "cellCp4x": 226931,
+    "strategicArenaCP": 228393,
     "activeSkills": [
       {
         "type": "Active",
@@ -21993,9 +21882,7 @@
     },
     "attribute": "技",
     "tactic": "爆發",
-    "baseCp": 203568,
-    "cellCp3x": 228561,
-    "cellCp4x": 230550,
+    "strategicArenaCP": 231501,
     "activeSkills": [
       {
         "type": "Active",
@@ -22402,9 +22289,7 @@
     },
     "attribute": "技",
     "tactic": "爆發",
-    "baseCp": 202623,
-    "cellCp3x": 227560,
-    "cellCp4x": 229669,
+    "strategicArenaCP": 230591,
     "activeSkills": [
       {
         "type": "Active",
@@ -22672,9 +22557,7 @@
     },
     "attribute": "速",
     "tactic": "輸出",
-    "baseCp": 202500,
-    "cellCp3x": 227424,
-    "cellCp4x": 225973,
+    "strategicArenaCP": 227424,
     "activeSkills": [
       {
         "type": "Active",
@@ -23048,9 +22931,7 @@
     },
     "attribute": "知",
     "tactic": "輸出",
-    "baseCp": 207145,
-    "cellCp3x": 232310,
-    "cellCp4x": 230799,
+    "strategicArenaCP": 232310,
     "activeSkills": [
       {
         "type": "Active",
@@ -23397,9 +23278,7 @@
     },
     "attribute": "技",
     "tactic": "輔助",
-    "baseCp": 206740,
-    "cellCp3x": 231836,
-    "cellCp4x": 230343,
+    "strategicArenaCP": 231836,
     "activeSkills": [
       {
         "type": "Active",
@@ -23657,9 +23536,7 @@
     },
     "attribute": "技",
     "tactic": "輸出",
-    "baseCp": 203716,
-    "cellCp3x": 228718,
-    "cellCp4x": 227248,
+    "strategicArenaCP": 228718,
     "activeSkills": [
       {
         "type": "Active",
@@ -23990,9 +23867,7 @@
     },
     "attribute": "速",
     "tactic": "控制",
-    "baseCp": 203967,
-    "cellCp3x": 228972,
-    "cellCp4x": 230694,
+    "strategicArenaCP": 231717,
     "activeSkills": [
       {
         "type": "Active",
@@ -24293,9 +24168,7 @@
     },
     "attribute": "心",
     "tactic": "輸出",
-    "baseCp": 209159,
-    "cellCp3x": 234397,
-    "cellCp4x": 232868,
+    "strategicArenaCP": 234397,
     "activeSkills": [
       {
         "type": "Active",
@@ -24633,9 +24506,7 @@
     },
     "attribute": "知",
     "tactic": "輸出",
-    "baseCp": 207176,
-    "cellCp3x": 232342,
-    "cellCp4x": 230831,
+    "strategicArenaCP": 232342,
     "activeSkills": [
       {
         "type": "Active",
@@ -24956,9 +24827,7 @@
     },
     "attribute": "心",
     "tactic": "輔助",
-    "baseCp": 209511,
-    "cellCp3x": 234714,
-    "cellCp4x": 233194,
+    "strategicArenaCP": 234714,
     "activeSkills": [
       {
         "type": "Active",
@@ -25290,9 +25159,7 @@
     },
     "attribute": "力",
     "tactic": "輔助",
-    "baseCp": 206641,
-    "cellCp3x": 231750,
-    "cellCp4x": 230253,
+    "strategicArenaCP": 231750,
     "activeSkills": [
       {
         "type": "Active",
@@ -25549,9 +25416,7 @@
     },
     "attribute": "技",
     "tactic": "輸出",
-    "baseCp": 207923,
-    "cellCp3x": 233129,
-    "cellCp4x": 231608,
+    "strategicArenaCP": 233129,
     "activeSkills": [
       {
         "type": "Active",
@@ -25857,9 +25722,7 @@
     },
     "attribute": "技",
     "tactic": "控制",
-    "baseCp": 204407,
-    "cellCp3x": 229404,
-    "cellCp4x": 227935,
+    "strategicArenaCP": 229404,
     "activeSkills": [
       {
         "type": "Active",
@@ -26210,9 +26073,7 @@
     },
     "attribute": "速",
     "tactic": "輸出",
-    "baseCp": 204496,
-    "cellCp3x": 229513,
-    "cellCp4x": 232032,
+    "strategicArenaCP": 233003,
     "activeSkills": [
       {
         "type": "Active",
@@ -26539,9 +26400,7 @@
     },
     "attribute": "心",
     "tactic": "輸出",
-    "baseCp": 208157,
-    "cellCp3x": 233377,
-    "cellCp4x": 231852,
+    "strategicArenaCP": 233377,
     "activeSkills": [
       {
         "type": "Active",
@@ -26842,9 +26701,7 @@
     },
     "attribute": "知",
     "tactic": "輸出",
-    "baseCp": 208607,
-    "cellCp3x": 233812,
-    "cellCp4x": 232291,
+    "strategicArenaCP": 233812,
     "activeSkills": [
       {
         "type": "Active",
@@ -27134,9 +26991,7 @@
     },
     "attribute": "力",
     "tactic": "輔助",
-    "baseCp": 204999,
-    "cellCp3x": 229990,
-    "cellCp4x": 228523,
+    "strategicArenaCP": 229990,
     "activeSkills": [
       {
         "type": "Active",
@@ -27330,9 +27185,7 @@
     },
     "attribute": "速",
     "tactic": "輔助",
-    "baseCp": 205505,
-    "cellCp3x": 230548,
-    "cellCp4x": 229068,
+    "strategicArenaCP": 230548,
     "activeSkills": [
       {
         "type": "Active",
@@ -27610,9 +27463,7 @@
     },
     "attribute": "力",
     "tactic": "輸出",
-    "baseCp": 206334,
-    "cellCp3x": 231444,
-    "cellCp4x": 229947,
+    "strategicArenaCP": 231444,
     "activeSkills": [
       {
         "type": "Active",
@@ -27961,9 +27812,7 @@
     },
     "attribute": "速",
     "tactic": "均衡",
-    "baseCp": 206323,
-    "cellCp3x": 231423,
-    "cellCp4x": 229928,
+    "strategicArenaCP": 231423,
     "activeSkills": [
       {
         "type": "Active",
@@ -28323,9 +28172,7 @@
     },
     "attribute": "力",
     "tactic": "均衡",
-    "baseCp": 206940,
-    "cellCp3x": 232063,
-    "cellCp4x": 230563,
+    "strategicArenaCP": 232063,
     "activeSkills": [
       {
         "type": "Active",
@@ -28641,9 +28488,7 @@
     },
     "attribute": "速",
     "tactic": "輸出",
-    "baseCp": 207497,
-    "cellCp3x": 232656,
-    "cellCp4x": 231147,
+    "strategicArenaCP": 232656,
     "activeSkills": [
       {
         "type": "Active",
@@ -28993,9 +28838,7 @@
     },
     "attribute": "速",
     "tactic": "輔助",
-    "baseCp": 208335,
-    "cellCp3x": 233504,
-    "cellCp4x": 231992,
+    "strategicArenaCP": 233504,
     "activeSkills": [
       {
         "type": "Active",
@@ -29273,9 +29116,7 @@
     },
     "attribute": "技",
     "tactic": "輔助",
-    "baseCp": 208099,
-    "cellCp3x": 233278,
-    "cellCp4x": 231764,
+    "strategicArenaCP": 233278,
     "activeSkills": [
       {
         "type": "Active",
@@ -29522,9 +29363,7 @@
     },
     "attribute": "技",
     "tactic": "輔助",
-    "baseCp": 209048,
-    "cellCp3x": 234210,
-    "cellCp4x": 232700,
+    "strategicArenaCP": 234210,
     "activeSkills": [
       {
         "type": "Active",
@@ -29823,9 +29662,7 @@
     },
     "attribute": "力",
     "tactic": "輔助",
-    "baseCp": 207791,
-    "cellCp3x": 232947,
-    "cellCp4x": 231438,
+    "strategicArenaCP": 232947,
     "activeSkills": [
       {
         "type": "Active",
@@ -30065,9 +29902,7 @@
     },
     "attribute": "知",
     "tactic": "輸出",
-    "baseCp": 212336,
-    "cellCp3x": 237733,
-    "cellCp4x": 236164,
+    "strategicArenaCP": 237733,
     "activeSkills": [
       {
         "type": "Active",
@@ -30353,9 +30188,7 @@
     },
     "attribute": "知",
     "tactic": "輸出",
-    "baseCp": 212895,
-    "cellCp3x": 238316,
-    "cellCp4x": 236741,
+    "strategicArenaCP": 238316,
     "activeSkills": [
       {
         "type": "Active",
@@ -30646,9 +30479,7 @@
     },
     "attribute": "速",
     "tactic": "均衡",
-    "baseCp": 208601,
-    "cellCp3x": 233795,
-    "cellCp4x": 232277,
+    "strategicArenaCP": 233795,
     "activeSkills": [
       {
         "type": "Active",
@@ -30959,9 +30790,7 @@
     },
     "attribute": "力",
     "tactic": "輔助",
-    "baseCp": 208886,
-    "cellCp3x": 234043,
-    "cellCp4x": 232534,
+    "strategicArenaCP": 234043,
     "activeSkills": [
       {
         "type": "Active",
@@ -31495,7 +31324,8 @@
       "超血祭": "暴擊率增加至3倍，攻擊力增加20%，並使我方全體恢復本次造成傷害量15%的生命值",
       "血噬": "暴擊率增加10%，額外傷害增加8%",
       "血祭": "暴擊率增加至2.5倍，並使我方全體恢復本次造成傷害量15%的生命值"
-    }
+    },
+    "strategicArenaCP": null
   },
   {
     "id": "1160",
@@ -31511,9 +31341,7 @@
     },
     "attribute": "心",
     "tactic": "輸出",
-    "baseCp": 213519,
-    "cellCp3x": 238963,
-    "cellCp4x": 237383,
+    "strategicArenaCP": 238963,
     "activeSkills": [
       {
         "type": "Active",
@@ -32167,7 +31995,8 @@
       "偽裝": "防禦相關能力增加12%，受到單體技能傷害減少40%",
       "警戒": "迴避1次主動技能，持續1回合",
       "超警戒": "回避1次主動技能，並使攻擊相關能力增加5%，持續1回合"
-    }
+    },
+    "strategicArenaCP": null
   },
   {
     "id": "1167",
@@ -32412,6 +32241,7 @@
       "超警覺": "使下一次受到主動技能傷害為0，受到主動技能攻擊後解除，限疊加2次",
       "沉穩": "基本能力值增加8%，下一次使用主動技能後，回復自己最大生命值6%的生命，如果自己為滿生命值，賦予自己1回合內最大生命值5%的護盾，效果觸發後解除",
       "超沉穩": "基本能力值增加8%，下一次使用主動技能後，回復自己最大生命值10%的生命，如果自己為滿生命值，賦予自己1回合內最大生命值8%的護盾，效果觸發後解除"
-    }
+    },
+    "strategicArenaCP": null
   }
 ]
