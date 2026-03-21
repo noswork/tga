@@ -21,6 +21,11 @@ export interface Cell {
   uniqueSkillName: string | null;
   uniqueSkillSegments: { text: string; isEffect: boolean }[] | null;
   effectDefs: Record<string, string> | null;
+  baseStat: number | null;
+  stat1: string | null;
+  stat2: string | null;
+  stat3: string | null;
+  stat4: string | null;
 }
 
 export type TerminalMode = 'GAME';

@@ -23,15 +23,26 @@ const RARITY_COLOR: Record<number, string> = {
 };
 
 const STAT_ICON: Record<string, React.ReactNode> = {
-  Atk: <Zap size={11} className="text-red-400" />,
-  Def: <Shield size={11} className="text-blue-400" />,
-  Hp:  <Heart size={11} className="text-green-400" />,
+  ATK: <Zap size={11} className="text-red-400" />,
+  DEF: <Shield size={11} className="text-blue-400" />,
+  HP:  <Heart size={11} className="text-green-400" />,
 };
 
 const STAT_COLOR: Record<string, string> = {
-  Atk: 'text-red-400',
-  Def: 'text-blue-400',
-  Hp:  'text-green-400',
+  ATK: 'text-red-400',
+  DEF: 'text-blue-400',
+  HP:  'text-green-400',
+};
+
+const STAT_TYPE_ZH: Record<string, string> = {
+  ATK: '強襲',
+  DEF: '防衛',
+  HP:  '再生',
+};
+
+const STAT_VAL_ZH = (v: string | null | undefined): string => {
+  if (!v) return '—';
+  return v.replace(/ATK/g, '攻擊力').replace(/DEF/g, '防禦力').replace(/HP/g, '生命值');
 };
 
 const TITLE: Record<Lang, string> = { en: 'RC CELLS', zh: 'RC 細胞' };
@@ -109,7 +120,7 @@ const CellModal: React.FC<{ cell: Cell; lang: Lang; onClose: () => void }> = ({ 
               <div className="flex items-center gap-2 mt-1 flex-wrap">
                 <span className={`text-xs font-bold border px-1.5 rounded ${RARITY_COLOR[cell.rarity]}`}>{RARITY_LABEL[cell.rarity]}</span>
                 <span className={`flex items-center gap-1 text-xs font-bold ${STAT_COLOR[cell.statType]}`}>
-                  {STAT_ICON[cell.statType]} {cell.statType}
+                  {STAT_ICON[cell.statType]} {STAT_TYPE_ZH[cell.statType]}
                 </span>
               </div>
             </div>
@@ -123,6 +134,28 @@ const CellModal: React.FC<{ cell: Cell; lang: Lang; onClose: () => void }> = ({ 
             <div className="bg-gray-100 dark:bg-[#22252e] border border-gray-200 dark:border-gray-700 rounded p-3">
               <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">{cell.description}</p>
             </div>
+
+            {/* Stats */}
+            {cell.baseStat != null && (
+              <div className="bg-gray-100 dark:bg-[#22252e] border border-gray-200 dark:border-gray-700 rounded p-3 space-y-2">
+                {/* Base stat */}
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-semibold text-gray-500 dark:text-gray-400">加成</span>
+                  <span className={`text-base font-bold ${STAT_COLOR[cell.statType]}`}>{cell.baseStat.toLocaleString()}</span>
+                </div>
+                <div className="border-t border-gray-200 dark:border-gray-600 pt-2">
+                  <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-1.5">因子</p>
+                  <div className="grid grid-cols-2 gap-x-3 gap-y-1">
+                    {([cell.stat1, cell.stat2, cell.stat3, cell.stat4] as (string|null)[]).map((s, i) => (
+                      <div key={i} className="flex items-center justify-between bg-gray-200 dark:bg-black/30 rounded px-2 py-1">
+                        <span className="text-xs text-gray-500 dark:text-gray-400">{i + 1}</span>
+                        <span className="text-xs font-semibold text-gray-800 dark:text-gray-200">{STAT_VAL_ZH(s)}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
             {cell.uniqueSkillSegments && (
               <div className="bg-gray-100 dark:bg-[#22252e] border border-yellow-400/50 dark:border-yellow-700/50 rounded p-3">
                 <p className="text-yellow-600 dark:text-yellow-400 text-xs font-bold mb-1 tracking-wider">{UNIQUE_SKILL[lang]}</p>
