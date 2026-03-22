@@ -75,6 +75,7 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, activeSection, se
            <div className="flex flex-col justify-center drop-shadow-lg">
              <span className="text-2xl font-bold text-black dark:text-white tracking-tighter group-hover:text-ghoul-red transition-colors font-ghoul uppercase leading-none text-shadow-sm">{t.brandTitle}</span>
              <span className="text-[10px] tracking-[0.6em] uppercase text-ghoul-red font-mono mt-1 font-bold text-shadow-sm">{t.brandSubtitle}</span>
+             <span className="text-[9px] tracking-[0.4em] uppercase text-gray-400 dark:text-gray-500 font-mono mt-0.5">by <span className="text-ghoul-red/80 font-bold">nos</span></span>
              {viewCount !== null && (
                <span className="flex items-center gap-1 text-[9px] text-gray-400 font-mono mt-0.5 tracking-wider">
                  <Eye size={9} className="opacity-60" />{viewCount.toLocaleString()} VIEWS
