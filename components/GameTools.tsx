@@ -2,8 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import { Lang } from '../types';
 import { translations } from '../constants';
-import { Map as MapIcon, Wrench, AlertOctagon, ChevronRight, Lock } from 'lucide-react';
+import { Map as MapIcon, Wrench, AlertOctagon, ChevronRight, Lock, LayoutGrid } from 'lucide-react';
 import { StrongholdMap } from './tools/StrongholdMap';
+import { TierlistTool } from './tools/TierlistTool';
 
 interface GameToolsProps {
   lang: Lang;
@@ -38,6 +39,18 @@ export const GameTools: React.FC<GameToolsProps> = ({ lang }) => {
       statusBg: 'bg-green-400/10 border-green-400/30',
       primaryColor: 'text-ghoul-red',
       hoverBorder: 'group-hover:border-ghoul-red'
+    },
+    {
+      id: 'tierlist',
+      title: t.tierlist.title,
+      description: t.tierlist.toolDesc,
+      icon: LayoutGrid,
+      actionLabel: t.tierlist.openTool,
+      status: t.tierlist.statusLabel,
+      statusColor: 'text-green-400',
+      statusBg: 'bg-green-400/10 border-green-400/30',
+      primaryColor: 'text-ghoul-red',
+      hoverBorder: 'group-hover:border-ghoul-red'
     }
   ];
 
@@ -46,6 +59,14 @@ export const GameTools: React.FC<GameToolsProps> = ({ lang }) => {
     return (
       <div className="fixed inset-0 z-40 pt-24 bg-ccg-light dark:bg-ghoul-black flex flex-col animate-in fade-in duration-300 overscroll-none touch-none">
          <StrongholdMap lang={lang} onClose={() => setActiveTool(null)} />
+      </div>
+    );
+  }
+
+  if (activeTool === 'tierlist') {
+    return (
+      <div className="fixed inset-0 z-40 pt-14 md:pt-24 bg-ghoul-black flex flex-col animate-in fade-in duration-300 overscroll-none touch-none">
+        <TierlistTool lang={lang} onClose={() => setActiveTool(null)} />
       </div>
     );
   }

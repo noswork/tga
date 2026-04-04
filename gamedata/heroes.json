@@ -31073,6 +31073,8 @@
       "atk": 36019,
       "def": 28198
     },
+    "attribute": "技",
+    "strategicArenaCP": 234363,
     "activeSkills": [
       {
         "type": "Active",
@@ -31324,8 +31326,7 @@
       "超血祭": "暴擊率增加至3倍，攻擊力增加20%，並使我方全體恢復本次造成傷害量15%的生命值",
       "血噬": "暴擊率增加10%，額外傷害增加8%",
       "血祭": "暴擊率增加至2.5倍，並使我方全體恢復本次造成傷害量15%的生命值"
-    },
-    "strategicArenaCP": null
+    }
   },
   {
     "id": "1160",
@@ -31701,6 +31702,7 @@
       "atk": 33026,
       "def": 29625
     },
+    "attribute": "力",
     "activeSkills": [
       {
         "type": "Active",
@@ -32010,6 +32012,7 @@
       "atk": 33746,
       "def": 29447
     },
+    "attribute": "力",
     "activeSkills": [
       {
         "type": "Active",
@@ -32243,5 +32246,174 @@
       "超沉穩": "基本能力值增加8%，下一次使用主動技能後，回復自己最大生命值10%的生命，如果自己為滿生命值，賦予自己1回合內最大生命值8%的護盾，效果觸發後解除"
     },
     "strategicArenaCP": null
+  },
+  {
+    "id": "1168",
+    "title": "√A",
+    "name": "金木研",
+    "fullName": "√A 金木研",
+    "rarity": "SSR",
+    "organization": "Anteiku",
+    "stats": {
+      "hp": 609900,
+      "atk": 39414,
+      "def": 28478
+    },
+    "attribute": "DST",
+    "strategicArenaCP": null,
+    "activeSkills": [
+      {
+        "type": "Active",
+        "skillNum": 1,
+        "levels": [
+          {
+            "lv": 1,
+            "name": "主動技能-等級1",
+            "description": "對目標造成攻擊力222%的超混沌傷害",
+            "effects": [
+              { "text": "對目標造成攻擊力222%的", "isEffect": false },
+              { "text": "超混沌", "isEffect": true, "effectName": "超混沌", "effectDesc": "破擊率增加至1.5倍，對帶有Weak值或處於Weak狀態的敵人造成傷害增加50%並賦予目標1回合內暈眩效果" },
+              { "text": "傷害", "isEffect": false }
+            ]
+          },
+          {
+            "lv": 2,
+            "name": "主動技能-等級2",
+            "description": "對目標造成攻擊力310%的超混沌傷害",
+            "effects": [
+              { "text": "對目標造成攻擊力310%的", "isEffect": false },
+              { "text": "超混沌", "isEffect": true, "effectName": "超混沌", "effectDesc": "破擊率增加至1.5倍，對帶有Weak值或處於Weak狀態的敵人造成傷害增加50%並賦予目標1回合內暈眩效果" },
+              { "text": "傷害", "isEffect": false }
+            ]
+          },
+          {
+            "lv": 3,
+            "name": "主動技能-等級3",
+            "description": "對目標造成攻擊力540%的超混沌傷害",
+            "effects": [
+              { "text": "對目標造成攻擊力540%的", "isEffect": false },
+              { "text": "超混沌", "isEffect": true, "effectName": "超混沌", "effectDesc": "破擊率增加至1.5倍，對帶有Weak值或處於Weak狀態的敵人造成傷害增加50%並賦予目標1回合內暈眩效果" },
+              { "text": "傷害", "isEffect": false }
+            ]
+          }
+        ]
+      }
+    ],
+    "passiveSkills": [
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "name": "專屬技能",
+        "description": "當場上有角色受到控制或Weak效果後，使自己最大生命值增加3%，最多增加至12%，並回復自己最大生命值2%的生命值，如果受到控制或Weak效果的是敵方角色，解除目標所有護盾和增益效果",
+        "effects": [
+          { "text": "當場上有角色受到控制或Weak效果後，使自己最大生命值增加3%，最多增加至12%，並回復自己最大生命值2%的生命值，如果受到控制或Weak效果的是敵方角色，解除目標所有護盾和增益效果", "isEffect": false }
+        ]
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "name": "湮滅",
+        "description": "當敵方角色釋放主動技能後，自己獲得1個凝視效果，當凝視達到2個時，解除敵方全體所有護盾效果，並立即對敵方全體造成攻擊力200%的湮滅傷害，之後解除自己所有凝視效果，當自己對敵方造成控制或Weak效果時，使自己技能等級上升，每回合限觸發1次",
+        "effects": [
+          { "text": "當敵方角色釋放主動技能後，自己獲得1個", "isEffect": false },
+          { "text": "凝視", "isEffect": true, "effectName": "凝視", "effectDesc": "防禦相關能力增加3%" },
+          { "text": "效果，當凝視達到2個時，解除敵方全體所有護盾效果，並立即對敵方全體造成攻擊力200%的", "isEffect": false },
+          { "text": "湮滅", "isEffect": true, "effectName": "湮滅", "effectDesc": "暴擊率增加至2倍，自己生命值每低1%，本次傷害暴擊傷害增加1%，造成傷害增加1%" },
+          { "text": "傷害，之後解除自己所有凝視效果，當自己對敵方造成控制或Weak效果時，使自己技能等級上升，每回合限觸發1次", "isEffect": false }
+        ]
+      },
+      {
+        "type": "Passive",
+        "subtype": "gift",
+        "name": "湮滅",
+        "description": "當敵方角色釋放主動技能後，自己獲得1個凝視效果，當凝視達到2個時，解除敵方全體所有護盾效果，並立即對敵方全體造成攻擊力220%的超湮滅傷害，之後解除自己所有凝視效果，當自己對敵方造成控制或Weak效果時，使自己技能等級上升，每回合限觸發1次",
+        "effects": [
+          { "text": "當敵方角色釋放主動技能後，自己獲得1個", "isEffect": false },
+          { "text": "凝視", "isEffect": true, "effectName": "凝視", "effectDesc": "防禦相關能力增加3%" },
+          { "text": "效果，當凝視達到2個時，解除敵方全體所有護盾效果，並立即對敵方全體造成攻擊力220%的", "isEffect": false },
+          { "text": "超湮滅", "isEffect": true, "effectName": "超湮滅", "effectDesc": "暴擊率增加至2倍，自己生命值每低2%，本次傷害暴擊傷害增加1.5%，造成傷害增加2%" },
+          { "text": "傷害，之後解除自己所有凝視效果，當自己對敵方造成控制或Weak效果時，使自己技能等級上升，每回合限觸發1次", "isEffect": false }
+        ]
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "name": "安定區強化",
+        "description": "場上我方每有1個安定區角色，使我方全體所有能力值增加5%，使自己攻擊相關能力額外增加3%，造成傷害增加5%，當我方安定區角色受到傷害時，使目標1回合內最大生命值增加5%，限疊加3次",
+        "effects": [
+          { "text": "場上我方每有1個安定區角色，使我方全體所有能力值增加5%，使自己攻擊相關能力額外增加3%，造成傷害增加5%，當我方安定區角色受到傷害時，使目標1回合內最大生命值增加5%，限疊加3次", "isEffect": false }
+        ]
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "name": "絕望",
+        "description": "當我方回合開始時，如果我方存在生命值低於50%的角色，解除自己所有減益效果和weak效果，並使自己1回合內獲得絕望效果，當自己受到傷害時，如果自己帶有絕望效果，吸收傷害量的50%，在下一個我方回合結束時再受到吸收傷害量的傷害，自己死亡前對敵方全體造成攻擊力220%的湮滅傷害",
+        "effects": [
+          { "text": "當我方回合開始時，如果我方存在生命值低於50%的角色，解除自己所有減益效果和weak效果，並使自己1回合內獲得", "isEffect": false },
+          { "text": "絕望", "isEffect": true, "effectName": "絕望", "effectDesc": "将所有攻击引导给自己，受到伤害和额外伤害减少40%，免疫减益和Weak效果" },
+          { "text": "效果，當自己受到傷害時，如果自己帶有絕望效果，吸收傷害量的50%，在下一個我方回合結束時再受到吸收傷害量的傷害，自己死亡前對敵方全體造成攻擊力220%的", "isEffect": false },
+          { "text": "湮滅", "isEffect": true, "effectName": "湮滅", "effectDesc": "暴擊率增加至2倍，自己生命值每低1%，本次傷害暴擊傷害增加1%，造成傷害增加1%" },
+          { "text": "傷害", "isEffect": false }
+        ]
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "name": "力量解放強化",
+        "description": "力量解放後，賦予自己1回合內基本能力值增加10%的效果",
+        "effects": [
+          { "text": "力量解放後，賦予自己1回合內基本能力值增加10%的效果", "isEffect": false }
+        ]
+      },
+      {
+        "type": "Passive",
+        "subtype": "rank",
+        "name": "Weak",
+        "description": "造成Weak時，賦予自己1回合內造成傷害增加10%的效果",
+        "effects": [
+          { "text": "造成Weak時，賦予自己1回合內造成傷害增加10%的效果", "isEffect": false }
+        ]
+      }
+    ],
+    "tiers": [
+      {
+        "tier": 1,
+        "effects": [
+          { "description": "戰鬥開始時，1回合內使自己獲得最大生命5%的護盾" },
+          { "description": "戰鬥中受到傷害減少5%" },
+          { "description": "戰鬥中再生率增加6%" },
+          { "description": "造成weak後，使得自己下一次造成傷害時，該次技能攻擊力增加6%" },
+          { "description": "當我方回合時，1回合內使自己獲得最大生命5%的護盾" }
+        ]
+      },
+      {
+        "tier": 2,
+        "effects": [
+          { "description": "戰鬥開始時，1回合內使自己最大生命值增加10%" },
+          { "description": "在PVP中，使我方全體最大生命值增加8%" },
+          { "description": "生命值首次低於50%時獲得初始攻擊力1000%的護盾" },
+          { "description": "戰鬥開始時，1回合內使自己免疫阻斷效果" },
+          { "description": "戰鬥開始時，使自己最大生命值增加10%" }
+        ]
+      },
+      {
+        "tier": 3,
+        "effects": [
+          { "description": "戰鬥開始時，1回合內使自己受到主動技能傷害減少5%" },
+          { "description": "我方全體受到暴擊傷害減少6%" },
+          { "description": "生命值低於50%時，吸血率增加6%，並且不能低於基礎值以下" },
+          { "description": "首回合造成傷害增加5%" },
+          { "description": "戰鬥開始時，使自己受到主動技能傷害減少5%" }
+        ]
+      }
+    ],
+    "effectDefs": {
+      "超混沌": "破擊率增加至1.5倍，對帶有Weak值或處於Weak狀態的敵人造成傷害增加50%並賦予目標1回合內暈眩效果",
+      "凝視": "防禦相關能力增加3%",
+      "湮滅": "暴擊率增加至2倍，自己生命值每低1%，本次傷害暴擊傷害增加1%，造成傷害增加1%",
+      "超湮滅": "暴擊率增加至2倍，自己生命值每低2%，本次傷害暴擊傷害增加1.5%，造成傷害增加2%",
+      "絕望": "将所有攻击引导给自己，受到伤害和额外伤害减少40%，免疫减益和Weak效果"
+    }
   }
 ]

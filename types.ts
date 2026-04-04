@@ -87,7 +87,7 @@ export interface Character {
     atk: number;
     def: number;
   };
-  attribute?: '力' | '技' | '速' | '心' | '知';
+  attribute?: '力' | '技' | '速' | '心' | '知' | 'DST';
   tactic?: '輸出' | '輔助' | '控制' | '均衡' | '爆發';
   strategicArenaCP?: number | null;
   activeSkills: ActiveSkill[];
@@ -204,6 +204,37 @@ export interface Translation {
     result: string;
     rcNeeded: string;
     goldNeeded: string;
+    tierlist: {
+      title: string;
+      openTool: string;
+      toolDesc: string;
+      statusLabel: string;
+      addTier: string;
+      exportImage: string;
+      exporting: string;
+      bgColor: string;
+      tierLabel: string;
+      labelColor: string;
+      save: string;
+      cancel: string;
+      unranked: string;
+      filterAll: string;
+      filterOrg: string;
+      filterAttr: string;
+      filterRarity: string;
+      filterTactic: string;
+      moveUp: string;
+      moveDown: string;
+      editRow: string;
+      deleteRow: string;
+      addTeam: string;
+      teamName: string;
+      teamNamePlaceholder: string;
+      confirmTeam: string;
+      teams: string;
+      selectedCount: string;
+      deleteTeam: string;
+    };
   };
   terminal: {
     title: string;

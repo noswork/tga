@@ -157,7 +157,7 @@ const HeroCard: React.FC<{ char: Character; onClick: () => void }> = ({ char, on
         <img src={heroImg(char.id, 'frame', r)} alt="" className="absolute inset-0 w-full h-full object-fill pointer-events-none" onError={e => (e.currentTarget.style.display='none')} />
         {char.attribute && (
           <img
-            src={`/assets/heroes/attribute/${{ 力:'str', 技:'skl', 速:'spd', 心:'psy', 知:'wit' }[char.attribute]}.png`}
+            src={`/assets/heroes/attribute/${{ 力:'str', 技:'skl', 速:'spd', 心:'psy', 知:'wit', DST:'dst' }[char.attribute]}.png`}
             alt={char.attribute}
             className="absolute top-0 right-0 w-8 h-8 object-contain"
           />
@@ -209,7 +209,7 @@ const CharModal: React.FC<{ char: Character; lang: Lang; onClose: () => void; on
                   <img src={heroImg(char.id, 'frame', r)} alt="" className="absolute inset-0 w-full h-full object-contain pointer-events-none" onError={e => (e.currentTarget.style.display='none')} />
                   {char.attribute && (
                     <img
-                      src={`/assets/heroes/attribute/${{ 力:'str', 技:'skl', 速:'spd', 心:'psy', 知:'wit' }[char.attribute]}.png`}
+                      src={`/assets/heroes/attribute/${{ 力:'str', 技:'skl', 速:'spd', 心:'psy', 知:'wit', DST:'dst' }[char.attribute]}.png`}
                       alt={char.attribute}
                       className="absolute top-0 right-0 w-5 h-5 object-contain"
                     />

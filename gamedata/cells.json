@@ -1,5 +1,44 @@
 [
   {
+    "id": "Equip_Special_1138_Atk",
+    "imgFile": "Equip_Special_1138_Atk.png",
+    "name": "強襲細胞【萬聖】",
+    "rarity": 6,
+    "statType": "ATK",
+    "baseStat": null,
+    "stat1": null,
+    "stat2": null,
+    "stat3": null,
+    "stat4": null,
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【萬聖】",
+    "uniqueSkillSegments": [
+      {
+        "text": "戰鬥開始時，使我方攻擊力最高的CCG角色和自己技能等級上升，當場上有角色死亡時，使敵方全體獲得",
+        "isEffect": false
+      },
+      {
+        "text": "厄運",
+        "isEffect": true
+      },
+      {
+        "text": "，當自己死亡時，解除敵方全體所有厄運，賦予敵方全體1回合內",
+        "isEffect": false
+      },
+      {
+        "text": "死神詛咒",
+        "isEffect": true
+      },
+      {
+        "text": "效果",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "厄運": "受到釋放者傷害增加10%"
+    }
+  },
+  {
     "id": "Equip_Special_1076_Atk",
     "imgFile": "Equip_Special_1076_Atk.png",
     "name": "強襲細胞【紅焰孤翼】",
