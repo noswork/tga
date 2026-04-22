@@ -109,7 +109,7 @@ const CellCard: React.FC<{ cell: Cell; onClick: () => void }> = ({ cell, onClick
 
 const CellModal: React.FC<{ cell: Cell; lang: Lang; onClose: () => void; onOpenChar: (charId: string) => void }> = ({ cell, lang, onClose, onOpenChar }) => {
   const owner = getCharForCell(cell.id);
-  const ATTR_IMG: Record<string, string> = { 力:'str', 技:'skl', 速:'spd', 心:'psy', 知:'wit' };
+  const ATTR_IMG: Record<string, string> = { 力:'str', 技:'skl', 速:'spd', 心:'psy', 知:'wit', '滅':'dst' };
   return createPortal(
     <>
       <div className="fixed inset-0 z-40" style={{ background: 'rgba(0,0,0,0.75)', backdropFilter: 'blur(4px)' }} onClick={onClose} />

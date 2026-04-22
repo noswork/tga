@@ -87,7 +87,7 @@ export interface Character {
     atk: number;
     def: number;
   };
-  attribute?: '力' | '技' | '速' | '心' | '知' | 'DST';
+  attribute?: '力' | '技' | '速' | '心' | '知' | '滅';
   tactic?: '輸出' | '輔助' | '控制' | '均衡' | '爆發';
   strategicArenaCP?: number | null;
   activeSkills: ActiveSkill[];

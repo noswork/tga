@@ -1,5 +1,97 @@
 [
   {
+    "id": "Equip_Special_1105_Atk",
+    "imgFile": "Equip_Special_1105_Atk.png",
+    "name": "強襲細胞【復活節】",
+    "rarity": 6,
+    "statType": "ATK",
+    "baseStat": null,
+    "stat1": null,
+    "stat2": null,
+    "stat3": null,
+    "stat4": null,
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【復活節】",
+    "uniqueSkillSegments": [
+      {
+        "text": "戰鬥開始時，使我方全體安定區角色獲得1個",
+        "isEffect": false
+      },
+      {
+        "text": "潛力",
+        "isEffect": true
+      },
+      {
+        "text": "，當我方角色潛力爆發時，使該角色技能等級上升，並賦予1回合",
+        "isEffect": false
+      },
+      {
+        "text": "狂化",
+        "isEffect": true
+      },
+      {
+        "text": "效果",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "潛力": "造成傷害增加3%，受到傷害減少3%",
+      "狂化": "使用主動技能攻擊時，額外造成攻擊力數值140%的傷害"
+    }
+  },
+  {
+    "id": "Equip_Special_1080_Hp",
+    "imgFile": "Equip_Special_1080_Hp.png",
+    "name": "再生細胞【戰鬥服】",
+    "rarity": 6,
+    "statType": "HP",
+    "baseStat": null,
+    "stat1": null,
+    "stat2": null,
+    "stat3": null,
+    "stat4": null,
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【戰鬥服】",
+    "uniqueSkillSegments": [
+      {
+        "text": "【補位也生效】戰鬥開始時，使我方全體青桐樹角色1回合內受到非主動技能傷害減少10%。使我方初始攻擊力最高的角色獲得以下效果：生命值首次低於60%時，立即釋放1級主動技能，生命值首次低於30%時，技能等級上升",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {}
+  },
+  {
+    "id": "Equip_Special_1078_Hp",
+    "imgFile": "Equip_Special_1078_Hp.png",
+    "name": "再生細胞【夏日祭】",
+    "rarity": 6,
+    "statType": "HP",
+    "baseStat": null,
+    "stat1": null,
+    "stat2": null,
+    "stat3": null,
+    "stat4": null,
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【夏日祭】",
+    "uniqueSkillSegments": [
+      {
+        "text": "【補位也生效】戰鬥開始時，立即賦予我方全體一個",
+        "isEffect": false
+      },
+      {
+        "text": "振奮",
+        "isEffect": true
+      },
+      {
+        "text": "效果。當我方角色持有振奮效果達到3個時，該角色下次主動技能造成傷害增加15%",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "振奮": "攻擊力增加4%"
+    }
+  },
+  {
     "id": "Equip_Special_1138_Atk",
     "imgFile": "Equip_Special_1138_Atk.png",
     "name": "強襲細胞【萬聖】",

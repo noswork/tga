@@ -31691,6 +31691,186 @@
     }
   },
   {
+    "id": "1161",
+    "title": "1.5週年",
+    "name": "霧嶋絢都",
+    "fullName": "1.5週年 霧嶋絢都",
+    "rarity": "SSR",
+    "organization": "Aogiri Tree",
+    "stats": {
+      "hp": 603714,
+      "atk": 38004,
+      "def": 28300
+    },
+    "attribute": "力",
+    "strategicArenaCP": null,
+    "activeSkills": [
+      {
+        "type": "Active",
+        "skillNum": 1,
+        "levels": [
+          {
+            "lv": 1,
+            "name": "主動技能-等級1",
+            "description": "使目標1回合內獲得超弱點侵蝕效果，並對目標造成攻擊力217%的弱點狙擊傷害",
+            "effects": [
+              { "text": "使目標1回合內獲得", "isEffect": false },
+              { "text": "超弱點侵蝕", "isEffect": true, "effectName": "超弱點侵蝕", "effectDesc": "所有能力值減少8%，吸血率和回復率減少40%，造成額外傷害減少10%，限疊加2次" },
+              { "text": "效果，並對目標造成攻擊力217%的", "isEffect": false },
+              { "text": "弱點狙擊", "isEffect": true, "effectName": "弱點狙擊", "effectDesc": "暴擊率增加至2倍，對帶有弱點侵蝕的目標造成傷害增加80%" },
+              { "text": "傷害", "isEffect": false }
+            ]
+          },
+          {
+            "lv": 2,
+            "name": "主動技能-等級2",
+            "description": "使目標1回合內獲得超弱點侵蝕效果，並對目標造成攻擊力290%的弱點狙擊傷害",
+            "effects": [
+              { "text": "使目標1回合內獲得", "isEffect": false },
+              { "text": "超弱點侵蝕", "isEffect": true, "effectName": "超弱點侵蝕", "effectDesc": "所有能力值減少8%，吸血率和回復率減少40%，造成額外傷害減少10%，限疊加2次" },
+              { "text": "效果，並對目標造成攻擊力290%的", "isEffect": false },
+              { "text": "弱點狙擊", "isEffect": true, "effectName": "弱點狙擊", "effectDesc": "暴擊率增加至2倍，對帶有弱點侵蝕的目標造成傷害增加80%" },
+              { "text": "傷害", "isEffect": false }
+            ]
+          },
+          {
+            "lv": 3,
+            "name": "主動技能-等級3",
+            "description": "使目標1回合內獲得超弱點侵蝕效果，並對目標造成攻擊力520%的弱點狙擊傷害",
+            "effects": [
+              { "text": "使目標1回合內獲得", "isEffect": false },
+              { "text": "超弱點侵蝕", "isEffect": true, "effectName": "超弱點侵蝕", "effectDesc": "所有能力值減少8%，吸血率和回復率減少40%，造成額外傷害減少10%，限疊加2次" },
+              { "text": "效果，並對目標造成攻擊力520%的", "isEffect": false },
+              { "text": "弱點狙擊", "isEffect": true, "effectName": "弱點狙擊", "effectDesc": "暴擊率增加至2倍，對帶有弱點侵蝕的目標造成傷害增加80%" },
+              { "text": "傷害", "isEffect": false }
+            ]
+          }
+        ]
+      }
+    ],
+    "passiveSkills": [
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "name": "專屬技能",
+        "description": "帶有弱點侵蝕效果的敵人行動時，使該角色最大生命值減少0.75%，最多3%，當場上有敵方角色帶有吸魂效果時，自己免疫Weak和技能等級下降效果",
+        "effects": [
+          { "text": "帶有", "isEffect": false },
+          { "text": "弱點侵蝕", "isEffect": true, "effectName": "弱點侵蝕", "effectDesc": "所有能力值減少6%，吸血率和回復率減少40%，造成額外傷害減少10%，限疊加2次" },
+          { "text": "效果的敵人行動時，使該角色最大生命值減少0.75%，最多3%，當場上有敵方角色帶有吸魂效果時，自己免疫Weak和技能等級下降效果", "isEffect": false }
+        ]
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "name": "先攻",
+        "description": "當我方回合開始時，依照技能區自己的最高技能等級，立即對敵方生命值比例最低的目標釋放主動技能，該技能等級至少為1級，並使我方全體獲得1回合內主動技能傷害增加20%和非主動技能造成傷害增加30%的效果",
+        "effects": [
+          { "text": "當我方回合開始時，依照技能區自己的最高技能等級，立即對敵方生命值比例最低的目標釋放主動技能，該技能等級至少為1級，並使我方全體獲得1回合內主動技能傷害增加20%和非主動技能造成傷害增加30%的效果", "isEffect": false }
+        ]
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "name": "青桐樹強化",
+        "description": "我方場上每有1個青銅樹角色，使我方全體基本能力值增加5%，自己的主動技能傷害增加5%，當我方回合開始或自己使用主動技能時，使我方青銅樹角色基本能力值增加6%，造成傷害增加5%，限疊加3次",
+        "effects": [
+          { "text": "我方場上每有1個青銅樹角色，使我方全體基本能力值增加5%，自己的主動技能傷害增加5%，當我方回合開始或自己使用主動技能時，使我方青銅樹角色基本能力值增加6%，造成傷害增加5%，限疊加3次", "isEffect": false }
+        ]
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "name": "反擊",
+        "description": "當帶有弱點侵蝕效果的敵人釋放主動技能後，使該角色獲得阻斷效果，當帶有阻斷效果的敵人釋放主動技能後，立刻對該目標進行壓制反擊，造成自己攻擊力200%的弱點狙擊傷害",
+        "effects": [
+          { "text": "當帶有", "isEffect": false },
+          { "text": "弱點侵蝕", "isEffect": true, "effectName": "弱點侵蝕", "effectDesc": "所有能力值減少6%，吸血率和回復率減少40%，造成額外傷害減少10%，限疊加2次" },
+          { "text": "效果的敵人釋放主動技能後，使該角色獲得", "isEffect": false },
+          { "text": "阻斷", "isEffect": true, "effectName": "阻斷", "effectDesc": "使目標主動技能的額外效果失效，持續1回合" },
+          { "text": "效果，當帶有", "isEffect": false },
+          { "text": "阻斷", "isEffect": true, "effectName": "阻斷", "effectDesc": "使目標主動技能的額外效果失效，持續1回合" },
+          { "text": "效果的敵人釋放主動技能後，立刻對該目標進行壓制反擊，造成自己攻擊力200%的", "isEffect": false },
+          { "text": "弱點狙擊", "isEffect": true, "effectName": "弱點狙擊", "effectDesc": "暴擊率增加至2倍，對帶有弱點侵蝕的目標造成傷害增加80%" },
+          { "text": "傷害", "isEffect": false }
+        ]
+      },
+      {
+        "type": "Passive",
+        "subtype": "gift",
+        "name": "反擊",
+        "description": "當帶有弱點侵蝕效果的敵人釋放主動技能後，使該角色獲得阻斷效果，當帶有阻斷效果的敵人釋放主動技能後，立刻對該目標進行壓制反擊，造成自己攻擊力200%的弱點狙擊傷害，當敵方角色生命值首次低於60%時，使目標2回合內生命相關能力和攻擊相關能力減少10%",
+        "effects": [
+          { "text": "當帶有", "isEffect": false },
+          { "text": "弱點侵蝕", "isEffect": true, "effectName": "弱點侵蝕", "effectDesc": "所有能力值減少6%，吸血率和回復率減少40%，造成額外傷害減少10%，限疊加2次" },
+          { "text": "效果的敵人釋放主動技能後，使該角色獲得", "isEffect": false },
+          { "text": "阻斷", "isEffect": true, "effectName": "阻斷", "effectDesc": "使目標主動技能的額外效果失效，持續1回合" },
+          { "text": "效果，當帶有", "isEffect": false },
+          { "text": "阻斷", "isEffect": true, "effectName": "阻斷", "effectDesc": "使目標主動技能的額外效果失效，持續1回合" },
+          { "text": "效果的敵人釋放主動技能後，立刻對該目標進行壓制反擊，造成自己攻擊力200%的", "isEffect": false },
+          { "text": "弱點狙擊", "isEffect": true, "effectName": "弱點狙擊", "effectDesc": "暴擊率增加至2倍，對帶有弱點侵蝕的目標造成傷害增加80%" },
+          { "text": "傷害，當敵方角色生命值首次低於60%時，使目標2回合內生命相關能力和攻擊相關能力減少10%", "isEffect": false }
+        ]
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "name": "力量解放強化",
+        "description": "力量解放後，賦予自己1回合內基本能力值增加10%的效果",
+        "effects": [
+          { "text": "力量解放後，賦予自己1回合內基本能力值增加10%的效果", "isEffect": false }
+        ]
+      },
+      {
+        "type": "Passive",
+        "subtype": "rank",
+        "name": "Weak",
+        "description": "造成Weak時，賦予自己1回合內造成傷害增加10%的效果",
+        "effects": [
+          { "text": "造成Weak時，賦予自己1回合內造成傷害增加10%的效果", "isEffect": false }
+        ]
+      }
+    ],
+    "tiers": [
+      {
+        "tier": 1,
+        "effects": [
+          { "description": "戰鬥開始時，1回合內使自己獲得最大生命5%的護盾" },
+          { "description": "我方全體吸血率增加5%" },
+          { "description": "戰鬥中受到傷害減少5%" },
+          { "description": "對帶有弱點侵蝕效果的目標傷害增加8%" },
+          { "description": "當我方回合時，1回合內使自己獲得最大生命5%的護盾" }
+        ]
+      },
+      {
+        "tier": 2,
+        "effects": [
+          { "description": "戰鬥開始時，1回合內使自己最大生命值增加10%" },
+          { "description": "主動技能傷害增加5%" },
+          { "description": "戰鬥中暴擊抵抗增加10%" },
+          { "description": "我方【青桐樹】角色暴擊傷害增加10%" },
+          { "description": "戰鬥開始時，使自己最大生命值增加10%" }
+        ]
+      },
+      {
+        "tier": 3,
+        "effects": [
+          { "description": "戰鬥開始時，1回合內使自己受到主動技能傷害減少5%" },
+          { "description": "戰鬥開始時，使自己回復率增加5%" },
+          { "description": "自己生命值高於90%時，免疫阻斷效果" },
+          { "description": "戰鬥中造成傷害增加5%" },
+          { "description": "戰鬥開始時，使自己受到主動技能傷害減少5%" }
+        ]
+      }
+    ],
+    "effectDefs": {
+      "超弱點侵蝕": "所有能力值減少8%，吸血率和回復率減少40%，造成額外傷害減少10%，限疊加2次",
+      "弱點侵蝕": "所有能力值減少6%，吸血率和回復率減少40%，造成額外傷害減少10%，限疊加2次",
+      "弱點狙擊": "暴擊率增加至2倍，對帶有弱點侵蝕的目標造成傷害增加80%",
+      "阻斷": "使目標主動技能的額外效果失效，持續1回合"
+    }
+  },
+  {
     "id": "1164",
     "title": "300W下載",
     "name": "干支",
@@ -32001,6 +32181,163 @@
     "strategicArenaCP": null
   },
   {
+    "id": "1165",
+    "title": "1.5週年",
+    "name": "啼",
+    "fullName": "1.5週年 啼",
+    "rarity": "SSR",
+    "organization": "Aogiri Tree",
+    "stats": {
+      "hp": 39310,
+      "atk": 2227,
+      "def": 1658
+    },
+    "attribute": "技",
+    "strategicArenaCP": null,
+    "activeSkills": [
+      {
+        "type": "Active",
+        "skillNum": 1,
+        "levels": [
+          {
+            "lv": 1,
+            "name": "主動技能-等級1",
+            "description": "對敵方全體造成攻擊力120%的庇護打擊傷害",
+            "effects": [
+              { "text": "對敵方全體造成攻擊力120%的", "isEffect": false },
+              { "text": "庇護打擊", "isEffect": true, "effectName": "庇護打擊", "effectDesc": "本次技能攻擊力增加20%，使我方全體2回合內獲得本次傷害量20%的護盾" },
+              { "text": "傷害", "isEffect": false }
+            ]
+          },
+          {
+            "lv": 2,
+            "name": "主動技能-等級2",
+            "description": "對敵方全體造成攻擊力170%的庇護打擊傷害",
+            "effects": [
+              { "text": "對敵方全體造成攻擊力170%的", "isEffect": false },
+              { "text": "庇護打擊", "isEffect": true, "effectName": "庇護打擊", "effectDesc": "本次技能攻擊力增加20%，使我方全體2回合內獲得本次傷害量20%的護盾" },
+              { "text": "傷害", "isEffect": false }
+            ]
+          },
+          {
+            "lv": 3,
+            "name": "主動技能-等級3",
+            "description": "對敵方全體造成攻擊力260%的庇護打擊傷害",
+            "effects": [
+              { "text": "對敵方全體造成攻擊力260%的", "isEffect": false },
+              { "text": "庇護打擊", "isEffect": true, "effectName": "庇護打擊", "effectDesc": "本次技能攻擊力增加20%，使我方全體2回合內獲得本次傷害量20%的護盾" },
+              { "text": "傷害", "isEffect": false }
+            ]
+          }
+        ]
+      }
+    ],
+    "passiveSkills": [
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "name": "專屬技能",
+        "description": "當自己死亡時，使我方攻擊力最高的角色所有能力值增加8%，技能等級上升，並使目標1回合內獲得其初始最大生命值10%的護盾",
+        "effects": [
+          { "text": "當自己死亡時，使我方攻擊力最高的角色所有能力值增加8%，技能等級上升，並使目標1回合內獲得其初始最大生命值10%的護盾", "isEffect": false }
+        ]
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "name": "技能升級",
+        "description": "【援助也生效】戰鬥開始時，使自己攻擊力增加10%，我方角色死亡時，使自己最大生命值增加15%，自己行動後，如果本次技擊殺敵方目標，使自己技能等級上升",
+        "effects": [
+          { "text": "【援助也生效】戰鬥開始時，使自己攻擊力增加10%，我方角色死亡時，使自己最大生命值增加15%，自己行動後，如果本次技擊殺敵方目標，使自己技能等級上升", "isEffect": false }
+        ]
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "name": "能力強化",
+        "description": "在據點爭奪中，使我方角色免疫阻斷效果，且基本能力值增加20%，該效果對青桐樹角色翻倍，我方角色釋放主動技能前，解除目標所有護盾效果，並賦予目標1回合內吸血率減少30%的效果",
+        "effects": [
+          { "text": "在據點爭奪中，使我方角色免疫", "isEffect": false },
+          { "text": "阻斷", "isEffect": true, "effectName": "阻斷", "effectDesc": "使目標主動技能的額外效果失效，持續1回合" },
+          { "text": "效果，且基本能力值增加20%，該效果對青桐樹角色翻倍，我方角色釋放主動技能前，解除目標所有護盾效果，並賦予目標1回合內吸血率減少30%的效果", "isEffect": false }
+        ]
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "name": "堅韌",
+        "description": "在據點爭奪中，戰鬥開始時，自己立即釋放1級主動技能，並使我方全體獲得以下效果：下一次受到主動技能傷害減少40%，下一次受到主動技能傷害時回復自己最大生命值15%的生命值，生命值首次低於50%時，解除自己所有減益效果。",
+        "effects": [
+          { "text": "在據點爭奪中，戰鬥開始時，自己立即釋放1級主動技能，並使我方全體獲得以下效果：下一次受到主動技能傷害減少40%，下一次受到主動技能傷害時回復自己最大生命值15%的生命值，生命值首次低於50%時，解除自己所有減益效果。", "isEffect": false }
+        ]
+      },
+      {
+        "type": "Passive",
+        "subtype": "gift",
+        "name": "堅韌",
+        "description": "在據點爭奪中，戰鬥開始時，自己立即釋放1級主動技能，並使我方全體獲得以下效果：下一次受到主動技能傷害減少40%，下一次受到主動技能傷害時回復自己最大生命值15%的生命值，生命值首次低於50%時，解除自己所有減益效果。當三個效果都被消耗時，使該角色技能等級上升",
+        "effects": [
+          { "text": "在據點爭奪中，戰鬥開始時，自己立即釋放1級主動技能，並使我方全體獲得以下效果：下一次受到主動技能傷害減少40%，下一次受到主動技能傷害時回復自己最大生命值15%的生命值，生命值首次低於50%時，解除自己所有減益效果。當三個效果都被消耗時，使該角色技能等級上升", "isEffect": false }
+        ]
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "name": "力量解放強化",
+        "description": "力量解放後，賦予我方全體1回合內基本能力增加5%的效果",
+        "effects": [
+          { "text": "力量解放後，賦予我方全體1回合內基本能力增加5%的效果", "isEffect": false }
+        ]
+      },
+      {
+        "type": "Passive",
+        "subtype": "rank",
+        "name": "Weak",
+        "description": "造成Weak時，賦予目標1回合內受到傷害增加10%的效果",
+        "effects": [
+          { "text": "造成Weak時，賦予目標1回合內受到傷害增加10%的效果", "isEffect": false }
+        ]
+      }
+    ],
+    "tiers": [
+      {
+        "tier": 1,
+        "effects": [
+          { "description": "戰鬥開始時，1回合內使自己獲得最大生命5%的護盾" },
+          { "description": "戰鬥開始時，使自己暴擊防禦增加10%" },
+          { "description": "我方全體造成傷害增加5%" },
+          { "description": "據點爭奪中我方角色格擋率增加12%" },
+          { "description": "當我方回合時，1回合內使自己獲得最大生命5%的護盾" }
+        ]
+      },
+      {
+        "tier": 2,
+        "effects": [
+          { "description": "戰鬥開始時，1回合內使自己最大生命值增加10%" },
+          { "description": "我方全體回復率增加5%" },
+          { "description": "【援助也生效】戰鬥中受到傷害減少4%" },
+          { "description": "戰鬥中受到傷害減少8%" },
+          { "description": "戰鬥開始時，使自己最大生命值增加10%" }
+        ]
+      },
+      {
+        "tier": 3,
+        "effects": [
+          { "description": "戰鬥開始時，1回合內使自己受到主動技能傷害減少5%" },
+          { "description": "據點爭奪中我方角色攻擊力增加5%" },
+          { "description": "戰鬥開始時，使自己暴擊抵抗增加5%" },
+          { "description": "【援助也生效】戰鬥中破擊率增加5%" },
+          { "description": "戰鬥開始時，使自己受到主動技能傷害減少5%" }
+        ]
+      }
+    ],
+    "effectDefs": {
+      "庇護打擊": "本次技能攻擊力增加20%，使我方全體2回合內獲得本次傷害量20%的護盾",
+      "超庇護打擊": "本次技能攻擊力增加20%，破擊率增加15%，使我方全體2回合內獲得本次傷害量30%的護盾",
+      "阻斷": "使目標主動技能的額外效果失效，持續1回合"
+    }
+  },
+  {
     "id": "1167",
     "title": "小憩時光",
     "name": "入見萱",
@@ -32259,8 +32596,9 @@
       "atk": 39414,
       "def": 28478
     },
-    "attribute": "DST",
-    "strategicArenaCP": null,
+    "attribute": "滅",
+    "tactic": "均衡",
+    "strategicArenaCP": 253987,
     "activeSkills": [
       {
         "type": "Active",
