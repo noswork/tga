@@ -5,6 +5,7 @@ import { V3_MAP_CONFIG, V3_HEX_DX, V3_HEX_DY, V3_HEX_H, V3_MAIN_CITY_CENTER, V3_
 import { keyFor, hexToRgba, inBounds, computeCenter, decodeMapShareState } from './utils';
 import { useMapState } from './hooks/useMapState';
 import { useAnnotations } from './hooks/useAnnotations';
+import { useAutoSave } from './hooks/useAutoSave';
 import { ControlPanel } from './components/ControlPanel';
 import { AnnotationToolbar } from './components/AnnotationToolbar';
 import { TextInput } from './components/TextInput';
@@ -106,6 +107,13 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
   } = useAnnotations(annotationMode, annotationColor, annotationSize, annotationLayerRef, (msg) => {
     setShareMessage(msg);
     setTimeout(() => setShareMessage(null), 4000);
+  });
+
+  // 自動保存功能：每 30 秒靜默保存到 Cloudflare KV
+  useAutoSave({
+    markedCells: state.current.markedCells,
+    annotations,
+    enabled: true,
   });
 
   const applyTransform = () => {
