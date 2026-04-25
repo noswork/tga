@@ -80,15 +80,20 @@ export const useAutoSave = ({ markedCells, annotations, enabled = true }: UseAut
       isSavingRef.current = true;
 
       if (useBeacon) {
-        // 使用 sendBeacon 在頁面關閉時發送（更可靠）
-        const blob = new Blob([JSON.stringify(currentState)], { type: 'application/json' });
-        const sent = navigator.sendBeacon('https://tga-share.nossite.com/map/share', blob);
+        // 使用 fetch + keepalive 代替 sendBeacon（避免 CORS 問題）
+        try {
+          await fetch('https://tga-share.nossite.com/map/share', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(currentState),
+            keepalive: true,
+            credentials: 'omit', // 不發送 credentials 避免 CORS 問題
+          });
 
-        if (sent) {
           lastSavedStateRef.current = currentStateStr;
           console.log('[AutoSave] ✓ 離開時自動保存已發送');
-        } else {
-          console.warn('[AutoSave] ✗ sendBeacon 發送失敗');
+        } catch (e) {
+          console.warn('[AutoSave] ✗ 離開時保存失敗:', e);
         }
       } else {
         // 正常的 fetch 請求
@@ -102,7 +107,8 @@ export const useAutoSave = ({ markedCells, annotations, enabled = true }: UseAut
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(currentState),
           signal: controller.signal,
-          keepalive: true, // 允許請求在頁面關閉後繼續
+          keepalive: true,
+          credentials: 'omit', // 不發送 credentials 避免 CORS 問題
         });
 
         clearTimeout(timeout);
