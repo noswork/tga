@@ -1,5 +1,47 @@
 [
   {
+    "id": "Equip_Special_1060_Hp",
+    "imgFile": "Equip_Special_1060_Hp.png",
+    "name": "再生細胞【正義雙刃】",
+    "rarity": 6,
+    "statType": "Hp",
+    "baseStat": null,
+    "stat1": null,
+    "stat2": null,
+    "stat3": null,
+    "stat4": null,
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【正義雙刃】",
+    "uniqueSkillSegments": [
+      {
+        "text": "【補位也生效】在PVE戰鬥中，使我方CCG角色造成單體主動技能傷害增加30%。當我方回合開始時，使得我方攻擊力最高的CCG角色技能等級上升至3級",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {}
+  },
+  {
+    "id": "Equip_Special_1121_Def",
+    "imgFile": "Equip_Special_1121_Def.png",
+    "name": "防衛細胞【赤舌】",
+    "rarity": 6,
+    "statType": "Def",
+    "baseStat": null,
+    "stat1": null,
+    "stat2": null,
+    "stat3": null,
+    "stat4": null,
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【赤舌】",
+    "uniqueSkillSegments": [
+      {
+        "text": "【補位也生效】在突破封鎖中，使我方全體免疫所有減益和Weak效果，我方角色使用主動技能後，使我方角色以100%的效果重複釋放該技能",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {}
+  },
+  {
     "id": "Equip_Special_1105_Atk",
     "imgFile": "Equip_Special_1105_Atk.png",
     "name": "強襲細胞【復活節】",
