@@ -8,6 +8,7 @@ export interface StrongholdMapProps {
 export type MarkMode = 'add' | 'remove';
 export type AnnotationMode = 'none' | 'arrow' | 'rectangle' | 'text' | 'sketch' | 'eraser';
 export type MapVersion = 'v1' | 'v2' | 'v3';
+export type V3OrgVariant = '16org' | '24org';
 
 export interface MapState {
   scale: number;

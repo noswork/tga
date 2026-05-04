@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { translations } from '../../../constants';
-import { StrongholdMapProps, MarkMode, AnnotationMode, SharedMapState, MapVersion } from './types';
-import { V3_MAP_CONFIG, V3_HEX_DX, V3_HEX_DY, V3_HEX_H, V3_MAIN_CITY_CENTER, V3_MAIN_CITY_CELLS, V3_BUILDING_DATA, V3_ICON_IMAGES, WATERMARK_TILES, STORAGE_KEYS, V1_MAP_CONFIG, V1_HEX_DX, V1_HEX_DY, V1_HEX_H, V1_MAIN_CITY_CENTER, V1_MAIN_CITY_CELLS, V1_BUILDING_DATA, V1_ICON_IMAGES, V2_MAP_CONFIG, V2_HEX_DX, V2_HEX_DY, V2_HEX_H, V2_MAIN_CITY_CENTER, V2_MAIN_CITY_CELLS, V2_BUILDING_DATA, V2_ICON_IMAGES } from './config';
+import { StrongholdMapProps, MarkMode, AnnotationMode, SharedMapState, MapVersion, V3OrgVariant } from './types';
+import { V3_MAP_CONFIG, V3_HEX_DX, V3_HEX_DY, V3_HEX_H, V3_MAIN_CITY_CENTER, V3_MAIN_CITY_CELLS, V3_BUILDING_DATA, V3_BUILDING_DATA_24ORG, V3_ICON_IMAGES, WATERMARK_TILES, STORAGE_KEYS, V1_MAP_CONFIG, V1_HEX_DX, V1_HEX_DY, V1_HEX_H, V1_MAIN_CITY_CENTER, V1_MAIN_CITY_CELLS, V1_BUILDING_DATA, V1_ICON_IMAGES, V2_MAP_CONFIG, V2_HEX_DX, V2_HEX_DY, V2_HEX_H, V2_MAIN_CITY_CENTER, V2_MAIN_CITY_CELLS, V2_BUILDING_DATA, V2_ICON_IMAGES } from './config';
 import { keyFor, hexToRgba, inBounds, computeCenter, decodeMapShareState } from './utils';
 import { useMapState } from './hooks/useMapState';
 import { useAnnotations } from './hooks/useAnnotations';
@@ -40,10 +40,10 @@ const getMainCityCenter = (v: MapVersion) => {
   if (v === 'v2') return V2_MAIN_CITY_CENTER;
   return V3_MAIN_CITY_CENTER;
 };
-const getBuildingData = (v: MapVersion) => {
+const getBuildingData = (v: MapVersion, v3Variant: V3OrgVariant = '16org') => {
   if (v === 'v1') return V1_BUILDING_DATA;
   if (v === 'v2') return V2_BUILDING_DATA;
-  return V3_BUILDING_DATA;
+  return v3Variant === '24org' ? V3_BUILDING_DATA_24ORG : V3_BUILDING_DATA;
 };
 const getIconImages = (v: MapVersion) => {
   if (v === 'v1') return V1_ICON_IMAGES;
@@ -70,6 +70,9 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
   const [mapVersion, setMapVersionState] = useState<MapVersion>(() => {
     return (localStorage.getItem(STORAGE_KEYS.mapVersion) as MapVersion) || 'v3';
   });
+  const [v3OrgVariant, setV3OrgVariantState] = useState<V3OrgVariant>(() => {
+    return (localStorage.getItem(STORAGE_KEYS.v3OrgVariant) as V3OrgVariant) || '16org';
+  });
 
   const setMapVersion = (v: MapVersion) => {
     localStorage.setItem(STORAGE_KEYS.mapVersion, v);
@@ -84,6 +87,11 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
       state.current.translate.y = svgRect.height / 2 - cy * cfg.minScale;
       requestAnimationFrame(applyTransform);
     }
+  };
+
+  const setV3OrgVariant = (variant: V3OrgVariant) => {
+    localStorage.setItem(STORAGE_KEYS.v3OrgVariant, variant);
+    setV3OrgVariantState(variant);
   };
   const annotationLayerRef = useRef<SVGGElement>(null);
   const justCompletedTextDragRef = useRef(false);
@@ -234,7 +242,7 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
     }
     hexLayer.appendChild(hexFragment);
 
-    const buildingData = getBuildingData(mapVersion);
+    const buildingData = getBuildingData(mapVersion, v3OrgVariant);
     const iconImages = getIconImages(mapVersion);
     const mainCityCenter = getMainCityCenter(mapVersion);
     const mainCityCells = getMainCityCells(mapVersion);
@@ -404,7 +412,7 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
     setTimeout(() => {
       loadSharedMap();
     }, 100);
-  }, [mapVersion]);
+  }, [mapVersion, v3OrgVariant]);
 
   const createMark = (x: number, y: number, color: string) => {
     const key = keyFor(x, y);
@@ -1102,6 +1110,8 @@ export const StrongholdMap: React.FC<StrongholdMapProps> = ({ lang, onClose }) =
         shareMessage={shareMessage}
         mapVersion={mapVersion}
         setMapVersion={setMapVersion}
+        v3OrgVariant={v3OrgVariant}
+        setV3OrgVariant={setV3OrgVariant}
       />
 
       <div className="flex-1 relative bg-[var(--map-bg)] transition-colors duration-300 overflow-hidden cursor-crosshair select-none z-10 order-1 lg:order-2 min-h-0 overscroll-none">

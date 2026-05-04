@@ -2,6 +2,7 @@ export const STORAGE_KEYS = {
   marks: 'stronghold-marks',
   annotations: 'stronghold-annotations',
   mapVersion: 'stronghold-map-version',
+  v3OrgVariant: 'stronghold-v3-org-variant',
 } as const;
 
 // --- MAP CONFIGURATION ---
@@ -66,6 +67,26 @@ export const V3_ICON_IMAGES: Record<string, string> = {
   fortress: '/assets/tools/StrongholdMap/fortress.png',
   organization: '/assets/tools/StrongholdMap/org.png',
   block: '/assets/tools/StrongholdMap/block.png',
+};
+
+// v3 24-組織佈局：在原 16 組織基礎上，以 x=30 為軸鏡像補齊左右對稱，
+// 另於左右兩側中段各加一點（[4, 30] / [56, 30]），合共 24 個組織位置。
+export const V3_BUILDING_DATA_24ORG: Record<string, number[][]> = {
+  ...V3_BUILDING_DATA,
+  organization: [
+    [33, 99], [27, 99],
+    [13, 85], [47, 85],
+    [7, 67], [53, 67],
+    [4, 58], [56, 58],
+    [4, 30], [56, 30],
+    [7, 21], [53, 21],
+    [14, 14], [46, 14],
+    [21, 7], [39, 7],
+    [27, 7], [33, 7],
+    [4, 44], [56, 44],
+    [10, 76], [50, 76],
+    [20, 92], [40, 92],
+  ],
 };
 
 export const WATERMARK_TILES = Array.from({ length: 300 });

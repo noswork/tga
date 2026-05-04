@@ -2,7 +2,7 @@ import React from 'react';
 import { X, Target, Settings, Download, CheckCircle, Trash2, Eraser, Monitor, Share2 } from 'lucide-react';
 import { Lang } from '../../../../types';
 import { translations } from '../../../../constants';
-import { MarkMode, AnnotationMode, MapVersion } from '../types';
+import { MarkMode, AnnotationMode, MapVersion, V3OrgVariant } from '../types';
 import { COLORS } from '../config';
 
 interface ControlPanelProps {
@@ -23,6 +23,8 @@ interface ControlPanelProps {
   shareMessage?: string | null;
   mapVersion: MapVersion;
   setMapVersion: (version: MapVersion) => void;
+  v3OrgVariant: V3OrgVariant;
+  setV3OrgVariant: (variant: V3OrgVariant) => void;
 }
 
 export const ControlPanel: React.FC<ControlPanelProps> = ({
@@ -43,6 +45,8 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
   shareMessage,
   mapVersion,
   setMapVersion,
+  v3OrgVariant,
+  setV3OrgVariant,
 }) => {
   const t = translations[lang].tools.map;
   const qT = t.quality;
@@ -130,6 +134,24 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
                 );
               })}
             </div>
+            {mapVersion === 'v3' && (
+              <div className="mt-2">
+                <h3 className="text-[10px] lg:text-[11px] font-mono text-gray-500 dark:text-zinc-500 mb-1.5 uppercase tracking-wider">{t.v3OrgVariant}</h3>
+                <div className="flex gap-1.5">
+                  {(['16org', '24org'] as const).map((variant) => (
+                    <button
+                      key={variant}
+                      onClick={() => setV3OrgVariant(variant)}
+                      className={`flex-1 py-1 rounded text-[10px] font-bold font-mono transition-all border uppercase
+                        ${v3OrgVariant === variant ? 'bg-ghoul-red text-white border-red-500' : 'bg-transparent text-gray-500 border-gray-300 dark:border-zinc-700 hover:bg-black/5 dark:hover:bg-white/5'}
+                      `}
+                    >
+                      {variant === '16org' ? t.v3Variant16 : t.v3Variant24}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           <button onClick={onClearAll} className="w-full py-1.5 lg:py-2.5 rounded border border-red-500/30 dark:border-red-900/50 text-red-600 dark:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors text-[10px] lg:text-xs font-bold font-tech flex items-center justify-center gap-2">

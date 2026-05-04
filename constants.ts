@@ -81,6 +81,9 @@ export const translations: Record<Lang, Translation> = {
         liveFeed: 'LIVE FEED',
         sectorInfo: 'SECTOR 20 // WARD 11\nRC DENSITY: HIGH',
         mapVersion: 'MAP VERSION',
+        v3OrgVariant: 'V3 LAYOUT',
+        v3Variant16: '16 ORG',
+        v3Variant24: '24 ORG',
         quality: {
           title: 'EXPORT QUALITY',
           q1: 'Standard',
@@ -345,6 +348,9 @@ export const translations: Record<Lang, Translation> = {
         liveFeed: '實時監控',
         sectorInfo: '第 20 區 // 11 支部\nRC 濃度：高',
         mapVersion: '地圖版本',
+        v3OrgVariant: 'V3 佈局',
+        v3Variant16: '16 組織',
+        v3Variant24: '24 組織',
         quality: {
           title: '導出畫質',
           q1: '標準',

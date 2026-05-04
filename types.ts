@@ -178,6 +178,9 @@ export interface Translation {
       shareCopied: string;
       shareFailed: string;
       mapVersion: string;
+      v3OrgVariant: string;
+      v3Variant16: string;
+      v3Variant24: string;
       quality: {
         title: string;
         q1: string;
