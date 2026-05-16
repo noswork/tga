@@ -446,7 +446,7 @@ export const CharacterGallery: React.FC<CharacterGalleryProps> = ({ lang, onSwit
               <Database className="text-ghoul-red" /> {t.title}
             </h2>
             <div className="text-xs font-tech text-gray-500 tracking-[0.3em]">{t.ccgDatabase}</div>
-            <div className="text-xs text-gray-400 mt-1">Data credit: <a href="https://twitter.com/kevinchatmajo1" target="_blank" rel="noopener noreferrer" className="text-ghoul-red hover:underline">@kevinchatmajo1</a></div>
+            <div className="text-xs text-gray-400 mt-1">Data mined by <a href="https://space.bilibili.com/252713343" target="_blank" rel="noopener noreferrer" className="text-ghoul-red hover:underline">@Nos</a></div>
           </div>
           <div className="flex items-center gap-3">
             <div className="text-sm font-tech text-gray-400">{filteredData.length} / {charactersData.length} {lang === 'zh' ? '角色' : 'SUBJECTS'}</div>
