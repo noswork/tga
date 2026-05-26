@@ -168,6 +168,30 @@ const CellModal: React.FC<{ cell: Cell; lang: Lang; onClose: () => void; onOpenC
               </div>
             )}
 
+            {/* Factor icons (new build) — slot icon + name + pct, one row per factor */}
+            {cell.factors && cell.factors.length > 0 && (
+              <div className="bg-gray-100 dark:bg-[#22252e] border border-gray-200 dark:border-gray-700 rounded p-3">
+                <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-1.5">細胞因子</p>
+                <div className="grid grid-cols-2 gap-2">
+                  {cell.factors.map((f, i) => (
+                    <div key={i} className="flex items-center gap-2 bg-gray-200 dark:bg-black/30 rounded px-2 py-1.5">
+                      {f.iconUrl
+                        ? <img src={f.iconUrl} alt="" className="w-6 h-6 rounded-full object-contain bg-black/40 flex-shrink-0" onError={e => (e.currentTarget.style.opacity='0.3')} />
+                        : <div className="w-6 h-6 rounded-full bg-black/40 flex-shrink-0" />}
+                      <div className="flex-1 min-w-0 flex items-center justify-between gap-2">
+                        <span className="text-xs text-gray-700 dark:text-gray-200 truncate">{f.name ?? f.stat}</span>
+                        {f.valuePct != null && (
+                          <span className="text-xs font-bold text-green-600 dark:text-green-400 flex-shrink-0">
+                            +{f.valuePct.toLocaleString(undefined, { maximumFractionDigits: 2 })}%
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Owner character */}
             {owner && (
               <div className="bg-gray-100 dark:bg-[#22252e] border border-gray-200 dark:border-gray-700 rounded p-3">

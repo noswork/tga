@@ -18,13 +18,16 @@ type FilterCategory = 'ALL' | 'No Organization' | 'CCG Higher Rank Investigator'
 type RarityFilter = 'ALL' | 'SP' | 'SSR' | 'SR' | 'R';
 type SkillTab = 'active' | 'passive' | 'talent';
 type ViewMode = 'grid' | 'rank';
+// All 7 metrics are still computed below — only ATK/DEF/HP are surfaced
+// in the UI for now (CP metrics commented out, may return later).
 type RankMetric = 'baseCp' | 'arenaCP' | 'cellCp3x' | 'cellCp4x' | 'atk' | 'def' | 'hp';
 
 const RANK_METRICS: { key: RankMetric; label: string; color: string; glow: string; gradFrom: string; gradTo: string }[] = [
-  { key: 'baseCp',   label: '基礎戰力',   color: 'text-red-400',    glow: '0 0 8px rgba(239,68,68,0.7)',   gradFrom: '#7f1d1d', gradTo: '#ef4444' },
-  { key: 'arenaCP',  label: '競技場戰力', color: 'text-pink-400',   glow: '0 0 8px rgba(236,72,153,0.7)',  gradFrom: '#831843', gradTo: '#ec4899' },
-  { key: 'cellCp3x', label: '3x細胞戰力', color: 'text-yellow-400', glow: '0 0 8px rgba(234,179,8,0.7)',   gradFrom: '#713f12', gradTo: '#eab308' },
-  { key: 'cellCp4x', label: '4x細胞戰力', color: 'text-orange-400', glow: '0 0 8px rgba(249,115,22,0.7)',  gradFrom: '#7c2d12', gradTo: '#f97316' },
+  // CP-based metrics retained in the type/getCharValue but hidden from UI:
+  // { key: 'baseCp',   label: '基礎戰力',   color: 'text-red-400',    glow: '0 0 8px rgba(239,68,68,0.7)',   gradFrom: '#7f1d1d', gradTo: '#ef4444' },
+  // { key: 'arenaCP',  label: '競技場戰力', color: 'text-pink-400',   glow: '0 0 8px rgba(236,72,153,0.7)',  gradFrom: '#831843', gradTo: '#ec4899' },
+  // { key: 'cellCp3x', label: '3x細胞戰力', color: 'text-yellow-400', glow: '0 0 8px rgba(234,179,8,0.7)',   gradFrom: '#713f12', gradTo: '#eab308' },
+  // { key: 'cellCp4x', label: '4x細胞戰力', color: 'text-orange-400', glow: '0 0 8px rgba(249,115,22,0.7)',  gradFrom: '#7c2d12', gradTo: '#f97316' },
   { key: 'atk',      label: 'ATK',        color: 'text-orange-300', glow: '0 0 8px rgba(253,186,116,0.7)', gradFrom: '#7c2d12', gradTo: '#fdba74' },
   { key: 'def',      label: 'DEF',        color: 'text-blue-400',   glow: '0 0 8px rgba(96,165,250,0.7)',  gradFrom: '#1e3a5f', gradTo: '#60a5fa' },
   { key: 'hp',       label: 'HP',         color: 'text-green-400',  glow: '0 0 8px rgba(74,222,128,0.7)',  gradFrom: '#14532d', gradTo: '#4ade80' },
@@ -61,15 +64,19 @@ const TACTIC_COLOR: Record<string, string> = {
 
 
 const SUBTYPE_LABEL: Record<string, string> = {
-  passive: '被動',
-  rank:    'Rank',
-  gift:    '潛能升級',
+  passive:   '被動',
+  rank:      'Rank',
+  gift:      '潛能升級',
+  resonance: '共鳴',
+  orb:       '專屬',
 };
 
 const SUBTYPE_COLOR: Record<string, string> = {
-  passive: 'text-gray-400 border-gray-600',
-  rank:    'text-yellow-400 border-yellow-700',
-  gift:    'text-pink-400 border-pink-700',
+  passive:   'text-gray-400 border-gray-600',
+  rank:      'text-yellow-400 border-yellow-700',
+  gift:      'text-pink-400 border-pink-700',
+  resonance: 'text-cyan-400 border-cyan-700',
+  orb:       'text-amber-400 border-amber-700',
 };
 
 const LV_LABELS = ['一級', '二級', '三級', '四級', '五級'];
@@ -248,30 +255,8 @@ const CharModal: React.FC<{ char: Character; lang: Lang; onClose: () => void; on
                 <span className="text-gray-900 dark:text-white font-bold text-sm">{char.stats.def.toLocaleString()}</span>
               </div>
             </div>
-            {/* CP row */}
-            {char.strategicArenaCP != null && (() => {
-              const { atk, def, hp } = char.stats;
-              const arenaCP = char.strategicArenaCP!;
-              const baseCp = calcBaseCp(arenaCP, atk, def, hp);
-              const cp3x = calcCellCp3x(arenaCP, atk, def, hp);
-              const cp4x = calcCellCp4x(arenaCP, atk, def, hp);
-              return (
-                <div className="flex divide-x divide-gray-200 dark:divide-gray-700 border-t border-gray-200 dark:border-gray-700">
-                  <div className="flex-1 flex flex-col items-center py-2">
-                    <span className="text-xs text-gray-400 font-tech tracking-wider">基礎戰力</span>
-                    <span className="text-gray-900 dark:text-white font-bold text-sm">{baseCp.toLocaleString()}</span>
-                  </div>
-                  <div className="flex-1 flex flex-col items-center py-2">
-                    <span className="text-xs text-yellow-400 font-tech tracking-wider">3x細胞戰力</span>
-                    <span className="text-gray-900 dark:text-white font-bold text-sm">{cp3x.toLocaleString()}</span>
-                  </div>
-                  <div className="flex-1 flex flex-col items-center py-2">
-                    <span className="text-xs text-orange-400 font-tech tracking-wider">4x細胞戰力</span>
-                    <span className="text-gray-900 dark:text-white font-bold text-sm">{cp4x.toLocaleString()}</span>
-                  </div>
-                </div>
-              );
-            })()}
+            {/* CP row removed — strategicArenaCP is no longer computed in this build.
+                Ranking logic is preserved in getCharValue() / RANK_METRICS for future re-display. */}
 
             {/* Tabs */}
             <div className="flex border-t border-gray-200 dark:border-gray-700">
@@ -302,7 +287,9 @@ const CharModal: React.FC<{ char: Character; lang: Lang; onClose: () => void; on
                       <div key={skill.skillNum} className="bg-gray-100 dark:bg-[#22252e] border border-gray-200 dark:border-gray-700 rounded p-4">
                         <div className="flex items-center justify-between mb-3 gap-2">
                           <div className="flex items-center gap-2">
-                            <Sword size={15} className="text-red-500 flex-shrink-0" />
+                            {skill.iconUrl
+                              ? <img src={skill.iconUrl} alt="" className="w-8 h-8 rounded-full object-contain bg-black/40 flex-shrink-0" onError={e => (e.currentTarget.style.display='none')} />
+                              : <Sword size={15} className="text-red-500 flex-shrink-0" />}
                             <span className="text-gray-900 dark:text-white font-bold text-sm">主動技能 #{skill.skillNum}</span>
                           </div>
                           <div className="flex gap-1 flex-shrink-0">
@@ -332,10 +319,12 @@ const CharModal: React.FC<{ char: Character; lang: Lang; onClose: () => void; on
                 : (char.passiveSkills as PassiveSkill[]).map((skill, idx) => (
                     <div key={idx} className="bg-gray-100 dark:bg-[#22252e] border border-gray-200 dark:border-gray-700 rounded p-4">
                       <div className="flex items-center gap-2 mb-2 flex-wrap">
-                        {idx % 2 === 0
-                          ? <Flame size={15} className="text-orange-400 flex-shrink-0" />
-                          : <Sparkles size={15} className="text-purple-400 flex-shrink-0" />}
-                        <span className="text-gray-900 dark:text-white font-bold text-sm">{skill.name}</span>
+                        {skill.iconUrl
+                          ? <img src={skill.iconUrl} alt="" className="w-8 h-8 rounded-full object-contain bg-black/40 flex-shrink-0" onError={e => (e.currentTarget.style.display='none')} />
+                          : (idx % 2 === 0
+                              ? <Flame size={15} className="text-orange-400 flex-shrink-0" />
+                              : <Sparkles size={15} className="text-purple-400 flex-shrink-0" />)}
+                        <span className="text-gray-900 dark:text-white font-bold text-sm">{skill.name ?? '—'}</span>
                         <span className={`ml-auto text-xs border px-1.5 py-0.5 rounded flex-shrink-0 ${SUBTYPE_COLOR[skill.subtype]}`}>
                           {SUBTYPE_LABEL[skill.subtype]}
                         </span>
@@ -408,7 +397,7 @@ export const CharacterGallery: React.FC<CharacterGalleryProps> = ({ lang, onSwit
   const [rarityFilter, setRarityFilter] = useState<RarityFilter>('ALL');
   const [selectedChar, setSelectedChar] = useState<Character | null>(null);
   const [viewMode, setViewMode] = useState<ViewMode>('grid');
-  const [rankMetric, setRankMetric] = useState<RankMetric>('baseCp');
+  const [rankMetric, setRankMetric] = useState<RankMetric>('atk');
   const [barReady, setBarReady] = useState(false);
 
   useEffect(() => {

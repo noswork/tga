@@ -11,9 +11,17 @@ export type ViewSection =
   | 'ghoulLab'
   | 'toybox';
 
+export interface CellFactor {
+  stat: string;
+  name: string | null;
+  valuePct: number | null;
+  iconUrl: string | null;
+}
+
 export interface Cell {
   id: string;
   imgFile: string;
+  iconUrl?: string | null;
   name: string;
   rarity: number;
   statType: string;
@@ -26,6 +34,7 @@ export interface Cell {
   stat2: string | null;
   stat3: string | null;
   stat4: string | null;
+  factors?: CellFactor[];
 }
 
 export type TerminalMode = 'GAME';
@@ -53,15 +62,18 @@ export interface ActiveSkillLevel {
 export interface ActiveSkill {
   type: 'Active';
   skillNum: number;
+  iconUrl?: string | null;
   levels: ActiveSkillLevel[];
 }
 
 export interface PassiveSkill {
   type: 'Passive';
-  subtype: 'passive' | 'rank' | 'gift';
-  name: string;
+  subtype: 'passive' | 'rank' | 'gift' | 'resonance' | 'orb';
+  id?: string | null;
+  name: string | null;
   description: string;
   effects: EffectSegment[];
+  iconUrl?: string | null;
 }
 
 export interface TierEffect {
@@ -90,6 +102,7 @@ export interface Character {
   attribute?: '力' | '技' | '速' | '心' | '知' | '滅';
   tactic?: '輸出' | '輔助' | '控制' | '均衡' | '爆發';
   strategicArenaCP?: number | null;
+  headUrl?: string | null;
   activeSkills: ActiveSkill[];
   passiveSkills: PassiveSkill[];
   tiers: Tier[];
