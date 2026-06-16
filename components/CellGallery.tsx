@@ -44,11 +44,6 @@ const STAT_TYPE_ZH: Record<string, string> = {
   HP:  '再生',
 };
 
-const STAT_VAL_ZH = (v: string | null | undefined): string => {
-  if (!v) return '—';
-  return v.replace(/ATK/g, '攻擊力').replace(/DEF/g, '防禦力').replace(/HP/g, '生命值');
-};
-
 function getCharForCell(cellId: string): Character | undefined {
   const m = cellId.match(/Equip_Special_(\d+)_/);
   if (!m) return undefined;
@@ -149,21 +144,10 @@ const CellModal: React.FC<{ cell: Cell; lang: Lang; onClose: () => void; onOpenC
 
             {/* Stats */}
             {cell.baseStat != null && (
-              <div className="bg-gray-100 dark:bg-[#22252e] border border-gray-200 dark:border-gray-700 rounded p-3 space-y-2">
+              <div className="bg-gray-100 dark:bg-[#22252e] border border-gray-200 dark:border-gray-700 rounded p-3">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-semibold text-gray-500 dark:text-gray-400">加成</span>
                   <span className={`text-base font-bold ${STAT_COLOR[cell.statType]}`}>{cell.baseStat.toLocaleString()}</span>
-                </div>
-                <div className="border-t border-gray-200 dark:border-gray-600 pt-2">
-                  <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-1.5">因子</p>
-                  <div className="grid grid-cols-2 gap-x-3 gap-y-1">
-                    {([cell.stat1, cell.stat2, cell.stat3, cell.stat4] as (string|null)[]).map((s, i) => (
-                      <div key={i} className="flex items-center justify-between bg-gray-200 dark:bg-black/30 rounded px-2 py-1">
-                        <span className="text-xs text-gray-500 dark:text-gray-400">{i + 1}</span>
-                        <span className="text-xs font-semibold text-gray-800 dark:text-gray-200">{STAT_VAL_ZH(s)}</span>
-                      </div>
-                    ))}
-                  </div>
                 </div>
               </div>
             )}

@@ -15953,10 +15953,10 @@
   {
     "id": "1071",
     "title": "強者",
-    "name": "大守八雲",
-    "fullName": "強者 大守八雲",
+    "name": "",
+    "fullName": "強者",
     "rarity": "SSR",
-    "organization": "Aogiri Tree",
+    "organization": "青桐樹",
     "stats": {
       "hp": 588488,
       "atk": 35817,
@@ -15964,11 +15964,12 @@
     },
     "attribute": "知",
     "tactic": "爆發",
-    "strategicArenaCP": 233707,
+    "headUrl": "/assets/heroes/head/1071_head.png",
     "activeSkills": [
       {
         "type": "Active",
         "skillNum": 1,
+        "iconUrl": "/assets/heroes/skill-active/1071_skill_b.png",
         "levels": [
           {
             "lv": 1,
@@ -16040,6 +16041,7 @@
       {
         "type": "Passive",
         "subtype": "passive",
+        "id": "1071_p1",
         "name": "壓迫",
         "description": "我方角色造成傷害後，使自己獲得1個壓迫，限疊加4層，當壓迫到達4層時，使自己獲得吞噬效果，當自己造成傷害時，若自己持有吞噬或目標生命值低於60%，則自己持有的每層壓迫額外造成目標最大生命值3%的傷害，每層壓迫造成的額外傷害不超過攜帶者攻擊力的150%",
         "effects": [
@@ -16107,11 +16109,85 @@
             "text": "造成的額外傷害不超過攜帶者攻擊力的150%",
             "isEffect": false
           }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1071_p1.png"
       },
       {
         "type": "Passive",
-        "subtype": "gift",
+        "subtype": "passive",
+        "id": "1071_p2",
+        "name": "傷害強化",
+        "description": "自己使用主動技能擊殺敵方目標時，立即對敵方生命值最低的目標造成攻擊力220%的輾壓傷害，並賦予自己1回合內受到傷害減少20%的效果，限疊加3層，本次攻擊視為主動技能",
+        "effects": [
+          {
+            "text": "自己使用主動技能擊殺敵方目標時，立即對敵方生命值最低的目標造成攻擊力220%的",
+            "isEffect": false
+          },
+          {
+            "text": "輾壓",
+            "isEffect": true,
+            "effectName": "輾壓",
+            "effectDesc": "本次技能造成傷害時，使技能係數增加當前破擊率數值的80%"
+          },
+          {
+            "text": "傷害，並賦予自己1回合內受到傷害減少20%的效果，限疊加3層，本次攻擊視為主動技能",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1071_p2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1071_p3",
+        "name": "攻擊能力強化",
+        "description": "當場上有角色死亡時，使自己攻擊力增加該角色攻擊力的10%，若死亡的角色為我方角色，則額外賦予自己1回合內攻擊相關能力增加10%的效果",
+        "effects": [
+          {
+            "text": "當場上有角色死亡時，使自己攻擊力增加該角色攻擊力的10%，若死亡的角色為我方角色，則額外賦予自己1回合內攻擊相關能力增加10%的效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1071_p3.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1071_p4",
+        "name": "力量解放強化",
+        "description": "力量解放後，賦予自己1回合內造成傷害增加12%的效果",
+        "effects": [
+          {
+            "text": "力量解放後，賦予自己1回合內造成傷害增加12%的效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_1.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1071_p5",
+        "name": "Weak",
+        "description": "造成Weak時，賦予自己1層壓迫",
+        "effects": [
+          {
+            "text": "造成Weak時，賦予自己1層",
+            "isEffect": false
+          },
+          {
+            "text": "壓迫",
+            "isEffect": true,
+            "effectName": "壓迫",
+            "effectDesc": "破擊率增加3%"
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "resonance",
+        "id": "1071_rp1",
         "name": "壓迫",
         "description": "我方回合開始時或我方角色造成傷害後，使自己獲得1個壓迫，限疊加4層，當壓迫到達4層時，使自己獲得吞噬效果，當自己造成傷害時，若自己持有吞噬或目標生命值低於60%，則自己持有的每層壓迫額外造成目標最大生命值5%的傷害，每層壓迫造成的額外傷害不超過攜帶者攻擊力的150%",
         "effects": [
@@ -16179,62 +16255,18 @@
             "text": "造成的額外傷害不超過攜帶者攻擊力的150%",
             "isEffect": false
           }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1071_p1.png"
       },
       {
         "type": "Passive",
-        "subtype": "passive",
-        "name": "傷害強化",
-        "description": "自己使用主動技能擊殺敵方目標時，立即對敵方生命值最低的目標造成攻擊力220%的輾壓傷害，並賦予自己1回合內受到傷害減少20%的效果，限疊加3層，本次攻擊視為主動技能",
+        "subtype": "orb",
+        "id": "1071_ep9",
+        "name": null,
+        "description": "每獲得1層壓迫，使自己基本能力增加3%，最多增加至12%，主動技能無視嘲諷，自己造成傷害時，目標生命值每少10%，使本次技能造成傷害增加4%，最多增加至16%",
         "effects": [
           {
-            "text": "自己使用主動技能擊殺敵方目標時，立即對敵方生命值最低的目標造成攻擊力220%的",
-            "isEffect": false
-          },
-          {
-            "text": "輾壓",
-            "isEffect": true,
-            "effectName": "輾壓",
-            "effectDesc": "本次技能造成傷害時，使技能係數增加當前破擊率數值的80%"
-          },
-          {
-            "text": "傷害，並賦予自己1回合內受到傷害減少20%的效果，限疊加3層，本次攻擊視為主動技能",
-            "isEffect": false
-          }
-        ]
-      },
-      {
-        "type": "Passive",
-        "subtype": "passive",
-        "name": "攻擊能力強化",
-        "description": "當場上有角色死亡時，使自己攻擊力增加該角色攻擊力的10%，若死亡的角色為我方角色，則額外賦予自己1回合內攻擊相關能力增加10%的效果",
-        "effects": [
-          {
-            "text": "當場上有角色死亡時，使自己攻擊力增加該角色攻擊力的10%，若死亡的角色為我方角色，則額外賦予自己1回合內攻擊相關能力增加10%的效果",
-            "isEffect": false
-          }
-        ]
-      },
-      {
-        "type": "Passive",
-        "subtype": "passive",
-        "name": "力量解放強化",
-        "description": "力量解放後，賦予自己1回合內造成傷害增加12%的效果",
-        "effects": [
-          {
-            "text": "力量解放後，賦予自己1回合內造成傷害增加12%的效果",
-            "isEffect": false
-          }
-        ]
-      },
-      {
-        "type": "Passive",
-        "subtype": "rank",
-        "name": "Weak",
-        "description": "造成Weak時，賦予自己1層壓迫",
-        "effects": [
-          {
-            "text": "造成Weak時，賦予自己1層",
+            "text": "每獲得1層",
             "isEffect": false
           },
           {
@@ -16242,8 +16274,13 @@
             "isEffect": true,
             "effectName": "壓迫",
             "effectDesc": "破擊率增加3%"
+          },
+          {
+            "text": "，使自己基本能力增加3%，最多增加至12%，主動技能無視嘲諷，自己造成傷害時，目標生命值每少10%，使本次技能造成傷害增加4%，最多增加至16%",
+            "isEffect": false
           }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-orb/Equip_HE_UR_1071.png"
       }
     ],
     "tiers": [
@@ -16309,19 +16346,19 @@
       }
     ],
     "effectDefs": {
-      "超輾壓": "本次技能造成傷害時，使技能係數增加當前破擊率數值的120%，並賦予自己2回合內破擊率增加5%的效果",
-      "壓迫": "破擊率增加3%",
-      "吞噬": "造成傷害增加20%，造成傷害後解除，並同時解除所有壓迫",
-      "輾壓": "本次技能造成傷害時，使技能係數增加當前破擊率數值的80%"
+      "輾壓": "*輾壓：本次技能造成傷害時，使技能係數增加當前破擊率數值的80%",
+      "超輾壓": "*超輾壓：本次技能造成傷害時，使技能係數增加當前破擊率數值的120%，並賦予自己2回合內破擊率增加5%的效果",
+      "壓迫": "*壓迫：破擊率增加3%",
+      "吞噬": "*吞噬：造成傷害增加20%，造成傷害後解除，並同時解除所有壓迫"
     }
   },
   {
     "id": "1072",
     "title": "堂島．改",
-    "name": "亞門鋼太朗",
-    "fullName": "堂島．改 亞門鋼太朗",
+    "name": "",
+    "fullName": "堂島．改",
     "rarity": "SSR",
-    "organization": "CCG Higher Rank Investigator",
+    "organization": "CCG上位搜查官",
     "stats": {
       "hp": 564696,
       "atk": 35530,
@@ -16329,11 +16366,12 @@
     },
     "attribute": "心",
     "tactic": "均衡",
-    "strategicArenaCP": 231745,
+    "headUrl": "/assets/heroes/head/1072_head.png",
     "activeSkills": [
       {
         "type": "Active",
         "skillNum": 1,
+        "iconUrl": "/assets/heroes/skill-active/1072_skill_b.png",
         "levels": [
           {
             "lv": 1,
@@ -16435,6 +16473,7 @@
       {
         "type": "Passive",
         "subtype": "passive",
+        "id": "1072_p1",
         "name": "衝鋒",
         "description": "當我方回合開始時，對敵方全體造成攻擊力140%的傷害，並賦予目標3回合內重傷效果",
         "effects": [
@@ -16452,43 +16491,13 @@
             "text": "效果",
             "isEffect": false
           }
-        ]
-      },
-      {
-        "type": "Passive",
-        "subtype": "gift",
-        "name": "衝鋒",
-        "description": "當我方回合開始時，對敵方全體造成攻擊力140%的先制傷害，並賦予目標3回合內中重傷效果",
-        "effects": [
-          {
-            "text": "當我方回合開始時，對敵方全體造成攻擊力140%的",
-            "isEffect": false
-          },
-          {
-            "text": "先制",
-            "isEffect": true,
-            "effectName": "先制",
-            "effectDesc": "對生命值高於70%的敵人造成的傷害增加25%"
-          },
-          {
-            "text": "傷害，並賦予目標3回合內中",
-            "isEffect": false
-          },
-          {
-            "text": "重傷",
-            "isEffect": true,
-            "effectName": "重傷",
-            "effectDesc": "最大生命值減少8%，格擋率減少5%"
-          },
-          {
-            "text": "效果",
-            "isEffect": false
-          }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1072_p1.png"
       },
       {
         "type": "Passive",
         "subtype": "passive",
+        "id": "1072_p2",
         "name": "剛猛",
         "description": "戰鬥開始時，賦予自己2層剛猛效果，我方場上每有1個CCG角色額外賦予自己1層剛猛效果，自己每持有1層剛猛，使敵方全體防禦力減少5%",
         "effects": [
@@ -16526,11 +16535,13 @@
             "text": "，使敵方全體防禦力減少5%",
             "isEffect": false
           }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1072_p2.png"
       },
       {
         "type": "Passive",
         "subtype": "passive",
+        "id": "1072_p3",
         "name": "群體強化",
         "description": "使我方角色對有關能力值減少的減益效果免疫，當我方CCG角色對當前生命值大於70%的敵人造成傷害時，賦予我方全體CCG角色2回合內基本能力值增加5%的效果",
         "effects": [
@@ -16538,11 +16549,13 @@
             "text": "使我方角色對有關能力值減少的減益效果免疫，當我方CCG角色對當前生命值大於70%的敵人造成傷害時，賦予我方全體CCG角色2回合內基本能力值增加5%的效果",
             "isEffect": false
           }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1072_p3.png"
       },
       {
         "type": "Passive",
         "subtype": "passive",
+        "id": "1072_p4",
         "name": "力量解放強化",
         "description": "力量解放後，解除自己所有減益效果",
         "effects": [
@@ -16550,11 +16563,13 @@
             "text": "力量解放後，解除自己所有減益效果",
             "isEffect": false
           }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_1.png"
       },
       {
         "type": "Passive",
-        "subtype": "rank",
+        "subtype": "passive",
+        "id": "1072_p5",
         "name": "Weak",
         "description": "造成Weak時，賦予目標2回合內最大生命值減少10%的效果",
         "effects": [
@@ -16562,7 +16577,66 @@
             "text": "造成Weak時，賦予目標2回合內最大生命值減少10%的效果",
             "isEffect": false
           }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "resonance",
+        "id": "1072_rp1",
+        "name": "衝鋒",
+        "description": "當我方回合開始時，對敵方全體造成攻擊力140%的先制傷害，並賦予目標3回合內中重傷效果",
+        "effects": [
+          {
+            "text": "當我方回合開始時，對敵方全體造成攻擊力140%的",
+            "isEffect": false
+          },
+          {
+            "text": "先制",
+            "isEffect": true,
+            "effectName": "先制",
+            "effectDesc": "對生命值高於70%的敵人造成的傷害增加25%"
+          },
+          {
+            "text": "傷害，並賦予目標3回合內中",
+            "isEffect": false
+          },
+          {
+            "text": "重傷",
+            "isEffect": true,
+            "effectName": "重傷",
+            "effectDesc": "最大生命值減少8%，格擋率減少5%"
+          },
+          {
+            "text": "效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1072_p1.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "orb",
+        "id": "1072_ep9",
+        "name": null,
+        "description": "自己對剩餘生命值大於50%的敵人造成傷害時，目標每剩餘10%生命值，造成傷害增加2%，自己每擁有1層剛猛效果，使自己暴擊率增加3%，暴擊傷害增加5%",
+        "effects": [
+          {
+            "text": "自己對剩餘生命值大於50%的敵人造成傷害時，目標每剩餘10%生命值，造成傷害增加2%，自己每擁有1層",
+            "isEffect": false
+          },
+          {
+            "text": "剛猛",
+            "isEffect": true,
+            "effectName": "剛猛",
+            "effectDesc": "攻擊力提高4%，受到傷害減少4%"
+          },
+          {
+            "text": "效果，使自己暴擊率增加3%，暴擊傷害增加5%",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-orb/Equip_HE_UR_1072.png"
       }
     ],
     "tiers": [
@@ -16628,20 +16702,22 @@
       }
     ],
     "effectDefs": {
-      "超殘暴": "攻擊時，額外造成傷害量30%的追加傷害",
-      "衝擊": "攻擊時，額外造成自己攻擊力數值150%的傷害",
-      "重傷": "最大生命值減少8%，格擋率減少5%",
-      "先制": "對生命值高於70%的敵人造成的傷害增加25%",
-      "剛猛": "攻擊力提高4%，受到傷害減少4%"
+      "殘暴": "*殘暴：攻擊時，額外造成傷害量20%的追加傷害",
+      "衝擊": "*衝擊：攻擊時，額外造成自己攻擊力數值150%的傷害",
+      "超殘暴": "*超殘暴：攻擊時，額外造成傷害量30%的追加傷害",
+      "重傷": "*重傷：最大生命值減少8%，格擋率減少5%",
+      "剛猛": "*剛猛：攻擊力提高4%，受到傷害減少4%",
+      "先制": "*先制：對生命值高於70%的敵人造成的傷害增加25%",
+      "致死": "*致死：無法觸發所有回復效果"
     }
   },
   {
     "id": "1073",
     "title": "笛口貳",
-    "name": "真戶吳緒",
-    "fullName": "笛口貳 真戶吳緒",
+    "name": "",
+    "fullName": "笛口貳",
     "rarity": "SSR",
-    "organization": "CCG Higher Rank Investigator",
+    "organization": "CCG上位搜查官",
     "stats": {
       "hp": 569454,
       "atk": 34091,
@@ -16649,11 +16725,12 @@
     },
     "attribute": "速",
     "tactic": "輔助",
-    "strategicArenaCP": 229886,
+    "headUrl": "/assets/heroes/head/1073_head.png",
     "activeSkills": [
       {
         "type": "Active",
         "skillNum": 1,
+        "iconUrl": "/assets/heroes/skill-active/1073_skill_b.png",
         "levels": [
           {
             "lv": 1,
@@ -16725,6 +16802,7 @@
       {
         "type": "Passive",
         "subtype": "passive",
+        "id": "1073_p1",
         "name": "護盾強化",
         "description": "【補位也生效】我方CCG角色釋放主動技能後，賦予我方全體2回合內各自最大生命值5%的護盾，我方帶有護盾的CCG角色受到傷害減少15%",
         "effects": [
@@ -16732,23 +16810,13 @@
             "text": "【補位也生效】我方CCG角色釋放主動技能後，賦予我方全體2回合內各自最大生命值5%的護盾，我方帶有護盾的CCG角色受到傷害減少15%",
             "isEffect": false
           }
-        ]
-      },
-      {
-        "type": "Passive",
-        "subtype": "gift",
-        "name": "護盾強化",
-        "description": "【補位也生效】我方CCG角色釋放主動技能後，賦予我方全體2回合內最大生命值5%的護盾，我方帶有護盾的CCG角色受到傷害減少15%，造成傷害增加8%",
-        "effects": [
-          {
-            "text": "【補位也生效】我方CCG角色釋放主動技能後，賦予我方全體2回合內最大生命值5%的護盾，我方帶有護盾的CCG角色受到傷害減少15%，造成傷害增加8%",
-            "isEffect": false
-          }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1073_p1.png"
       },
       {
         "type": "Passive",
         "subtype": "passive",
+        "id": "1073_p2",
         "name": "CCG強化",
         "description": "【補位也生效】使我方CCG角色暴擊率增加15%，暴擊傷害增加20%，戰鬥開始時，若我方場上全為CCG角色，則賦予我方全體2回合內基本能力值增加10%的效果",
         "effects": [
@@ -16756,11 +16824,13 @@
             "text": "【補位也生效】使我方CCG角色暴擊率增加15%，暴擊傷害增加20%，戰鬥開始時，若我方場上全為CCG角色，則賦予我方全體2回合內基本能力值增加10%的效果",
             "isEffect": false
           }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1073_p2.png"
       },
       {
         "type": "Passive",
         "subtype": "passive",
+        "id": "1073_p3",
         "name": "預防",
         "description": "【補位也生效】我方回合結束時，賦予我方CCG角色1回合內預防效果，帶有預防效果的角色獲得減益效果時，解除預防，並免疫本次減益效果，然後賦予該角色2回合內最大生命值10%的護盾",
         "effects": [
@@ -16798,11 +16868,13 @@
             "text": "，並免疫本次減益效果，然後賦予該角色2回合內最大生命值10%的護盾",
             "isEffect": false
           }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1073_p3.png"
       },
       {
         "type": "Passive",
         "subtype": "passive",
+        "id": "1073_p4",
         "name": "力量解放強化",
         "description": "力量解放後，賦予自己1回合內造成傷害增加10%的效果",
         "effects": [
@@ -16810,11 +16882,13 @@
             "text": "力量解放後，賦予自己1回合內造成傷害增加10%的效果",
             "isEffect": false
           }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_1.png"
       },
       {
         "type": "Passive",
-        "subtype": "rank",
+        "subtype": "passive",
+        "id": "1073_p5",
         "name": "Weak",
         "description": "造成Weak時，賦予目標1回合內受到傷害增加10%的效果",
         "effects": [
@@ -16822,7 +16896,46 @@
             "text": "造成Weak時，賦予目標1回合內受到傷害增加10%的效果",
             "isEffect": false
           }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "resonance",
+        "id": "1073_rp1",
+        "name": "護盾強化",
+        "description": "【補位也生效】我方CCG角色釋放主動技能後，賦予我方全體2回合內最大生命值5%的護盾，我方帶有護盾的CCG角色受到傷害減少15%，造成傷害增加8%",
+        "effects": [
+          {
+            "text": "【補位也生效】我方CCG角色釋放主動技能後，賦予我方全體2回合內最大生命值5%的護盾，我方帶有護盾的CCG角色受到傷害減少15%，造成傷害增加8%",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1073_p1.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "orb",
+        "id": "1073_ep9",
+        "name": null,
+        "description": "【補位也生效】我方場上每有一個CCG角色，我方CCG角色基本能力增加3%，敵方角色生命值首次降低到50%以下時，賦予目標1回合內致死效果",
+        "effects": [
+          {
+            "text": "【補位也生效】我方場上每有一個CCG角色，我方CCG角色基本能力增加3%，敵方角色生命值首次降低到50%以下時，賦予目標1回合內",
+            "isEffect": false
+          },
+          {
+            "text": "致死",
+            "isEffect": true,
+            "effectName": "致死",
+            "effectDesc": "無法觸發所有回復效果"
+          },
+          {
+            "text": "效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-orb/Equip_HE_UR_1073.png"
       }
     ],
     "tiers": [
@@ -16888,8 +17001,9 @@
       }
     ],
     "effectDefs": {
-      "超致死": "無法觸發所有回復效果，帶有效果期間減少帶有者最大生命值10%",
-      "預防": "敵方回合結束時，使自己防禦力增加5%，最多增加20%"
+      "致死": "*致死：無法觸發所有回復效果",
+      "超致死": "*超致死：無法觸發所有回復效果，帶有效果期間減少帶有者最大生命值10%",
+      "預防": "*預防：敵方回合結束時，使自己防禦力增加5%，最多增加20%"
     }
   },
   {
@@ -17526,10 +17640,10 @@
         "subtype": "orb",
         "id": "1075_ep9",
         "name": null,
-        "description": "我方角色每次受到攻擊時，使自己最大生命值增4%，最多增加至20%，自己使用主動技能時，使我方全體防禦力和暴擊抵抗增加5%，最多增加至10%",
+        "description": "我方角色每次受到攻擊時，使自己基本能力增加2%，最多增加至8%，自己使用主動技能時，使我方全體防禦力和暴擊抵抗增加4%，最多增加至16%",
         "effects": [
           {
-            "text": "我方角色每次受到攻擊時，使自己最大生命值增4%，最多增加至20%，自己使用主動技能時，使我方全體防禦力和暴擊抵抗增加5%，最多增加至10%",
+            "text": "我方角色每次受到攻擊時，使自己基本能力增加2%，最多增加至8%，自己使用主動技能時，使我方全體防禦力和暴擊抵抗增加4%，最多增加至16%",
             "isEffect": false
           }
         ],
@@ -17610,10 +17724,10 @@
   {
     "id": "1076",
     "title": "紅焰孤翼",
-    "name": "霧嶋董香",
-    "fullName": "紅焰孤翼 霧嶋董香",
+    "name": "",
+    "fullName": "紅焰孤翼",
     "rarity": "SSR",
-    "organization": "Anteiku",
+    "organization": "安定區",
     "stats": {
       "hp": 502837,
       "atk": 33228,
@@ -17621,11 +17735,12 @@
     },
     "attribute": "力",
     "tactic": "爆發",
-    "strategicArenaCP": 215512,
+    "headUrl": "/assets/heroes/head/1076_head.png",
     "activeSkills": [
       {
         "type": "Active",
         "skillNum": 1,
+        "iconUrl": "/assets/heroes/skill-active/1076_skill_b.png",
         "levels": [
           {
             "lv": 1,
@@ -17697,6 +17812,7 @@
       {
         "type": "Passive",
         "subtype": "passive",
+        "id": "1076_p1",
         "name": "追擊",
         "description": "當自己施放主動技能成功擊敗敵人後，對當下生命值百分比最低的敵人造成攻擊力180%的傷害",
         "effects": [
@@ -17704,33 +17820,13 @@
             "text": "當自己施放主動技能成功擊敗敵人後，對當下生命值百分比最低的敵人造成攻擊力180%的傷害",
             "isEffect": false
           }
-        ]
-      },
-      {
-        "type": "Passive",
-        "subtype": "gift",
-        "name": "追擊",
-        "description": "當自己使用主動技能成功擊殺敵人後，對當前生命值比例最低的敵人造成攻擊力220%的死亡傷害",
-        "effects": [
-          {
-            "text": "當自己使用主動技能成功擊殺敵人後，對當前生命值比例最低的敵人造成攻擊力220%的",
-            "isEffect": false
-          },
-          {
-            "text": "死亡",
-            "isEffect": true,
-            "effectName": "死亡",
-            "effectDesc": "對生命低於25%的敵人造成的傷害增加30%"
-          },
-          {
-            "text": "傷害",
-            "isEffect": false
-          }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1076_p1.png"
       },
       {
         "type": "Passive",
         "subtype": "passive",
+        "id": "1076_p2",
         "name": "傷害強化",
         "description": "對生命值低於30%的角色造成的傷害增加20%",
         "effects": [
@@ -17738,11 +17834,13 @@
             "text": "對生命值低於30%的角色造成的傷害增加20%",
             "isEffect": false
           }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1076_p2.png"
       },
       {
         "type": "Passive",
         "subtype": "passive",
+        "id": "1076_p3",
         "name": "攻擊能力強化",
         "description": "當我方其他角色死亡時，賦予自己攻擊相關能力增加5%的效果，限4次",
         "effects": [
@@ -17760,11 +17858,13 @@
             "text": "時，賦予自己攻擊相關能力增加5%的效果，限4次",
             "isEffect": false
           }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1076_p3.png"
       },
       {
         "type": "Passive",
         "subtype": "passive",
+        "id": "1076_p4",
         "name": "力量解放強化",
         "description": "力量解放後，賦予自己1回合內造成傷害增加10%的效果",
         "effects": [
@@ -17772,11 +17872,13 @@
             "text": "力量解放後，賦予自己1回合內造成傷害增加10%的效果",
             "isEffect": false
           }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_1.png"
       },
       {
         "type": "Passive",
-        "subtype": "rank",
+        "subtype": "passive",
+        "id": "1076_p5",
         "name": "Weak",
         "description": "造成敵人被Weak時，賦予自己1回合內攻擊力增加10%的效果",
         "effects": [
@@ -17784,7 +17886,66 @@
             "text": "造成敵人被Weak時，賦予自己1回合內攻擊力增加10%的效果",
             "isEffect": false
           }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "resonance",
+        "id": "1076_rp1",
+        "name": "追擊",
+        "description": "當自己使用主動技能成功擊殺敵人後，對當前生命值比例最低的敵人造成攻擊力220%的死亡傷害",
+        "effects": [
+          {
+            "text": "當自己使用主動技能成功擊殺敵人後，對當前生命值比例最低的敵人造成攻擊力220%的",
+            "isEffect": false
+          },
+          {
+            "text": "死亡",
+            "isEffect": true,
+            "effectName": "死亡",
+            "effectDesc": "對生命低於25%的敵人造成的傷害增加30%"
+          },
+          {
+            "text": "傷害",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1076_p1.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "orb",
+        "id": "1076_ep9",
+        "name": null,
+        "description": "自己每觸發1次追殺效果，使自己下1次主動技能造成傷害增加20%，當我方回合開始時，若敵方存在生命值低於35%的角色，則賦予自己1回合內追殺效果",
+        "effects": [
+          {
+            "text": "自己每觸發1次",
+            "isEffect": false
+          },
+          {
+            "text": "追殺",
+            "isEffect": true,
+            "effectName": "追殺",
+            "effectDesc": "當場上任意敵方角色死亡時，立刻對敵方全體造成攻擊力130%的傷害"
+          },
+          {
+            "text": "效果，使自己下1次主動技能造成傷害增加20%，當我方回合開始時，若敵方存在生命值低於35%的角色，則賦予自己1回合內",
+            "isEffect": false
+          },
+          {
+            "text": "追殺",
+            "isEffect": true,
+            "effectName": "追殺",
+            "effectDesc": "當場上任意敵方角色死亡時，立刻對敵方全體造成攻擊力130%的傷害"
+          },
+          {
+            "text": "效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-orb/Equip_HE_UR_1076.png"
       }
     ],
     "tiers": [
@@ -17850,8 +18011,9 @@
       }
     ],
     "effectDefs": {
-      "超追殺": "當場上有敵方死亡時，立刻對敵方全體造成攻擊力150%的追殺傷害",
-      "死亡": "對生命低於25%的敵人造成的傷害增加30%"
+      "追殺": "*追殺：當場上任意敵方角色死亡時，立刻對敵方全體造成攻擊力130%的傷害",
+      "超追殺": "*超追殺：當場上有敵方死亡時，立刻對敵方全體造成攻擊力150%的追殺傷害",
+      "死亡": "*死亡：對生命低於25%的敵人造成的傷害增加30%"
     }
   },
   {
@@ -18651,10 +18813,10 @@
   {
     "id": "1079",
     "title": "夏日祭",
-    "name": "金木研",
-    "fullName": "夏日祭 金木研",
+    "name": "",
+    "fullName": "夏日祭",
     "rarity": "SSR",
-    "organization": "Anteiku",
+    "organization": "安定區",
     "stats": {
       "hp": 590894,
       "atk": 35040,
@@ -18662,11 +18824,12 @@
     },
     "attribute": "力",
     "tactic": "均衡",
-    "strategicArenaCP": 231799,
+    "headUrl": "/assets/heroes/head/1079_head.png",
     "activeSkills": [
       {
         "type": "Active",
         "skillNum": 1,
+        "iconUrl": "/assets/heroes/skill-active/1079_skill_b.png",
         "levels": [
           {
             "lv": 1,
@@ -18738,6 +18901,7 @@
       {
         "type": "Passive",
         "subtype": "passive",
+        "id": "1079_p1",
         "name": "堅毅",
         "description": "我方全體每有1個安定區角色，使我方全體基本能力值增加3%，最多增加至12%，戰鬥開始時，使自己獲得2回合內堅毅效果，並使我方安定區角色獲得抗爭效果，若我方全為安定區角色，額外賦予自己阻攔效果",
         "effects": [
@@ -18775,11 +18939,13 @@
             "text": "效果",
             "isEffect": false
           }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1079_p1.png"
       },
       {
         "type": "Passive",
         "subtype": "passive",
+        "id": "1079_p2",
         "name": "奮戰",
         "description": "我方回合開始時，若自己未持有奮戰效果，賦予自己4個奮戰，限疊加4層，自己受到主動技能傷害時，將自己身上的1個奮戰效果轉化為1個衰退效果，賦予至攻擊者身上，限疊加4層",
         "effects": [
@@ -18827,11 +18993,13 @@
             "text": "效果，賦予至攻擊者身上，限疊加4層",
             "isEffect": false
           }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1079_p2.png"
       },
       {
         "type": "Passive",
         "subtype": "passive",
+        "id": "1079_p3",
         "name": "追加攻擊",
         "description": "我方回合開始時，若自己當前生命值低於50%，立即對敵方攻擊力最高的角色造成攻擊力180%的傷害，自己死亡前，立即對敵方攻擊力最高的角色造成攻擊力300%的傷害",
         "effects": [
@@ -18839,11 +19007,41 @@
             "text": "我方回合開始時，若自己當前生命值低於50%，立即對敵方攻擊力最高的角色造成攻擊力180%的傷害，自己死亡前，立即對敵方攻擊力最高的角色造成攻擊力300%的傷害",
             "isEffect": false
           }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1079_p3.png"
       },
       {
         "type": "Passive",
-        "subtype": "gift",
+        "subtype": "passive",
+        "id": "1079_p4",
+        "name": "力量解放強化",
+        "description": "力量解放後，賦予自己1回合內基本能力增加10%效果",
+        "effects": [
+          {
+            "text": "力量解放後，賦予自己1回合內基本能力增加10%效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_1.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1079_p5",
+        "name": "Weak",
+        "description": "被Weak時，賦予自己1回合內受到的傷害減少12%的效果",
+        "effects": [
+          {
+            "text": "被Weak時，賦予自己1回合內受到的傷害減少12%的效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "resonance",
+        "id": "1079_rp3",
         "name": "追加攻擊",
         "description": "我方回合開始時，若自己當前生命值低於50%，立即對敵方攻擊力最高的角色造成攻擊力180%的超先制傷害，自己死亡前，立即對敵方攻擊力最高的角色造成攻擊力300%的超猛擊傷害",
         "effects": [
@@ -18871,31 +19069,32 @@
             "text": "傷害",
             "isEffect": false
           }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1079_p3.png"
       },
       {
         "type": "Passive",
-        "subtype": "passive",
-        "name": "力量解放強化",
-        "description": "力量解放後，賦予自己1回合內基本能力增加10%效果",
+        "subtype": "orb",
+        "id": "1079_ep9",
+        "name": null,
+        "description": "自己每次受到傷害時，使自己攻擊力、防禦力增加1，最多增加至2%，敵方全體每獲得1個衰退效果，使敵方全體暴擊抵抗和暴擊防禦減少12%，最多減少至2%",
         "effects": [
           {
-            "text": "力量解放後，賦予自己1回合內基本能力增加10%效果",
+            "text": "自己每次受到傷害時，使自己攻擊力、防禦力增加1，最多增加至2%，敵方全體每獲得1個",
             "isEffect": false
-          }
-        ]
-      },
-      {
-        "type": "Passive",
-        "subtype": "rank",
-        "name": "Weak",
-        "description": "被Weak時，賦予自己1回合內受到的傷害減少12%的效果",
-        "effects": [
+          },
           {
-            "text": "被Weak時，賦予自己1回合內受到的傷害減少12%的效果",
+            "text": "衰退",
+            "isEffect": true,
+            "effectName": "衰退",
+            "effectDesc": "所有能力值減少2%"
+          },
+          {
+            "text": "效果，使敵方全體暴擊抵抗和暴擊防禦減少12%，最多減少至2%",
             "isEffect": false
           }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-orb/Equip_HE_UR_1079.png"
       }
     ],
     "tiers": [
@@ -18961,14 +19160,15 @@
       }
     ],
     "effectDefs": {
-      "超猛擊": "無視防禦力和格擋率，並賦予目標2回合內格擋率減少30%的效果",
-      "堅毅": "生命相關能力增加15%，防禦相關能力增加10%，並使自己進入挑釁姿勢，將所有攻擊引導給自己，堅毅期間免疫減益效果和Weak效果",
-      "抗爭": "攻擊相關能力增加5%，當前生命值每減少5%，攻擊力額外增加2%，最多增加至12%",
-      "阻攔": "當前生命值每減少4%，防禦力和格擋率增加1%，最多增加至15%",
-      "挑釁": "將所有攻擊引導給自己",
-      "奮戰": "破擊率增加4%，造成傷害增加5%",
-      "衰退": "所有能力值減少2%",
-      "超先制": "對生命值高於60%的敵人造成的傷害增加30%"
+      "猛擊": "*猛擊：無視防禦力和格擋率",
+      "超猛擊": "*超猛擊：無視防禦力和格擋率，並賦予目標2回合內格擋率減少30%的效果",
+      "堅毅": "*堅毅：生命相關能力增加15%，防禦相關能力增加10%，並使自己進入挑釁姿勢，將所有攻擊引導給自己，堅毅期間免疫減益效果和Weak效果",
+      "抗爭": "*抗爭：攻擊相關能力增加5%，當前生命值每減少5%，攻擊力額外增加2%，最多增加至12%",
+      "阻攔": "*阻攔：當前生命值每減少4%，防禦力和格擋率增加1%，最多增加至15%",
+      "挑釁": "*挑釁：將所有攻擊引導給自己",
+      "奮戰": "*奮戰：破擊率增加4%，造成傷害增加5%",
+      "衰退": "*衰退：所有能力值減少2%",
+      "超先制": "*超先制：對生命值高於60%的敵人造成的傷害增加30%"
     }
   },
   {
@@ -21286,10 +21486,10 @@
   {
     "id": "1089",
     "title": "安定區",
-    "name": "霧嶋董香",
-    "fullName": "安定區 霧嶋董香",
+    "name": "",
+    "fullName": "安定區",
     "rarity": "SSR",
-    "organization": "Anteiku",
+    "organization": "安定區",
     "stats": {
       "hp": 583729,
       "atk": 33803,
@@ -21297,11 +21497,12 @@
     },
     "attribute": "力",
     "tactic": "均衡",
-    "strategicArenaCP": 227245,
+    "headUrl": "/assets/heroes/head/1089_head.png",
     "activeSkills": [
       {
         "type": "Active",
         "skillNum": 1,
+        "iconUrl": "/assets/heroes/skill-active/1089_skill_b.png",
         "levels": [
           {
             "lv": 1,
@@ -21373,6 +21574,7 @@
       {
         "type": "Passive",
         "subtype": "passive",
+        "id": "1089_p1",
         "name": "庇護",
         "description": "我方回合開始時，依據自己的最大生命值，賦予我方全體1回合內護盾，護盾量為最大生命值的10%，並額外賦予自己1回合內自己已損失生命值20%的護盾，我方安定區角色持有護盾時，免疫減益效果，且受到傷害減少10%",
         "effects": [
@@ -21380,11 +21582,13 @@
             "text": "我方回合開始時，依據自己的最大生命值，賦予我方全體1回合內護盾，護盾量為最大生命值的10%，並額外賦予自己1回合內自己已損失生命值20%的護盾，我方安定區角色持有護盾時，免疫減益效果，且受到傷害減少10%",
             "isEffect": false
           }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1089_p1.png"
       },
       {
         "type": "Passive",
         "subtype": "passive",
+        "id": "1089_p2",
         "name": "團結",
         "description": "自己生命值每少10%，使自己吸血率和造成傷害增加5%，最多增加30%，我方場上全部為安定區角色時，我方全體基本能力值增加10%，並使自己獲得團結效果",
         "effects": [
@@ -21402,11 +21606,13 @@
             "text": "效果",
             "isEffect": false
           }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1089_p2.png"
       },
       {
         "type": "Passive",
         "subtype": "passive",
+        "id": "1089_p3",
         "name": "掙扎",
         "description": "自己首次受到致命傷害時，保留1點生命值，並使自己獲得3個掙扎，掙扎存在時，使自己攻擊相關能力增加10%，造成傷害增加15%",
         "effects": [
@@ -21434,11 +21640,41 @@
             "text": "存在時，使自己攻擊相關能力增加10%，造成傷害增加15%",
             "isEffect": false
           }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1089_p3.png"
       },
       {
         "type": "Passive",
-        "subtype": "gift",
+        "subtype": "passive",
+        "id": "1089_p4",
+        "name": "力量解放強化",
+        "description": "力量解放後，賦予自己1回合內攻擊力增加12%的效果",
+        "effects": [
+          {
+            "text": "力量解放後，賦予自己1回合內攻擊力增加12%的效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_1.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1089_p5",
+        "name": "Weak",
+        "description": "造成Weak時，依自己的已損失生命值賦予我方全體1回合內護盾，護盾量為已損失生命值的15%",
+        "effects": [
+          {
+            "text": "造成Weak時，依自己的已損失生命值賦予我方全體1回合內護盾，護盾量為已損失生命值的15%",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "resonance",
+        "id": "1089_rp3",
         "name": "掙扎",
         "description": "自己首次受到致命傷害時，保留1點生命值，並使自己獲得4個掙扎，掙扎存在時，自己攻擊相關能力增加10%，造成傷害增加15%",
         "effects": [
@@ -21466,31 +21702,22 @@
             "text": "存在時，自己攻擊相關能力增加10%，造成傷害增加15%",
             "isEffect": false
           }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1089_p3.png"
       },
       {
         "type": "Passive",
-        "subtype": "passive",
-        "name": "力量解放強化",
-        "description": "力量解放後，賦予自己1回合內攻擊力增加12%的效果",
+        "subtype": "orb",
+        "id": "1089_ep9",
+        "name": null,
+        "description": "自己每次受到傷害時，使我方安定區角色造成傷害增加2%，最多增加至12%，對當前生命值百分比高於自己的目標造成傷害時，使本次造成傷害增加15%",
         "effects": [
           {
-            "text": "力量解放後，賦予自己1回合內攻擊力增加12%的效果",
+            "text": "自己每次受到傷害時，使我方安定區角色造成傷害增加2%，最多增加至12%，對當前生命值百分比高於自己的目標造成傷害時，使本次造成傷害增加15%",
             "isEffect": false
           }
-        ]
-      },
-      {
-        "type": "Passive",
-        "subtype": "rank",
-        "name": "Weak",
-        "description": "造成Weak時，依自己的已損失生命值賦予我方全體1回合內護盾，護盾量為已損失生命值的15%",
-        "effects": [
-          {
-            "text": "造成Weak時，依自己的已損失生命值賦予我方全體1回合內護盾，護盾量為已損失生命值的15%",
-            "isEffect": false
-          }
-        ]
+        ],
+        "iconUrl": "/assets/heroes/skill-orb/Equip_HE_UR_1089.png"
       }
     ],
     "tiers": [
@@ -21556,9 +21783,10 @@
       }
     ],
     "effectDefs": {
-      "超怒火": "攻擊時，額外造成攻擊者已損失生命值40%的傷害，該傷害最多不超過攻擊者最大生命值的20%",
-      "團結": "我方其他安定區角色造成傷害時，賦予攜帶者1回合內造成傷害量10%的護盾",
-      "掙扎": "自己生命值不會低於1，受到傷害時解除，並賦予我方全體2回合內基本能力值增加5%的效果"
+      "怒火": "*怒火：攻擊時，額外造成攻擊者已損失生命值30%的傷害，該傷害最多不超過攻擊者最大生命值的15%",
+      "超怒火": "*超怒火：攻擊時，額外造成攻擊者已損失生命值40%的傷害，該傷害最多不超過攻擊者最大生命值的20%",
+      "團結": "*團結：我方其他安定區角色造成傷害時，賦予攜帶者1回合內造成傷害量10%的護盾",
+      "掙扎": "*掙扎：自己生命值不會低於1，受到傷害時解除，並賦予我方全體2回合內基本能力值增加5%的效果"
     }
   },
   {
@@ -34776,23 +35004,361 @@
   },
   {
     "id": "1150",
-    "title": "蝕夢心魔",
+    "title": "被封存的記憶",
     "name": "佐佐木琲世",
-    "fullName": "蝕夢心魔 佐佐木琲世",
+    "fullName": "被封存的記憶 佐佐木琲世",
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 587183,
-      "atk": 38069,
-      "def": 28137
+      "hp": 617514,
+      "atk": 39357,
+      "def": 28759
     },
     "attribute": "知",
-    "tactic": "控制",
-    "headUrl": null,
-    "activeSkills": [],
-    "passiveSkills": [],
-    "tiers": [],
-    "effectDefs": {}
+    "tactic": "均衡",
+    "headUrl": "/assets/heroes/head/1150_head.png",
+    "activeSkills": [
+      {
+        "type": "Active",
+        "skillNum": 1,
+        "iconUrl": "/assets/heroes/skill-active/1150_skill_b.png",
+        "levels": [
+          {
+            "lv": 1,
+            "name": "主動技能-等級1",
+            "description": "對敵方全體造成攻擊力155%的超蝕夢傷害",
+            "effects": [
+              {
+                "text": "對敵方全體造成攻擊力155%的",
+                "isEffect": false
+              },
+              {
+                "text": "超蝕夢",
+                "isEffect": true,
+                "effectName": "超蝕夢",
+                "effectDesc": "本次技能傷害無視分擔效果，無法暴擊，並使本次技能造成傷害增加自己暴擊傷害數值的25%，最多增加100%"
+              },
+              {
+                "text": "傷害",
+                "isEffect": false
+              }
+            ]
+          },
+          {
+            "lv": 2,
+            "name": "主動技能-等級2",
+            "description": "對敵方全體造成攻擊力220%的超蝕夢傷害",
+            "effects": [
+              {
+                "text": "對敵方全體造成攻擊力220%的",
+                "isEffect": false
+              },
+              {
+                "text": "超蝕夢",
+                "isEffect": true,
+                "effectName": "超蝕夢",
+                "effectDesc": "本次技能傷害無視分擔效果，無法暴擊，並使本次技能造成傷害增加自己暴擊傷害數值的25%，最多增加100%"
+              },
+              {
+                "text": "傷害",
+                "isEffect": false
+              }
+            ]
+          },
+          {
+            "lv": 3,
+            "name": "主動技能-等級3",
+            "description": "對敵方全體造成攻擊力325%的超蝕夢傷害",
+            "effects": [
+              {
+                "text": "對敵方全體造成攻擊力325%的",
+                "isEffect": false
+              },
+              {
+                "text": "超蝕夢",
+                "isEffect": true,
+                "effectName": "超蝕夢",
+                "effectDesc": "本次技能傷害無視分擔效果，無法暴擊，並使本次技能造成傷害增加自己暴擊傷害數值的25%，最多增加100%"
+              },
+              {
+                "text": "傷害",
+                "isEffect": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "passiveSkills": [
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1150_p1",
+        "name": "統率",
+        "description": "當我方其他CCG角色釋放主動技能前，使自己獲得1個統率，限疊加4次，自己釋放主動技能後，如果自己帶有統率，解除一個統率，依次使敵方全體獲得以下效果：所有能力值減少6%；造成傷害減少15%；吸血率變為0，無法獲得任何護盾效果；受到致命傷害時立刻被擊殺並且不會觸發任何免除死亡效果",
+        "effects": [
+          {
+            "text": "當我方其他CCG角色釋放主動技能前，使自己獲得1個",
+            "isEffect": false
+          },
+          {
+            "text": "統率",
+            "isEffect": true,
+            "effectName": "統率",
+            "effectDesc": "基本能力值增加4%，解除時獲得1回合內最大生命值10%的護盾"
+          },
+          {
+            "text": "，限疊加4次，自己釋放主動技能後，如果自己帶有",
+            "isEffect": false
+          },
+          {
+            "text": "統率",
+            "isEffect": true,
+            "effectName": "統率",
+            "effectDesc": "基本能力值增加4%，解除時獲得1回合內最大生命值10%的護盾"
+          },
+          {
+            "text": "，解除一個",
+            "isEffect": false
+          },
+          {
+            "text": "統率",
+            "isEffect": true,
+            "effectName": "統率",
+            "effectDesc": "基本能力值增加4%，解除時獲得1回合內最大生命值10%的護盾"
+          },
+          {
+            "text": "，依次使敵方全體獲得以下效果：所有能力值減少6%；造成傷害減少15%；吸血率變為0，無法獲得任何護盾效果；受到致命傷害時立刻被擊殺並且不會觸發任何免除死亡效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1150_p1.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1150_p2",
+        "name": "號令",
+        "description": "使我方CCG角色所有能力值增加16%，自己攻擊力增加8%，造成傷害增加12%。當我方回合開始時，使自己獲得1個統率，並使我方其他角色1回合內獲得2個指示效果",
+        "effects": [
+          {
+            "text": "使我方CCG角色所有能力值增加16%，自己攻擊力增加8%，造成傷害增加12%。當我方回合開始時，使自己獲得1個",
+            "isEffect": false
+          },
+          {
+            "text": "統率",
+            "isEffect": true,
+            "effectName": "統率",
+            "effectDesc": "基本能力值增加4%，解除時獲得1回合內最大生命值10%的護盾"
+          },
+          {
+            "text": "，並使我方其他角色1回合內獲得2個",
+            "isEffect": false
+          },
+          {
+            "text": "指示",
+            "isEffect": true,
+            "effectName": "指示",
+            "effectDesc": "基本能力值增加3%，生命值比例低於20%時該效果翻倍，並且受到額外傷害減少至1，額外傷害減少效果生效後解除"
+          },
+          {
+            "text": "效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1150_p2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1150_p3",
+        "name": "失控",
+        "description": "自己每解除1個統率，使我方全體攻擊力增加3%，並使自己獲得1個失控效果，限疊加8次。當自己的失控效果首次達到8個時，使自己1回合內獲得以下效果：生命值比例高於50%時造成傷害增加50%，生命值比例低於50%時免疫所有傷害",
+        "effects": [
+          {
+            "text": "自己每解除1個",
+            "isEffect": false
+          },
+          {
+            "text": "統率",
+            "isEffect": true,
+            "effectName": "統率",
+            "effectDesc": "基本能力值增加4%，解除時獲得1回合內最大生命值10%的護盾"
+          },
+          {
+            "text": "，使我方全體攻擊力增加3%，並使自己獲得1個",
+            "isEffect": false
+          },
+          {
+            "text": "失控",
+            "isEffect": true,
+            "effectName": "失控",
+            "effectDesc": "攻擊相關能力增加4%，受到傷害增加5%，造成傷害時損失自己最大生命值3%的生命，額外造成自己攻擊力數值40%的傷害"
+          },
+          {
+            "text": "效果，限疊加8次。當自己的",
+            "isEffect": false
+          },
+          {
+            "text": "失控",
+            "isEffect": true,
+            "effectName": "失控",
+            "effectDesc": "攻擊相關能力增加4%，受到傷害增加5%，造成傷害時損失自己最大生命值3%的生命，額外造成自己攻擊力數值40%的傷害"
+          },
+          {
+            "text": "效果首次達到8個時，使自己1回合內獲得以下效果：生命值比例高於50%時造成傷害增加50%，生命值比例低於50%時免疫所有傷害",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1150_p3.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1150_p4",
+        "name": "力量解放強化",
+        "description": "力量解放後，賦予自己1回合內造成傷害增加12%的效果",
+        "effects": [
+          {
+            "text": "力量解放後，賦予自己1回合內造成傷害增加12%的效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_1.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1150_p5",
+        "name": "Weak",
+        "description": "造成敵人被Weak時，賦予自己1回合內攻擊力增加10%的效果",
+        "effects": [
+          {
+            "text": "造成敵人被Weak時，賦予自己1回合內攻擊力增加10%的效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "resonance",
+        "id": "1150_rp2",
+        "name": "號令",
+        "description": "使我方CCG角色所有能力值增加16%，自己攻擊力增加8%，造成傷害增加12%。當我方回合開始時，使自己獲得1個超指示，並使我方其他角色1回合內獲得2個超指示效果",
+        "effects": [
+          {
+            "text": "使我方CCG角色所有能力值增加16%，自己攻擊力增加8%，造成傷害增加12%。當我方回合開始時，使自己獲得1個",
+            "isEffect": false
+          },
+          {
+            "text": "超指示",
+            "isEffect": true,
+            "effectName": "超指示",
+            "effectDesc": "基本能力值增加4%，格擋率增加5%，生命值比例低於50%時該效果翻倍，並且受到額外傷害減少至1，額外傷害減少效果生效後解除"
+          },
+          {
+            "text": "，並使我方其他角色1回合內獲得2個",
+            "isEffect": false
+          },
+          {
+            "text": "超指示",
+            "isEffect": true,
+            "effectName": "超指示",
+            "effectDesc": "基本能力值增加4%，格擋率增加5%，生命值比例低於50%時該效果翻倍，並且受到額外傷害減少至1，額外傷害減少效果生效後解除"
+          },
+          {
+            "text": "效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1150_p2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "orb",
+        "id": "1150_ep9",
+        "name": null,
+        "description": "使我方CCG角色每次釋放主動技能後，使自己1回合內暴擊傷害增加6%，最多增加18%，當自己生命值比例低於30%時，使自己本回合內攻擊力增加8%，破擊率增加10%",
+        "effects": [
+          {
+            "text": "使我方CCG角色每次釋放主動技能後，使自己1回合內暴擊傷害增加6%，最多增加18%，當自己生命值比例低於30%時，使自己本回合內攻擊力增加8%，破擊率增加10%",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-orb/Equip_HE_UR_1150.png"
+      }
+    ],
+    "tiers": [
+      {
+        "tier": 1,
+        "effects": [
+          {
+            "description": "戰鬥開始時，1回合內使自己獲得最大生命5%的護盾"
+          },
+          {
+            "description": "自己生命值高於90%時，免疫阻斷效果"
+          },
+          {
+            "description": "戰鬥開始時，使自己暴擊傷害增加10%"
+          },
+          {
+            "description": "生命值首次低於50%時解除自身控制效果和Weak效果並在一回合內免疫控制和Weak效果"
+          },
+          {
+            "description": "當我方回合時，1回合內使自己獲得最大生命5%的護盾"
+          }
+        ]
+      },
+      {
+        "tier": 2,
+        "effects": [
+          {
+            "description": "戰鬥開始時，1回合內使自己最大生命值增加10%"
+          },
+          {
+            "description": "戰鬥中生命增加5%"
+          },
+          {
+            "description": "我方【CCG】角色暴擊防禦增加6%"
+          },
+          {
+            "description": "我方回合開始時使我方【CCG】角色一回合內下一次主動技能傷害增加5%"
+          },
+          {
+            "description": "戰鬥開始時，使自己最大生命值增加10%"
+          }
+        ]
+      },
+      {
+        "tier": 3,
+        "effects": [
+          {
+            "description": "戰鬥開始時，1回合內使自己受到主動技能傷害減少5%"
+          },
+          {
+            "description": "我方角色吸血率增加5%"
+          },
+          {
+            "description": "自身帶有失控效果時造成傷害增加6%"
+          },
+          {
+            "description": "我方角色暴擊抵抗增加5%"
+          },
+          {
+            "description": "戰鬥開始時，使自己受到主動技能傷害減少5%"
+          }
+        ]
+      }
+    ],
+    "effectDefs": {
+      "蝕夢": "*蝕夢：本次技能傷害無視分擔效果，無法暴擊，並使本次技能造成傷害增加自己暴擊傷害數值的15%，最多增加60%",
+      "超蝕夢": "*超蝕夢：本次技能傷害無視分擔效果，無法暴擊，並使本次技能造成傷害增加自己暴擊傷害數值的25%，最多增加100%",
+      "統率": "*統率：基本能力值增加4%，解除時獲得1回合內最大生命值10%的護盾",
+      "指示": "*指示：基本能力值增加3%，生命值比例低於20%時該效果翻倍，並且受到額外傷害減少至1，額外傷害減少效果生效後解除",
+      "失控": "*失控：攻擊相關能力增加4%，受到傷害增加5%，造成傷害時損失自己最大生命值3%的生命，額外造成自己攻擊力數值40%的傷害",
+      "超指示": "*超指示：基本能力值增加4%，格擋率增加5%，生命值比例低於50%時該效果翻倍，並且受到額外傷害減少至1，額外傷害減少效果生效後解除"
+    }
   },
   {
     "id": "1158",
@@ -35867,6 +36433,369 @@
     }
   },
   {
+    "id": "1162",
+    "title": "花嫁",
+    "name": "霧嶋董香",
+    "fullName": "花嫁 霧嶋董香",
+    "rarity": "SSR",
+    "organization": "安定區",
+    "stats": {
+      "hp": 616562,
+      "atk": 36940,
+      "def": 28351
+    },
+    "attribute": "力",
+    "tactic": "均衡",
+    "headUrl": "/assets/heroes/head/1162_head.png",
+    "activeSkills": [
+      {
+        "type": "Active",
+        "skillNum": 1,
+        "iconUrl": "/assets/heroes/skill-active/1162_skill_b.png",
+        "levels": [
+          {
+            "lv": 1,
+            "name": "主動技能-等級1",
+            "description": "使自己1回合內進入超壓制領域後，對敵方全體造成攻擊力155%的崩擊傷害",
+            "effects": [
+              {
+                "text": "使自己1回合內進入",
+                "isEffect": false
+              },
+              {
+                "text": "超壓制領域",
+                "isEffect": true,
+                "effectName": "超壓制領域",
+                "effectDesc": "使我方全體攻擊力增加50%，使我方初始攻擊力最高的角色攻擊力額外增加6%，敵方全體攻擊力減少20%，造成傷害和額外傷害減少20%"
+              },
+              {
+                "text": "後，對敵方全體造成攻擊力155%的",
+                "isEffect": false
+              },
+              {
+                "text": "崩擊",
+                "isEffect": true,
+                "effectName": "崩擊",
+                "effectDesc": "本次技能造成傷害增加30%，自己攻擊力每比目標高6%，技能係數增加5%，最多增加至30%，並忽略目標護盾"
+              },
+              {
+                "text": "傷害",
+                "isEffect": false
+              }
+            ]
+          },
+          {
+            "lv": 2,
+            "name": "主動技能-等級2",
+            "description": "使自己1回合內進入超壓制領域後，對敵方全體造成攻擊力220%的崩擊傷害",
+            "effects": [
+              {
+                "text": "使自己1回合內進入",
+                "isEffect": false
+              },
+              {
+                "text": "超壓制領域",
+                "isEffect": true,
+                "effectName": "超壓制領域",
+                "effectDesc": "使我方全體攻擊力增加50%，使我方初始攻擊力最高的角色攻擊力額外增加6%，敵方全體攻擊力減少20%，造成傷害和額外傷害減少20%"
+              },
+              {
+                "text": "後，對敵方全體造成攻擊力220%的",
+                "isEffect": false
+              },
+              {
+                "text": "崩擊",
+                "isEffect": true,
+                "effectName": "崩擊",
+                "effectDesc": "本次技能造成傷害增加30%，自己攻擊力每比目標高6%，技能係數增加5%，最多增加至30%，並忽略目標護盾"
+              },
+              {
+                "text": "傷害",
+                "isEffect": false
+              }
+            ]
+          },
+          {
+            "lv": 3,
+            "name": "主動技能-等級3",
+            "description": "使自己1回合內進入超壓制領域後，對敵方全體造成攻擊力325%的崩擊傷害",
+            "effects": [
+              {
+                "text": "使自己1回合內進入",
+                "isEffect": false
+              },
+              {
+                "text": "超壓制領域",
+                "isEffect": true,
+                "effectName": "超壓制領域",
+                "effectDesc": "使我方全體攻擊力增加50%，使我方初始攻擊力最高的角色攻擊力額外增加6%，敵方全體攻擊力減少20%，造成傷害和額外傷害減少20%"
+              },
+              {
+                "text": "後，對敵方全體造成攻擊力325%的",
+                "isEffect": false
+              },
+              {
+                "text": "崩擊",
+                "isEffect": true,
+                "effectName": "崩擊",
+                "effectDesc": "本次技能造成傷害增加30%，自己攻擊力每比目標高6%，技能係數增加5%，最多增加至30%，並忽略目標護盾"
+              },
+              {
+                "text": "傷害",
+                "isEffect": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "passiveSkills": [
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1162_p1",
+        "name": "戰術支援",
+        "description": "戰鬥開始時，使我方全體安定區角色獲得戰術支援，之後自己立即釋放2級主動技能，當壓制領域解除時，立即消耗所有必殺技能量和必殺技能量卡，使我方全體技能1回合內造成傷害增加15%",
+        "effects": [
+          {
+            "text": "戰鬥開始時，使我方全體安定區角色獲得",
+            "isEffect": false
+          },
+          {
+            "text": "戰術支援",
+            "isEffect": true,
+            "effectName": "戰術支援",
+            "effectDesc": "行動後，使自己攻擊力和最大生命值增加5%，能力值增加效果限疊加4次，並記錄本次傷害量30%的數值，記錄數值最多不得超過攻擊者初始生命值的80%，釋放主動技能攻擊時，額外造成戰術支援記錄數值等量的傷害，該傷害無視目標50%的額外傷害減少效果。"
+          },
+          {
+            "text": "，之後自己立即釋放2級主動技能，當",
+            "isEffect": false
+          },
+          {
+            "text": "壓制領域",
+            "isEffect": true,
+            "effectName": "壓制領域",
+            "effectDesc": "使我方全體攻擊力增加50%，敵方全體攻擊力減少20%，造成傷害和額外傷害減少20%"
+          },
+          {
+            "text": "解除時，立即消耗所有必殺技能量和必殺技能量卡，使我方全體技能1回合內造成傷害增加15%",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1162_p1.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1162_p2",
+        "name": "安定區能力增強",
+        "description": "使我方安定區角色基本能力值增加24%，場上每有1個安定區角色，使自己攻擊相關能力增加8%，當我方角色受到超過自己最大生命值30%的技能傷害時，如果自己帶有壓制領域，使我方角色觸發以下效果中隨機一個效果：解除並在1回合內免疫所有減益和weak效果；回復本次受到傷害量15%的生命，該回復不受回復率影響；使攻擊者1回合內攻擊力減少10%，限疊加2次",
+        "effects": [
+          {
+            "text": "使我方安定區角色基本能力值增加24%，場上每有1個安定區角色，使自己攻擊相關能力增加8%，當我方角色受到超過自己最大生命值30%的技能傷害時，如果自己帶有",
+            "isEffect": false
+          },
+          {
+            "text": "壓制領域",
+            "isEffect": true,
+            "effectName": "壓制領域",
+            "effectDesc": "使我方全體攻擊力增加50%，敵方全體攻擊力減少20%，造成傷害和額外傷害減少20%"
+          },
+          {
+            "text": "，使我方角色觸發以下效果中隨機一個效果：解除並在1回合內免疫所有減益和weak效果；回復本次受到傷害量15%的生命，該回復不受回復率影響；使攻擊者1回合內攻擊力減少10%，限疊加2次",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1162_p2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1162_p3",
+        "name": "崩擊",
+        "description": "當我方回合開始或我方角色行動後，使自己獲得1個昂揚，限疊加4次，當我方回合結束時，對敵方全體造成攻擊力150%的崩擊傷害，並解除所有昂揚",
+        "effects": [
+          {
+            "text": "當我方回合開始或我方角色行動後，使自己獲得1個",
+            "isEffect": false
+          },
+          {
+            "text": "昂揚",
+            "isEffect": true,
+            "effectName": "昂揚",
+            "effectDesc": "使我方全體造成傷害增加6%，該效果對自己翻倍，使自己造成傷害時必然造成暴擊，解除時回復初始最大生命值15%的生命，該效果不受回復率影響"
+          },
+          {
+            "text": "，限疊加4次，當我方回合結束時，對敵方全體造成攻擊力150%的",
+            "isEffect": false
+          },
+          {
+            "text": "崩擊",
+            "isEffect": true,
+            "effectName": "崩擊",
+            "effectDesc": "本次技能造成傷害增加30%，自己攻擊力每比目標高6%，技能係數增加5%，最多增加至30%，並忽略目標護盾"
+          },
+          {
+            "text": "傷害，並解除所有",
+            "isEffect": false
+          },
+          {
+            "text": "昂揚",
+            "isEffect": true,
+            "effectName": "昂揚",
+            "effectDesc": "使我方全體造成傷害增加6%，該效果對自己翻倍，使自己造成傷害時必然造成暴擊，解除時回復初始最大生命值15%的生命，該效果不受回復率影響"
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1162_p3.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1162_p4",
+        "name": "力量解放強化",
+        "description": "力量解放後，賦予自己1回合內基本能力值增加10%的效果",
+        "effects": [
+          {
+            "text": "力量解放後，賦予自己1回合內基本能力值增加10%的效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_1.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1162_p5",
+        "name": "Weak",
+        "description": "造成Weak時，賦予我方全體1回合內基本能力增加8%的效果",
+        "effects": [
+          {
+            "text": "造成Weak時，賦予我方全體1回合內基本能力增加8%的效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "resonance",
+        "id": "1162_rp2",
+        "name": "安定區能力增強",
+        "description": "使我方安定區角色基本能力值增加24%，場上每有1個安定區角色，使自己攻擊相關能力增加8%，當我方角色受到超過自己最大生命值30%的技能傷害時，如果自己帶有壓制領域，使我方角色觸發以下效果中隨機一個效果：解除並在1回合內免疫所有減益和weak效果；回復本次受到傷害量15%的生命，該回復不受回復率影響；使攻擊者1回合內攻擊力減少10%，限疊加2次；立即釋放1級主動技能進行反擊",
+        "effects": [
+          {
+            "text": "使我方安定區角色基本能力值增加24%，場上每有1個安定區角色，使自己攻擊相關能力增加8%，當我方角色受到超過自己最大生命值30%的技能傷害時，如果自己帶有",
+            "isEffect": false
+          },
+          {
+            "text": "壓制領域",
+            "isEffect": true,
+            "effectName": "壓制領域",
+            "effectDesc": "使我方全體攻擊力增加50%，敵方全體攻擊力減少20%，造成傷害和額外傷害減少20%"
+          },
+          {
+            "text": "，使我方角色觸發以下效果中隨機一個效果：解除並在1回合內免疫所有減益和weak效果；回復本次受到傷害量15%的生命，該回復不受回復率影響；使攻擊者1回合內攻擊力減少10%，限疊加2次；立即釋放1級主動技能進行反擊",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1162_p2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "orb",
+        "id": "1162_ep9",
+        "name": null,
+        "description": "我方角色使用非主動技能後，使該角色1回合內最大生命值和破擊率增加4%，最多增加12%，當壓制領域解除時，使我方全體回復自己初始生命值50%的生命",
+        "effects": [
+          {
+            "text": "我方角色使用非主動技能後，使該角色1回合內最大生命值和破擊率增加4%，最多增加12%，當",
+            "isEffect": false
+          },
+          {
+            "text": "壓制領域",
+            "isEffect": true,
+            "effectName": "壓制領域",
+            "effectDesc": "使我方全體攻擊力增加50%，敵方全體攻擊力減少20%，造成傷害和額外傷害減少20%"
+          },
+          {
+            "text": "解除時，使我方全體回復自己初始生命值50%的生命",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-orb/Equip_HE_UR_1162.png"
+      }
+    ],
+    "tiers": [
+      {
+        "tier": 1,
+        "effects": [
+          {
+            "description": "戰鬥開始時，1回合內使自己獲得最大生命5%的護盾"
+          },
+          {
+            "description": "我方【安定區】角色格擋率增加5%"
+          },
+          {
+            "description": "生命值低於50%時防禦力增加6%"
+          },
+          {
+            "description": "自身帶有壓制領域時破擊率增加8%"
+          },
+          {
+            "description": "當我方回合時，1回合內使自己獲得最大生命5%的護盾"
+          }
+        ]
+      },
+      {
+        "tier": 2,
+        "effects": [
+          {
+            "description": "戰鬥開始時，1回合內使自己最大生命值增加10%"
+          },
+          {
+            "description": "戰鬥開始時，使自己回復率增加5%"
+          },
+          {
+            "description": "我方角色暴擊抵抗增加5%"
+          },
+          {
+            "description": "戰鬥開始時，1回合內使自己免疫阻斷效果"
+          },
+          {
+            "description": "戰鬥開始時，使自己最大生命值增加10%"
+          }
+        ]
+      },
+      {
+        "tier": 3,
+        "effects": [
+          {
+            "description": "戰鬥開始時，1回合內使自己受到主動技能傷害減少5%"
+          },
+          {
+            "description": "我方角色暴擊傷害增加8%"
+          },
+          {
+            "description": "我方【安定區】角色生命值首次低於30%時在1回合內吸血率增加30%"
+          },
+          {
+            "description": "釋放主動技能後使我方全體1回合內非主動技能傷害增加4%，限疊加2次"
+          },
+          {
+            "description": "戰鬥開始時，使自己受到主動技能傷害減少5%"
+          }
+        ]
+      }
+    ],
+    "effectDefs": {
+      "壓制領域": "*壓制領域：使我方全體攻擊力增加50%，敵方全體攻擊力減少20%，造成傷害和額外傷害減少20%",
+      "崩擊": "*崩擊：本次技能造成傷害增加30%，自己攻擊力每比目標高6%，技能係數增加5%，最多增加至30%，並忽略目標護盾",
+      "超壓制領域": "*超壓制領域：使我方全體攻擊力增加50%，使我方初始攻擊力最高的角色攻擊力額外增加6%，敵方全體攻擊力減少20%，造成傷害和額外傷害減少20%",
+      "戰術支援": "*戰術支援：行動後，使自己攻擊力和最大生命值增加5%，能力值增加效果限疊加4次，並記錄本次傷害量30%的數值，記錄數值最多不得超過攻擊者初始生命值的80%，釋放主動技能攻擊時，額外造成戰術支援記錄數值等量的傷害，該傷害無視目標50%的額外傷害減少效果。",
+      "昂揚": "*昂揚：使我方全體造成傷害增加6%，該效果對自己翻倍，使自己造成傷害時必然造成暴擊，解除時回復初始最大生命值15%的生命，該效果不受回復率影響"
+    }
+  },
+  {
     "id": "1164",
     "title": "300萬下載達成",
     "name": "干支",
@@ -36144,10 +37073,10 @@
             "description": "我方【青桐樹】角色暴擊率增加6%"
           },
           {
-            "description": null
+            "description": "使用主動技能時使我方全體下一次主動技能傷害增加10%"
           },
           {
-            "description": null
+            "description": "生命值低於50%時格擋率增加8%"
           },
           {
             "description": "當我方回合時，1回合內使自己獲得最大生命5%的護盾"
@@ -36468,6 +37397,325 @@
       "庇護打擊": "*庇護打擊：本次技能攻擊力增加20%，使我方全體2回合內獲得本次傷害量20%的護盾",
       "超庇護打擊": "*超庇護打擊：本次技能攻擊力增加20%，破擊率增加15%，使我方全體2回合內獲得本次傷害量30%的護盾",
       "阻斷": "*阻斷：使目標主動技能的額外效果失效，持續1回合"
+    }
+  },
+  {
+    "id": "1166",
+    "title": "花嫁",
+    "name": "真戶曉",
+    "fullName": "花嫁 真戶曉",
+    "rarity": "SSR",
+    "organization": "CCG下位搜查官",
+    "stats": {
+      "hp": 628458,
+      "atk": 33861,
+      "def": 29370
+    },
+    "attribute": "技",
+    "tactic": "輔助",
+    "headUrl": "/assets/heroes/head/1166_head.png",
+    "activeSkills": [
+      {
+        "type": "Active",
+        "skillNum": 1,
+        "iconUrl": "/assets/heroes/skill-active/1166_skill_b.png",
+        "levels": [
+          {
+            "lv": 1,
+            "name": "主動技能-等級1",
+            "description": "使我方全體技能等級上升，1回合內基本能力值增加6%，並使我方全體1回合內獲得超願景",
+            "effects": [
+              {
+                "text": "使我方全體技能等級上升，1回合內基本能力值增加6%，並使我方全體1回合內獲得",
+                "isEffect": false
+              },
+              {
+                "text": "超願景",
+                "isEffect": true,
+                "effectName": "超願景",
+                "effectDesc": "造成傷害增加6%，釋放主動技能攻擊時，依照技能等級，每1級使造成傷害增加5%，解除時使我方全體清空Weak值並解除Weak效果"
+              }
+            ]
+          },
+          {
+            "lv": 2,
+            "name": "主動技能-等級2",
+            "description": "使我方全體技能等級上升，2回合內基本能力值增加6%，並使我方全體1回合內獲得超願景",
+            "effects": [
+              {
+                "text": "使我方全體技能等級上升，2回合內基本能力值增加6%，並使我方全體1回合內獲得",
+                "isEffect": false
+              },
+              {
+                "text": "超願景",
+                "isEffect": true,
+                "effectName": "超願景",
+                "effectDesc": "造成傷害增加6%，釋放主動技能攻擊時，依照技能等級，每1級使造成傷害增加5%，解除時使我方全體清空Weak值並解除Weak效果"
+              }
+            ]
+          },
+          {
+            "lv": 3,
+            "name": "主動技能-等級3",
+            "description": "使我方全體技能等級上升，2回合內基本能力值增加10%，並使我方全體1回合內獲得超願景",
+            "effects": [
+              {
+                "text": "使我方全體技能等級上升，2回合內基本能力值增加10%，並使我方全體1回合內獲得",
+                "isEffect": false
+              },
+              {
+                "text": "超願景",
+                "isEffect": true,
+                "effectName": "超願景",
+                "effectDesc": "造成傷害增加6%，釋放主動技能攻擊時，依照技能等級，每1級使造成傷害增加5%，解除時使我方全體清空Weak值並解除Weak效果"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "passiveSkills": [
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1166_p1",
+        "name": "技能升級",
+        "description": "【補位也生效】當我方回合開始時，使我方全體清空Weak值並解除Weak效果，並使我方全體下一次使用主動技能後，1回合內獲得自己最大生命值20%的護盾，如果該技能沒有解除任何Weak效果，使我方全體1回合內主動技能傷害增加15%，並使我方所有等級為1的技能等級上升至2級",
+        "effects": [
+          {
+            "text": "【補位也生效】當我方回合開始時，使我方全體清空Weak值並解除Weak效果，並使我方全體下一次使用主動技能後，1回合內獲得自己最大生命值20%的護盾，如果該技能沒有解除任何Weak效果，使我方全體1回合內主動技能傷害增加15%，並使我方所有等級為1的技能等級上升至2級",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1166_p1.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1166_p2",
+        "name": "全體技能增強",
+        "description": "【補位也生效】使我方全體基本能力值增加18%，敵方全體基本能力值減少18%，當我方角色受到主動傷害、非主動技能或額外傷害後，依照該傷害的傷害類型，使該角色1回合內受到該類型傷害減少20%，最多減少60%",
+        "effects": [
+          {
+            "text": "【補位也生效】使我方全體基本能力值增加18%，敵方全體基本能力值減少18%，當我方角色受到主動傷害、非主動技能或額外傷害後，依照該傷害的傷害類型，使該角色1回合內受到該類型傷害減少20%，最多減少60%",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1166_p2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1166_p3",
+        "name": "佑護",
+        "description": "【補位也生效】當我方角色技能等級上升時或受到主動技能傷害時，使該角色獲得1個佑護，限疊加8次，當我方回合開始時，解除所有佑護，使我方角色根據解除佑護的數量，每解除1個，使該角色攻擊相關能力增加4%，限疊加8次",
+        "effects": [
+          {
+            "text": "【補位也生效】當我方角色技能等級上升時或受到主動技能傷害時，使該角色獲得1個",
+            "isEffect": false
+          },
+          {
+            "text": "佑護",
+            "isEffect": true,
+            "effectName": "佑護",
+            "effectDesc": "防禦力增加10%，解除時獲得1回合內施加者初始生命值10%的護盾"
+          },
+          {
+            "text": "，限疊加8次，當我方回合開始時，解除所有",
+            "isEffect": false
+          },
+          {
+            "text": "佑護",
+            "isEffect": true,
+            "effectName": "佑護",
+            "effectDesc": "防禦力增加10%，解除時獲得1回合內施加者初始生命值10%的護盾"
+          },
+          {
+            "text": "，使我方角色根據解除",
+            "isEffect": false
+          },
+          {
+            "text": "佑護",
+            "isEffect": true,
+            "effectName": "佑護",
+            "effectDesc": "防禦力增加10%，解除時獲得1回合內施加者初始生命值10%的護盾"
+          },
+          {
+            "text": "的數量，每解除1個，使該角色攻擊相關能力增加4%，限疊加8次",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1166_p3.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1166_p4",
+        "name": "力量解放強化",
+        "description": "力量解放後，賦予我方全體1回合內基本能力增加5%的效果",
+        "effects": [
+          {
+            "text": "力量解放後，賦予我方全體1回合內基本能力增加5%的效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_1.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1166_p5",
+        "name": "Weak",
+        "description": "受到Weak時，賦予自己我方全體1回合內受到傷害減少10%效果",
+        "effects": [
+          {
+            "text": "受到Weak時，賦予自己我方全體1回合內受到傷害減少10%效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "resonance",
+        "id": "1166_rp3",
+        "name": "佑護",
+        "description": "【補位也生效】當我方角色技能等級上升時或受到主動技能傷害時，使該角色獲得1個佑護，限疊加8次，當我方回合開始時，解除所有佑護，使我方角色根據解除佑護的數量，每解除1個，使該角色攻擊相關能力增加4%，限疊加8次，戰鬥開始時，使我方全體獲得2個佑護",
+        "effects": [
+          {
+            "text": "【補位也生效】當我方角色技能等級上升時或受到主動技能傷害時，使該角色獲得1個",
+            "isEffect": false
+          },
+          {
+            "text": "佑護",
+            "isEffect": true,
+            "effectName": "佑護",
+            "effectDesc": "防禦力增加10%，解除時獲得1回合內施加者初始生命值10%的護盾"
+          },
+          {
+            "text": "，限疊加8次，當我方回合開始時，解除所有",
+            "isEffect": false
+          },
+          {
+            "text": "佑護",
+            "isEffect": true,
+            "effectName": "佑護",
+            "effectDesc": "防禦力增加10%，解除時獲得1回合內施加者初始生命值10%的護盾"
+          },
+          {
+            "text": "，使我方角色根據解除",
+            "isEffect": false
+          },
+          {
+            "text": "佑護",
+            "isEffect": true,
+            "effectName": "佑護",
+            "effectDesc": "防禦力增加10%，解除時獲得1回合內施加者初始生命值10%的護盾"
+          },
+          {
+            "text": "的數量，每解除1個，使該角色攻擊相關能力增加4%，限疊加8次，戰鬥開始時，使我方全體獲得2個",
+            "isEffect": false
+          },
+          {
+            "text": "佑護",
+            "isEffect": true,
+            "effectName": "佑護",
+            "effectDesc": "防禦力增加10%，解除時獲得1回合內施加者初始生命值10%的護盾"
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1166_p3.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "orb",
+        "id": "1166_ep9",
+        "name": null,
+        "description": "【補位也生效】我方角色生命值首次低於40%時，使該角色獲得2個佑護，我方角色對目標造成Weak後，使我方全體攻擊力增加2%，最多10%，我方角色被Weak時，使我方全體防禦力增加2%，最多10%",
+        "effects": [
+          {
+            "text": "【補位也生效】我方角色生命值首次低於40%時，使該角色獲得2個",
+            "isEffect": false
+          },
+          {
+            "text": "佑護",
+            "isEffect": true,
+            "effectName": "佑護",
+            "effectDesc": "防禦力增加10%，解除時獲得1回合內施加者初始生命值10%的護盾"
+          },
+          {
+            "text": "，我方角色對目標造成Weak後，使我方全體攻擊力增加2%，最多10%，我方角色被Weak時，使我方全體防禦力增加2%，最多10%",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-orb/Equip_HE_UR_1166.png"
+      }
+    ],
+    "tiers": [
+      {
+        "tier": 1,
+        "effects": [
+          {
+            "description": "戰鬥開始時，1回合內使自己獲得最大生命5%的護盾"
+          },
+          {
+            "description": "戰鬥開始時，使自己防禦力增加5%"
+          },
+          {
+            "description": "我方角色吸血率增加5%"
+          },
+          {
+            "description": "【補位也生效】我方角色失去護盾時在1回合內攻擊力增加5%"
+          },
+          {
+            "description": "當我方回合時，1回合內使自己獲得最大生命5%的護盾"
+          }
+        ]
+      },
+      {
+        "tier": 2,
+        "effects": [
+          {
+            "description": "戰鬥開始時，1回合內使自己最大生命值增加10%"
+          },
+          {
+            "description": "【補位也生效】我方角色暴擊率增加5%"
+          },
+          {
+            "description": "從補位登場時使我方角色1回合內造成傷害增加5%"
+          },
+          {
+            "description": "我方角色基本能力值增加4%"
+          },
+          {
+            "description": "戰鬥開始時，使自己最大生命值增加10%"
+          }
+        ]
+      },
+      {
+        "tier": 3,
+        "effects": [
+          {
+            "description": "戰鬥開始時，1回合內使自己受到主動技能傷害減少5%"
+          },
+          {
+            "description": "戰鬥開始時，1回合內使自己受到傷害減少10%"
+          },
+          {
+            "description": "【補位也生效】我方角色首回合防禦相關能力增加6%"
+          },
+          {
+            "description": "戰鬥開始時，1回合內使自己免疫阻斷效果"
+          },
+          {
+            "description": "戰鬥開始時，使自己受到主動技能傷害減少5%"
+          }
+        ]
+      }
+    ],
+    "effectDefs": {
+      "願景": "*願景：造成傷害增加6%，解除時使我方全體清空Weak值並解除Weak效果",
+      "超願景": "*超願景：造成傷害增加6%，釋放主動技能攻擊時，依照技能等級，每1級使造成傷害增加5%，解除時使我方全體清空Weak值並解除Weak效果",
+      "佑護": "*佑護：防禦力增加10%，解除時獲得1回合內施加者初始生命值10%的護盾"
     }
   },
   {
@@ -37177,16 +38425,16 @@
         "subtype": "passive",
         "id": "1170_p1",
         "name": "绝刃",
-        "description": "【補位也生效】戰鬥開始時，使敵方初始攻擊力最高的敵方角色獲得执念效果，當自己從補位登場後，立刻對帶有执念效果的目標造成攻擊力400%的猛擊傷害，並解除目標执念效果，使目標獲得绝刃效果，帶有执念的角色死亡後，使敵方初始攻擊力最高的角色獲得执念效果",
+        "description": "【補位也生效】戰鬥開始時，使敵方初始攻擊力最高的敵方角色獲得迷茫效果，當自己從補位登場後，立刻對帶有迷茫效果的目標造成攻擊力400%的猛擊傷害，並解除目標迷茫效果，使目標獲得绝刃效果，帶有迷茫的角色死亡後，使敵方初始攻擊力最高的角色獲得迷茫效果",
         "effects": [
           {
             "text": "【補位也生效】戰鬥開始時，使敵方初始攻擊力最高的敵方角色獲得",
             "isEffect": false
           },
           {
-            "text": "执念",
+            "text": "迷茫",
             "isEffect": true,
-            "effectName": "执念",
+            "effectName": "迷茫",
             "effectDesc": "受到主動技能傷害增加30%，受到額外傷害增加30%，受到攻擊時積累傷害值的100%，解除時受到積累傷害值的傷害，該傷害不得超過施加者初始生命值的1000%"
           },
           {
@@ -37194,9 +38442,9 @@
             "isEffect": false
           },
           {
-            "text": "执念",
+            "text": "迷茫",
             "isEffect": true,
-            "effectName": "执念",
+            "effectName": "迷茫",
             "effectDesc": "受到主動技能傷害增加30%，受到額外傷害增加30%，受到攻擊時積累傷害值的100%，解除時受到積累傷害值的傷害，該傷害不得超過施加者初始生命值的1000%"
           },
           {
@@ -37214,9 +38462,9 @@
             "isEffect": false
           },
           {
-            "text": "执念",
+            "text": "迷茫",
             "isEffect": true,
-            "effectName": "执念",
+            "effectName": "迷茫",
             "effectDesc": "受到主動技能傷害增加30%，受到額外傷害增加30%，受到攻擊時積累傷害值的100%，解除時受到積累傷害值的傷害，該傷害不得超過施加者初始生命值的1000%"
           },
           {
@@ -37234,9 +38482,9 @@
             "isEffect": false
           },
           {
-            "text": "执念",
+            "text": "迷茫",
             "isEffect": true,
-            "effectName": "执念",
+            "effectName": "迷茫",
             "effectDesc": "受到主動技能傷害增加30%，受到額外傷害增加30%，受到攻擊時積累傷害值的100%，解除時受到積累傷害值的傷害，該傷害不得超過施加者初始生命值的1000%"
           },
           {
@@ -37244,9 +38492,9 @@
             "isEffect": false
           },
           {
-            "text": "执念",
+            "text": "迷茫",
             "isEffect": true,
-            "effectName": "执念",
+            "effectName": "迷茫",
             "effectDesc": "受到主動技能傷害增加30%，受到額外傷害增加30%，受到攻擊時積累傷害值的100%，解除時受到積累傷害值的傷害，該傷害不得超過施加者初始生命值的1000%"
           },
           {
@@ -37254,7 +38502,7 @@
             "isEffect": false
           }
         ],
-        "iconUrl": null
+        "iconUrl": "/assets/heroes/skill-passive/1170_p1.png"
       },
       {
         "type": "Passive",
@@ -37268,7 +38516,7 @@
             "isEffect": false
           }
         ],
-        "iconUrl": null
+        "iconUrl": "/assets/heroes/skill-passive/1170_p2.png"
       },
       {
         "type": "Passive",
@@ -37302,7 +38550,7 @@
             "isEffect": false
           }
         ],
-        "iconUrl": null
+        "iconUrl": "/assets/heroes/skill-passive/1170_p3.png"
       },
       {
         "type": "Passive",
@@ -37344,7 +38592,7 @@
             "isEffect": false
           }
         ],
-        "iconUrl": null
+        "iconUrl": "/assets/heroes/skill-passive/1170_p2.png"
       },
       {
         "type": "Passive",
@@ -37358,7 +38606,7 @@
             "isEffect": false
           }
         ],
-        "iconUrl": null
+        "iconUrl": "/assets/heroes/skill-orb/Equip_HE_UR_1170.png"
       }
     ],
     "tiers": [
@@ -37426,7 +38674,7 @@
     "effectDefs": {
       "暗袭": "*暗襲：解除目標所有增益和姿勢效果，如果攻擊者生命值比例高於目標，造成傷害增加40%",
       "超暗袭": "*超暗襲：解除目標所有增益和姿勢效果，如果攻擊者生命值比例高於目標，造成傷害增加40%，並額外對目標造成自己最大生命值12%的傷害",
-      "执念": "*執念：受到主動技能傷害增加30%，受到額外傷害增加30%，受到攻擊時積累傷害值的100%，解除時受到積累傷害值的傷害，該傷害不得超過施加者初始生命值的1000%",
+      "迷茫": "*迷茫：受到主動技能傷害增加30%，受到額外傷害增加30%，受到攻擊時積累傷害值的100%，解除時受到積累傷害值的傷害，該傷害不得超過施加者初始生命值的1000%",
       "绝刃": "*絕刃：回復率、吸血率、再生率變為0，持有者使用主動技能後，使持有者被動技能失效，直到持有者回合結束",
       "猛擊": "*猛擊：無視防禦力和格擋率",
       "刃铠": "*刃鎧：防禦力增加8%，暴擊防禦增加25%"

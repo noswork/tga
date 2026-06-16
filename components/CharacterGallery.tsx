@@ -67,7 +67,7 @@ const SUBTYPE_LABEL: Record<string, string> = {
   passive:   '被動',
   rank:      'Rank',
   gift:      '潛能升級',
-  resonance: '共鳴',
+  resonance: '專屬潛能',
   orb:       '專屬',
 };
 

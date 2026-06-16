@@ -71,25 +71,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可在極大程度上提升攻擊力，且力屬性角色裝備後還會獲得額外效果",
@@ -119,25 +119,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可大幅提升攻擊力，且力屬性角色裝備後還會獲得額外效果",
@@ -167,25 +167,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可提升攻擊力，且力屬性角色裝備後還會獲得額外效果",
@@ -261,25 +261,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可在極大程度上提升攻擊力，且技屬性角色裝備後還會獲得額外效果",
@@ -309,25 +309,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可大幅提升攻擊力，且技屬性角色裝備後還會獲得額外效果",
@@ -357,25 +357,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可提升攻擊力，且技屬性角色裝備後還會獲得額外效果",
@@ -451,25 +451,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可在極大程度上提升攻擊力，且速屬性角色裝備後還會獲得額外效果",
@@ -499,25 +499,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可大幅提升攻擊力，且速屬性角色裝備後還會獲得額外效果",
@@ -547,25 +547,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可提升攻擊力，且速屬性角色裝備後還會獲得額外效果",
@@ -641,25 +641,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可在極大程度上提升攻擊力，且心屬性角色裝備後還會獲得額外效果",
@@ -689,25 +689,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可大幅提升攻擊力，且心屬性角色裝備後還會獲得額外效果",
@@ -737,25 +737,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可提升攻擊力，且心屬性角色裝備後還會獲得額外效果",
@@ -831,25 +831,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可在極大程度上提升攻擊力，且知屬性角色裝備後還會獲得額外效果",
@@ -879,25 +879,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可大幅提升攻擊力，且知屬性角色裝備後還會獲得額外效果",
@@ -927,25 +927,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可提升攻擊力，且知屬性角色裝備後還會獲得額外效果",
@@ -1067,25 +1067,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可提升攻擊力，且滅屬性角色裝備後還會獲得額外效果",
@@ -1115,25 +1115,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可大幅提升攻擊力，且滅屬性角色裝備後還會獲得額外效果",
@@ -1163,25 +1163,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可在極大程度上提升攻擊力，且滅屬性角色裝備後還會獲得額外效果",
@@ -1266,25 +1266,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可在極大程度上提升防禦力，且力屬性角色裝備後還會獲得額外效果",
@@ -1314,25 +1314,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可大幅提升防禦力，且力屬性角色裝備後還會獲得額外效果",
@@ -1362,25 +1362,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可提升防禦力，且力屬性角色裝備後還會獲得額外效果",
@@ -1410,25 +1410,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可提升防禦力，且力屬性角色裝備後還會獲得額外效果",
@@ -1481,25 +1481,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可在極大程度上提升防禦力，且技屬性角色裝備後還會獲得額外效果",
@@ -1529,25 +1529,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可大幅提升防禦力，且技屬性角色裝備後還會獲得額外效果",
@@ -1577,25 +1577,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可提升防禦力，且技屬性角色裝備後還會獲得額外效果",
@@ -1625,25 +1625,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可提升防禦力，且技屬性角色裝備後還會獲得額外效果",
@@ -1696,25 +1696,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可在極大程度上提升防禦力，且速屬性角色裝備後還會獲得額外效果",
@@ -1744,25 +1744,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可大幅提升防禦力，且速屬性角色裝備後還會獲得額外效果",
@@ -1792,25 +1792,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可提升防禦力，且速屬性角色裝備後還會獲得額外效果",
@@ -1840,25 +1840,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可提升防禦力，且速屬性角色裝備後還會獲得額外效果",
@@ -1911,25 +1911,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可在極大程度上提升防禦力，且心屬性角色裝備後還會獲得額外效果",
@@ -1959,25 +1959,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可大幅提升防禦力，且心屬性角色裝備後還會獲得額外效果",
@@ -2007,25 +2007,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可提升防禦力，且心屬性角色裝備後還會獲得額外效果",
@@ -2055,25 +2055,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可提升防禦力，且心屬性角色裝備後還會獲得額外效果",
@@ -2126,25 +2126,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可在極大程度上提升防禦力，且知屬性角色裝備後還會獲得額外效果",
@@ -2174,25 +2174,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可大幅提升防禦力，且知屬性角色裝備後還會獲得額外效果",
@@ -2222,25 +2222,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可提升防禦力，且知屬性角色裝備後還會獲得額外效果",
@@ -2270,25 +2270,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可提升防禦力，且知屬性角色裝備後還會獲得額外效果",
@@ -2364,25 +2364,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可提升防禦力，且滅屬性角色裝備後還會獲得額外效果",
@@ -2412,25 +2412,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可提升防禦力，且滅屬性角色裝備後還會獲得額外效果",
@@ -2460,25 +2460,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可大幅提升防禦力，且滅屬性角色裝備後還會獲得額外效果",
@@ -2508,25 +2508,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可在極大程度上提升防禦力，且滅屬性角色裝備後還會獲得額外效果",
@@ -2611,25 +2611,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可在極大程度上提升生命值，且力屬性角色裝備後還會獲得額外效果",
@@ -2659,25 +2659,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可大幅提升生命值，且力屬性角色裝備後還會獲得額外效果",
@@ -2707,25 +2707,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可提升生命值，且力屬性角色裝備後還會獲得額外效果",
@@ -2755,25 +2755,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可提升生命值，且力屬性角色裝備後還會獲得額外效果",
@@ -2826,25 +2826,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可在極大程度上提升生命值，且技屬性角色裝備後還會獲得額外效果",
@@ -2874,25 +2874,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可大幅提升生命值，且技屬性角色裝備後還會獲得額外效果",
@@ -2922,25 +2922,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可提升生命值，且技屬性角色裝備後還會獲得額外效果",
@@ -2970,25 +2970,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可提升生命值，且技屬性角色裝備後還會獲得額外效果",
@@ -3041,25 +3041,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可在極大程度上提升生命值，且速屬性角色裝備後還會獲得額外效果",
@@ -3089,25 +3089,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可大幅提升生命值，且速屬性角色裝備後還會獲得額外效果",
@@ -3137,25 +3137,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可提升生命值，且速屬性角色裝備後還會獲得額外效果",
@@ -3185,25 +3185,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可提升生命值，且速屬性角色裝備後還會獲得額外效果",
@@ -3256,25 +3256,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可在極大程度上提升生命值，且心屬性角色裝備後還會獲得額外效果",
@@ -3304,25 +3304,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可大幅提升生命值，且心屬性角色裝備後還會獲得額外效果",
@@ -3352,25 +3352,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可提升生命值，且心屬性角色裝備後還會獲得額外效果",
@@ -3400,25 +3400,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可提升生命值，且心屬性角色裝備後還會獲得額外效果",
@@ -3471,25 +3471,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可在極大程度上提升生命值，且知屬性角色裝備後還會獲得額外效果",
@@ -3519,25 +3519,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可大幅提升生命值，且知屬性角色裝備後還會獲得額外效果",
@@ -3567,25 +3567,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可提升生命值，且知屬性角色裝備後還會獲得額外效果",
@@ -3615,25 +3615,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可提升生命值，且知屬性角色裝備後還會獲得額外效果",
@@ -3709,25 +3709,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.1,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可提升生命值，且滅屬性角色裝備後還會獲得額外效果",
@@ -3757,25 +3757,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.3,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可提升生命值，且滅屬性角色裝備後還會獲得額外效果",
@@ -3805,25 +3805,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 0.6,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可大幅提升生命值，且滅屬性角色裝備後還會獲得額外效果",
@@ -3853,25 +3853,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可在極大程度上提升生命值，且滅屬性角色裝備後還會獲得額外效果",
@@ -3898,28 +3898,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -3949,25 +3949,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -4016,28 +4016,28 @@
     "stat4": "1.5% ATK",
     "factors": [
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
@@ -4064,28 +4064,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
-      },
-      {
-        "stat": "Def",
-        "name": "防禦力",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
@@ -4124,28 +4124,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -4172,28 +4172,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
-      },
-      {
-        "stat": "Def",
-        "name": "防禦力",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
@@ -4220,28 +4220,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -4271,25 +4271,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -4338,28 +4338,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -4389,25 +4389,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -4446,28 +4446,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -4494,28 +4494,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -4542,28 +4542,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -4593,25 +4593,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -4638,28 +4638,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
-      },
-      {
-        "stat": "Def",
-        "name": "防禦力",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
@@ -4686,28 +4686,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -4749,25 +4749,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -4797,25 +4797,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -4845,25 +4845,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -4902,28 +4902,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
-      },
-      {
-        "stat": "Def",
-        "name": "防禦力",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
@@ -4953,25 +4953,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
-        "stat": "Atk",
-        "name": "攻擊力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
-        "stat": "Atk",
-        "name": "攻擊力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -4998,28 +4998,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
@@ -5061,25 +5061,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -5131,25 +5131,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
@@ -5176,28 +5176,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -5224,28 +5224,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -5272,28 +5272,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
-      },
-      {
-        "stat": "Def",
-        "name": "防禦力",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
@@ -5323,25 +5323,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -5400,28 +5400,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Atk",
-        "name": "攻擊力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
-        "stat": "Atk",
-        "name": "攻擊力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
-        "stat": "Atk",
-        "name": "攻擊力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
-        "stat": "Atk",
-        "name": "攻擊力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -5451,25 +5451,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -5496,28 +5496,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
-      },
-      {
-        "stat": "Def",
-        "name": "防禦力",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
@@ -5547,25 +5547,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -5592,28 +5592,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
-      },
-      {
-        "stat": "Def",
-        "name": "防禦力",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
@@ -5643,25 +5643,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -5710,28 +5710,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -5793,25 +5793,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
@@ -5841,25 +5841,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -5889,25 +5889,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -5937,25 +5937,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -5985,25 +5985,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -6030,28 +6030,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -6093,25 +6093,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -6141,25 +6141,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -6189,25 +6189,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -6234,28 +6234,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -6282,28 +6282,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
@@ -6333,25 +6333,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -6378,28 +6378,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
-      },
-      {
-        "stat": "Def",
-        "name": "防禦力",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
@@ -6438,28 +6438,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
-      },
-      {
-        "stat": "Def",
-        "name": "防禦力",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
@@ -6486,28 +6486,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -6537,25 +6537,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -6614,28 +6614,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -6677,25 +6677,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -6722,28 +6722,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -6773,25 +6773,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
@@ -6821,25 +6821,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -6866,28 +6866,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
-      },
-      {
-        "stat": "Def",
-        "name": "防禦力",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
@@ -6917,25 +6917,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -6962,28 +6962,28 @@
     "stat4": null,
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "stat": "Crit",
+        "name": "暴擊率",
+        "valuePct": 1.2,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_crit_3.png"
       },
       {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "stat": "Crit",
+        "name": "暴擊率",
+        "valuePct": 1.2,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_crit_3.png"
       },
       {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "stat": "Crit",
+        "name": "暴擊率",
+        "valuePct": 1.2,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_crit_3.png"
       },
       {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "stat": "Crit",
+        "name": "暴擊率",
+        "valuePct": 1.2,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_crit_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -7013,25 +7013,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -7058,28 +7058,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -7118,28 +7118,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -7169,25 +7169,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -7214,28 +7214,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -7294,28 +7294,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -7374,28 +7374,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
-      },
-      {
-        "stat": "Def",
-        "name": "防禦力",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
@@ -7425,25 +7425,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -7492,28 +7492,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
-      },
-      {
-        "stat": "Def",
-        "name": "防禦力",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
@@ -7555,25 +7555,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -7600,28 +7600,28 @@
     "stat4": null,
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -7673,25 +7673,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -7733,25 +7733,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -7778,28 +7778,28 @@
     "stat4": null,
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -7826,28 +7826,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
-      },
-      {
-        "stat": "Def",
-        "name": "防禦力",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
@@ -7877,25 +7877,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -7925,25 +7925,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -7982,28 +7982,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -8045,25 +8045,25 @@
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
@@ -8093,25 +8093,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -8141,25 +8141,25 @@
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -8189,25 +8189,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -8267,28 +8267,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -8340,25 +8340,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -8417,28 +8417,28 @@
     "stat4": null,
     "factors": [
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
-      },
-      {
-        "stat": "Def",
-        "name": "防禦力",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
@@ -8465,28 +8465,28 @@
     "stat4": "1.5% HP",
     "factors": [
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
-      },
-      {
-        "stat": "Def",
-        "name": "防禦力",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
@@ -8548,25 +8548,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -8608,25 +8608,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -8661,28 +8661,28 @@
     "stat4": null,
     "factors": [
       {
-        "stat": "Hp",
-        "name": "生命值",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       },
       {
         "stat": "Hp",
         "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
-      },
-      {
-        "stat": "Hp",
-        "name": "生命值",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_hp.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
@@ -8736,6 +8736,54 @@
     "effectDefs": {}
   },
   {
+    "id": "Equip_Special_1136_Hp",
+    "imgFile": "Equip_Special_1136_Hp.png",
+    "iconUrl": "/assets/cells-icon/Equip_Special_1136_Hp.png",
+    "name": "再生細胞【特等搜查官】",
+    "rarity": 6,
+    "statType": "HP",
+    "baseStat": null,
+    "stat1": null,
+    "stat2": null,
+    "stat3": null,
+    "stat4": null,
+    "factors": [
+      {
+        "stat": "Hp",
+        "name": "生命值",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
+      },
+      {
+        "stat": "Hp",
+        "name": "生命值",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
+      },
+      {
+        "stat": "Hp",
+        "name": "生命值",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
+      },
+      {
+        "stat": "Hp",
+        "name": "生命值",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
+      }
+    ],
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【特等搜查官】",
+    "uniqueSkillSegments": [
+      {
+        "text": "【補位也生效】【援助也生效】使我方初始攻擊力最高的角色防禦相關能力增加8%，當該角色生命值首次低於40%時，使該角色1回合內受到傷害減少10%，並賦予自己1回合內最大生命值10%的護盾",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {}
+  },
+  {
     "id": "Equip_Special_1138_Atk",
     "imgFile": "Equip_Special_1138_Atk.png",
     "iconUrl": "/assets/cells-icon/Equip_Special_1138_Atk.png",
@@ -8752,25 +8800,25 @@
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Atk",
         "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_atk.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       }
     ],
     "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
@@ -8829,28 +8877,28 @@
     "stat4": null,
     "factors": [
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Atk",
+        "name": "攻擊力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
       },
       {
         "stat": "Def",
         "name": "防禦力",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
       },
       {
-        "stat": "Def",
-        "name": "防禦力",
+        "stat": "Hp",
+        "name": "生命值",
         "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
-      },
-      {
-        "stat": "Def",
-        "name": "防禦力",
-        "valuePct": 1.5,
-        "iconUrl": "/assets/cells-factor/JS_icon_def.png"
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
       }
     ],
     "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
