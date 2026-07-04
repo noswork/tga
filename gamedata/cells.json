@@ -6125,6 +6125,62 @@
     "effectDefs": {}
   },
   {
+    "id": "Equip_Special_1037_Def",
+    "imgFile": "Equip_Special_1037_Def.png",
+    "iconUrl": "/assets/cells-icon/Equip_Special_1037_Def.png",
+    "name": "防衛細胞【戀愛中的人妖】",
+    "rarity": 6,
+    "statType": "DEF",
+    "baseStat": null,
+    "stat1": null,
+    "stat2": null,
+    "stat3": null,
+    "stat4": null,
+    "factors": [
+      {
+        "stat": "Hp",
+        "name": "生命值",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
+      },
+      {
+        "stat": "Hp",
+        "name": "生命值",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
+      },
+      {
+        "stat": "Hp",
+        "name": "生命值",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
+      },
+      {
+        "stat": "Hp",
+        "name": "生命值",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_hp_3.png"
+      }
+    ],
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【戀愛中的人妖】",
+    "uniqueSkillSegments": [
+      {
+        "text": "在PVE戰鬥中，使我方全體獲得",
+        "isEffect": false
+      },
+      {
+        "text": "專心致志",
+        "isEffect": true,
+        "effectName": "專心致志",
+        "effectDesc": "*專心致志：攻擊力增加10%，首次造成傷害時，額外造成施加者最大生命值30%的傷害"
+      }
+    ],
+    "effectDefs": {
+      "專心致志": "*專心致志：攻擊力增加10%，首次造成傷害時，額外造成施加者最大生命值30%的傷害"
+    }
+  },
+  {
     "id": "Equip_Special_1037_Hp",
     "imgFile": "Equip_Special_1037_Hp.png",
     "iconUrl": "/assets/cells-icon/Equip_Special_1037_Hp.png",
@@ -8921,6 +8977,66 @@
     ],
     "effectDefs": {
       "搗蛋鬼": "*搗蛋鬼：暴擊傷害增加10%，限疊加3層"
+    }
+  },
+  {
+    "id": "Equip_Special_1140_Atk",
+    "imgFile": "Equip_Special_1140_Atk.png",
+    "iconUrl": "/assets/cells-icon/Equip_Special_1140_Atk.png",
+    "name": "強襲細胞【聖誕】",
+    "rarity": 6,
+    "statType": "ATK",
+    "baseStat": null,
+    "stat1": null,
+    "stat2": null,
+    "stat3": null,
+    "stat4": null,
+    "factors": [
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      }
+    ],
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【聖誕】",
+    "uniqueSkillSegments": [
+      {
+        "text": "戰鬥開始時，使自己的技能上升至3級，並獲得3個",
+        "isEffect": false
+      },
+      {
+        "text": "祝福",
+        "isEffect": true,
+        "effectName": "祝福",
+        "effectDesc": "*祝福：造成傷害和格擋率增加4%"
+      },
+      {
+        "text": "，自己在場時，使我方全體受到單次技能傷害不得超過該角色最大生命值的55%，並免疫所有技能等級下降效果",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "祝福": "*祝福：造成傷害和格擋率增加4%"
     }
   }
 ]

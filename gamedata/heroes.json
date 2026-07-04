@@ -36434,9 +36434,9 @@
   },
   {
     "id": "1162",
-    "title": "花嫁",
+    "title": "雋永花嫁",
     "name": "霧嶋董香",
-    "fullName": "花嫁 霧嶋董香",
+    "fullName": "雋永花嫁 霧嶋董香",
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
@@ -37401,9 +37401,9 @@
   },
   {
     "id": "1166",
-    "title": "花嫁",
+    "title": "雋永花嫁",
     "name": "真戶曉",
-    "fullName": "花嫁 真戶曉",
+    "fullName": "雋永花嫁 真戶曉",
     "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
@@ -38330,6 +38330,308 @@
       "湮滅": "*湮滅：自己生命值每低2%，本次傷害暴擊率增加6%、暴擊傷害增加1.5%，該技能不會觸發吸血效果，並額外造成吸血率130%的傷害",
       "絕望": "*絕望：將所有攻擊引導給自己，受到傷害和額外傷害減少20%，免疫減益和Weak效果",
       "超湮滅": "*超湮滅：自己生命值每低2%，本次傷害暴擊率增加6%、暴擊傷害增加1.5%，造成傷害增加2%，該技能不會觸發吸血效果，並額外造成吸血率130%的傷害"
+    }
+  },
+  {
+    "id": "1169",
+    "title": "不良青年",
+    "name": "不知吟士",
+    "fullName": "不良青年 不知吟士",
+    "rarity": "SSR",
+    "organization": "CCG下位搜查官",
+    "stats": {
+      "hp": 614183,
+      "atk": 37314,
+      "def": 28224
+    },
+    "attribute": "力",
+    "tactic": "爆發",
+    "headUrl": "/assets/heroes/head/1169_head.png",
+    "activeSkills": [
+      {
+        "type": "Active",
+        "skillNum": 1,
+        "iconUrl": "/assets/heroes/skill-active/1169_skill_b.png",
+        "levels": [
+          {
+            "lv": 1,
+            "name": "主動技能-等級1",
+            "description": "對敵方全體造成攻擊力155%的超轟炸傷害",
+            "effects": [
+              {
+                "text": "對敵方全體造成攻擊力155%的",
+                "isEffect": false
+              },
+              {
+                "text": "超轟炸",
+                "isEffect": true,
+                "effectName": "超轟炸",
+                "effectDesc": "該技能必然造成暴擊，當目標數不少於3人時，額外造成自己初始攻擊力數值350%的傷害，當目標數少於3人時，使技能係數增加80%"
+              },
+              {
+                "text": "傷害",
+                "isEffect": false
+              }
+            ]
+          },
+          {
+            "lv": 2,
+            "name": "主動技能-等級2",
+            "description": "對敵方全體造成攻擊力220%的超轟炸傷害",
+            "effects": [
+              {
+                "text": "對敵方全體造成攻擊力220%的",
+                "isEffect": false
+              },
+              {
+                "text": "超轟炸",
+                "isEffect": true,
+                "effectName": "超轟炸",
+                "effectDesc": "該技能必然造成暴擊，當目標數不少於3人時，額外造成自己初始攻擊力數值350%的傷害，當目標數少於3人時，使技能係數增加80%"
+              },
+              {
+                "text": "傷害",
+                "isEffect": false
+              }
+            ]
+          },
+          {
+            "lv": 3,
+            "name": "主動技能-等級3",
+            "description": "對敵方全體造成攻擊力325%的超轟炸傷害",
+            "effects": [
+              {
+                "text": "對敵方全體造成攻擊力325%的",
+                "isEffect": false
+              },
+              {
+                "text": "超轟炸",
+                "isEffect": true,
+                "effectName": "超轟炸",
+                "effectDesc": "該技能必然造成暴擊，當目標數不少於3人時，額外造成自己初始攻擊力數值350%的傷害，當目標數少於3人時，使技能係數增加80%"
+              },
+              {
+                "text": "傷害",
+                "isEffect": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "passiveSkills": [
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1169_p1",
+        "name": "能力增幅",
+        "description": "當我方角色使用主動技能攻擊或受到超過自己最大生命值35%的傷害後，使該角色1回合內獲得1個能力增幅，限疊加3次，當我方角色能力增幅達到2個時，立即解除自身控制與Weak效果，並對敵方生命值比例最低的敵人釋放2級主動技能",
+        "effects": [
+          {
+            "text": "當我方角色使用主動技能攻擊或受到超過自己最大生命值35%的傷害後，使該角色1回合內獲得1個",
+            "isEffect": false
+          },
+          {
+            "text": "能力增幅",
+            "isEffect": true,
+            "effectName": "能力增幅",
+            "effectDesc": "基本能力值增加5%，造成傷害增加4%，解除時獲得技能增幅效果，持續5回合"
+          },
+          {
+            "text": "，限疊加3次，當我方角色",
+            "isEffect": false
+          },
+          {
+            "text": "能力增幅",
+            "isEffect": true,
+            "effectName": "能力增幅",
+            "effectDesc": "基本能力值增加5%，造成傷害增加4%，解除時獲得技能增幅效果，持續5回合"
+          },
+          {
+            "text": "達到2個時，立即解除自身控制與Weak效果，並對敵方生命值比例最低的敵人釋放2級主動技能",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1169_p1.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1169_p2",
+        "name": "CCG全體強化",
+        "description": "使我方CCG角色基本能力值增加24%，主動技能造成傷害增加15%，使自己造成額外傷害增加20%，戰鬥開始時，使我方CCG角色1回合內受到傷害減少30%，當生命值比例低於60%時該效果翻倍，並在該效果解除時，使我方全體1回合內獲得自己已損失生命值60%的護盾",
+        "effects": [
+          {
+            "text": "使我方CCG角色基本能力值增加24%，主動技能造成傷害增加15%，使自己造成額外傷害增加20%，戰鬥開始時，使我方CCG角色1回合內受到傷害減少30%，當生命值比例低於60%時該效果翻倍，並在該效果解除時，使我方全體1回合內獲得自己已損失生命值60%的護盾",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1169_p2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1169_p3",
+        "name": "全體連擊",
+        "description": "當我方角色釋放主動技能後，隨機解除該角色1個減益效果，當我方回合開始時，如果上一回合我方使用主動技能的類型都為攻擊技能，使我方全體下一次使用主動攻擊技能後，以相同等級重複釋放該技能",
+        "effects": [
+          {
+            "text": "當我方角色釋放主動技能後，隨機解除該角色1個減益效果，當我方回合開始時，如果上一回合我方使用主動技能的類型都為攻擊技能，使我方全體下一次使用主動攻擊技能後，以相同等級重複釋放該技能",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1169_p3.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1169_p4",
+        "name": "力量解放強化",
+        "description": "力量解放後，賦予我方全體1回合內造成傷害增加8%的效果",
+        "effects": [
+          {
+            "text": "力量解放後，賦予我方全體1回合內造成傷害增加8%的效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_1.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1169_p5",
+        "name": "Weak",
+        "description": "造成Weak時，賦予我方全體1回合內基本能力增加8%的效果",
+        "effects": [
+          {
+            "text": "造成Weak時，賦予我方全體1回合內基本能力增加8%的效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "resonance",
+        "id": "1169_rp1",
+        "name": "能力增幅",
+        "description": "當我方角色使用主動技能攻擊或受到超過自己最大生命值35%的傷害後，使該角色1回合內獲得1個能力增幅，限疊加3次，當我方角色能力增幅達到2個時，立即解除自身控制與Weak效果，並對敵方生命值比例最低的敵人釋放2級主動技能，戰鬥開始時我方角色獲得2個技能增幅",
+        "effects": [
+          {
+            "text": "當我方角色使用主動技能攻擊或受到超過自己最大生命值35%的傷害後，使該角色1回合內獲得1個",
+            "isEffect": false
+          },
+          {
+            "text": "能力增幅",
+            "isEffect": true,
+            "effectName": "能力增幅",
+            "effectDesc": "基本能力值增加5%，造成傷害增加4%，解除時獲得技能增幅效果，持續5回合"
+          },
+          {
+            "text": "，限疊加3次，當我方角色",
+            "isEffect": false
+          },
+          {
+            "text": "能力增幅",
+            "isEffect": true,
+            "effectName": "能力增幅",
+            "effectDesc": "基本能力值增加5%，造成傷害增加4%，解除時獲得技能增幅效果，持續5回合"
+          },
+          {
+            "text": "達到2個時，立即解除自身控制與Weak效果，並對敵方生命值比例最低的敵人釋放2級主動技能，戰鬥開始時我方角色獲得2個",
+            "isEffect": false
+          },
+          {
+            "text": "技能增幅",
+            "isEffect": true,
+            "effectName": "技能增幅",
+            "effectDesc": "所有能力值增加3%，主動技能造成傷害增加6%，限疊加5次"
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1169_p1.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "orb",
+        "id": "1169_ep9",
+        "name": null,
+        "description": "戰鬥開始時，使我方全體1回合內獲得以下效果：受到主動技能傷害後，使自己1回合內格擋率增加6%，限疊加6次，釋放主動技能攻擊後，使自己1回合內破擊率增加3%，限疊加6次",
+        "effects": [
+          {
+            "text": "戰鬥開始時，使我方全體1回合內獲得以下效果：受到主動技能傷害後，使自己1回合內格擋率增加6%，限疊加6次，釋放主動技能攻擊後，使自己1回合內破擊率增加3%，限疊加6次",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-orb/Equip_HE_UR_1169.png"
+      }
+    ],
+    "tiers": [
+      {
+        "tier": 1,
+        "effects": [
+          {
+            "description": "戰鬥開始時，1回合內使自己獲得最大生命5%的護盾"
+          },
+          {
+            "description": "我方【CCG】角色生命值首次低於40%時，使其下一次主動技能傷害增加8%"
+          },
+          {
+            "description": "戰鬥開始時，使自己回復率增加5%"
+          },
+          {
+            "description": "使用主動技能後使我方【CCG】角色2回合內破擊率增加5%"
+          },
+          {
+            "description": "當我方回合時，1回合內使自己獲得最大生命5%的護盾"
+          }
+        ]
+      },
+      {
+        "tier": 2,
+        "effects": [
+          {
+            "description": "戰鬥開始時，1回合內使自己最大生命值增加10%"
+          },
+          {
+            "description": "戰鬥中造成傷害增加5%"
+          },
+          {
+            "description": "我方【CCG】角色首回合免疫生命無法回復效果"
+          },
+          {
+            "description": "戰鬥開始時，使自己暴擊傷害增加10%"
+          },
+          {
+            "description": "戰鬥開始時，使自己最大生命值增加10%"
+          }
+        ]
+      },
+      {
+        "tier": 3,
+        "effects": [
+          {
+            "description": "戰鬥開始時，1回合內使自己受到主動技能傷害減少5%"
+          },
+          {
+            "description": "我方角色吸血率增加5%"
+          },
+          {
+            "description": "戰鬥中受到傷害減少5%"
+          },
+          {
+            "description": "我方角色首回合攻擊力增加5%"
+          },
+          {
+            "description": "戰鬥開始時，使自己受到主動技能傷害減少5%"
+          }
+        ]
+      }
+    ],
+    "effectDefs": {
+      "轟炸": "*轟炸：該技能必然造成暴擊，當目標數不少於3人時，額外造成自己初始攻擊力數值240%的傷害，當目標數少於3人時，使技能係數增加40%",
+      "超轟炸": "*超轟炸：該技能必然造成暴擊，當目標數不少於3人時，額外造成自己初始攻擊力數值350%的傷害，當目標數少於3人時，使技能係數增加80%",
+      "能力增幅": "*能力增幅：基本能力值增加5%，造成傷害增加4%，解除時獲得技能增幅效果，持續5回合",
+      "技能增幅": "*技能增幅：所有能力值增加3%，主動技能造成傷害增加6%，限疊加5次"
     }
   },
   {
