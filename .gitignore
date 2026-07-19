@@ -42,3 +42,7 @@ cloudflare
 /tools
 
 .playwright-mcp
+
+*.srt
+
+*.txt

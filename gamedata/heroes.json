@@ -7,9 +7,9 @@
     "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": 479045,
-      "atk": 33515,
-      "def": 22973
+      "hp": null,
+      "atk": null,
+      "def": null
     },
     "attribute": "技",
     "tactic": "輸出",
@@ -2347,7 +2347,7 @@
     "title": "正義搜查官",
     "name": "亞門鋼太朗",
     "fullName": "正義搜查官 亞門鋼太朗",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 486124,
@@ -2516,7 +2516,7 @@
     "title": "學長",
     "name": "西尾錦",
     "fullName": "學長 西尾錦",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "安定區",
     "stats": {
       "hp": 462936,
@@ -6211,7 +6211,7 @@
     "title": "菜鳥搜查官",
     "name": "瀧澤政道",
     "fullName": "菜鳥搜查官 瀧澤政道",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 421198,
@@ -7393,7 +7393,7 @@
     "title": "11區前首領",
     "name": "萬丈數壹",
     "fullName": "11區前首領 萬丈數壹",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
       "hp": 342235,
@@ -7541,7 +7541,7 @@
     "title": "老練的搜查官",
     "name": "富良太志",
     "fullName": "老練的搜查官 富良太志",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
       "hp": 360909,
@@ -8810,7 +8810,7 @@
     "title": "指揮官",
     "name": "丸手齋",
     "fullName": "指揮官 丸手齋",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
       "hp": 453661,
@@ -11301,7 +11301,7 @@
     "title": "瞇瞇眼的率真青年",
     "name": "伊東倉元",
     "fullName": "瞇瞇眼的率真青年 伊東倉元",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 444386,
@@ -11449,7 +11449,7 @@
     "title": "艾梅利歐",
     "name": "五里美鄉",
     "fullName": "艾梅利歐 五里美鄉",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 425835,
@@ -11841,7 +11841,7 @@
     "title": "解體師",
     "name": "小太郎",
     "fullName": "解體師 小太郎",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "無組織",
     "stats": {
       "hp": 333098,
@@ -11989,7 +11989,7 @@
     "title": "蘋果頭",
     "name": "村松喜江",
     "fullName": "蘋果頭 村松喜江",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "無組織",
     "stats": {
       "hp": 411923,
@@ -12137,7 +12137,7 @@
     "title": "愛讀書的青年",
     "name": "金木研",
     "fullName": "愛讀書的青年 金木研",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "安定區",
     "stats": {
       "hp": 495400,
@@ -12802,7 +12802,7 @@
     "title": "啼的跟班",
     "name": "Gagi",
     "fullName": "啼的跟班 Gagi",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
       "hp": 301117,
@@ -12950,7 +12950,7 @@
     "title": "啼的跟班",
     "name": "Guge",
     "fullName": "啼的跟班 Guge",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
       "hp": 282843,
@@ -14408,7 +14408,7 @@
     "title": "戰場薔薇",
     "name": "真戶曉",
     "fullName": "戰場薔薇 真戶曉",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 384097,
@@ -14556,7 +14556,7 @@
     "title": "不屈的篠原",
     "name": "篠原幸紀",
     "fullName": "不屈的篠原 篠原幸紀",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
       "hp": 444386,
@@ -14704,7 +14704,7 @@
     "title": "可靠的特等搜查官",
     "name": "黑磐巖",
     "fullName": "可靠的特等搜查官 黑磐巖",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
       "hp": 425835,
@@ -15215,7 +15215,7 @@
     "title": "三等搜查官",
     "name": "草場一平",
     "fullName": "三等搜查官 草場一平",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 346804,
@@ -15363,7 +15363,7 @@
     "title": "局員搜查官",
     "name": "中島康智",
     "fullName": "局員搜查官 中島康智",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 333098,
@@ -15511,7 +15511,7 @@
     "title": "萬丈跟班",
     "name": "一味",
     "fullName": "萬丈跟班 一味",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
       "hp": 333098,
@@ -15659,7 +15659,7 @@
     "title": "萬丈跟班",
     "name": "二璐",
     "fullName": "萬丈跟班 二璐",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
       "hp": 333098,
@@ -15807,7 +15807,7 @@
     "title": "萬丈跟班",
     "name": "三手",
     "fullName": "萬丈跟班 三手",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
       "hp": 365078,
@@ -33723,7 +33723,7 @@
     "title": "戰無不勝的搜查官",
     "name": "有馬貴將",
     "fullName": "戰無不勝的搜查官 有馬貴將",
-    "rarity": "SP",
+    "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
       "hp": 604666,
@@ -34036,7 +34036,7 @@
     "title": "激情之翼",
     "name": "霧嶋絢都",
     "fullName": "激情之翼 霧嶋絢都",
-    "rarity": "SP",
+    "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
       "hp": 602287,
@@ -35095,7 +35095,7 @@
         "subtype": "passive",
         "id": "1150_p1",
         "name": "統率",
-        "description": "當我方其他CCG角色釋放主動技能前，使自己獲得1個統率，限疊加4次，自己釋放主動技能後，如果自己帶有統率，解除一個統率，依次使敵方全體獲得以下效果：所有能力值減少6%；造成傷害減少15%；吸血率變為0，無法獲得任何護盾效果；受到致命傷害時立刻被擊殺並且不會觸發任何免除死亡效果",
+        "description": "當我方其他CCG角色釋放主動技能前，使自己獲得1個統率，限疊加4次，自己釋放主動技能前，如果自己帶有統率，解除所有統率，依次使敵方全體獲得以下效果：所有能力值減少6%；造成傷害減少15%；吸血率變為0，無法獲得任何護盾效果；生命值比例低於1%時立刻被擊殺並且不會觸發任何免除死亡效果",
         "effects": [
           {
             "text": "當我方其他CCG角色釋放主動技能前，使自己獲得1個",
@@ -35108,7 +35108,7 @@
             "effectDesc": "基本能力值增加4%，解除時獲得1回合內最大生命值10%的護盾"
           },
           {
-            "text": "，限疊加4次，自己釋放主動技能後，如果自己帶有",
+            "text": "，限疊加4次，自己釋放主動技能前，如果自己帶有",
             "isEffect": false
           },
           {
@@ -35118,7 +35118,7 @@
             "effectDesc": "基本能力值增加4%，解除時獲得1回合內最大生命值10%的護盾"
           },
           {
-            "text": "，解除一個",
+            "text": "，解除所有",
             "isEffect": false
           },
           {
@@ -35128,7 +35128,7 @@
             "effectDesc": "基本能力值增加4%，解除時獲得1回合內最大生命值10%的護盾"
           },
           {
-            "text": "，依次使敵方全體獲得以下效果：所有能力值減少6%；造成傷害減少15%；吸血率變為0，無法獲得任何護盾效果；受到致命傷害時立刻被擊殺並且不會觸發任何免除死亡效果",
+            "text": "，依次使敵方全體獲得以下效果：所有能力值減少6%；造成傷害減少15%；吸血率變為0，無法獲得任何護盾效果；生命值比例低於1%時立刻被擊殺並且不會觸發任何免除死亡效果",
             "isEffect": false
           }
         ],
@@ -35660,7 +35660,7 @@
     "title": "烈焰一擊",
     "name": "霧嶋董香",
     "fullName": "烈焰一擊 霧嶋董香",
-    "rarity": "SP",
+    "rarity": "SSR",
     "organization": "安定區",
     "stats": {
       "hp": 613707,
@@ -38980,6 +38980,689 @@
       "绝刃": "*絕刃：回復率、吸血率、再生率變為0，持有者使用主動技能後，使持有者被動技能失效，直到持有者回合結束",
       "猛擊": "*猛擊：無視防禦力和格擋率",
       "刃铠": "*刃鎧：防禦力增加8%，暴擊防禦增加25%"
+    }
+  },
+  {
+    "id": "1171",
+    "title": "海濱狂歡",
+    "name": "神代利世",
+    "fullName": "海濱狂歡 神代利世",
+    "rarity": "SSR",
+    "organization": "無組織",
+    "stats": {
+      "hp": 616086,
+      "atk": 37400,
+      "def": 28122
+    },
+    "attribute": "技",
+    "tactic": "輸出",
+    "headUrl": "/assets/heroes/head/1171_head.png",
+    "activeSkills": [
+      {
+        "type": "Active",
+        "skillNum": 1,
+        "iconUrl": "/assets/heroes/skill-active/1171_skill_b.png",
+        "levels": [
+          {
+            "lv": 1,
+            "name": "主動技能-等級1",
+            "description": "對敵方全體造成攻擊力217%的超波浪傷害",
+            "effects": [
+              {
+                "text": "對敵方全體造成攻擊力217%的",
+                "isEffect": false
+              },
+              {
+                "text": "超波浪",
+                "isEffect": true,
+                "effectName": "超波浪",
+                "effectDesc": "本次技能造成傷害增加40%，目標帶有護盾時使技能係數增加60%，對方沒有護盾時無視目標防禦力和格擋率，並使我方全體獲得1回合內造成傷害量25%的護盾"
+              },
+              {
+                "text": "傷害",
+                "isEffect": false
+              }
+            ]
+          },
+          {
+            "lv": 2,
+            "name": "主動技能-等級2",
+            "description": "對敵方全體造成攻擊力290%的超波浪傷害",
+            "effects": [
+              {
+                "text": "對敵方全體造成攻擊力290%的",
+                "isEffect": false
+              },
+              {
+                "text": "超波浪",
+                "isEffect": true,
+                "effectName": "超波浪",
+                "effectDesc": "本次技能造成傷害增加40%，目標帶有護盾時使技能係數增加60%，對方沒有護盾時無視目標防禦力和格擋率，並使我方全體獲得1回合內造成傷害量25%的護盾"
+              },
+              {
+                "text": "傷害",
+                "isEffect": false
+              }
+            ]
+          },
+          {
+            "lv": 3,
+            "name": "主動技能-等級3",
+            "description": "對敵方全體造成攻擊力520%的超波浪傷害",
+            "effects": [
+              {
+                "text": "對敵方全體造成攻擊力520%的",
+                "isEffect": false
+              },
+              {
+                "text": "超波浪",
+                "isEffect": true,
+                "effectName": "超波浪",
+                "effectDesc": "本次技能造成傷害增加40%，目標帶有護盾時使技能係數增加60%，對方沒有護盾時無視目標防禦力和格擋率，並使我方全體獲得1回合內造成傷害量25%的護盾"
+              },
+              {
+                "text": "傷害",
+                "isEffect": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "passiveSkills": [
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1171_p1",
+        "name": "反制",
+        "description": "當我方回合開始時，使自己1回合內獲得最大生命值15%的護盾，攻擊力增加30%，我方角色受到單體主動技能傷害時，如果自己帶有護盾效果，我方其他角色受到本次傷害的50%由自己承擔，並對攻擊者反擊，造成攻擊力150%的波浪傷害，每次反擊後，使我方角色1回合內非主動技能造成傷害增加15%，限疊加3次",
+        "effects": [
+          {
+            "text": "當我方回合開始時，使自己1回合內獲得最大生命值15%的護盾，攻擊力增加30%，我方角色受到單體主動技能傷害時，如果自己帶有護盾效果，我方其他角色受到本次傷害的50%由自己承擔，並對攻擊者反擊，造成攻擊力150%的",
+            "isEffect": false
+          },
+          {
+            "text": "波浪",
+            "isEffect": true,
+            "effectName": "波浪",
+            "effectDesc": "目標帶有護盾時使技能係數增加60%，對方沒有護盾時無視目標防禦力和格擋率，並使我方全體獲得1回合內造成傷害量20%的護盾"
+          },
+          {
+            "text": "傷害，每次反擊後，使我方角色1回合內非主動技能造成傷害增加15%，限疊加3次",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1171_p1.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1171_p2",
+        "name": "無組織強化",
+        "description": "自己在場時，使我方無組織角色獲得以下效果：基本能力值增加30%，生命值高於60%時攻擊力增加10%，造成額外傷害增加18%，生命低於40%時防禦相關能力增加20%，受到額外傷害減少12%，每使用2次主動技能，使自己技能等級提升",
+        "effects": [
+          {
+            "text": "自己在場時，使我方無組織角色獲得以下效果：基本能力值增加30%，生命值高於60%時攻擊力增加10%，造成額外傷害增加18%，生命低於40%時防禦相關能力增加20%，受到額外傷害減少12%，每使用2次主動技能，使自己技能等級提升",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1171_p2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1171_p3",
+        "name": "浪襲",
+        "description": "\u0003當我方角色釋放非主動技能後，使自己獲得1個#",
+        "effects": [
+          {
+            "text": "\u0003當我方角色釋放非主動技能後，使自己獲得1個#",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1171_p3.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1171_p4",
+        "name": "力量解放強化",
+        "description": "力量解放後，賦予自己1回合內基本能力值增加10%的效果",
+        "effects": [
+          {
+            "text": "力量解放後，賦予自己1回合內基本能力值增加10%的效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_1.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1171_p5",
+        "name": "Weak",
+        "description": "造成Weak時，賦予自己1回合內造成傷害增加10%的效果",
+        "effects": [
+          {
+            "text": "造成Weak時，賦予自己1回合內造成傷害增加10%的效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "resonance",
+        "id": "1171_rp1",
+        "name": "反制",
+        "description": "當我方回合開始時，使自己1回合內獲得最大生命值15%的護盾，攻擊力增加30%，我方其他角色受到單體主動技能傷害時，如果自己帶有護盾效果，本次傷害的50%由自己承擔，並對攻擊者反擊，造成攻擊力150%的超波浪傷害，每次反擊後，使我方角色1回合內非主動技能造成傷害增加15%，限疊加3次",
+        "effects": [
+          {
+            "text": "當我方回合開始時，使自己1回合內獲得最大生命值15%的護盾，攻擊力增加30%，我方其他角色受到單體主動技能傷害時，如果自己帶有護盾效果，本次傷害的50%由自己承擔，並對攻擊者反擊，造成攻擊力150%的",
+            "isEffect": false
+          },
+          {
+            "text": "超波浪",
+            "isEffect": true,
+            "effectName": "超波浪",
+            "effectDesc": "本次技能造成傷害增加40%，目標帶有護盾時使技能係數增加60%，對方沒有護盾時無視目標防禦力和格擋率，並使我方全體獲得1回合內造成傷害量25%的護盾"
+          },
+          {
+            "text": "傷害，每次反擊後，使我方角色1回合內非主動技能造成傷害增加15%，限疊加3次",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1171_p1.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "orb",
+        "id": "1171_ep9",
+        "name": null,
+        "description": "當自己行動或我方無組織角色受到單體傷害後，使自己攻擊力和最大生命值增加4%，最多增加16%，當自己生命值首次低於50%時，使自己1回合內全能力值增加8%，並使自己技能等級上升至3級",
+        "effects": [
+          {
+            "text": "當自己行動或我方無組織角色受到單體傷害後，使自己攻擊力和最大生命值增加4%，最多增加16%，當自己生命值首次低於50%時，使自己1回合內全能力值增加8%，並使自己技能等級上升至3級",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-orb/Equip_HE_UR_1171.png"
+      }
+    ],
+    "tiers": [
+      {
+        "tier": 1,
+        "effects": [
+          {
+            "description": "戰鬥開始時，1回合內使自己獲得最大生命5%的護盾"
+          },
+          {
+            "description": null
+          },
+          {
+            "description": "戰鬥中暴擊抵抗增加10%"
+          },
+          {
+            "description": "戰鬥開始時使自己1回合內防禦力增加8%"
+          },
+          {
+            "description": "當我方回合時，1回合內使自己獲得最大生命5%的護盾"
+          }
+        ]
+      },
+      {
+        "tier": 2,
+        "effects": [
+          {
+            "description": "戰鬥開始時，1回合內使自己最大生命值增加10%"
+          },
+          {
+            "description": "我方角色暴擊傷害增加10%"
+          },
+          {
+            "description": "自身帶有護盾效果時使我方【無組織】角色傷害增加6%"
+          },
+          {
+            "description": "戰鬥中最大生命值增加6%"
+          },
+          {
+            "description": "戰鬥開始時，使自己最大生命值增加10%"
+          }
+        ]
+      },
+      {
+        "tier": 3,
+        "effects": [
+          {
+            "description": "戰鬥開始時，1回合內使自己受到主動技能傷害減少5%"
+          },
+          {
+            "description": "首回合主動技能傷害增加30%"
+          },
+          {
+            "description": "戰鬥開始時，使自己免疫阻斷效果，該效果當自己被weak時解除"
+          },
+          {
+            "description": null
+          },
+          {
+            "description": "戰鬥開始時，使自己受到主動技能傷害減少5%"
+          }
+        ]
+      }
+    ],
+    "effectDefs": {
+      "波浪": "*波浪：目標帶有護盾時使技能係數增加60%，對方沒有護盾時無視目標防禦力和格擋率，並使我方全體獲得1回合內造成傷害量20%的護盾",
+      "超波浪": "*超波浪：本次技能造成傷害增加40%，目標帶有護盾時使技能係數增加60%，對方沒有護盾時無視目標防禦力和格擋率，並使我方全體獲得1回合內造成傷害量25%的護盾",
+      "浪襲": "*浪襲：使我方全體防禦力和最大生命值增加6%，自身最大生命值增加6%，非主動技能傷害增加10%"
+    }
+  },
+  {
+    "id": "1173",
+    "title": "覺悟之梟",
+    "name": "芳村",
+    "fullName": "覺悟之梟 芳村",
+    "rarity": "SSR",
+    "organization": "安定區",
+    "stats": {
+      "hp": 625127,
+      "atk": 39241,
+      "def": 28606
+    },
+    "attribute": "心",
+    "tactic": "均衡",
+    "headUrl": "/assets/heroes/head/1173_head.png",
+    "activeSkills": [
+      {
+        "type": "Active",
+        "skillNum": 1,
+        "iconUrl": "/assets/heroes/skill-active/1173_skill_b.png",
+        "levels": [
+          {
+            "lv": 1,
+            "name": "主動技能-等級1",
+            "description": "對敵方全體造成攻擊力155%的超裂傷傷害，並使目標1回合內獲得裂傷效果",
+            "effects": [
+              {
+                "text": "對敵方全體造成攻擊力155%的",
+                "isEffect": false
+              },
+              {
+                "text": "超裂傷",
+                "isEffect": true,
+                "effectName": "超裂傷",
+                "effectDesc": "防禦相關能力減少12%，累計受到最大生命值30%的傷害時，額外受到施加者攻擊力數值220%的真理傷害，並重置累計值"
+              },
+              {
+                "text": "傷害，並使目標1回合內獲得",
+                "isEffect": false
+              },
+              {
+                "text": "裂傷",
+                "isEffect": true,
+                "effectName": "裂傷",
+                "effectDesc": "防禦相關能力減少8%，累計受到最大生命值30%的傷害時，額外受到施加者攻擊力數值220%的傷害，並重置累計值"
+              },
+              {
+                "text": "效果",
+                "isEffect": false
+              }
+            ]
+          },
+          {
+            "lv": 2,
+            "name": "主動技能-等級2",
+            "description": "對敵方全體造成攻擊力220%的超裂傷傷害，並使目標1回合內獲得裂傷效果",
+            "effects": [
+              {
+                "text": "對敵方全體造成攻擊力220%的",
+                "isEffect": false
+              },
+              {
+                "text": "超裂傷",
+                "isEffect": true,
+                "effectName": "超裂傷",
+                "effectDesc": "防禦相關能力減少12%，累計受到最大生命值30%的傷害時，額外受到施加者攻擊力數值220%的真理傷害，並重置累計值"
+              },
+              {
+                "text": "傷害，並使目標1回合內獲得",
+                "isEffect": false
+              },
+              {
+                "text": "裂傷",
+                "isEffect": true,
+                "effectName": "裂傷",
+                "effectDesc": "防禦相關能力減少8%，累計受到最大生命值30%的傷害時，額外受到施加者攻擊力數值220%的傷害，並重置累計值"
+              },
+              {
+                "text": "效果",
+                "isEffect": false
+              }
+            ]
+          },
+          {
+            "lv": 3,
+            "name": "主動技能-等級3",
+            "description": "對敵方全體造成攻擊力325%的超裂傷傷害，並使目標1回合內獲得裂傷效果",
+            "effects": [
+              {
+                "text": "對敵方全體造成攻擊力325%的",
+                "isEffect": false
+              },
+              {
+                "text": "超裂傷",
+                "isEffect": true,
+                "effectName": "超裂傷",
+                "effectDesc": "防禦相關能力減少12%，累計受到最大生命值30%的傷害時，額外受到施加者攻擊力數值220%的真理傷害，並重置累計值"
+              },
+              {
+                "text": "傷害，並使目標1回合內獲得",
+                "isEffect": false
+              },
+              {
+                "text": "裂傷",
+                "isEffect": true,
+                "effectName": "裂傷",
+                "effectDesc": "防禦相關能力減少8%，累計受到最大生命值30%的傷害時，額外受到施加者攻擊力數值220%的傷害，並重置累計值"
+              },
+              {
+                "text": "效果",
+                "isEffect": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "passiveSkills": [
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1173_p1",
+        "name": "仇視",
+        "description": "戰鬥開始時，使我方角色1回合內防禦力增加15%，使自己和我方最大生命值最低的角色獲得仇視效果，我方回合結束時，使1名未帶有仇視效果的我方角色獲得仇視效果，當我方角色攻擊時，如果帶有仇視效果，對目標額外造成仇視記錄值100%的額外傷害",
+        "effects": [
+          {
+            "text": "戰鬥開始時，使我方角色1回合內防禦力增加15%，使自己和我方最大生命值最低的角色獲得",
+            "isEffect": false
+          },
+          {
+            "text": "仇視",
+            "isEffect": true,
+            "effectName": "仇視",
+            "effectDesc": "受到傷害時，吸收受到傷害量的30%，並將抵擋值記錄至仇視中，記錄值最多不得超過持有者初始生命值的100%"
+          },
+          {
+            "text": "效果，我方回合結束時，使1名未帶有",
+            "isEffect": false
+          },
+          {
+            "text": "仇視",
+            "isEffect": true,
+            "effectName": "仇視",
+            "effectDesc": "受到傷害時，吸收受到傷害量的30%，並將抵擋值記錄至仇視中，記錄值最多不得超過持有者初始生命值的100%"
+          },
+          {
+            "text": "效果的我方角色獲得",
+            "isEffect": false
+          },
+          {
+            "text": "仇視",
+            "isEffect": true,
+            "effectName": "仇視",
+            "effectDesc": "受到傷害時，吸收受到傷害量的30%，並將抵擋值記錄至仇視中，記錄值最多不得超過持有者初始生命值的100%"
+          },
+          {
+            "text": "效果，當我方角色攻擊時，如果帶有",
+            "isEffect": false
+          },
+          {
+            "text": "仇視",
+            "isEffect": true,
+            "effectName": "仇視",
+            "effectDesc": "受到傷害時，吸收受到傷害量的30%，並將抵擋值記錄至仇視中，記錄值最多不得超過持有者初始生命值的100%"
+          },
+          {
+            "text": "效果，對目標額外造成",
+            "isEffect": false
+          },
+          {
+            "text": "仇視",
+            "isEffect": true,
+            "effectName": "仇視",
+            "effectDesc": "受到傷害時，吸收受到傷害量的30%，並將抵擋值記錄至仇視中，記錄值最多不得超過持有者初始生命值的100%"
+          },
+          {
+            "text": "記錄值100%的額外傷害",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1173_p1.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1173_p2",
+        "name": "憤怒",
+        "description": "當我方帶有仇視效果的角色行動後，自己獲得1個憤怒效果，限疊加4次，使我方全體防禦力和格擋率增加4%，最多增加16%，並使該角色回復自己最大生命值8%的生命，該效果不受回復率影響",
+        "effects": [
+          {
+            "text": "當我方帶有",
+            "isEffect": false
+          },
+          {
+            "text": "仇視",
+            "isEffect": true,
+            "effectName": "仇視",
+            "effectDesc": "受到傷害時，吸收受到傷害量的30%，並將抵擋值記錄至仇視中，記錄值最多不得超過持有者初始生命值的100%"
+          },
+          {
+            "text": "效果的角色行動後，自己獲得1個",
+            "isEffect": false
+          },
+          {
+            "text": "憤怒",
+            "isEffect": true,
+            "effectName": "憤怒",
+            "effectDesc": "最大生命值增加6%，受到全體技能傷害減少3%"
+          },
+          {
+            "text": "效果，限疊加4次，使我方全體防禦力和格擋率增加4%，最多增加16%，並使該角色回復自己最大生命值8%的生命，該效果不受回復率影響",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1173_p2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1173_p3",
+        "name": "狂怒打擊",
+        "description": "使我方角色所有能力值增加18%，自己的攻擊相關能力和造成傷害增加16%，當自己生命值首次低於70%、50%、30%時，立即釋放自己的1級、2級、3級主動技能技能，當自己憤怒效果達到4個時，立即對敵方全體造成攻擊力190%的血湧傷害",
+        "effects": [
+          {
+            "text": "使我方角色所有能力值增加18%，自己的攻擊相關能力和造成傷害增加16%，當自己生命值首次低於70%、50%、30%時，立即釋放自己的1級、2級、3級主動技能技能，當自己",
+            "isEffect": false
+          },
+          {
+            "text": "憤怒",
+            "isEffect": true,
+            "effectName": "憤怒",
+            "effectDesc": "最大生命值增加6%，受到全體技能傷害減少3%"
+          },
+          {
+            "text": "效果達到4個時，立即對敵方全體造成攻擊力190%的",
+            "isEffect": false
+          },
+          {
+            "text": "血湧",
+            "isEffect": true,
+            "effectName": "血湧",
+            "effectDesc": "敵方生命值比例不高於自己時，本次技能造成傷害增加150%，不低於自己時本次技能額外造成自己最大生命值6%的額外傷害"
+          },
+          {
+            "text": "傷害",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1173_p3.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1173_p4",
+        "name": "力量解放強化",
+        "description": "力量解放後，賦予自己1回合內基本能力值增加10%的效果",
+        "effects": [
+          {
+            "text": "力量解放後，賦予自己1回合內基本能力值增加10%的效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_1.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1173_p5",
+        "name": "Weak",
+        "description": "造成Weak時，賦予自己1回合內造成傷害增加10%的效果",
+        "effects": [
+          {
+            "text": "造成Weak時，賦予自己1回合內造成傷害增加10%的效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "resonance",
+        "id": "1173_rp2",
+        "name": "憤怒",
+        "description": "當我方帶有仇視效果的角色行動後，自己獲得1個憤怒效果，限疊加4次，使我方全體防禦力和格擋率增加4%，最多增加16%，使該角色回復自己最大生命值8%的生命，該效果不受回復率影響，如果該角色帶有無法回復生命效果，使該角色獲得1回合內最大生命值15%的護盾",
+        "effects": [
+          {
+            "text": "當我方帶有",
+            "isEffect": false
+          },
+          {
+            "text": "仇視",
+            "isEffect": true,
+            "effectName": "仇視",
+            "effectDesc": "受到傷害時，吸收受到傷害量的30%，並將抵擋值記錄至仇視中，記錄值最多不得超過持有者初始生命值的100%"
+          },
+          {
+            "text": "效果的角色行動後，自己獲得1個",
+            "isEffect": false
+          },
+          {
+            "text": "憤怒",
+            "isEffect": true,
+            "effectName": "憤怒",
+            "effectDesc": "最大生命值增加6%，受到全體技能傷害減少3%"
+          },
+          {
+            "text": "效果，限疊加4次，使我方全體防禦力和格擋率增加4%，最多增加16%，使該角色回復自己最大生命值8%的生命，該效果不受回復率影響，如果該角色帶有無法回復生命效果，使該角色獲得1回合內最大生命值15%的護盾",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1173_p2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "orb",
+        "id": "1173_ep9",
+        "name": null,
+        "description": "我方角色帶有仇視效果時，受到傷害和額外傷害減少10%，自己釋放主動技能後，依照釋放主動技能的等級，使自己1回合內攻擊力增加6%、8%、12%",
+        "effects": [
+          {
+            "text": "我方角色帶有",
+            "isEffect": false
+          },
+          {
+            "text": "仇視",
+            "isEffect": true,
+            "effectName": "仇視",
+            "effectDesc": "受到傷害時，吸收受到傷害量的30%，並將抵擋值記錄至仇視中，記錄值最多不得超過持有者初始生命值的100%"
+          },
+          {
+            "text": "效果時，受到傷害和額外傷害減少10%，自己釋放主動技能後，依照釋放主動技能的等級，使自己1回合內攻擊力增加6%、8%、12%",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-orb/Equip_HE_UR_1173.png"
+      }
+    ],
+    "tiers": [
+      {
+        "tier": 1,
+        "effects": [
+          {
+            "description": "戰鬥開始時，1回合內使自己獲得最大生命5%的護盾"
+          },
+          {
+            "description": "自己生命值高於90%時，免疫阻斷效果"
+          },
+          {
+            "description": "戰鬥開始時，使自己暴擊傷害增加10%"
+          },
+          {
+            "description": "獲得憤怒效果時使自身下一次技能傷害增加4%，限疊加2層"
+          },
+          {
+            "description": "當我方回合時，1回合內使自己獲得最大生命5%的護盾"
+          }
+        ]
+      },
+      {
+        "tier": 2,
+        "effects": [
+          {
+            "description": "戰鬥開始時，1回合內使自己最大生命值增加10%"
+          },
+          {
+            "description": "戰鬥開始時，使自己吸血率增加5%"
+          },
+          {
+            "description": "受到單次傷害超過自己最大生命值20%後使自己造成傷害增加8%"
+          },
+          {
+            "description": "戰鬥中主動技能傷害增加5%"
+          },
+          {
+            "description": "戰鬥開始時，使自己最大生命值增加10%"
+          }
+        ]
+      },
+      {
+        "tier": 3,
+        "effects": [
+          {
+            "description": "戰鬥開始時，1回合內使自己受到主動技能傷害減少5%"
+          },
+          {
+            "description": "我方角色暴擊防禦增加6%"
+          },
+          {
+            "description": "我方【安定區】角色破擊率增加5%"
+          },
+          {
+            "description": "生命值首次低於70%時解除自身控制效果和Weak效果並免疫控制和Weak效果"
+          },
+          {
+            "description": "戰鬥開始時，使自己受到主動技能傷害減少5%"
+          }
+        ]
+      }
+    ],
+    "effectDefs": {
+      "血湧": "*血湧：敵方生命值比例不高於自己時，本次技能造成傷害增加150%，不低於自己時本次技能額外造成自己最大生命值6%的額外傷害",
+      "裂傷": "*裂傷：防禦相關能力減少8%，累計受到最大生命值30%的傷害時，額外受到施加者攻擊力數值220%的傷害，並重置累計值",
+      "真理": "*真理：該傷害無視分擔效果，並且忽略目標護盾，無視額外傷害減少效果",
+      "超裂傷": "*超裂傷：防禦相關能力減少12%，累計受到最大生命值30%的傷害時，額外受到施加者攻擊力數值220%的真理傷害，並重置累計值",
+      "仇視": "*仇視：受到傷害時，吸收受到傷害量的30%，並將抵擋值記錄至仇視中，記錄值最多不得超過持有者初始生命值的100%",
+      "憤怒": "*憤怒：最大生命值增加6%，受到全體技能傷害減少3%"
     }
   }
 ]
