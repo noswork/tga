@@ -8143,6 +8143,24 @@
     }
   },
   {
+    "id": "Equip_Special_1089_Hp",
+    "imgFile": "Equip_Special_1089_Hp.png",
+    "iconUrl": "/assets/cells-icon/Equip_Special_1089_Hp.png",
+    "name": "再生細胞（Toka Kirishima專屬）",
+    "rarity": null,
+    "statType": null,
+    "baseStat": null,
+    "stat1": null,
+    "stat2": null,
+    "stat3": null,
+    "stat4": null,
+    "factors": [],
+    "description": null,
+    "uniqueSkillName": "再生細胞（Toka Kirishima專屬）",
+    "uniqueSkillSegments": [],
+    "effectDefs": {}
+  },
+  {
     "id": "Equip_Special_1090_Hp",
     "imgFile": "Equip_Special_1090_Hp.png",
     "iconUrl": "/assets/cells-icon/Equip_Special_1090_Hp.png",
@@ -8706,6 +8724,76 @@
     }
   },
   {
+    "id": "Equip_Special_1129_Atk",
+    "imgFile": "Equip_Special_1129_Atk.png",
+    "iconUrl": "/assets/cells-icon/Equip_Special_1129_Atk.png",
+    "name": "強襲細胞【一週年】",
+    "rarity": 6,
+    "statType": "ATK",
+    "baseStat": null,
+    "stat1": null,
+    "stat2": null,
+    "stat3": null,
+    "stat4": null,
+    "factors": [
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      }
+    ],
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【一週年】",
+    "uniqueSkillSegments": [
+      {
+        "text": "戰鬥開始時，使我方全體所有能力值增加6%，最大生命值增加15%，當我方其他角色使用主動技能後，自己立即技能等級上升，當自己使用主動技能後，立刻觸發絕對追擊，對當前生命值比例最低的敵人造成攻擊力210%的",
+        "isEffect": false
+      },
+      {
+        "text": "穿刺",
+        "isEffect": true,
+        "effectName": "穿刺",
+        "effectDesc": "*穿刺：無視目標的防禦力"
+      },
+      {
+        "text": "傷害，攻擊後如果目標生命值低於60%或死亡，則對敵方全體造成自己攻擊力數值320%的",
+        "isEffect": false
+      },
+      {
+        "text": "穿刺",
+        "isEffect": true,
+        "effectName": "穿刺",
+        "effectDesc": "*穿刺：無視目標的防禦力"
+      },
+      {
+        "text": "傷害",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "穿刺": "*穿刺：無視目標的防禦力"
+    }
+  },
+  {
     "id": "Equip_Special_1133_Atk",
     "imgFile": "Equip_Special_1133_Atk.png",
     "iconUrl": "/assets/cells-icon/Equip_Special_1133_Atk.png",
@@ -9216,5 +9304,23 @@
     "effectDefs": {
       "祝福": "*祝福：造成傷害和格擋率增加4%"
     }
+  },
+  {
+    "id": "Equip_Special_1142_Hp",
+    "imgFile": "Equip_Special_1142_Hp.png",
+    "iconUrl": "/assets/cells-icon/Equip_Special_1142_Hp.png",
+    "name": "再生細胞（高槻泉專屬）",
+    "rarity": null,
+    "statType": null,
+    "baseStat": null,
+    "stat1": null,
+    "stat2": null,
+    "stat3": null,
+    "stat4": null,
+    "factors": [],
+    "description": null,
+    "uniqueSkillName": "再生細胞（高槻泉專屬）",
+    "uniqueSkillSegments": [],
+    "effectDefs": {}
   }
 ]
