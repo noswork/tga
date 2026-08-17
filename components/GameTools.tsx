@@ -2,9 +2,10 @@
 import React, { useEffect, useState } from 'react';
 import { Lang } from '../types';
 import { translations } from '../constants';
-import { Map as MapIcon, Wrench, AlertOctagon, ChevronRight, Lock, LayoutGrid } from 'lucide-react';
+import { Map as MapIcon, Wrench, AlertOctagon, ChevronRight, Lock, LayoutGrid, Activity } from 'lucide-react';
 import { StrongholdMap } from './tools/StrongholdMap';
 import { TierlistTool } from './tools/TierlistTool';
+import { ActiveCellHelper } from './tools/ActiveCellHelper';
 
 interface GameToolsProps {
   lang: Lang;
@@ -51,6 +52,18 @@ export const GameTools: React.FC<GameToolsProps> = ({ lang }) => {
       statusBg: 'bg-green-400/10 border-green-400/30',
       primaryColor: 'text-ghoul-red',
       hoverBorder: 'group-hover:border-ghoul-red'
+    },
+    {
+      id: 'activecell',
+      title: '活性細胞戰力計算器',
+      description: '深淵戰域 (Rogue) 活性細胞養成輔助。每回合輸入遊戲提供的三個選項，即時計算 CP 增益並標示最佳選擇。',
+      icon: Activity,
+      actionLabel: '開啟計算器',
+      status: 'ONLINE',
+      statusColor: 'text-green-400',
+      statusBg: 'bg-green-400/10 border-green-400/30',
+      primaryColor: 'text-ghoul-red',
+      hoverBorder: 'group-hover:border-ghoul-red'
     }
   ];
 
@@ -69,6 +82,10 @@ export const GameTools: React.FC<GameToolsProps> = ({ lang }) => {
         <TierlistTool lang={lang} onClose={() => setActiveTool(null)} />
       </div>
     );
+  }
+
+  if (activeTool === 'activecell') {
+    return <ActiveCellHelper onClose={() => setActiveTool(null)} />;
   }
 
   return (
