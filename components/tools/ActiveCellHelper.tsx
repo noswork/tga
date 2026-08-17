@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react';
-import { X, Activity } from 'lucide-react';
+import { X } from 'lucide-react';
 import heroCalcData from '../../gamedata/hero_calc_data.json';
 import heroNamesZh from '../../gamedata/hero_names_zh.json';
 
@@ -19,12 +19,12 @@ const TOTAL_ROUNDS = 30;
 
 interface StatDef { id: string; label: string; kind: 'flat' | 'rate' | 'sec'; base?: 'Atk'|'Def'|'Hp'; w?: number; thr?: number; }
 const STAT_DEFS: StatDef[] = [
-  { id: 'AtkFixed', label: 'ATK（固定）', kind: 'flat', base: 'Atk' },
-  { id: 'DefFixed', label: 'DEF（固定）', kind: 'flat', base: 'Def' },
-  { id: 'HpFixed',  label: 'HP（固定）',  kind: 'flat', base: 'Hp'  },
-  { id: 'AtkRate', label: 'ATK 因子', kind: 'rate', base: 'Atk' },
-  { id: 'DefRate', label: 'DEF 因子', kind: 'rate', base: 'Def' },
-  { id: 'HpRate',  label: 'HP 因子',  kind: 'rate', base: 'Hp'  },
+  { id: 'AtkFixed', label: '攻擊', kind: 'flat', base: 'Atk' },
+  { id: 'DefFixed', label: '防禦', kind: 'flat', base: 'Def' },
+  { id: 'HpFixed',  label: '生命',  kind: 'flat', base: 'Hp'  },
+  { id: 'AtkRate', label: '攻擊因子', kind: 'rate', base: 'Atk' },
+  { id: 'DefRate', label: '防禦因子', kind: 'rate', base: 'Def' },
+  { id: 'HpRate',  label: '生命因子',  kind: 'rate', base: 'Hp'  },
   { id: 'Crit',         label: '暴擊率',     kind: 'sec', w: 3500 },
   { id: 'Uncrit',       label: '暴擊抵抗',   kind: 'sec', w: 3500 },
   { id: 'CritDeepen',   label: '暴擊傷害',   kind: 'sec', w: 3000, thr: 1.5 },
@@ -126,6 +126,7 @@ export const ActiveCellHelper: React.FC<Props> = ({ onClose }) => {
   const [flatHp, setFlatHp] = useState(START_FLAT.Hp);
   const [slots, setSlots] = useState<Slot[]>(Array.from({ length: NUM_SLOTS }, emptySlot));
   const [opts, setOpts] = useState<Opt[]>(Array.from({ length: NUM_OPTS }, emptyOpt));
+  const [tab, setTab] = useState<'setup' | 'round'>('setup');
 
   // ── Computed base stats ─────────────────────────────────────────────────
 
@@ -294,38 +295,44 @@ export const ActiveCellHelper: React.FC<Props> = ({ onClose }) => {
   // ── JSX ─────────────────────────────────────────────────────────────────
 
   return (
-    <div className="fixed inset-0 z-50 pt-14 md:pt-24 bg-ccg-light dark:bg-ghoul-black flex flex-col">
-      <div className="flex-grow overflow-y-auto">
-        <div className="w-full max-w-4xl mx-auto px-4 py-6 space-y-5 text-sm">
+    <div className="fixed inset-0 z-50 pt-14 md:pt-24 bg-ccg-light dark:bg-ghoul-black flex flex-col overflow-hidden">
+      <div className="relative z-10 flex-1 flex flex-col overflow-hidden">
+        <div className="w-full max-w-7xl mx-auto px-4 py-4 flex flex-col gap-3 h-full overflow-hidden">
           {/* Header */}
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between bg-white dark:bg-black/60 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-2.5 shrink-0">
             <div className="flex items-center gap-3">
-              <Activity className="text-ghoul-red" size={28} />
-              <div>
-                <p className="text-xs uppercase tracking-[0.25em] text-ghoul-red">深淵戰域</p>
-                <h2 className="text-2xl font-bold">活性細胞戰力計算器</h2>
-              </div>
+              <img src="/assets/xbyj/XBYJ_showIcon.png" alt="" className="w-10 h-10" />
+              <h2 className="text-xl md:text-2xl font-bold text-black dark:text-white">細胞研究戰力計算器</h2>
             </div>
             <div className="flex items-center gap-3">
-              <div className="text-right">
-                <div className="text-xs text-gray-500 dark:text-gray-400">
+              <div className="text-right hidden sm:block">
+                <div className="text-sm text-gray-600 dark:text-gray-300">
                   回合 {Math.min(round, TOTAL_ROUNDS)} / {TOTAL_ROUNDS}
                 </div>
-                <button onClick={resetRun} className="mt-1 px-3 py-1 text-xs rounded border border-gray-400 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-                  新回合
-                </button>
               </div>
-              <button onClick={onClose} className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+              <button onClick={resetRun} className="px-3 py-1.5 text-sm rounded border border-gray-400 dark:border-gray-500 text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-colors">
+                新回合
+              </button>
+              <button onClick={onClose} className="p-2 rounded-full text-gray-700 dark:text-white hover:bg-gray-200 dark:hover:bg-white/10 transition-colors">
                 <X size={24} />
               </button>
             </div>
           </div>
 
+          {/* Mobile tab switcher */}
+          <div className="flex md:hidden gap-1 shrink-0 bg-gray-200 dark:bg-black/50 rounded-lg p-1">
+            <button onClick={() => setTab('setup')} className={`flex-1 px-2 py-1.5 text-sm rounded transition-colors ${tab==='setup'?'bg-ghoul-red text-white font-medium':'text-gray-600 dark:text-gray-300'}`}>角色設定</button>
+            <button onClick={() => setTab('round')} className={`flex-1 px-2 py-1.5 text-sm rounded transition-colors ${tab==='round'?'bg-ghoul-red text-white font-medium':'text-gray-600 dark:text-gray-300'}`}>回合 {Math.min(round, TOTAL_ROUNDS)} 選項</button>
+          </div>
+
+          <div className="flex-1 min-h-0 grid grid-cols-1 md:grid-cols-2 gap-3">
+          {/* ── Left column: hero base + cell state ── */}
+          <div className={`${tab==='setup'?'flex':'hidden'} md:flex flex-col gap-3 min-h-0 overflow-y-auto pr-1`}>
           {/* Hero Base */}
-          <div className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white/80 dark:bg-black/40 p-4 space-y-3">
+          <div className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-black/50 p-3.5 space-y-3 shrink-0 text-black dark:text-white">
             <div className="flex items-center gap-3">
-              <h3 className="font-semibold">角色基礎屬性</h3>
-              <label className="ml-auto flex items-center gap-2 text-xs cursor-pointer">
+              <h3 className="font-semibold text-base">角色基礎屬性</h3>
+              <label className="ml-auto flex items-center gap-1.5 text-sm cursor-pointer">
                 <input type="checkbox" checked={manualMode} onChange={e => setManualMode(e.target.checked)} className="rounded" />
                 手動輸入
               </label>
@@ -333,54 +340,54 @@ export const ActiveCellHelper: React.FC<Props> = ({ onClose }) => {
 
             {!manualMode ? (
               <>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 gap-2.5">
                   <label className="flex flex-col gap-1">
-                    <span className="text-xs text-gray-500">角色（輸入搜尋）</span>
-                    <select value={heroId} onChange={e => setHeroId(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1.5 text-sm">
+                    <span className="text-xs text-gray-500 dark:text-gray-400">角色（輸入搜尋）</span>
+                    <select value={heroId} onChange={e => setHeroId(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2.5 py-1.5 text-sm text-black dark:text-white">
                       <option value="">-- 請選擇角色 --</option>
                       {heroOptions.map(h => <option key={h.id} value={h.id}>{h.label}</option>)}
                     </select>
                   </label>
-                  <div className="grid grid-cols-2 gap-2">
-                    <label className="flex flex-col gap-1">
-                      <span className="text-xs text-gray-500">等級</span>
-                      <input type="number" min="1" max="500" value={heroLv} onChange={e => setHeroLv(+e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1.5 text-sm" />
-                    </label>
-                    <label className="flex flex-col gap-1">
-                      <span className="text-xs text-gray-500">星級突破</span>
-                      <select value={heroStar} onChange={e => setHeroStar(+e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1.5 text-sm">
-                        {[0,1,2,3,4,5,6].map(s => <option key={s} value={s}>{s}</option>)}
-                      </select>
-                    </label>
-                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-2.5">
+                  <label className="flex flex-col gap-1">
+                    <span className="text-xs text-gray-500 dark:text-gray-400">等級</span>
+                    <input type="number" min="1" max="500" value={heroLv} onChange={e => setHeroLv(+e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2.5 py-1.5 text-sm text-black dark:text-white" />
+                  </label>
+                  <label className="flex flex-col gap-1">
+                    <span className="text-xs text-gray-500 dark:text-gray-400">星級突破</span>
+                    <select value={heroStar} onChange={e => setHeroStar(+e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2.5 py-1.5 text-sm text-black dark:text-white">
+                      {[0,1,2,3,4,5,6].map(s => <option key={s} value={s}>{s}</option>)}
+                    </select>
+                  </label>
                 </div>
                 <div className="grid grid-cols-3 gap-2">
                   <label className="flex flex-col gap-1">
-                    <span className="text-xs text-gray-500">協同 ATK (0-30)</span>
-                    <input type="number" min="0" max="30" value={bondAtk} onChange={e => setBondAtk(+e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1.5 text-sm" />
+                    <span className="text-xs text-gray-500 dark:text-gray-400">協同 ATK</span>
+                    <input type="number" min="0" max="30" value={bondAtk} onChange={e => setBondAtk(+e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1.5 text-sm text-black dark:text-white" />
                   </label>
                   <label className="flex flex-col gap-1">
-                    <span className="text-xs text-gray-500">協同 DEF (0-30)</span>
-                    <input type="number" min="0" max="30" value={bondDef} onChange={e => setBondDef(+e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1.5 text-sm" />
+                    <span className="text-xs text-gray-500 dark:text-gray-400">協同 DEF</span>
+                    <input type="number" min="0" max="30" value={bondDef} onChange={e => setBondDef(+e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1.5 text-sm text-black dark:text-white" />
                   </label>
                   <label className="flex flex-col gap-1">
-                    <span className="text-xs text-gray-500">協同 HP (0-30)</span>
-                    <input type="number" min="0" max="30" value={bondHp} onChange={e => setBondHp(+e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1.5 text-sm" />
+                    <span className="text-xs text-gray-500 dark:text-gray-400">協同 HP</span>
+                    <input type="number" min="0" max="30" value={bondHp} onChange={e => setBondHp(+e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1.5 text-sm text-black dark:text-white" />
                   </label>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   <label className="flex flex-col gap-1">
-                    <span className="text-xs text-gray-500">彩虹潛能 Lv7 (0-9)</span>
-                    <input type="number" min="0" max="9" value={pot7} onChange={e => setPot7(+e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1.5 text-sm" />
+                    <span className="text-xs text-gray-500 dark:text-gray-400">彩虹潛能 Lv7</span>
+                    <input type="number" min="0" max="9" value={pot7} onChange={e => setPot7(+e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2.5 py-1.5 text-sm text-black dark:text-white" />
                   </label>
                   <label className="flex flex-col gap-1">
-                    <span className="text-xs text-gray-500">彩虹潛能 Lv6 (0-9)</span>
-                    <input type="number" min="0" max="9" value={pot6} onChange={e => setPot6(+e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1.5 text-sm" />
+                    <span className="text-xs text-gray-500 dark:text-gray-400">彩虹潛能 Lv6</span>
+                    <input type="number" min="0" max="9" value={pot6} onChange={e => setPot6(+e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2.5 py-1.5 text-sm text-black dark:text-white" />
                   </label>
                 </div>
                 {baseStats && (
-                  <div className="text-xs text-gray-500 bg-gray-50 dark:bg-gray-900/50 rounded p-2">
-                    計算基礎值：ATK <b className="text-orange-400">{Math.round(baseStats.Atk)}</b> / DEF <b className="text-blue-400">{Math.round(baseStats.Def)}</b> / HP <b className="text-green-400">{Math.round(baseStats.Hp)}</b>
+                  <div className="text-xs text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-900/60 rounded p-2">
+                    ATK <b className="text-orange-400">{Math.round(baseStats.Atk)}</b> / DEF <b className="text-blue-400">{Math.round(baseStats.Def)}</b> / HP <b className="text-green-400">{Math.round(baseStats.Hp)}</b>
                   </div>
                 )}
               </>
@@ -388,24 +395,24 @@ export const ActiveCellHelper: React.FC<Props> = ({ onClose }) => {
               <div className="grid grid-cols-3 gap-2">
                 <label className="flex flex-col gap-1">
                   <span className="text-xs text-orange-400">ATK Base</span>
-                  <input type="number" min="0" placeholder="30000" value={manualAtk} onChange={e => setManualAtk(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1.5 text-sm" />
+                  <input type="number" min="0" placeholder="30000" value={manualAtk} onChange={e => setManualAtk(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1.5 text-sm text-black dark:text-white" />
                 </label>
                 <label className="flex flex-col gap-1">
                   <span className="text-xs text-blue-400">DEF Base</span>
-                  <input type="number" min="0" placeholder="25000" value={manualDef} onChange={e => setManualDef(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1.5 text-sm" />
+                  <input type="number" min="0" placeholder="25000" value={manualDef} onChange={e => setManualDef(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1.5 text-sm text-black dark:text-white" />
                 </label>
                 <label className="flex flex-col gap-1">
                   <span className="text-xs text-green-400">HP Base</span>
-                  <input type="number" min="0" placeholder="500000" value={manualHp} onChange={e => setManualHp(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1.5 text-sm" />
+                  <input type="number" min="0" placeholder="500000" value={manualHp} onChange={e => setManualHp(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1.5 text-sm text-black dark:text-white" />
                 </label>
               </div>
             )}
           </div>
 
           {/* Current Cell State */}
-          <div className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white/80 dark:bg-black/40 p-4 space-y-3">
-            <div className="flex items-center gap-3">
-              <h3 className="font-semibold">當前活性細胞狀態</h3>
+          <div className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-black/50 p-3.5 space-y-3 shrink-0 text-black dark:text-white">
+            <div className="flex items-center gap-2">
+              <h3 className="font-semibold text-base">強化型RC細胞</h3>
               {totalCP > 0 && <span className="ml-auto text-xs text-gray-500 dark:text-gray-400">≈ <b className="text-black dark:text-white">{fmt(totalCP)}</b> CP</span>}
             </div>
             <div className="grid grid-cols-3 gap-2">
@@ -414,11 +421,12 @@ export const ActiveCellHelper: React.FC<Props> = ({ onClose }) => {
                 const val = s==='Atk'?flatAtk:s==='Def'?flatDef:flatHp;
                 const mx = ATTR_MAX[id];
                 const pct = mx ? Math.min(100, (val/mx)*100) : 0;
+                const label = s==='Atk'?'攻擊':s==='Def'?'防禦':'生命';
                 return (
                   <div key={s} className="flex flex-col gap-1">
                     <div className="flex justify-between text-xs">
-                      <span className={s==='Atk'?'text-orange-400':s==='Def'?'text-blue-400':'text-green-400'}>{s} 固定</span>
-                      <span className="text-gray-400">{val} / {mx}</span>
+                      <span className={s==='Atk'?'text-orange-500 dark:text-orange-400':s==='Def'?'text-blue-500 dark:text-blue-400':'text-green-600 dark:text-green-400'}>{s}:{label}</span>
+                      <span className="text-gray-500 dark:text-gray-400">{val}/{mx}</span>
                     </div>
                     <div className="h-1.5 rounded-full bg-gray-200 dark:bg-gray-700">
                       <div className={`h-full rounded-full transition-all ${pct>=100?'bg-red-500':s==='Atk'?'bg-orange-400':s==='Def'?'bg-blue-400':'bg-green-400'}`} style={{width:`${pct}%`}} />
@@ -434,73 +442,73 @@ export const ActiveCellHelper: React.FC<Props> = ({ onClose }) => {
                 const maxed = mx !== undefined && s.val >= mx - 1e-9;
                 return (
                   <div key={i} className={`rounded border px-2 py-1.5 text-center text-xs transition-colors ${
-                    s.stat ? maxed ? 'border-red-500/60 bg-red-900/20 text-red-300' : 'border-emerald-500/50 bg-emerald-900/20 text-emerald-300' : 'border-gray-600 bg-gray-900/30 text-gray-500'
+                    s.stat ? maxed ? 'border-red-500/60 bg-red-100 dark:bg-red-900/20 text-red-600 dark:text-red-300' : 'border-emerald-500/50 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300' : 'border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-900/30 text-gray-500'
                   }`}>
-                    <div className="text-gray-400 mb-0.5">槽位 {i+1}</div>
-                    {s.stat ? <><div className="font-medium leading-tight">{d?.label??s.stat}</div><div className="font-bold tabular-nums">{(s.val*100).toFixed(2)}%{maxed?' ⚠':''}</div></> : <div className="text-gray-600">空</div>}
+                    <div className="text-gray-500 dark:text-gray-400 mb-0.5">槽 {i+1}</div>
+                    {s.stat ? <><div className="font-medium leading-tight text-[11px]">{d?.label??s.stat}</div><div className="font-bold tabular-nums">{(s.val*100).toFixed(1)}%{maxed?' ⚠':''}</div></> : <div className="text-gray-400 dark:text-gray-600">空</div>}
                   </div>
                 );
               })}
             </div>
           </div>
+          </div>
 
-          {/* Round Options */}
-          <div className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white/80 dark:bg-black/40 p-4 space-y-3">
+          {/* ── Right column: round options ── */}
+          <div className={`${tab==='round'?'flex':'hidden'} md:flex flex-col gap-3 min-h-0 overflow-y-auto pr-1`}>
+          <div className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-black/50 p-3.5 space-y-3 text-black dark:text-white">
             <div className="flex items-center gap-2">
-              <h3 className="font-semibold">回合 {Math.min(round, TOTAL_ROUNDS)} 選項</h3>
-              <span className="text-xs text-gray-500 ml-auto">輸入遊戲提供的 3 個選擇</span>
+              <h3 className="font-semibold text-base">回合 {Math.min(round, TOTAL_ROUNDS)} 選項</h3>
             </div>
-            <div className="text-xs text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-900/50 rounded p-2">
-              <b>固定</b> = 加到固定值，純增益。<b>因子</b> = 佔槽位（取代原內容）。<b>提升</b> = 加到槽位現有屬性，有上限。
+            <div className="text-xs text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-900/50 rounded p-2">
+              <b>屬性提升</b>=純增益。<b>獲得因子</b>=佔槽位。<b>因子提升</b>=疊加現有因子。
             </div>
             {opts.map((o,i) => {
               const r = results[i];
               const isBest = i === bestIdx;
               return (
-                <div key={i} className={`rounded-lg border p-3 transition-all ${isBest?'border-emerald-500 bg-emerald-900/20 shadow shadow-emerald-900/30':!r.ok&&o.kind?'border-gray-600 opacity-60':'border-gray-300 dark:border-gray-700'}`}>
+                <div key={i} className={`rounded border p-2.5 transition-all ${isBest?'border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20':!r.ok&&o.kind?'border-gray-300 dark:border-gray-700 opacity-60':'border-gray-200 dark:border-gray-700'}`}>
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-xs font-bold text-gray-400 w-16">選項 {i+1}</span>
+                    <span className="text-xs font-bold text-gray-500 dark:text-gray-400 w-14">選項 {i+1}</span>
                     <select value={o.kind} onChange={e => {
                       const newKind = e.target.value as OptKind;
                       if (newKind === o.kind) {
                         updateOpt(i, { kind: newKind });
                       } else {
-                        // When switching kind, set appropriate default stat
                         const newStat = newKind === 'flat' ? 'AtkFixed' : newKind === 'factor' ? 'AtkRate' : o.stat;
                         updateOpt(i, { kind: newKind, stat: newStat, valStr: '' });
                       }
-                    }} className="rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1 text-xs">
-                      <option value="flat">固定值</option>
-                      <option value="factor">因子入槽</option>
-                      <option value="boost">提升槽位</option>
+                    }} className="rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1 text-xs text-black dark:text-white">
+                      <option value="flat">屬性提升</option>
+                      <option value="factor">獲得因子</option>
+                      <option value="boost">因子提升</option>
                       <option value="">無/技能</option>
                     </select>
-                    {o.kind && <span className={`ml-auto text-base font-bold tabular-nums ${isBest?'text-emerald-400':r.gain>0?'text-emerald-300':r.gain<0?'text-red-400':'text-gray-500'}`}>
+                    {o.kind && <span className={`ml-auto text-base font-bold tabular-nums ${isBest?'text-emerald-600 dark:text-emerald-400':r.gain>0?'text-emerald-600 dark:text-emerald-300':r.gain<0?'text-red-500 dark:text-red-400':'text-gray-500'}`}>
                       {r.ok||r.gain?(r.gain>=0?'+':'')+fmt(r.gain)+' CP':'n/a'}
                     </span>}
                   </div>
                   {o.kind && (
                     <div className="flex flex-wrap items-center gap-2">
                       {(o.kind==='flat'||o.kind==='factor') && (
-                        <select value={o.stat} onChange={e => updateOpt(i, {stat:e.target.value})} className="rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1 text-xs">
+                        <select value={o.stat} onChange={e => updateOpt(i, {stat:e.target.value})} className="rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1 text-xs text-black dark:text-white">
                           {o.kind==='flat' ? FLAT_STATS.map(s => <option key={s.id} value={s.id}>{s.label}</option>) : FACTOR_STATS.map(s => <option key={s.id} value={s.id}>{s.label}</option>)}
                         </select>
                       )}
                       <div className="flex items-center gap-1">
-                        <input type="number" step="any" min="0" placeholder={o.kind==='flat'?'50':'1.6'} value={o.valStr} onChange={e => updateOpt(i, {valStr:e.target.value})} className="w-24 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1 text-xs" />
-                        {o.kind!=='flat' && <span className="text-xs text-gray-500">%</span>}
+                        <input type="number" step="any" min="0" placeholder={o.kind==='flat'?'50':'1.6'} value={o.valStr} onChange={e => updateOpt(i, {valStr:e.target.value})} className="w-24 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1 text-xs text-black dark:text-white" />
+                        {o.kind!=='flat' && <span className="text-xs text-gray-500 dark:text-gray-400">%</span>}
                       </div>
                       {(o.kind==='factor'||o.kind==='boost') && (
-                        <select value={o.slotIdx} onChange={e => updateOpt(i, {slotIdx:+e.target.value})} className="rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1 text-xs">
-                          {Array.from({length:NUM_SLOTS},(_,si) => <option key={si} value={si}>槽位 {si+1}</option>)}
+                        <select value={o.slotIdx} onChange={e => updateOpt(i, {slotIdx:+e.target.value})} className="rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1 text-xs text-black dark:text-white">
+                          {Array.from({length:NUM_SLOTS},(_,si) => <option key={si} value={si}>槽 {si+1}</option>)}
                         </select>
                       )}
                       <button onClick={() => applyOpt(i)} disabled={!r.ok&&r.gain<=0} className="ml-auto px-3 py-1 text-xs rounded bg-ghoul-red text-white font-medium hover:bg-red-700 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">套用</button>
                     </div>
                   )}
                   {o.kind && r.why && (
-                    <div className="mt-2 text-xs text-gray-500 dark:text-gray-400 flex gap-1">
-                      {isBest && <span className="text-emerald-400 font-bold shrink-0">最佳</span>}
+                    <div className="mt-2 text-xs text-gray-600 dark:text-gray-400 flex gap-1">
+                      {isBest && <span className="text-emerald-600 dark:text-emerald-400 font-bold shrink-0">最佳</span>}
                       <span>{r.why}</span>
                     </div>
                   )}
@@ -508,14 +516,15 @@ export const ActiveCellHelper: React.FC<Props> = ({ onClose }) => {
               );
             })}
             {results.some(r => r.ok && r.gain>0) && (
-              <div className="text-xs text-gray-500 dark:text-gray-400 text-center">
+              <div className="text-xs text-gray-600 dark:text-gray-400 text-center">
                 本回合最佳：選項 {bestIdx+1}，+{fmt(results[bestIdx].gain)} CP
               </div>
             )}
-            <div className="flex items-center gap-3 pt-1">
-              <span className="text-xs text-gray-500">套用後失敗？</span>
-              <button onClick={advanceRound} className="ml-auto px-3 py-1 text-xs rounded border border-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">失敗 → 下一回合</button>
+            <div className="flex justify-end pt-1">
+              <button onClick={advanceRound} className="px-4 py-1.5 text-sm rounded border border-gray-400 dark:border-gray-500 text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-colors">失敗/精力/技能 → 下一回合</button>
             </div>
+          </div>
+          </div>
           </div>
         </div>
       </div>

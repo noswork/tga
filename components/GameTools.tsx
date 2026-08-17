@@ -55,9 +55,10 @@ export const GameTools: React.FC<GameToolsProps> = ({ lang }) => {
     },
     {
       id: 'activecell',
-      title: '活性細胞戰力計算器',
-      description: '深淵戰域 (Rogue) 活性細胞養成輔助。每回合輸入遊戲提供的三個選項，即時計算 CP 增益並標示最佳選擇。',
+      title: '細胞研究戰力計算器',
+      description: '強力型RC細胞養成輔助工具。',
       icon: Activity,
+      iconImg: '/assets/xbyj/XBYJ_showIcon.png',
       actionLabel: '開啟計算器',
       status: 'ONLINE',
       statusColor: 'text-green-400',
@@ -120,7 +121,9 @@ export const GameTools: React.FC<GameToolsProps> = ({ lang }) => {
                     {/* Top Row: Icon & Status */}
                     <div className="flex justify-between items-start mb-6">
                         <div className={`p-4 bg-gray-100 dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-700 ${tool.primaryColor} shadow-inner`}>
-                        <tool.icon size={32} />
+                        {tool.iconImg
+                          ? <img src={tool.iconImg} alt="" className="w-8 h-8 object-contain" />
+                          : <tool.icon size={32} />}
                         </div>
                         
                         <div className={`flex items-center gap-2 px-3 py-1 rounded font-mono text-[10px] font-bold border tracking-widest ${tool.statusBg} ${tool.statusColor}`}>
