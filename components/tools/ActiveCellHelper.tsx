@@ -460,7 +460,16 @@ export const ActiveCellHelper: React.FC<Props> = ({ onClose }) => {
                 <div key={i} className={`rounded-lg border p-3 transition-all ${isBest?'border-emerald-500 bg-emerald-900/20 shadow shadow-emerald-900/30':!r.ok&&o.kind?'border-gray-600 opacity-60':'border-gray-300 dark:border-gray-700'}`}>
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-xs font-bold text-gray-400 w-16">選項 {i+1}</span>
-                    <select value={o.kind} onChange={e => updateOpt(i, {kind: e.target.value as OptKind, valStr:''})} className="rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1 text-xs">
+                    <select value={o.kind} onChange={e => {
+                      const newKind = e.target.value as OptKind;
+                      if (newKind === o.kind) {
+                        updateOpt(i, { kind: newKind });
+                      } else {
+                        // When switching kind, set appropriate default stat
+                        const newStat = newKind === 'flat' ? 'AtkFixed' : newKind === 'factor' ? 'AtkRate' : o.stat;
+                        updateOpt(i, { kind: newKind, stat: newStat, valStr: '' });
+                      }
+                    }} className="rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-1 text-xs">
                       <option value="flat">固定值</option>
                       <option value="factor">因子入槽</option>
                       <option value="boost">提升槽位</option>
