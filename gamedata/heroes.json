@@ -7,9 +7,9 @@
     "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": 479045,
-      "atk": 33515,
-      "def": 22973
+      "hp": null,
+      "atk": null,
+      "def": null
     },
     "attribute": "技",
     "tactic": "輸出",
@@ -261,9 +261,9 @@
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 512354,
-      "atk": 34954,
-      "def": 24503
+      "hp": 582554,
+      "atk": 39054,
+      "def": 27963
     },
     "attribute": "力",
     "tactic": "爆發",
@@ -619,9 +619,9 @@
     "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
-      "hp": 536146,
-      "atk": 34954,
-      "def": 22209
+      "hp": 606346,
+      "atk": 39054,
+      "def": 25669
     },
     "attribute": "技",
     "tactic": "輸出",
@@ -1025,9 +1025,9 @@
     "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": 540904,
-      "atk": 29775,
-      "def": 23738
+      "hp": 611104,
+      "atk": 33875,
+      "def": 27198
     },
     "attribute": "力",
     "tactic": "均衡",
@@ -1310,9 +1310,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 583729,
-      "atk": 35242,
-      "def": 27561
+      "hp": 653929,
+      "atk": 39342,
+      "def": 31021
     },
     "attribute": "技",
     "tactic": "均衡",
@@ -1708,9 +1708,9 @@
     "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 526629,
-      "atk": 35530,
-      "def": 22719
+      "hp": 596829,
+      "atk": 39630,
+      "def": 26179
     },
     "attribute": "力",
     "tactic": "輸出",
@@ -2024,9 +2024,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 517112,
-      "atk": 35242,
-      "def": 21699
+      "hp": 587312,
+      "atk": 39342,
+      "def": 25159
     },
     "attribute": "速",
     "tactic": "輸出",
@@ -2347,12 +2347,12 @@
     "title": "正義搜查官",
     "name": "亞門鋼太朗",
     "fullName": "正義搜查官 亞門鋼太朗",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
-      "hp": 486124,
-      "atk": 21101,
-      "def": 19957
+      "hp": 556324,
+      "atk": 25201,
+      "def": 23417
     },
     "attribute": "力",
     "tactic": "輔助",
@@ -2516,12 +2516,12 @@
     "title": "學長",
     "name": "西尾錦",
     "fullName": "學長 西尾錦",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 462936,
-      "atk": 26512,
-      "def": 16219
+      "hp": 533136,
+      "atk": 30612,
+      "def": 19679
     },
     "attribute": "速",
     "tactic": "均衡",
@@ -2678,9 +2678,9 @@
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 483804,
-      "atk": 34091,
-      "def": 22464
+      "hp": 554004,
+      "atk": 38191,
+      "def": 25924
     },
     "attribute": "力",
     "tactic": "輸出",
@@ -2942,9 +2942,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 512354,
-      "atk": 34379,
-      "def": 21189
+      "hp": 582554,
+      "atk": 38479,
+      "def": 24649
     },
     "attribute": "技",
     "tactic": "均衡",
@@ -3165,9 +3165,9 @@
     "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 474287,
-      "atk": 34379,
-      "def": 23228
+      "hp": 544487,
+      "atk": 38479,
+      "def": 26688
     },
     "attribute": "力",
     "tactic": "控制",
@@ -3479,9 +3479,9 @@
     "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
-      "hp": 502837,
-      "atk": 34091,
-      "def": 25012
+      "hp": 573037,
+      "atk": 38191,
+      "def": 28472
     },
     "attribute": "速",
     "tactic": "控制",
@@ -3744,9 +3744,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 488562,
-      "atk": 32364,
-      "def": 25522
+      "hp": 558762,
+      "atk": 36464,
+      "def": 28982
     },
     "attribute": "速",
     "tactic": "輔助",
@@ -3967,9 +3967,9 @@
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 521870,
-      "atk": 33228,
-      "def": 21444
+      "hp": 592070,
+      "atk": 37328,
+      "def": 24904
     },
     "attribute": "技",
     "tactic": "控制",
@@ -4211,9 +4211,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 569454,
-      "atk": 32077,
-      "def": 25012
+      "hp": 639654,
+      "atk": 36177,
+      "def": 28472
     },
     "attribute": "技",
     "tactic": "均衡",
@@ -4597,9 +4597,9 @@
     "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 564696,
-      "atk": 32940,
-      "def": 24503
+      "hp": 634896,
+      "atk": 37040,
+      "def": 27963
     },
     "attribute": "技",
     "tactic": "輔助",
@@ -4861,9 +4861,9 @@
     "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": 474287,
-      "atk": 32364,
-      "def": 24757
+      "hp": 544487,
+      "atk": 36464,
+      "def": 28217
     },
     "attribute": "速",
     "tactic": "輸出",
@@ -5084,9 +5084,9 @@
     "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": 474287,
-      "atk": 32364,
-      "def": 24757
+      "hp": 544487,
+      "atk": 36464,
+      "def": 28217
     },
     "attribute": "速",
     "tactic": "輸出",
@@ -5328,9 +5328,9 @@
     "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 545662,
-      "atk": 34379,
-      "def": 26542
+      "hp": 615862,
+      "atk": 38479,
+      "def": 30002
     },
     "attribute": "速",
     "tactic": "輸出",
@@ -5889,9 +5889,9 @@
     "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": 521870,
-      "atk": 39846,
-      "def": 26796
+      "hp": 592070,
+      "atk": 43946,
+      "def": 30256
     },
     "attribute": "知",
     "tactic": "爆發",
@@ -6211,12 +6211,12 @@
     "title": "菜鳥搜查官",
     "name": "瀧澤政道",
     "fullName": "菜鳥搜查官 瀧澤政道",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
-      "hp": 421198,
-      "atk": 25997,
-      "def": 16686
+      "hp": 491398,
+      "atk": 30097,
+      "def": 20146
     },
     "attribute": "技",
     "tactic": "均衡",
@@ -6362,9 +6362,9 @@
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 474287,
-      "atk": 34091,
-      "def": 22973
+      "hp": 544487,
+      "atk": 38191,
+      "def": 26433
     },
     "attribute": "速",
     "tactic": "控制",
@@ -6667,9 +6667,9 @@
     "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": 540904,
-      "atk": 31501,
-      "def": 22719
+      "hp": 611104,
+      "atk": 35601,
+      "def": 26179
     },
     "attribute": "速",
     "tactic": "輔助",
@@ -6888,9 +6888,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 469528,
-      "atk": 33515,
-      "def": 23738
+      "hp": 539728,
+      "atk": 37615,
+      "def": 27198
     },
     "attribute": "力",
     "tactic": "控制",
@@ -7142,9 +7142,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 502837,
-      "atk": 34379,
-      "def": 21444
+      "hp": 573037,
+      "atk": 38479,
+      "def": 24904
     },
     "attribute": "速",
     "tactic": "均衡",
@@ -7393,12 +7393,12 @@
     "title": "11區前首領",
     "name": "萬丈數壹",
     "fullName": "11區前首領 萬丈數壹",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 342235,
-      "atk": 18211,
-      "def": 15915
+      "hp": 412435,
+      "atk": 22311,
+      "def": 19375
     },
     "attribute": "技",
     "tactic": "均衡",
@@ -7541,12 +7541,12 @@
     "title": "老練的搜查官",
     "name": "富良太志",
     "fullName": "老練的搜查官 富良太志",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 360909,
-      "atk": 26770,
-      "def": 21358
+      "hp": 431109,
+      "atk": 30870,
+      "def": 24818
     },
     "attribute": "速",
     "tactic": "輸出",
@@ -7692,9 +7692,9 @@
     "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 540904,
-      "atk": 33803,
-      "def": 19660
+      "hp": 611104,
+      "atk": 37903,
+      "def": 23120
     },
     "attribute": "速",
     "tactic": "輸出",
@@ -7992,9 +7992,9 @@
     "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": 545662,
-      "atk": 27185,
-      "def": 25522
+      "hp": 615862,
+      "atk": 31285,
+      "def": 28982
     },
     "attribute": "力",
     "tactic": "輔助",
@@ -8213,9 +8213,9 @@
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 498079,
-      "atk": 30926,
-      "def": 24757
+      "hp": 568279,
+      "atk": 35026,
+      "def": 28217
     },
     "attribute": "技",
     "tactic": "均衡",
@@ -8477,9 +8477,9 @@
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 464770,
-      "atk": 32940,
-      "def": 24503
+      "hp": 534970,
+      "atk": 37040,
+      "def": 27963
     },
     "attribute": "技",
     "tactic": "均衡",
@@ -8810,12 +8810,12 @@
     "title": "指揮官",
     "name": "丸手齋",
     "fullName": "指揮官 丸手齋",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 453661,
-      "atk": 25224,
-      "def": 16219
+      "hp": 523861,
+      "atk": 29324,
+      "def": 19679
     },
     "attribute": "速",
     "tactic": "爆發",
@@ -8961,9 +8961,9 @@
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 469528,
-      "atk": 32077,
-      "def": 25267
+      "hp": 539728,
+      "atk": 36177,
+      "def": 28727
     },
     "attribute": "技",
     "tactic": "爆發",
@@ -9215,9 +9215,9 @@
     "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 474287,
-      "atk": 33803,
-      "def": 23228
+      "hp": 544487,
+      "atk": 37903,
+      "def": 26688
     },
     "attribute": "技",
     "tactic": "均衡",
@@ -9438,9 +9438,9 @@
     "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 507595,
-      "atk": 29487,
-      "def": 25012
+      "hp": 577795,
+      "atk": 33587,
+      "def": 28472
     },
     "attribute": "速",
     "tactic": "輔助",
@@ -9659,9 +9659,9 @@
     "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 469528,
-      "atk": 32364,
-      "def": 24503
+      "hp": 539728,
+      "atk": 36464,
+      "def": 27963
     },
     "attribute": "力",
     "tactic": "輸出",
@@ -9913,9 +9913,9 @@
     "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 445737,
-      "atk": 32652,
-      "def": 25522
+      "hp": 515937,
+      "atk": 36752,
+      "def": 28982
     },
     "attribute": "技",
     "tactic": "輸出",
@@ -10167,9 +10167,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 493320,
-      "atk": 30350,
-      "def": 26287
+      "hp": 563520,
+      "atk": 34450,
+      "def": 29747
     },
     "attribute": "技",
     "tactic": "輔助",
@@ -10441,9 +10441,9 @@
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 469528,
-      "atk": 35242,
-      "def": 21954
+      "hp": 539728,
+      "atk": 39342,
+      "def": 25414
     },
     "attribute": "力",
     "tactic": "均衡",
@@ -10776,9 +10776,9 @@
     "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
-      "hp": 474287,
-      "atk": 33228,
-      "def": 23738
+      "hp": 544487,
+      "atk": 37328,
+      "def": 27198
     },
     "attribute": "速",
     "tactic": "均衡",
@@ -10999,9 +10999,9 @@
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 460012,
-      "atk": 34666,
-      "def": 23483
+      "hp": 530212,
+      "atk": 38766,
+      "def": 26943
     },
     "attribute": "力",
     "tactic": "爆發",
@@ -11301,12 +11301,12 @@
     "title": "瞇瞇眼的率真青年",
     "name": "伊東倉元",
     "fullName": "瞇瞇眼的率真青年 伊東倉元",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
-      "hp": 444386,
-      "atk": 25739,
-      "def": 16219
+      "hp": 514586,
+      "atk": 29839,
+      "def": 19679
     },
     "attribute": "技",
     "tactic": "均衡",
@@ -11449,12 +11449,12 @@
     "title": "艾梅利歐",
     "name": "五里美鄉",
     "fullName": "艾梅利歐 五里美鄉",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
-      "hp": 425835,
-      "atk": 25481,
-      "def": 18321
+      "hp": 496035,
+      "atk": 29581,
+      "def": 21781
     },
     "attribute": "技",
     "tactic": "爆發",
@@ -11600,9 +11600,9 @@
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 469528,
-      "atk": 32940,
-      "def": 24248
+      "hp": 539728,
+      "atk": 37040,
+      "def": 27708
     },
     "attribute": "技",
     "tactic": "控制",
@@ -11841,12 +11841,12 @@
     "title": "解體師",
     "name": "小太郎",
     "fullName": "解體師 小太郎",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": 333098,
-      "atk": 22007,
-      "def": 12480
+      "hp": 403298,
+      "atk": 26107,
+      "def": 15940
     },
     "attribute": "力",
     "tactic": "爆發",
@@ -11989,12 +11989,12 @@
     "title": "蘋果頭",
     "name": "村松喜江",
     "fullName": "蘋果頭 村松喜江",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": 411923,
-      "atk": 22904,
-      "def": 21826
+      "hp": 482123,
+      "atk": 27004,
+      "def": 25286
     },
     "attribute": "力",
     "tactic": "爆發",
@@ -12137,12 +12137,12 @@
     "title": "愛讀書的青年",
     "name": "金木研",
     "fullName": "愛讀書的青年 金木研",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 495400,
-      "atk": 26512,
-      "def": 14584
+      "hp": 565600,
+      "atk": 30612,
+      "def": 18044
     },
     "attribute": "技",
     "tactic": "輸出",
@@ -12288,9 +12288,9 @@
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 645588,
-      "atk": 34954,
-      "def": 22973
+      "hp": 715788,
+      "atk": 39054,
+      "def": 26433
     },
     "attribute": "心",
     "tactic": "均衡",
@@ -12542,9 +12542,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 502837,
-      "atk": 34954,
-      "def": 24757
+      "hp": 573037,
+      "atk": 39054,
+      "def": 28217
     },
     "attribute": "速",
     "tactic": "爆發",
@@ -12802,12 +12802,12 @@
     "title": "啼的跟班",
     "name": "Gagi",
     "fullName": "啼的跟班 Gagi",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 301117,
-      "atk": 23273,
-      "def": 13167
+      "hp": 371317,
+      "atk": 27373,
+      "def": 16627
     },
     "attribute": "技",
     "tactic": "輸出",
@@ -12950,12 +12950,12 @@
     "title": "啼的跟班",
     "name": "Guge",
     "fullName": "啼的跟班 Guge",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 282843,
-      "atk": 23273,
-      "def": 14083
+      "hp": 353043,
+      "atk": 27373,
+      "def": 17543
     },
     "attribute": "力",
     "tactic": "輸出",
@@ -13101,9 +13101,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 559937,
-      "atk": 30926,
-      "def": 29345
+      "hp": 630137,
+      "atk": 35026,
+      "def": 32805
     },
     "attribute": "速",
     "tactic": "輔助",
@@ -13384,9 +13384,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 592294,
-      "atk": 37544,
-      "def": 27051
+      "hp": 662494,
+      "atk": 41644,
+      "def": 30511
     },
     "attribute": "心",
     "tactic": "爆發",
@@ -13744,9 +13744,9 @@
     "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 588488,
-      "atk": 35817,
-      "def": 26796
+      "hp": 658688,
+      "atk": 39917,
+      "def": 30256
     },
     "attribute": "心",
     "tactic": "輸出",
@@ -14157,9 +14157,9 @@
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 483804,
-      "atk": 33803,
-      "def": 22719
+      "hp": 554004,
+      "atk": 37903,
+      "def": 26179
     },
     "attribute": "力",
     "tactic": "爆發",
@@ -14408,12 +14408,12 @@
     "title": "戰場薔薇",
     "name": "真戶曉",
     "fullName": "戰場薔薇 真戶曉",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
-      "hp": 384097,
-      "atk": 25997,
-      "def": 19489
+      "hp": 454297,
+      "atk": 30097,
+      "def": 22949
     },
     "attribute": "速",
     "tactic": "輸出",
@@ -14556,12 +14556,12 @@
     "title": "不屈的篠原",
     "name": "篠原幸紀",
     "fullName": "不屈的篠原 篠原幸紀",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 444386,
-      "atk": 22131,
-      "def": 21125
+      "hp": 514586,
+      "atk": 26231,
+      "def": 24585
     },
     "attribute": "力",
     "tactic": "輸出",
@@ -14704,12 +14704,12 @@
     "title": "可靠的特等搜查官",
     "name": "黑磐巖",
     "fullName": "可靠的特等搜查官 黑磐巖",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 425835,
-      "atk": 21358,
-      "def": 21358
+      "hp": 496035,
+      "atk": 25458,
+      "def": 24818
     },
     "attribute": "力",
     "tactic": "輸出",
@@ -14855,9 +14855,9 @@
     "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 593246,
-      "atk": 35817,
-      "def": 26287
+      "hp": 663446,
+      "atk": 39917,
+      "def": 29747
     },
     "attribute": "知",
     "tactic": "輸出",
@@ -15215,12 +15215,12 @@
     "title": "三等搜查官",
     "name": "草場一平",
     "fullName": "三等搜查官 草場一平",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
-      "hp": 346804,
-      "atk": 21501,
-      "def": 12709
+      "hp": 417004,
+      "atk": 25601,
+      "def": 16169
     },
     "attribute": "速",
     "tactic": "爆發",
@@ -15363,12 +15363,12 @@
     "title": "局員搜查官",
     "name": "中島康智",
     "fullName": "局員搜查官 中島康智",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
-      "hp": 333098,
-      "atk": 21248,
-      "def": 13396
+      "hp": 403298,
+      "atk": 25348,
+      "def": 16856
     },
     "attribute": "速",
     "tactic": "爆發",
@@ -15511,12 +15511,12 @@
     "title": "萬丈跟班",
     "name": "一味",
     "fullName": "萬丈跟班 一味",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 333098,
-      "atk": 18717,
-      "def": 15686
+      "hp": 403298,
+      "atk": 22817,
+      "def": 19146
     },
     "attribute": "力",
     "tactic": "爆發",
@@ -15659,12 +15659,12 @@
     "title": "萬丈跟班",
     "name": "二璐",
     "fullName": "萬丈跟班 二璐",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 333098,
-      "atk": 16945,
-      "def": 17289
+      "hp": 403298,
+      "atk": 21045,
+      "def": 20749
     },
     "attribute": "速",
     "tactic": "均衡",
@@ -15807,12 +15807,12 @@
     "title": "萬丈跟班",
     "name": "三手",
     "fullName": "萬丈跟班 三手",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 365078,
-      "atk": 16945,
-      "def": 15686
+      "hp": 435278,
+      "atk": 21045,
+      "def": 19146
     },
     "attribute": "技",
     "tactic": "輸出",
@@ -15958,9 +15958,9 @@
     "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 588488,
-      "atk": 35817,
-      "def": 27816
+      "hp": 658688,
+      "atk": 39917,
+      "def": 31276
     },
     "attribute": "知",
     "tactic": "爆發",
@@ -16360,9 +16360,9 @@
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 564696,
-      "atk": 35530,
-      "def": 28835
+      "hp": 634896,
+      "atk": 39630,
+      "def": 32295
     },
     "attribute": "心",
     "tactic": "均衡",
@@ -16719,9 +16719,9 @@
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 569454,
-      "atk": 34091,
-      "def": 27816
+      "hp": 639654,
+      "atk": 38191,
+      "def": 31276
     },
     "attribute": "速",
     "tactic": "輔助",
@@ -17014,9 +17014,9 @@
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 570406,
-      "atk": 35702,
-      "def": 27357
+      "hp": 640606,
+      "atk": 39802,
+      "def": 30817
     },
     "attribute": "速",
     "tactic": "控制",
@@ -17411,9 +17411,9 @@
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 595884,
-      "atk": 34289,
-      "def": 27555
+      "hp": 666084,
+      "atk": 38389,
+      "def": 31015
     },
     "attribute": "技",
     "tactic": "輔助",
@@ -17729,9 +17729,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 502837,
-      "atk": 33228,
-      "def": 22719
+      "hp": 573037,
+      "atk": 37328,
+      "def": 26179
     },
     "attribute": "力",
     "tactic": "爆發",
@@ -18024,9 +18024,9 @@
     "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": 555179,
-      "atk": 34954,
-      "def": 27561
+      "hp": 625379,
+      "atk": 39054,
+      "def": 31021
     },
     "attribute": "速",
     "tactic": "均衡",
@@ -18457,9 +18457,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 585633,
-      "atk": 34148,
-      "def": 28198
+      "hp": 655833,
+      "atk": 38248,
+      "def": 31658
     },
     "attribute": "技",
     "tactic": "輔助",
@@ -18818,9 +18818,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 590894,
-      "atk": 35040,
-      "def": 27343
+      "hp": 661094,
+      "atk": 39140,
+      "def": 30803
     },
     "attribute": "力",
     "tactic": "均衡",
@@ -19179,9 +19179,9 @@
     "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 545662,
-      "atk": 33228,
-      "def": 25522
+      "hp": 615862,
+      "atk": 37328,
+      "def": 28982
     },
     "attribute": "力",
     "tactic": "輔助",
@@ -19501,9 +19501,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 550421,
-      "atk": 33515,
-      "def": 25012
+      "hp": 620621,
+      "atk": 37615,
+      "def": 28472
     },
     "attribute": "速",
     "tactic": "控制",
@@ -19897,9 +19897,9 @@
     "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": 572309,
-      "atk": 35271,
-      "def": 28020
+      "hp": 642509,
+      "atk": 39371,
+      "def": 31480
     },
     "attribute": "力",
     "tactic": "控制",
@@ -20305,9 +20305,9 @@
     "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": 574212,
-      "atk": 32652,
-      "def": 27816
+      "hp": 644412,
+      "atk": 36752,
+      "def": 31276
     },
     "attribute": "力",
     "tactic": "輔助",
@@ -20719,9 +20719,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 512354,
-      "atk": 35242,
-      "def": 25267
+      "hp": 582554,
+      "atk": 39342,
+      "def": 28727
     },
     "attribute": "力",
     "tactic": "控制",
@@ -21142,9 +21142,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 536146,
-      "atk": 34091,
-      "def": 23738
+      "hp": 606346,
+      "atk": 38191,
+      "def": 27198
     },
     "attribute": "速",
     "tactic": "均衡",
@@ -21531,9 +21531,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 583729,
-      "atk": 33803,
-      "def": 27306
+      "hp": 653929,
+      "atk": 37903,
+      "def": 30766
     },
     "attribute": "力",
     "tactic": "均衡",
@@ -21837,9 +21837,9 @@
     "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": 589439,
-      "atk": 33688,
-      "def": 28351
+      "hp": 659639,
+      "atk": 37788,
+      "def": 31811
     },
     "attribute": "技",
     "tactic": "輔助",
@@ -22155,9 +22155,9 @@
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 587060,
-      "atk": 32767,
-      "def": 28606
+      "hp": 657260,
+      "atk": 36867,
+      "def": 32066
     },
     "attribute": "速",
     "tactic": "輔助",
@@ -22519,9 +22519,9 @@
     "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 575164,
-      "atk": 34868,
-      "def": 28096
+      "hp": 645364,
+      "atk": 38968,
+      "def": 31556
     },
     "attribute": "力",
     "tactic": "均衡",
@@ -22835,9 +22835,9 @@
     "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 584681,
-      "atk": 34983,
-      "def": 27586
+      "hp": 654881,
+      "atk": 39083,
+      "def": 31046
     },
     "attribute": "速",
     "tactic": "均衡",
@@ -23193,9 +23193,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 585633,
-      "atk": 34120,
-      "def": 28173
+      "hp": 655833,
+      "atk": 38220,
+      "def": 31633
     },
     "attribute": "力",
     "tactic": "輔助",
@@ -23542,9 +23542,9 @@
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 574688,
-      "atk": 35184,
-      "def": 27586
+      "hp": 644888,
+      "atk": 39284,
+      "def": 31046
     },
     "attribute": "技",
     "tactic": "輸出",
@@ -23883,9 +23883,9 @@
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 573737,
-      "atk": 36738,
-      "def": 26618
+      "hp": 643937,
+      "atk": 40838,
+      "def": 30078
     },
     "attribute": "技",
     "tactic": "爆發",
@@ -24348,9 +24348,9 @@
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 599432,
-      "atk": 37573,
-      "def": 27969
+      "hp": 669632,
+      "atk": 41673,
+      "def": 31429
     },
     "attribute": "速",
     "tactic": "輸出",
@@ -24639,9 +24639,9 @@
     "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 581826,
-      "atk": 35616,
-      "def": 26414
+      "hp": 652026,
+      "atk": 39716,
+      "def": 29874
     },
     "attribute": "技",
     "tactic": "爆發",
@@ -24975,9 +24975,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 568678,
-      "atk": 35443,
-      "def": 27113
+      "hp": 638878,
+      "atk": 39543,
+      "def": 30573
     },
     "attribute": "速",
     "tactic": "輸出",
@@ -25387,9 +25387,9 @@
     "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": 614183,
-      "atk": 39069,
-      "def": 28937
+      "hp": 684383,
+      "atk": 43169,
+      "def": 32397
     },
     "attribute": "心",
     "tactic": "爆發",
@@ -25745,9 +25745,9 @@
     "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
-      "hp": 609424,
-      "atk": 36997,
-      "def": 28122
+      "hp": 679624,
+      "atk": 41097,
+      "def": 31582
     },
     "attribute": "速",
     "tactic": "均衡",
@@ -26107,9 +26107,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 594673,
-      "atk": 36968,
-      "def": 27510
+      "hp": 664873,
+      "atk": 41068,
+      "def": 30970
     },
     "attribute": "知",
     "tactic": "輸出",
@@ -26481,9 +26481,9 @@
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 596101,
-      "atk": 34350,
-      "def": 28759
+      "hp": 666301,
+      "atk": 38450,
+      "def": 32219
     },
     "attribute": "技",
     "tactic": "輔助",
@@ -26767,9 +26767,9 @@
     "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 575640,
-      "atk": 36220,
-      "def": 27077
+      "hp": 645840,
+      "atk": 40320,
+      "def": 30537
     },
     "attribute": "技",
     "tactic": "輸出",
@@ -27146,9 +27146,9 @@
     "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
-      "hp": 582302,
-      "atk": 35299,
-      "def": 27535
+      "hp": 652502,
+      "atk": 39399,
+      "def": 30995
     },
     "attribute": "速",
     "tactic": "控制",
@@ -27475,9 +27475,9 @@
     "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": 596101,
-      "atk": 37371,
-      "def": 28020
+      "hp": 666301,
+      "atk": 41471,
+      "def": 31480
     },
     "attribute": "心",
     "tactic": "輸出",
@@ -27841,9 +27841,9 @@
     "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
-      "hp": 588963,
-      "atk": 37256,
-      "def": 27586
+      "hp": 659163,
+      "atk": 41356,
+      "def": 31046
     },
     "attribute": "知",
     "tactic": "輸出",
@@ -28200,9 +28200,9 @@
     "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": 622748,
-      "atk": 33372,
-      "def": 29523
+      "hp": 692948,
+      "atk": 37472,
+      "def": 32983
     },
     "attribute": "心",
     "tactic": "輔助",
@@ -28528,9 +28528,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 598956,
-      "atk": 34062,
-      "def": 29014
+      "hp": 669156,
+      "atk": 38162,
+      "def": 32474
     },
     "attribute": "力",
     "tactic": "輔助",
@@ -28813,9 +28813,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 588012,
-      "atk": 36767,
-      "def": 28555
+      "hp": 658212,
+      "atk": 40867,
+      "def": 32015
     },
     "attribute": "技",
     "tactic": "輸出",
@@ -29147,9 +29147,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 586584,
-      "atk": 34005,
-      "def": 28300
+      "hp": 656784,
+      "atk": 38105,
+      "def": 31760
     },
     "attribute": "技",
     "tactic": "控制",
@@ -29526,9 +29526,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 580398,
-      "atk": 35904,
-      "def": 27281
+      "hp": 650598,
+      "atk": 40004,
+      "def": 30741
     },
     "attribute": "速",
     "tactic": "輸出",
@@ -29891,9 +29891,9 @@
     "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": 591818,
-      "atk": 36824,
-      "def": 28493
+      "hp": 662018,
+      "atk": 40924,
+      "def": 31953
     },
     "attribute": "心",
     "tactic": "輸出",
@@ -30220,9 +30220,9 @@
     "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 599908,
-      "atk": 37026,
-      "def": 27688
+      "hp": 670108,
+      "atk": 41126,
+      "def": 31148
     },
     "attribute": "知",
     "tactic": "輸出",
@@ -30538,9 +30538,9 @@
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 595149,
-      "atk": 32796,
-      "def": 28784
+      "hp": 665349,
+      "atk": 36896,
+      "def": 32244
     },
     "attribute": "力",
     "tactic": "輔助",
@@ -30759,9 +30759,9 @@
     "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 592770,
-      "atk": 34062,
-      "def": 28504
+      "hp": 662970,
+      "atk": 38162,
+      "def": 31964
     },
     "attribute": "速",
     "tactic": "輔助",
@@ -31065,9 +31065,9 @@
     "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
-      "hp": 587184,
-      "atk": 36163,
-      "def": 27890
+      "hp": 657384,
+      "atk": 40263,
+      "def": 31350
     },
     "attribute": "力",
     "tactic": "輸出",
@@ -31472,9 +31472,9 @@
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 589131,
-      "atk": 35386,
-      "def": 28316
+      "hp": 659331,
+      "atk": 39486,
+      "def": 31776
     },
     "attribute": "速",
     "tactic": "均衡",
@@ -31860,9 +31860,9 @@
     "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": 594198,
-      "atk": 35731,
-      "def": 28045
+      "hp": 664398,
+      "atk": 39831,
+      "def": 31505
     },
     "attribute": "力",
     "tactic": "均衡",
@@ -32204,9 +32204,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 590867,
-      "atk": 36422,
-      "def": 28096
+      "hp": 661067,
+      "atk": 40522,
+      "def": 31556
     },
     "attribute": "速",
     "tactic": "輸出",
@@ -32591,9 +32591,9 @@
     "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": 616086,
-      "atk": 33285,
-      "def": 29523
+      "hp": 686286,
+      "atk": 37385,
+      "def": 32983
     },
     "attribute": "速",
     "tactic": "輔助",
@@ -32896,9 +32896,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 597053,
-      "atk": 35040,
-      "def": 29192
+      "hp": 667253,
+      "atk": 39140,
+      "def": 32652
     },
     "attribute": "技",
     "tactic": "輔助",
@@ -33171,9 +33171,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 622272,
-      "atk": 33141,
-      "def": 29218
+      "hp": 692472,
+      "atk": 37241,
+      "def": 32678
     },
     "attribute": "技",
     "tactic": "輔助",
@@ -33498,9 +33498,9 @@
     "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": 613231,
-      "atk": 33630,
-      "def": 29218
+      "hp": 683431,
+      "atk": 37730,
+      "def": 32678
     },
     "attribute": "力",
     "tactic": "輔助",
@@ -33763,12 +33763,12 @@
     "title": "戰無不勝的搜查官",
     "name": "有馬貴將",
     "fullName": "戰無不勝的搜查官 有馬貴將",
-    "rarity": "SP",
+    "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 604666,
-      "atk": 38465,
-      "def": 28682
+      "hp": 674866,
+      "atk": 42565,
+      "def": 32142
     },
     "attribute": "知",
     "tactic": "輸出",
@@ -34076,12 +34076,12 @@
     "title": "激情之翼",
     "name": "霧嶋絢都",
     "fullName": "激情之翼 霧嶋絢都",
-    "rarity": "SP",
+    "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 602287,
-      "atk": 39126,
-      "def": 28555
+      "hp": 672487,
+      "atk": 43226,
+      "def": 32015
     },
     "attribute": "知",
     "tactic": "輸出",
@@ -34398,9 +34398,9 @@
     "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": 621320,
-      "atk": 34868,
-      "def": 28224
+      "hp": 691520,
+      "atk": 38968,
+      "def": 31684
     },
     "attribute": "速",
     "tactic": "均衡",
@@ -34737,9 +34737,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 615134,
-      "atk": 33889,
-      "def": 28912
+      "hp": 685334,
+      "atk": 37989,
+      "def": 32372
     },
     "attribute": "力",
     "tactic": "輔助",
@@ -35050,9 +35050,9 @@
     "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
-      "hp": 617514,
-      "atk": 39357,
-      "def": 28759
+      "hp": 687714,
+      "atk": 43457,
+      "def": 32219
     },
     "attribute": "知",
     "tactic": "均衡",
@@ -35408,9 +35408,9 @@
     "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 609900,
-      "atk": 36019,
-      "def": 28198
+      "hp": 680100,
+      "atk": 40119,
+      "def": 31658
     },
     "attribute": "技",
     "tactic": "均衡",
@@ -35700,12 +35700,12 @@
     "title": "烈焰一擊",
     "name": "霧嶋董香",
     "fullName": "烈焰一擊 霧嶋董香",
-    "rarity": "SP",
+    "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 613707,
-      "atk": 38925,
-      "def": 28402
+      "hp": 683907,
+      "atk": 43025,
+      "def": 31862
     },
     "attribute": "心",
     "tactic": "輸出",
@@ -36104,9 +36104,9 @@
     "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 603714,
-      "atk": 38004,
-      "def": 28300
+      "hp": 673914,
+      "atk": 42104,
+      "def": 31760
     },
     "attribute": "力",
     "tactic": "輸出",
@@ -36480,9 +36480,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 616562,
-      "atk": 36940,
-      "def": 28351
+      "hp": 686762,
+      "atk": 41040,
+      "def": 31811
     },
     "attribute": "力",
     "tactic": "均衡",
@@ -36843,9 +36843,9 @@
     "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 613195,
-      "atk": 33026,
-      "def": 29625
+      "hp": 683395,
+      "atk": 37126,
+      "def": 33085
     },
     "attribute": "力",
     "tactic": "輔助",
@@ -37182,9 +37182,9 @@
     "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 612755,
-      "atk": 36307,
-      "def": 28122
+      "hp": 682955,
+      "atk": 40407,
+      "def": 31582
     },
     "attribute": "技",
     "tactic": "輔助",
@@ -37447,9 +37447,9 @@
     "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
-      "hp": 628458,
-      "atk": 33861,
-      "def": 29370
+      "hp": 698658,
+      "atk": 37961,
+      "def": 32830
     },
     "attribute": "技",
     "tactic": "輔助",
@@ -37766,9 +37766,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 613231,
-      "atk": 33746,
-      "def": 29447
+      "hp": 683431,
+      "atk": 37846,
+      "def": 32907
     },
     "attribute": "力",
     "tactic": "輔助",
@@ -38042,9 +38042,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 609900,
-      "atk": 39414,
-      "def": 28478
+      "hp": 680100,
+      "atk": 43514,
+      "def": 31938
     },
     "attribute": "滅",
     "tactic": "均衡",
@@ -38410,9 +38410,9 @@
     "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
-      "hp": 614183,
-      "atk": 37314,
-      "def": 28224
+      "hp": 684383,
+      "atk": 41414,
+      "def": 31684
     },
     "attribute": "力",
     "tactic": "爆發",
@@ -38712,9 +38712,9 @@
     "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
-      "hp": 618941,
-      "atk": 36163,
-      "def": 28377
+      "hp": 689141,
+      "atk": 40263,
+      "def": 31837
     },
     "attribute": "技",
     "tactic": "輔助",
@@ -39060,9 +39060,9 @@
     "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": 616086,
-      "atk": 37400,
-      "def": 28122
+      "hp": 686286,
+      "atk": 41500,
+      "def": 31582
     },
     "attribute": "技",
     "tactic": "輸出",
@@ -39355,9 +39355,9 @@
     "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
-      "hp": 608473,
-      "atk": 37055,
-      "def": 28606
+      "hp": 678673,
+      "atk": 41155,
+      "def": 32066
     },
     "attribute": "速",
     "tactic": "輔助",
@@ -39692,9 +39692,9 @@
     "rarity": "SSR",
     "organization": "安定區",
     "stats": {
-      "hp": 625127,
-      "atk": 39241,
-      "def": 28606
+      "hp": 695327,
+      "atk": 43341,
+      "def": 32066
     },
     "attribute": "心",
     "tactic": "均衡",
@@ -40100,9 +40100,9 @@
     "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
-      "hp": 613231,
-      "atk": 37745,
-      "def": 28198
+      "hp": 683431,
+      "atk": 41845,
+      "def": 31658
     },
     "attribute": "速",
     "tactic": "輸出",
