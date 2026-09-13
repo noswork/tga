@@ -2,6 +2,7 @@ import React, { useState, useCallback, useMemo } from 'react';
 import { X } from 'lucide-react';
 import heroCalcData from '../../gamedata/hero_calc_data.json';
 import heroNamesZh from '../../gamedata/hero_names_zh.json';
+import heroesJson from '../../gamedata/heroes.json';
 
 // ── Constants ───────────────────────────────────────────────────────────────
 
@@ -53,8 +54,10 @@ const fmt = (n: number) => n >= 10000 ? (n/10000).toFixed(2)+'萬' : Math.round(
 // ── Hero base stat computation (from xbyj.html) ────────────────────────────
 
 interface HeroData { n: string; t?: string; r: number; af: number; df: number; hf: number; aa: number; ad: number; ah: number; grp: string; caps: number[]; rup: number[]; }
+interface HeroJsonEntry { id: string; name: string; title: string; fullName: string; rarity: string; stats: { hp: number | null; atk: number | null; def: number | null }; }
 const HEROES = heroCalcData.heroes as Record<string, HeroData>;
 const HERO_NAMES_ZH = heroNamesZh as Record<string, { name: string; title: string }>;
+const HEROES_JSON = heroesJson as HeroJsonEntry[];
 const RANKS = heroCalcData.ranks as any;
 const BOND = heroCalcData.bond as { Atk: number; Def: number; Hp: number; max: number };
 const GROW = heroCalcData.grow as { growF1: number; growF2: number; growMax: number };
@@ -68,7 +71,15 @@ function computeBase(
   pot6: number, pot7: number
 ): { Atk: number; Def: number; Hp: number } | null {
   const h = HEROES[heroId];
-  if (!h) return null;
+
+  // Fallback: if no calc data, use heroes.json stats (Lv350/6★/bond30/pot7×9)
+  if (!h) {
+    const hJson = HEROES_JSON.find(e => e.id === heroId);
+    if (!hJson || !hJson.stats.atk) return null;
+    // heroes.json has reference stats; return as-is (user can switch to manual for custom config)
+    return { Atk: hJson.stats.atk, Def: hJson.stats.def, Hp: hJson.stats.hp };
+  }
+
   const rk = RANKS[h.grp]?.[String(star)];
   if (!rk) return null;
 
@@ -282,15 +293,16 @@ export const ActiveCellHelper: React.FC<Props> = ({ onClose }) => {
   const currentSlotCP = slots.reduce((acc, s) => acc + (s.stat ? statCP(s.stat, s.val) : 0), 0);
   const totalCP = currentFlatCP + currentSlotCP;
 
-  const heroOptions = useMemo(() =>
-    Object.entries(HEROES).map(([id, h]) => {
-      const zh = HERO_NAMES_ZH[id];
-      const zhName = zh?.name || h.n;
-      const zhTitle = zh?.title || h.t || '';
+  const heroOptions = useMemo(() => {
+    // Build from heroes.json so we include all 138 heroes
+    const byId = new Map(HEROES_JSON.map(h => [h.id, h]));
+    return Array.from(byId.values()).map(h => {
+      const zhName = h.name || h.id;
+      const zhTitle = h.title || '';
       const label = zhTitle ? `${zhName} [${zhTitle}]` : zhName;
-      return { id, label, zhName };
-    }).sort((a,b) => a.zhName.localeCompare(b.zhName, 'zh-TW'))
-  , []);
+      return { id: h.id, label, zhName };
+    }).sort((a,b) => a.zhName.localeCompare(b.zhName, 'zh-TW'));
+  }, []);
 
   // ── JSX ─────────────────────────────────────────────────────────────────
 
