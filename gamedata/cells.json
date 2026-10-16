@@ -5307,6 +5307,66 @@
     "effectDefs": {}
   },
   {
+    "id": "Equip_Special_1021_Def",
+    "imgFile": "Equip_Special_1021_Def.png",
+    "iconUrl": null,
+    "name": "防衛細胞【鯱】",
+    "rarity": 6,
+    "statType": "DEF",
+    "baseStat": null,
+    "stat1": null,
+    "stat2": null,
+    "stat3": null,
+    "stat4": null,
+    "factors": [
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      }
+    ],
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【鯱】",
+    "uniqueSkillSegments": [
+      {
+        "text": "戰鬥開始時，使我方全體所有能力值增加16%，當自己受到傷害或造成傷害時，使自己技能等級上升，當自己釋放主動技能後和我方回合開始時，使敵方全體基本能力值減少10%，限疊加4層，當減少能力值效果首次疊加至4層時，使自己獲得",
+        "isEffect": false
+      },
+      {
+        "text": "憤怒解放",
+        "isEffect": true,
+        "effectName": "憤怒解放",
+        "effectDesc": "憤怒解放：攻擊相關能力增加20%，主動技能係數增加80%，造成傷害時無視防禦力和格擋率"
+      },
+      {
+        "text": "效果，並立刻對敵方生命值比例最低的敵人釋放2級主動技能",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "憤怒解放": "憤怒解放：攻擊相關能力增加20%，主動技能係數增加80%，造成傷害時無視防禦力和格擋率"
+    }
+  },
+  {
     "id": "Equip_Special_1023_Atk",
     "imgFile": "Equip_Special_1023_Atk.png",
     "iconUrl": "/assets/cells-icon/Equip_Special_1023_Atk.png",
@@ -8854,6 +8914,97 @@
     }
   },
   {
+    "id": "Equip_Special_1132_Atk",
+    "imgFile": "Equip_Special_1132_Atk.png",
+    "iconUrl": null,
+    "name": "強襲細胞【體育祭】",
+    "rarity": 6,
+    "statType": "ATK",
+    "baseStat": null,
+    "stat1": null,
+    "stat2": null,
+    "stat3": null,
+    "stat4": null,
+    "factors": [
+      {
+        "stat": "Def",
+        "name": "防禦力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
+      },
+      {
+        "stat": "Def",
+        "name": "防禦力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
+      },
+      {
+        "stat": "Def",
+        "name": "防禦力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
+      },
+      {
+        "stat": "Def",
+        "name": "防禦力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
+      }
+    ],
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【體育祭】",
+    "uniqueSkillSegments": [
+      {
+        "text": "【援助也生效】當敵方回合開始時使敵方全體獲得",
+        "isEffect": false
+      },
+      {
+        "text": "超動搖",
+        "isEffect": true,
+        "effectName": "超動搖",
+        "effectDesc": "*超動搖：攻擊力減少6%，解除時使持有者技能等級下降，持有者死亡時使敵方全體技能等級下降"
+      },
+      {
+        "text": "，當自己的",
+        "isEffect": false
+      },
+      {
+        "text": "超動搖",
+        "isEffect": true,
+        "effectName": "超動搖",
+        "effectDesc": "*超動搖：攻擊力減少6%，解除時使持有者技能等級下降，持有者死亡時使敵方全體技能等級下降"
+      },
+      {
+        "text": "到達4層時，賦予所有帶有",
+        "isEffect": false
+      },
+      {
+        "text": "超動搖",
+        "isEffect": true,
+        "effectName": "超動搖",
+        "effectDesc": "*超動搖：攻擊力減少6%，解除時使持有者技能等級下降，持有者死亡時使敵方全體技能等級下降"
+      },
+      {
+        "text": "的敵人1回合內攻擊力、防禦力減少10%、造成傷害減少10%的效果，並解除目標",
+        "isEffect": false
+      },
+      {
+        "text": "超動搖",
+        "isEffect": true,
+        "effectName": "超動搖",
+        "effectDesc": "*超動搖：攻擊力減少6%，解除時使持有者技能等級下降，持有者死亡時使敵方全體技能等級下降"
+      },
+      {
+        "text": "效果",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "體育精神": "*體育精神：防禦力增加10%，暴擊防禦增加12%，持有者受到單次傷害不得超過自己最大生命值的50%",
+      "超動搖": "*超動搖：攻擊力減少6%，解除時使持有者技能等級下降，持有者死亡時使敵方全體技能等級下降"
+    }
+  },
+  {
     "id": "Equip_Special_1133_Atk",
     "imgFile": "Equip_Special_1133_Atk.png",
     "iconUrl": "/assets/cells-icon/Equip_Special_1133_Atk.png",
@@ -8967,6 +9118,66 @@
     ],
     "effectDefs": {
       "不羈之怒": "*不羈之怒：使自己解除並免疫所有減益效果，自己造成傷害時，使我方全體解除1個減益效果，並回復各自已損失生命值20%的生命，該回復不受回復率影響"
+    }
+  },
+  {
+    "id": "Equip_Special_1134_Hp",
+    "imgFile": "Equip_Special_1134_Hp.png",
+    "iconUrl": null,
+    "name": "再生細胞【往日】",
+    "rarity": 6,
+    "statType": "HP",
+    "baseStat": null,
+    "stat1": null,
+    "stat2": null,
+    "stat3": null,
+    "stat4": null,
+    "factors": [
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      }
+    ],
+    "description": "側重提升存活能力的Rc細胞，角色裝備後可極大提升生命值",
+    "uniqueSkillName": "再生細胞【往日】",
+    "uniqueSkillSegments": [
+      {
+        "text": "使我方角色所有能力值增加16%，戰鬥開始時，使敵方全體獲得2個",
+        "isEffect": false
+      },
+      {
+        "text": "監視",
+        "isEffect": true,
+        "effectName": "監視",
+        "effectDesc": "*監視：受到傷害時，額外受到監視施加者攻擊力40%的傷害，持續2回合"
+      },
+      {
+        "text": "效果，並使敵方全體1回合內攻擊力相關能力減少25%，當自己生命值比例首次低於50%時，使自己1回合內造成傷害增加80%，非主動技能係數增加150%",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "監視": "*監視：受到傷害時，額外受到監視施加者攻擊力40%的傷害，持續2回合"
     }
   },
   {
