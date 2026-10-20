@@ -7,9 +7,9 @@
     "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": null,
-      "atk": null,
-      "def": null
+      "hp": 479045,
+      "atk": 33515,
+      "def": 22973
     },
     "attribute": "技",
     "tactic": "輸出",
@@ -2347,7 +2347,7 @@
     "title": "正義搜查官",
     "name": "亞門鋼太朗",
     "fullName": "正義搜查官 亞門鋼太朗",
-    "rarity": "SSR",
+    "rarity": "SR",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 556324,
@@ -2516,7 +2516,7 @@
     "title": "學長",
     "name": "西尾錦",
     "fullName": "學長 西尾錦",
-    "rarity": "SSR",
+    "rarity": "SR",
     "organization": "安定區",
     "stats": {
       "hp": 533136,
@@ -6211,7 +6211,7 @@
     "title": "菜鳥搜查官",
     "name": "瀧澤政道",
     "fullName": "菜鳥搜查官 瀧澤政道",
-    "rarity": "SSR",
+    "rarity": "SR",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 491398,
@@ -7393,7 +7393,7 @@
     "title": "11區前首領",
     "name": "萬丈數壹",
     "fullName": "11區前首領 萬丈數壹",
-    "rarity": "SSR",
+    "rarity": "R",
     "organization": "青桐樹",
     "stats": {
       "hp": 412435,
@@ -7541,7 +7541,7 @@
     "title": "老練的搜查官",
     "name": "富良太志",
     "fullName": "老練的搜查官 富良太志",
-    "rarity": "SSR",
+    "rarity": "SR",
     "organization": "CCG上位搜查官",
     "stats": {
       "hp": 431109,
@@ -8810,7 +8810,7 @@
     "title": "指揮官",
     "name": "丸手齋",
     "fullName": "指揮官 丸手齋",
-    "rarity": "SSR",
+    "rarity": "SR",
     "organization": "CCG上位搜查官",
     "stats": {
       "hp": 523861,
@@ -11301,7 +11301,7 @@
     "title": "瞇瞇眼的率真青年",
     "name": "伊東倉元",
     "fullName": "瞇瞇眼的率真青年 伊東倉元",
-    "rarity": "SSR",
+    "rarity": "SR",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 514586,
@@ -11449,7 +11449,7 @@
     "title": "艾梅利歐",
     "name": "五里美鄉",
     "fullName": "艾梅利歐 五里美鄉",
-    "rarity": "SSR",
+    "rarity": "SR",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 496035,
@@ -11841,7 +11841,7 @@
     "title": "解體師",
     "name": "小太郎",
     "fullName": "解體師 小太郎",
-    "rarity": "SSR",
+    "rarity": "R",
     "organization": "無組織",
     "stats": {
       "hp": 403298,
@@ -11989,7 +11989,7 @@
     "title": "蘋果頭",
     "name": "村松喜江",
     "fullName": "蘋果頭 村松喜江",
-    "rarity": "SSR",
+    "rarity": "SR",
     "organization": "無組織",
     "stats": {
       "hp": 482123,
@@ -12137,7 +12137,7 @@
     "title": "愛讀書的青年",
     "name": "金木研",
     "fullName": "愛讀書的青年 金木研",
-    "rarity": "SSR",
+    "rarity": "SR",
     "organization": "安定區",
     "stats": {
       "hp": 565600,
@@ -12802,7 +12802,7 @@
     "title": "啼的跟班",
     "name": "Gagi",
     "fullName": "啼的跟班 Gagi",
-    "rarity": "SSR",
+    "rarity": "R",
     "organization": "青桐樹",
     "stats": {
       "hp": 371317,
@@ -12950,7 +12950,7 @@
     "title": "啼的跟班",
     "name": "Guge",
     "fullName": "啼的跟班 Guge",
-    "rarity": "SSR",
+    "rarity": "R",
     "organization": "青桐樹",
     "stats": {
       "hp": 353043,
@@ -14408,7 +14408,7 @@
     "title": "戰場薔薇",
     "name": "真戶曉",
     "fullName": "戰場薔薇 真戶曉",
-    "rarity": "SSR",
+    "rarity": "SR",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 454297,
@@ -14556,7 +14556,7 @@
     "title": "不屈的篠原",
     "name": "篠原幸紀",
     "fullName": "不屈的篠原 篠原幸紀",
-    "rarity": "SSR",
+    "rarity": "SR",
     "organization": "CCG上位搜查官",
     "stats": {
       "hp": 514586,
@@ -14704,7 +14704,7 @@
     "title": "可靠的特等搜查官",
     "name": "黑磐巖",
     "fullName": "可靠的特等搜查官 黑磐巖",
-    "rarity": "SSR",
+    "rarity": "SR",
     "organization": "CCG上位搜查官",
     "stats": {
       "hp": 496035,
@@ -15215,7 +15215,7 @@
     "title": "三等搜查官",
     "name": "草場一平",
     "fullName": "三等搜查官 草場一平",
-    "rarity": "SSR",
+    "rarity": "R",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 417004,
@@ -15363,7 +15363,7 @@
     "title": "局員搜查官",
     "name": "中島康智",
     "fullName": "局員搜查官 中島康智",
-    "rarity": "SSR",
+    "rarity": "R",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 403298,
@@ -15511,7 +15511,7 @@
     "title": "萬丈跟班",
     "name": "一味",
     "fullName": "萬丈跟班 一味",
-    "rarity": "SSR",
+    "rarity": "R",
     "organization": "青桐樹",
     "stats": {
       "hp": 403298,
@@ -15659,7 +15659,7 @@
     "title": "萬丈跟班",
     "name": "二璐",
     "fullName": "萬丈跟班 二璐",
-    "rarity": "SSR",
+    "rarity": "R",
     "organization": "青桐樹",
     "stats": {
       "hp": 403298,
@@ -15807,7 +15807,7 @@
     "title": "萬丈跟班",
     "name": "三手",
     "fullName": "萬丈跟班 三手",
-    "rarity": "SSR",
+    "rarity": "R",
     "organization": "青桐樹",
     "stats": {
       "hp": 435278,
@@ -34169,7 +34169,7 @@
     "title": "戰無不勝的搜查官",
     "name": "有馬貴將",
     "fullName": "戰無不勝的搜查官 有馬貴將",
-    "rarity": "SSR",
+    "rarity": "SP",
     "organization": "CCG上位搜查官",
     "stats": {
       "hp": 674866,
@@ -34482,7 +34482,7 @@
     "title": "激情之翼",
     "name": "霧嶋絢都",
     "fullName": "激情之翼 霧嶋絢都",
-    "rarity": "SSR",
+    "rarity": "SP",
     "organization": "青桐樹",
     "stats": {
       "hp": 672487,
@@ -36507,7 +36507,7 @@
     "title": "烈焰一擊",
     "name": "霧嶋董香",
     "fullName": "烈焰一擊 霧嶋董香",
-    "rarity": "SSR",
+    "rarity": "SP",
     "organization": "安定區",
     "stats": {
       "hp": 683907,
