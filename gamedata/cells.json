@@ -5309,7 +5309,7 @@
   {
     "id": "Equip_Special_1021_Def",
     "imgFile": "Equip_Special_1021_Def.png",
-    "iconUrl": null,
+    "iconUrl": "/assets/cells-icon/Equip_Special_1021_Def.png",
     "name": "防衛細胞【鯱】",
     "rarity": 6,
     "statType": "DEF",
@@ -8916,7 +8916,7 @@
   {
     "id": "Equip_Special_1132_Atk",
     "imgFile": "Equip_Special_1132_Atk.png",
-    "iconUrl": null,
+    "iconUrl": "/assets/cells-icon/Equip_Special_1132_Atk.png",
     "name": "強襲細胞【體育祭】",
     "rarity": 6,
     "statType": "ATK",
@@ -9123,7 +9123,7 @@
   {
     "id": "Equip_Special_1134_Hp",
     "imgFile": "Equip_Special_1134_Hp.png",
-    "iconUrl": null,
+    "iconUrl": "/assets/cells-icon/Equip_Special_1134_Hp.png",
     "name": "再生細胞【往日】",
     "rarity": 6,
     "statType": "HP",
