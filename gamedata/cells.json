@@ -8844,6 +8844,54 @@
     }
   },
   {
+    "id": "Equip_Special_1125_Def",
+    "imgFile": "Equip_Special_1125_Def.png",
+    "iconUrl": "/assets/cells-icon/Equip_Special_1125_Def.png",
+    "name": "防衛細胞【第二次梟征伐戰】",
+    "rarity": 6,
+    "statType": "DEF",
+    "baseStat": null,
+    "stat1": null,
+    "stat2": null,
+    "stat3": null,
+    "stat4": null,
+    "factors": [
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      }
+    ],
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【第二次梟征伐戰】",
+    "uniqueSkillSegments": [
+      {
+        "text": "使我方CCG角色基本能力值增加18%，並在首次受到單次傷害超過自己最大生命值60%以上的傷害後，賦予該角色1回合內迴避1次主動技能效果。戰鬥開始時，自己立即釋放2級主動技能，本次技能必然暴擊，當自己觸發迴避主動技能效果時，立即對攻擊者釋放2級主動技能",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {}
+  },
+  {
     "id": "Equip_Special_1129_Atk",
     "imgFile": "Equip_Special_1129_Atk.png",
     "iconUrl": "/assets/cells-icon/Equip_Special_1129_Atk.png",
@@ -9229,7 +9277,7 @@
         "text": "血之凋零",
         "isEffect": true,
         "effectName": "血之凋零",
-        "effectDesc": "*血之凋零：持有者使用技能前，受到施加者攻擊力數值的250%的傷害，限疊加2層，若施加者生命值低於50%，則可額外疊加1層，施加者死亡時，解除本效果"
+        "effectDesc": "*血之凋零：持有者使用技能前，受到施加者攻擊力數值250%的額外傷害，限疊加2層，若施加者生命值低於50%，則可額外疊加1層，施加者死亡時，解除本效果"
       },
       {
         "text": "，吸血率減少50%，當自己的",
@@ -9239,7 +9287,7 @@
         "text": "血之凋零",
         "isEffect": true,
         "effectName": "血之凋零",
-        "effectDesc": "*血之凋零：持有者使用技能前，受到施加者攻擊力數值的250%的傷害，限疊加2層，若施加者生命值低於50%，則可額外疊加1層，施加者死亡時，解除本效果"
+        "effectDesc": "*血之凋零：持有者使用技能前，受到施加者攻擊力數值250%的額外傷害，限疊加2層，若施加者生命值低於50%，則可額外疊加1層，施加者死亡時，解除本效果"
       },
       {
         "text": "的傷害生效後，使目標1回合內受到額外傷害增加60%，限疊加2次，當帶有",
@@ -9249,7 +9297,7 @@
         "text": "血之凋零",
         "isEffect": true,
         "effectName": "血之凋零",
-        "effectDesc": "*血之凋零：持有者使用技能前，受到施加者攻擊力數值的250%的傷害，限疊加2層，若施加者生命值低於50%，則可額外疊加1層，施加者死亡時，解除本效果"
+        "effectDesc": "*血之凋零：持有者使用技能前，受到施加者攻擊力數值250%的額外傷害，限疊加2層，若施加者生命值低於50%，則可額外疊加1層，施加者死亡時，解除本效果"
       },
       {
         "text": "的友方角色死亡時，使自己解除所有減益和Weak效果，回復自己最大生命值40%的生命並技能等級上升，該回復效果不受回復率影響",
@@ -9257,7 +9305,7 @@
       }
     ],
     "effectDefs": {
-      "血之凋零": "*血之凋零：持有者使用技能前，受到施加者攻擊力數值的250%的傷害，限疊加2層，若施加者生命值低於50%，則可額外疊加1層，施加者死亡時，解除本效果"
+      "血之凋零": "*血之凋零：持有者使用技能前，受到施加者攻擊力數值250%的額外傷害，限疊加2層，若施加者生命值低於50%，則可額外疊加1層，施加者死亡時，解除本效果"
     }
   },
   {
@@ -9721,5 +9769,65 @@
       }
     ],
     "effectDefs": {}
+  },
+  {
+    "id": "Equip_Special_1164_Def",
+    "imgFile": "Equip_Special_1164_Def.png",
+    "iconUrl": "/assets/cells-icon/Equip_Special_1164_Def.png",
+    "name": "防衛細胞【300萬下載達成】",
+    "rarity": 6,
+    "statType": "DEF",
+    "baseStat": null,
+    "stat1": null,
+    "stat2": null,
+    "stat3": null,
+    "stat4": null,
+    "factors": [
+      {
+        "stat": "Def",
+        "name": "防禦力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
+      },
+      {
+        "stat": "Def",
+        "name": "防禦力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
+      },
+      {
+        "stat": "Def",
+        "name": "防禦力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
+      },
+      {
+        "stat": "Def",
+        "name": "防禦力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_def_3.png"
+      }
+    ],
+    "description": "側重提升防守能力的Rc細胞，角色裝備後可極大提升防禦力",
+    "uniqueSkillName": "防衛細胞【300萬下載達成】",
+    "uniqueSkillSegments": [
+      {
+        "text": "當我方回合開始時，消耗所有技能區自己的技能，自己立即釋放3級主動技能，每消耗1個主動技能，使我方全體下一次主動技能傷害增加4%，最多增加12%。我方帶有偽裝的角色受到單次傷害超過自己最大生命值的40%時，使目標獲得",
+        "isEffect": false
+      },
+      {
+        "text": "警戒",
+        "isEffect": true,
+        "effectName": "警戒",
+        "effectDesc": "*警戒：迴避1次主動技能，持續1回合"
+      },
+      {
+        "text": "效果",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "警戒": "*警戒：迴避1次主動技能，持續1回合"
+    }
   }
 ]
