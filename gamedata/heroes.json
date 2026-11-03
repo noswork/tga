@@ -7,9 +7,9 @@
     "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": 479045,
-      "atk": 33515,
-      "def": 22973
+      "hp": null,
+      "atk": null,
+      "def": null
     },
     "attribute": "技",
     "tactic": "輸出",
@@ -2347,7 +2347,7 @@
     "title": "正義搜查官",
     "name": "亞門鋼太朗",
     "fullName": "正義搜查官 亞門鋼太朗",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 556324,
@@ -2516,7 +2516,7 @@
     "title": "學長",
     "name": "西尾錦",
     "fullName": "學長 西尾錦",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "安定區",
     "stats": {
       "hp": 533136,
@@ -6211,7 +6211,7 @@
     "title": "菜鳥搜查官",
     "name": "瀧澤政道",
     "fullName": "菜鳥搜查官 瀧澤政道",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 491398,
@@ -7393,7 +7393,7 @@
     "title": "11區前首領",
     "name": "萬丈數壹",
     "fullName": "11區前首領 萬丈數壹",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
       "hp": 412435,
@@ -7541,7 +7541,7 @@
     "title": "老練的搜查官",
     "name": "富良太志",
     "fullName": "老練的搜查官 富良太志",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
       "hp": 431109,
@@ -8810,7 +8810,7 @@
     "title": "指揮官",
     "name": "丸手齋",
     "fullName": "指揮官 丸手齋",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
       "hp": 523861,
@@ -11301,7 +11301,7 @@
     "title": "瞇瞇眼的率真青年",
     "name": "伊東倉元",
     "fullName": "瞇瞇眼的率真青年 伊東倉元",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 514586,
@@ -11449,7 +11449,7 @@
     "title": "艾梅利歐",
     "name": "五里美鄉",
     "fullName": "艾梅利歐 五里美鄉",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 496035,
@@ -11841,7 +11841,7 @@
     "title": "解體師",
     "name": "小太郎",
     "fullName": "解體師 小太郎",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "無組織",
     "stats": {
       "hp": 403298,
@@ -11989,7 +11989,7 @@
     "title": "蘋果頭",
     "name": "村松喜江",
     "fullName": "蘋果頭 村松喜江",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "無組織",
     "stats": {
       "hp": 482123,
@@ -12137,7 +12137,7 @@
     "title": "愛讀書的青年",
     "name": "金木研",
     "fullName": "愛讀書的青年 金木研",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "安定區",
     "stats": {
       "hp": 565600,
@@ -12802,7 +12802,7 @@
     "title": "啼的跟班",
     "name": "Gagi",
     "fullName": "啼的跟班 Gagi",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
       "hp": 371317,
@@ -12950,7 +12950,7 @@
     "title": "啼的跟班",
     "name": "Guge",
     "fullName": "啼的跟班 Guge",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
       "hp": 353043,
@@ -14408,7 +14408,7 @@
     "title": "戰場薔薇",
     "name": "真戶曉",
     "fullName": "戰場薔薇 真戶曉",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 454297,
@@ -14556,7 +14556,7 @@
     "title": "不屈的篠原",
     "name": "篠原幸紀",
     "fullName": "不屈的篠原 篠原幸紀",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
       "hp": 514586,
@@ -14704,7 +14704,7 @@
     "title": "可靠的特等搜查官",
     "name": "黑磐巖",
     "fullName": "可靠的特等搜查官 黑磐巖",
-    "rarity": "SR",
+    "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
       "hp": 496035,
@@ -15215,7 +15215,7 @@
     "title": "三等搜查官",
     "name": "草場一平",
     "fullName": "三等搜查官 草場一平",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 417004,
@@ -15363,7 +15363,7 @@
     "title": "局員搜查官",
     "name": "中島康智",
     "fullName": "局員搜查官 中島康智",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 403298,
@@ -15511,7 +15511,7 @@
     "title": "萬丈跟班",
     "name": "一味",
     "fullName": "萬丈跟班 一味",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
       "hp": 403298,
@@ -15659,7 +15659,7 @@
     "title": "萬丈跟班",
     "name": "二璐",
     "fullName": "萬丈跟班 二璐",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
       "hp": 403298,
@@ -15807,7 +15807,7 @@
     "title": "萬丈跟班",
     "name": "三手",
     "fullName": "萬丈跟班 三手",
-    "rarity": "R",
+    "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
       "hp": 435278,
@@ -34169,7 +34169,7 @@
     "title": "戰無不勝的搜查官",
     "name": "有馬貴將",
     "fullName": "戰無不勝的搜查官 有馬貴將",
-    "rarity": "SP",
+    "rarity": "SSR",
     "organization": "CCG上位搜查官",
     "stats": {
       "hp": 674866,
@@ -34482,7 +34482,7 @@
     "title": "激情之翼",
     "name": "霧嶋絢都",
     "fullName": "激情之翼 霧嶋絢都",
-    "rarity": "SP",
+    "rarity": "SSR",
     "organization": "青桐樹",
     "stats": {
       "hp": 672487,
@@ -36507,7 +36507,7 @@
     "title": "烈焰一擊",
     "name": "霧嶋董香",
     "fullName": "烈焰一擊 霧嶋董香",
-    "rarity": "SP",
+    "rarity": "SSR",
     "organization": "安定區",
     "stats": {
       "hp": 683907,
@@ -42940,30 +42940,30 @@
         "subtype": "passive",
         "id": "1180_p1",
         "name": "超越",
-        "description": "當我方全為安定區角色時，使自己獲得超越效果，並使我方其他安定區角色受到致命傷害時獲得超越效果，使我方安定區角色1回合內造成傷害增加30%，暴擊抵抗增加80%，暴擊防禦增加50%",
+        "description": "戰鬥開始時，如果我方角色均為安定區角色，使自己獲得超越效果，並在首次有我方其他安定區角色受到致命傷害時使其獲得超越效果，同時使我方安定區1回合內造成傷害增加30%，暴擊抵抗增加80%，暴擊防禦增加50%",
         "effects": [
           {
-            "text": "當我方全為安定區角色時，使自己獲得",
+            "text": "戰鬥開始時，如果我方角色均為安定區角色，使自己獲得",
             "isEffect": false
           },
           {
             "text": "超越",
             "isEffect": true,
             "effectName": "超越",
-            "effectDesc": "生命值不能低于1點，免疫所有立即死亡效果，所有能力值增加6%"
+            "effectDesc": "生命值不能低於1點，免疫所有立即死亡效果，所有能力值增加6%，持續1回合"
           },
           {
-            "text": "效果，並使我方其他安定區角色受到致命傷害時獲得",
+            "text": "效果，並在首次有我方其他安定區角色受到致命傷害時使其獲得",
             "isEffect": false
           },
           {
             "text": "超越",
             "isEffect": true,
             "effectName": "超越",
-            "effectDesc": "生命值不能低于1點，免疫所有立即死亡效果，所有能力值增加6%"
+            "effectDesc": "生命值不能低於1點，免疫所有立即死亡效果，所有能力值增加6%，持續1回合"
           },
           {
-            "text": "效果，使我方安定區角色1回合內造成傷害增加30%，暴擊抵抗增加80%，暴擊防禦增加50%",
+            "text": "效果，同時使我方安定區1回合內造成傷害增加30%，暴擊抵抗增加80%，暴擊防禦增加50%",
             "isEffect": false
           }
         ],
@@ -42984,7 +42984,7 @@
             "text": "超越",
             "isEffect": true,
             "effectName": "超越",
-            "effectDesc": "生命值不能低于1點，免疫所有立即死亡效果，所有能力值增加6%"
+            "effectDesc": "生命值不能低於1點，免疫所有立即死亡效果，所有能力值增加6%，持續1回合"
           },
           {
             "text": "效果解除時對我軍全體進行治療，依照自己最大生命值的10%回復生命值",
@@ -43090,7 +43090,7 @@
             "text": "超越",
             "isEffect": true,
             "effectName": "超越",
-            "effectDesc": "生命值不能低于1點，免疫所有立即死亡效果，所有能力值增加6%"
+            "effectDesc": "生命值不能低於1點，免疫所有立即死亡效果，所有能力值增加6%，持續1回合"
           },
           {
             "text": "效果解除時對我軍全體進行治療，依照自己最大生命值的15%回復生命值",
@@ -43162,7 +43162,7 @@
             "description": "戰鬥開始時，1回合內使自己受到主動技能傷害減少5%"
           },
           {
-            "description": "我方角色獲得超越效果時解除並在1回合內免疫致死效果"
+            "description": "我方角色獲得超越效果時解除致死效果並在1回合內免疫致死效果"
           },
           {
             "description": "我方回合開始時使敵方角色暴擊傷害減少10%，最多減少20%"
@@ -43177,7 +43177,7 @@
       }
     ],
     "effectDefs": {
-      "超越": "*超越：生命值不能低于1點，免疫所有立即死亡效果，所有能力值增加6%",
+      "超越": "*超越：生命值不能低於1點，免疫所有立即死亡效果，所有能力值增加6%，持續1回合",
       "活力": "*活力：主動技能傷害增加6%",
       "先攻": "*先攻：下一次使用主動技能時係數增加100%，生效後解除自己所有活力和先攻效果"
     }
