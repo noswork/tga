@@ -7,9 +7,9 @@
     "rarity": "SSR",
     "organization": "無組織",
     "stats": {
-      "hp": null,
-      "atk": null,
-      "def": null
+      "hp": 479045,
+      "atk": 33515,
+      "def": 22973
     },
     "attribute": "技",
     "tactic": "輸出",
@@ -2347,7 +2347,7 @@
     "title": "正義搜查官",
     "name": "亞門鋼太朗",
     "fullName": "正義搜查官 亞門鋼太朗",
-    "rarity": "SSR",
+    "rarity": "SR",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 556324,
@@ -2516,7 +2516,7 @@
     "title": "學長",
     "name": "西尾錦",
     "fullName": "學長 西尾錦",
-    "rarity": "SSR",
+    "rarity": "SR",
     "organization": "安定區",
     "stats": {
       "hp": 533136,
@@ -6211,7 +6211,7 @@
     "title": "菜鳥搜查官",
     "name": "瀧澤政道",
     "fullName": "菜鳥搜查官 瀧澤政道",
-    "rarity": "SSR",
+    "rarity": "SR",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 491398,
@@ -7393,7 +7393,7 @@
     "title": "11區前首領",
     "name": "萬丈數壹",
     "fullName": "11區前首領 萬丈數壹",
-    "rarity": "SSR",
+    "rarity": "R",
     "organization": "青桐樹",
     "stats": {
       "hp": 412435,
@@ -7541,7 +7541,7 @@
     "title": "老練的搜查官",
     "name": "富良太志",
     "fullName": "老練的搜查官 富良太志",
-    "rarity": "SSR",
+    "rarity": "SR",
     "organization": "CCG上位搜查官",
     "stats": {
       "hp": 431109,
@@ -8810,7 +8810,7 @@
     "title": "指揮官",
     "name": "丸手齋",
     "fullName": "指揮官 丸手齋",
-    "rarity": "SSR",
+    "rarity": "SR",
     "organization": "CCG上位搜查官",
     "stats": {
       "hp": 523861,
@@ -11301,7 +11301,7 @@
     "title": "瞇瞇眼的率真青年",
     "name": "伊東倉元",
     "fullName": "瞇瞇眼的率真青年 伊東倉元",
-    "rarity": "SSR",
+    "rarity": "SR",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 514586,
@@ -11449,7 +11449,7 @@
     "title": "艾梅利歐",
     "name": "五里美鄉",
     "fullName": "艾梅利歐 五里美鄉",
-    "rarity": "SSR",
+    "rarity": "SR",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 496035,
@@ -11841,7 +11841,7 @@
     "title": "解體師",
     "name": "小太郎",
     "fullName": "解體師 小太郎",
-    "rarity": "SSR",
+    "rarity": "R",
     "organization": "無組織",
     "stats": {
       "hp": 403298,
@@ -11989,7 +11989,7 @@
     "title": "蘋果頭",
     "name": "村松喜江",
     "fullName": "蘋果頭 村松喜江",
-    "rarity": "SSR",
+    "rarity": "SR",
     "organization": "無組織",
     "stats": {
       "hp": 482123,
@@ -12137,7 +12137,7 @@
     "title": "愛讀書的青年",
     "name": "金木研",
     "fullName": "愛讀書的青年 金木研",
-    "rarity": "SSR",
+    "rarity": "SR",
     "organization": "安定區",
     "stats": {
       "hp": 565600,
@@ -12802,7 +12802,7 @@
     "title": "啼的跟班",
     "name": "Gagi",
     "fullName": "啼的跟班 Gagi",
-    "rarity": "SSR",
+    "rarity": "R",
     "organization": "青桐樹",
     "stats": {
       "hp": 371317,
@@ -12950,7 +12950,7 @@
     "title": "啼的跟班",
     "name": "Guge",
     "fullName": "啼的跟班 Guge",
-    "rarity": "SSR",
+    "rarity": "R",
     "organization": "青桐樹",
     "stats": {
       "hp": 353043,
@@ -14408,7 +14408,7 @@
     "title": "戰場薔薇",
     "name": "真戶曉",
     "fullName": "戰場薔薇 真戶曉",
-    "rarity": "SSR",
+    "rarity": "SR",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 454297,
@@ -14556,7 +14556,7 @@
     "title": "不屈的篠原",
     "name": "篠原幸紀",
     "fullName": "不屈的篠原 篠原幸紀",
-    "rarity": "SSR",
+    "rarity": "SR",
     "organization": "CCG上位搜查官",
     "stats": {
       "hp": 514586,
@@ -14704,7 +14704,7 @@
     "title": "可靠的特等搜查官",
     "name": "黑磐巖",
     "fullName": "可靠的特等搜查官 黑磐巖",
-    "rarity": "SSR",
+    "rarity": "SR",
     "organization": "CCG上位搜查官",
     "stats": {
       "hp": 496035,
@@ -15215,7 +15215,7 @@
     "title": "三等搜查官",
     "name": "草場一平",
     "fullName": "三等搜查官 草場一平",
-    "rarity": "SSR",
+    "rarity": "R",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 417004,
@@ -15363,7 +15363,7 @@
     "title": "局員搜查官",
     "name": "中島康智",
     "fullName": "局員搜查官 中島康智",
-    "rarity": "SSR",
+    "rarity": "R",
     "organization": "CCG下位搜查官",
     "stats": {
       "hp": 403298,
@@ -15511,7 +15511,7 @@
     "title": "萬丈跟班",
     "name": "一味",
     "fullName": "萬丈跟班 一味",
-    "rarity": "SSR",
+    "rarity": "R",
     "organization": "青桐樹",
     "stats": {
       "hp": 403298,
@@ -15659,7 +15659,7 @@
     "title": "萬丈跟班",
     "name": "二璐",
     "fullName": "萬丈跟班 二璐",
-    "rarity": "SSR",
+    "rarity": "R",
     "organization": "青桐樹",
     "stats": {
       "hp": 403298,
@@ -15807,7 +15807,7 @@
     "title": "萬丈跟班",
     "name": "三手",
     "fullName": "萬丈跟班 三手",
-    "rarity": "SSR",
+    "rarity": "R",
     "organization": "青桐樹",
     "stats": {
       "hp": 435278,
@@ -26113,6 +26113,364 @@
     }
   },
   {
+    "id": "1115",
+    "title": "OWL",
+    "name": "瀧澤政道",
+    "fullName": "OWL 瀧澤政道",
+    "rarity": "SSR",
+    "organization": "青桐樹",
+    "stats": {
+      "hp": 691520,
+      "atk": 43917,
+      "def": 32780
+    },
+    "attribute": "知",
+    "tactic": "輸出",
+    "headUrl": "/assets/heroes/head/1115_head.png",
+    "activeSkills": [
+      {
+        "type": "Active",
+        "skillNum": 1,
+        "iconUrl": "/assets/heroes/skill-active/1115_skill_b.png",
+        "levels": [
+          {
+            "lv": 1,
+            "name": "主動技能-等級1",
+            "description": "對目標造成攻擊力217%的超暴食傷害",
+            "effects": [
+              {
+                "text": "對目標造成攻擊力217%的",
+                "isEffect": false
+              },
+              {
+                "text": "超暴食",
+                "isEffect": true,
+                "effectName": "超暴食",
+                "effectDesc": "每有4%的生命值，使自己攻擊相關能力增加2%"
+              },
+              {
+                "text": "傷害",
+                "isEffect": false
+              }
+            ]
+          },
+          {
+            "lv": 2,
+            "name": "主動技能-等級2",
+            "description": "對目標造成攻擊力290%的超暴食傷害",
+            "effects": [
+              {
+                "text": "對目標造成攻擊力290%的",
+                "isEffect": false
+              },
+              {
+                "text": "超暴食",
+                "isEffect": true,
+                "effectName": "超暴食",
+                "effectDesc": "每有4%的生命值，使自己攻擊相關能力增加2%"
+              },
+              {
+                "text": "傷害",
+                "isEffect": false
+              }
+            ]
+          },
+          {
+            "lv": 3,
+            "name": "主動技能-等級3",
+            "description": "對目標造成攻擊力520%的超暴食傷害",
+            "effects": [
+              {
+                "text": "對目標造成攻擊力520%的",
+                "isEffect": false
+              },
+              {
+                "text": "超暴食",
+                "isEffect": true,
+                "effectName": "超暴食",
+                "effectDesc": "每有4%的生命值，使自己攻擊相關能力增加2%"
+              },
+              {
+                "text": "傷害",
+                "isEffect": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "passiveSkills": [
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1115_p1",
+        "name": "強襲",
+        "description": "戰鬥開始時，使我方青銅樹角色攻擊相關能力增加25%，基本能力值增加15%，並對敵方全體造成攻擊力220%的啃噬傷害，並使敵方全體獲得獵物效果，自己對帶獵物的敵方角色造成傷害時額外造成攻擊力數值150%的額外傷害，並使自己攻擊力增加8%，最多增加32%",
+        "effects": [
+          {
+            "text": "戰鬥開始時，使我方青銅樹角色攻擊相關能力增加25%，基本能力值增加15%，並對敵方全體造成攻擊力220%的",
+            "isEffect": false
+          },
+          {
+            "text": "啃噬",
+            "isEffect": true,
+            "effectName": "啃噬",
+            "effectDesc": "無視護盾，破擊率增加150%"
+          },
+          {
+            "text": "傷害，並使敵方全體獲得",
+            "isEffect": false
+          },
+          {
+            "text": "獵物",
+            "isEffect": true,
+            "effectName": "獵物",
+            "effectDesc": "暴擊抵抗減少30%，防禦相關能力減少12%，受到額外傷害增加20%"
+          },
+          {
+            "text": "效果，自己對帶",
+            "isEffect": false
+          },
+          {
+            "text": "獵物",
+            "isEffect": true,
+            "effectName": "獵物",
+            "effectDesc": "暴擊抵抗減少30%，防禦相關能力減少12%，受到額外傷害增加20%"
+          },
+          {
+            "text": "的敵方角色造成傷害時額外造成攻擊力數值150%的額外傷害，並使自己攻擊力增加8%，最多增加32%",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1115_p1.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1115_p2",
+        "name": "捕食",
+        "description": "當自己在場時，使自己獲得捕食者效果，當自己釋放主動技能前，回復捕食者記錄值100%的生命值，如果自己為滿生命值，使本次技能造成傷害增加30%，並額外造成記錄值50%的額外傷害，該傷害無視額外傷害減少和增加效果，之後將捕食者記錄值清零",
+        "effects": [
+          {
+            "text": "當自己在場時，使自己獲得",
+            "isEffect": false
+          },
+          {
+            "text": "捕食者",
+            "isEffect": true,
+            "effectName": "捕食者",
+            "effectDesc": "免疫致死效果，免疫所有回復率減少效果，記錄自己造成傷害和受到傷害時的傷害量的50%，最多不得超過自己初始生命值的100%"
+          },
+          {
+            "text": "效果，當自己釋放主動技能前，回復",
+            "isEffect": false
+          },
+          {
+            "text": "捕食者",
+            "isEffect": true,
+            "effectName": "捕食者",
+            "effectDesc": "免疫致死效果，免疫所有回復率減少效果，記錄自己造成傷害和受到傷害時的傷害量的50%，最多不得超過自己初始生命值的100%"
+          },
+          {
+            "text": "記錄值100%的生命值，如果自己為滿生命值，使本次技能造成傷害增加30%，並額外造成記錄值50%的額外傷害，該傷害無視額外傷害減少和增加效果，之後將",
+            "isEffect": false
+          },
+          {
+            "text": "捕食者",
+            "isEffect": true,
+            "effectName": "捕食者",
+            "effectDesc": "免疫致死效果，免疫所有回復率減少效果，記錄自己造成傷害和受到傷害時的傷害量的50%，最多不得超過自己初始生命值的100%"
+          },
+          {
+            "text": "記錄值清零",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1115_p2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1115_p3",
+        "name": "追襲",
+        "description": "當自己生命值比例首次低於50%時，使自己回復生命至最大生命值，並使自己1回合內獲得狩獵效果，狩獵效果結束時，立刻對敵方生命值比例最低的角色釋放1級主動技能",
+        "effects": [
+          {
+            "text": "當自己生命值比例首次低於50%時，使自己回復生命至最大生命值，並使自己1回合內獲得",
+            "isEffect": false
+          },
+          {
+            "text": "狩獵",
+            "isEffect": true,
+            "effectName": "狩獵",
+            "effectDesc": "所有能力值增加6%，使我方全體破擊率增加25%，造成傷害增加15%"
+          },
+          {
+            "text": "效果，",
+            "isEffect": false
+          },
+          {
+            "text": "狩獵",
+            "isEffect": true,
+            "effectName": "狩獵",
+            "effectDesc": "所有能力值增加6%，使我方全體破擊率增加25%，造成傷害增加15%"
+          },
+          {
+            "text": "效果結束時，立刻對敵方生命值比例最低的角色釋放1級主動技能",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1115_p3.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1115_p4",
+        "name": "力量解放強化",
+        "description": "力量解放後，賦予自己1回合內造成傷害增加12%的效果",
+        "effects": [
+          {
+            "text": "力量解放後，賦予自己1回合內造成傷害增加12%的效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_1.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1115_p5",
+        "name": "Weak",
+        "description": "造成Weak時，賦予自己1回合內攻擊力增加10%的效果",
+        "effects": [
+          {
+            "text": "造成Weak時，賦予自己1回合內攻擊力增加10%的效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "resonance",
+        "id": "1115_rp3",
+        "name": "追襲",
+        "description": "當自己生命值比例首次低於50%時，使自己回復生命至最大生命值，立刻對敵方生命值比例最低的角色釋放2級主動技能，使自己1回合內獲得狩獵效果，狩獵效果結束時，立刻對敵方生命值比例最低的角色釋放2級主動技能",
+        "effects": [
+          {
+            "text": "當自己生命值比例首次低於50%時，使自己回復生命至最大生命值，立刻對敵方生命值比例最低的角色釋放2級主動技能，使自己1回合內獲得",
+            "isEffect": false
+          },
+          {
+            "text": "狩獵",
+            "isEffect": true,
+            "effectName": "狩獵",
+            "effectDesc": "所有能力值增加6%，使我方全體破擊率增加25%，造成傷害增加15%"
+          },
+          {
+            "text": "效果，",
+            "isEffect": false
+          },
+          {
+            "text": "狩獵",
+            "isEffect": true,
+            "effectName": "狩獵",
+            "effectDesc": "所有能力值增加6%，使我方全體破擊率增加25%，造成傷害增加15%"
+          },
+          {
+            "text": "效果結束時，立刻對敵方生命值比例最低的角色釋放2級主動技能",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1115_p3.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "orb",
+        "id": "1115_ep9",
+        "name": null,
+        "description": "我方回合開始時，如果場上有生命值低於50%的角色，清空Weak值並解除自身Weak效果，攻擊時使目標防禦力減少3%，最多減少9%，受到攻擊時使攻擊者暴擊傷害減少5%，最多減少15%",
+        "effects": [
+          {
+            "text": "我方回合開始時，如果場上有生命值低於50%的角色，清空Weak值並解除自身Weak效果，攻擊時使目標防禦力減少3%，最多減少9%，受到攻擊時使攻擊者暴擊傷害減少5%，最多減少15%",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-orb/Equip_HE_UR_1115.png"
+      }
+    ],
+    "tiers": [
+      {
+        "tier": 1,
+        "effects": [
+          {
+            "description": "戰鬥開始時，1回合內使自己獲得最大生命5%的護盾"
+          },
+          {
+            "description": "生命值高於50%時免疫阻斷效果"
+          },
+          {
+            "description": "戰鬥開始時，使自己最大生命值增加5%"
+          },
+          {
+            "description": "我方角色暴擊抵抗增加6%"
+          },
+          {
+            "description": "當我方回合時，1回合內使自己獲得最大生命5%的護盾"
+          }
+        ]
+      },
+      {
+        "tier": 2,
+        "effects": [
+          {
+            "description": "戰鬥開始時，1回合內使自己最大生命值增加10%"
+          },
+          {
+            "description": "我方角色回復率增加5%"
+          },
+          {
+            "description": "我方回合開始時如果自己為滿生命值，使自己1回合內造成傷害增加8%"
+          },
+          {
+            "description": "累計造成傷害超過初始生命值的200%時使自己攻擊力增加6%"
+          },
+          {
+            "description": "戰鬥開始時，使自己最大生命值增加10%"
+          }
+        ]
+      },
+      {
+        "tier": 3,
+        "effects": [
+          {
+            "description": "戰鬥開始時，1回合內使自己受到主動技能傷害減少5%"
+          },
+          {
+            "description": "受到攻擊時使攻擊者1回合內防禦力減少4%，限疊加2次"
+          },
+          {
+            "description": "成功回復生命值時使自己1回合內受到傷害減少8%"
+          },
+          {
+            "description": "戰鬥中受到傷害減少5%"
+          },
+          {
+            "description": "戰鬥開始時，使自己受到主動技能傷害減少5%"
+          }
+        ]
+      }
+    ],
+    "effectDefs": {
+      "暴食": "*暴食：每有4%的生命值，使自己攻擊相關能力增加1%",
+      "超暴食": "*超暴食：每有4%的生命值，使自己攻擊相關能力增加2%",
+      "啃噬": "*啃噬：無視護盾，破擊率增加150%",
+      "獵物": "*獵物：暴擊抵抗減少30%，防禦相關能力減少12%，受到額外傷害增加20%",
+      "捕食者": "*捕食者：免疫致死效果，免疫所有回復率減少效果，記錄自己造成傷害和受到傷害時的傷害量的50%，最多不得超過自己初始生命值的100%",
+      "狩獵": "*狩獵：所有能力值增加6%，使我方全體破擊率增加25%，造成傷害增加15%"
+    }
+  },
+  {
     "id": "1116",
     "title": "班長",
     "name": "瓜江久生",
@@ -34169,7 +34527,7 @@
     "title": "戰無不勝的搜查官",
     "name": "有馬貴將",
     "fullName": "戰無不勝的搜查官 有馬貴將",
-    "rarity": "SSR",
+    "rarity": "SP",
     "organization": "CCG上位搜查官",
     "stats": {
       "hp": 674866,
@@ -34482,7 +34840,7 @@
     "title": "激情之翼",
     "name": "霧嶋絢都",
     "fullName": "激情之翼 霧嶋絢都",
-    "rarity": "SSR",
+    "rarity": "SP",
     "organization": "青桐樹",
     "stats": {
       "hp": 672487,
@@ -36507,7 +36865,7 @@
     "title": "烈焰一擊",
     "name": "霧嶋董香",
     "fullName": "烈焰一擊 霧嶋董香",
-    "rarity": "SSR",
+    "rarity": "SP",
     "organization": "安定區",
     "stats": {
       "hp": 683907,
@@ -43180,6 +43538,375 @@
       "超越": "*超越：生命值不能低於1點，免疫所有立即死亡效果，所有能力值增加6%，持續1回合",
       "活力": "*活力：主動技能傷害增加6%",
       "先攻": "*先攻：下一次使用主動技能時係數增加100%，生效後解除自己所有活力和先攻效果"
+    }
+  },
+  {
+    "id": "1181",
+    "title": "2週年",
+    "name": "佐佐木琲世",
+    "fullName": "2週年 佐佐木琲世",
+    "rarity": "SSR",
+    "organization": "CCG上位搜查官",
+    "stats": {
+      "hp": 672011,
+      "atk": 43946,
+      "def": 30741
+    },
+    "attribute": "力",
+    "tactic": "輸出",
+    "headUrl": "/assets/heroes/head/1181_head.png",
+    "activeSkills": [
+      {
+        "type": "Active",
+        "skillNum": 1,
+        "iconUrl": "/assets/heroes/skill-active/1181_skill_b.png",
+        "levels": [
+          {
+            "lv": 1,
+            "name": "主動技能-等級1",
+            "description": "對目標造成攻擊力217%的超斷絕傷害",
+            "effects": [
+              {
+                "text": "對目標造成攻擊力217%的",
+                "isEffect": false
+              },
+              {
+                "text": "超斷絕",
+                "isEffect": true,
+                "effectName": "超斷絕",
+                "effectDesc": "本次技能期間攻擊力增加100%，必定暴擊，無視護盾、防禦力和格擋率，視為造成克制傷害，並對其他目標濺射造成本次造成傷害量40%的真理傷害，對每個目標的濺射傷害不得超過自己攻擊力數值的500%"
+              },
+              {
+                "text": "傷害",
+                "isEffect": false
+              }
+            ]
+          },
+          {
+            "lv": 2,
+            "name": "主動技能-等級2",
+            "description": "對目標造成攻擊力290%的超斷絕傷害",
+            "effects": [
+              {
+                "text": "對目標造成攻擊力290%的",
+                "isEffect": false
+              },
+              {
+                "text": "超斷絕",
+                "isEffect": true,
+                "effectName": "超斷絕",
+                "effectDesc": "本次技能期間攻擊力增加100%，必定暴擊，無視護盾、防禦力和格擋率，視為造成克制傷害，並對其他目標濺射造成本次造成傷害量40%的真理傷害，對每個目標的濺射傷害不得超過自己攻擊力數值的500%"
+              },
+              {
+                "text": "傷害",
+                "isEffect": false
+              }
+            ]
+          },
+          {
+            "lv": 3,
+            "name": "主動技能-等級3",
+            "description": "對目標造成攻擊力520%的超斷絕傷害",
+            "effects": [
+              {
+                "text": "對目標造成攻擊力520%的",
+                "isEffect": false
+              },
+              {
+                "text": "超斷絕",
+                "isEffect": true,
+                "effectName": "超斷絕",
+                "effectDesc": "本次技能期間攻擊力增加100%，必定暴擊，無視護盾、防禦力和格擋率，視為造成克制傷害，並對其他目標濺射造成本次造成傷害量40%的真理傷害，對每個目標的濺射傷害不得超過自己攻擊力數值的500%"
+              },
+              {
+                "text": "傷害",
+                "isEffect": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "passiveSkills": [
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1181_p1",
+        "name": "劍技",
+        "description": "當我方回合開始時，自己獲得1個劍技，如果自己生命值比例高於80%，額外獲得1個劍技效果。我方回合結束時，對敵方生命值比例最低的角色釋放一刀兩斷，當該效果成功殺死敵人後，使我方全體解除所有致死效果，並使最大生命值回復至100%，並使自己獲得2個劍技效果",
+        "effects": [
+          {
+            "text": "當我方回合開始時，自己獲得1個",
+            "isEffect": false
+          },
+          {
+            "text": "劍技",
+            "isEffect": true,
+            "effectName": "劍技",
+            "effectDesc": "破擊率增加15%，暴擊率增加20%，限疊加4次"
+          },
+          {
+            "text": "，如果自己生命值比例高於80%，額外獲得1個",
+            "isEffect": false
+          },
+          {
+            "text": "劍技",
+            "isEffect": true,
+            "effectName": "劍技",
+            "effectDesc": "破擊率增加15%，暴擊率增加20%，限疊加4次"
+          },
+          {
+            "text": "效果。我方回合結束時，對敵方生命值比例最低的角色釋放",
+            "isEffect": false
+          },
+          {
+            "text": "一刀兩斷",
+            "isEffect": true,
+            "effectName": "一刀兩斷",
+            "effectDesc": "必定暴擊，無視護盾、防禦力和格擋率，視為造成克制傷害，造成攻擊力200%的傷害，立刻殺死生命值比例低於30%的敵人，如果未能成功殺死敵人，使敵方全體1回合內攻擊相關能力減少30%，攻擊時暴擊率視為0，下兩次主動技能和非主動技能造成傷害減少80%"
+          },
+          {
+            "text": "，當該效果成功殺死敵人後，使我方全體解除所有致死效果，並使最大生命值回復至100%，並使自己獲得2個",
+            "isEffect": false
+          },
+          {
+            "text": "劍技",
+            "isEffect": true,
+            "effectName": "劍技",
+            "effectDesc": "破擊率增加15%，暴擊率增加20%，限疊加4次"
+          },
+          {
+            "text": "效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1181_p1.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1181_p2",
+        "name": "CCG強化",
+        "description": "使我方CCG角色基本能力值增加30%，自己所有能力值增加15%，战斗开始时，使自己获得洞察效果，当敌方角色行动后，使目标1回合内获得威懾效果，限叠加4次",
+        "effects": [
+          {
+            "text": "使我方CCG角色基本能力值增加30%，自己所有能力值增加15%，战斗开始时，使自己获得",
+            "isEffect": false
+          },
+          {
+            "text": "洞察",
+            "isEffect": true,
+            "effectName": "洞察",
+            "effectDesc": "當自己最大生命值高於80%時使我方全體攻擊相關能力增加10%，當自己最大生命值低於80%時，使我方全體防禦相關能力增加10%，最大生命值增加20%"
+          },
+          {
+            "text": "效果，当敌方角色行动后，使目标1回合内获得",
+            "isEffect": false
+          },
+          {
+            "text": "威懾",
+            "isEffect": true,
+            "effectName": "威懾",
+            "effectDesc": "攻擊相關能力減少4%，吸血率減少25%，回復率減少40%"
+          },
+          {
+            "text": "效果，限叠加4次",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1181_p2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1181_p3",
+        "name": "速攻",
+        "description": "自己的劍技层数达到1层时，使我方全体造成伤害增加20%，达到2层时，使我方全体受到伤害减少20%，达到3层时，敌方回合开始时对敌方全体造成220%的速攻伤害",
+        "effects": [
+          {
+            "text": "自己的",
+            "isEffect": false
+          },
+          {
+            "text": "劍技",
+            "isEffect": true,
+            "effectName": "劍技",
+            "effectDesc": "破擊率增加15%，暴擊率增加20%，限疊加4次"
+          },
+          {
+            "text": "层数达到1层时，使我方全体造成伤害增加20%，达到2层时，使我方全体受到伤害减少20%，达到3层时，敌方回合开始时对敌方全体造成220%的",
+            "isEffect": false
+          },
+          {
+            "text": "速攻",
+            "isEffect": true,
+            "effectName": "速攻",
+            "effectDesc": "暴擊率增加至3倍，暴擊傷害增加30%，造成傷害增加40%"
+          },
+          {
+            "text": "伤害",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1181_p3.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1181_p4",
+        "name": "力量解放強化",
+        "description": "力量解放後，賦予自己1回合內基本能力值增加10%的效果",
+        "effects": [
+          {
+            "text": "力量解放後，賦予自己1回合內基本能力值增加10%的效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_1.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "passive",
+        "id": "1181_p5",
+        "name": "Weak",
+        "description": "造成Weak時，賦予自己1回合內攻擊相關能力增加8%的效果",
+        "effects": [
+          {
+            "text": "造成Weak時，賦予自己1回合內攻擊相關能力增加8%的效果",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/ComPSkill_2.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "resonance",
+        "id": "1181_rp3",
+        "name": "速攻",
+        "description": "自己的劍技层数达到1层时，使我方全体造成伤害增加20%，达到2层时，使我方全体受到伤害减少20%，达到3层时，敌方回合开始时对敌方全体造成220%的速攻伤害，达到4层时使自己所有能力值增加10%",
+        "effects": [
+          {
+            "text": "自己的",
+            "isEffect": false
+          },
+          {
+            "text": "劍技",
+            "isEffect": true,
+            "effectName": "劍技",
+            "effectDesc": "破擊率增加15%，暴擊率增加20%，限疊加4次"
+          },
+          {
+            "text": "层数达到1层时，使我方全体造成伤害增加20%，达到2层时，使我方全体受到伤害减少20%，达到3层时，敌方回合开始时对敌方全体造成220%的",
+            "isEffect": false
+          },
+          {
+            "text": "速攻",
+            "isEffect": true,
+            "effectName": "速攻",
+            "effectDesc": "暴擊率增加至3倍，暴擊傷害增加30%，造成傷害增加40%"
+          },
+          {
+            "text": "伤害，达到4层时使自己所有能力值增加10%",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-passive/1181_p3.png"
+      },
+      {
+        "type": "Passive",
+        "subtype": "orb",
+        "id": "1181_ep9",
+        "name": null,
+        "description": "每获得1个劍技效果，使自己攻击力增加2%，最多增加8%，行动后使自己暴击防御增加3%，最多增加18%",
+        "effects": [
+          {
+            "text": "每获得1个",
+            "isEffect": false
+          },
+          {
+            "text": "劍技",
+            "isEffect": true,
+            "effectName": "劍技",
+            "effectDesc": "破擊率增加15%，暴擊率增加20%，限疊加4次"
+          },
+          {
+            "text": "效果，使自己攻击力增加2%，最多增加8%，行动后使自己暴击防御增加3%，最多增加18%",
+            "isEffect": false
+          }
+        ],
+        "iconUrl": "/assets/heroes/skill-orb/Equip_HE_UR_1181.png"
+      }
+    ],
+    "tiers": [
+      {
+        "tier": 1,
+        "effects": [
+          {
+            "description": "戰鬥開始時，1回合內使自己獲得最大生命5%的護盾"
+          },
+          {
+            "description": "造成暴击时使目标防御力减少3%，最多减少6%"
+          },
+          {
+            "description": "戰鬥開始時，1回合內使自己免疫阻斷效果"
+          },
+          {
+            "description": "防御力增加4%，生命值低于60%时效果翻倍"
+          },
+          {
+            "description": "當我方回合時，1回合內使自己獲得最大生命5%的護盾"
+          }
+        ]
+      },
+      {
+        "tier": 2,
+        "effects": [
+          {
+            "description": "戰鬥開始時，1回合內使自己最大生命值增加10%"
+          },
+          {
+            "description": "我方角色回復率增加5%"
+          },
+          {
+            "description": "戰鬥中暴擊抵抗增加10%"
+          },
+          {
+            "description": "攻擊帶有威懾效果的敵方角色時造成傷害增加6%"
+          },
+          {
+            "description": "戰鬥開始時，使自己最大生命值增加10%"
+          }
+        ]
+      },
+      {
+        "tier": 3,
+        "effects": [
+          {
+            "description": "戰鬥開始時，1回合內使自己受到主動技能傷害減少5%"
+          },
+          {
+            "description": "敵方角色死亡時使自己1回合內攻擊力增加8%"
+          },
+          {
+            "description": "戰鬥開始時，使自己最大生命值增加5%"
+          },
+          {
+            "description": "我方回合開始時，使自己和我方當前攻擊力最高的其他角色1回合內獲得最大生命值30%的護盾"
+          },
+          {
+            "description": "戰鬥開始時，使自己受到主動技能傷害減少5%"
+          }
+        ]
+      }
+    ],
+    "effectDefs": {
+      "斷絕": "*斷絕：必定暴擊，無視護盾、防禦力和格擋率，視為造成克制傷害，並對其他目標濺射造成本次造成傷害量40%的真理傷害，對每個目標的濺射傷害不得超過自己攻擊力數值的500%",
+      "超斷絕": "*超斷絕：本次技能期間攻擊力增加100%，必定暴擊，無視護盾、防禦力和格擋率，視為造成克制傷害，並對其他目標濺射造成本次造成傷害量40%的真理傷害，對每個目標的濺射傷害不得超過自己攻擊力數值的500%",
+      "一刀兩斷": "*一刀兩斷：必定暴擊，無視護盾、防禦力和格擋率，視為造成克制傷害，造成攻擊力200%的傷害，立刻殺死生命值比例低於30%的敵人，如果未能成功殺死敵人，使敵方全體1回合內攻擊相關能力減少30%，攻擊時暴擊率視為0，下兩次主動技能和非主動技能造成傷害減少80%",
+      "劍技": "*劍技：破擊率增加15%，暴擊率增加20%，限疊加4次",
+      "洞察": "*洞察：當自己最大生命值高於80%時使我方全體攻擊相關能力增加10%，當自己最大生命值低於80%時，使我方全體防禦相關能力增加10%，最大生命值增加20%",
+      "威懾": "*威懾：攻擊相關能力減少4%，吸血率減少25%，回復率減少40%",
+      "速攻": "*速攻：暴擊率增加至3倍，暴擊傷害增加30%，造成傷害增加40%"
     }
   }
 ]
