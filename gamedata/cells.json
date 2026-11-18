@@ -3675,6 +3675,66 @@
     "effectDefs": {}
   },
   {
+    "id": "Equip_Special_1021_Atk",
+    "imgFile": "Equip_Special_1021_Atk.png",
+    "iconUrl": "/assets/cells-icon/Equip_Special_1021_Atk.png",
+    "name": "強襲細胞【鯱】",
+    "rarity": 6,
+    "statType": "ATK",
+    "baseStat": null,
+    "stat1": null,
+    "stat2": null,
+    "stat3": null,
+    "stat4": null,
+    "factors": [
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      }
+    ],
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【鯱】",
+    "uniqueSkillSegments": [
+      {
+        "text": "當我方回合開始時，",
+        "isEffect": false
+      },
+      {
+        "text": "奪取",
+        "isEffect": true,
+        "effectName": "奪取",
+        "effectDesc": "*奪取：使奪取目標能力值的減少值增加至施加者身上"
+      },
+      {
+        "text": "敵方當前攻擊力最高的角色25%吸血率和回復率，持續1回合，如果自己不是場上攻擊力最高的角色，使自己攻擊力增加20%，最多增加至100%，當我方角色生命值高於50%時，防禦力和格擋率增加20%，當我方角色生命值不高於50%時，受到單次技能傷害不得超過自己最大生命值的40%，並且受到額外傷害固定為1。",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "奪取": "*奪取：使奪取目標能力值的減少值增加至施加者身上"
+    }
+  },
+  {
     "id": "Equip_Special_1021_Def",
     "imgFile": "Equip_Special_1021_Def.png",
     "iconUrl": "/assets/cells-icon/Equip_Special_1021_Def.png",
@@ -6909,20 +6969,20 @@
         "isEffect": false
       },
       {
-        "text": "電擊",
+        "text": "放電",
         "isEffect": true,
-        "effectName": "電擊",
-        "effectDesc": "*電擊：造成傷害時，額外造成破擊率100%的傷害"
+        "effectName": "放電",
+        "effectDesc": "*放電：獲得時，賦予自己2回合內攻擊相關能力增加5%效果"
       },
       {
         "text": "時，立即並對敵方全體造成120%的",
         "isEffect": false
       },
       {
-        "text": "超感電",
+        "text": "電擊",
         "isEffect": true,
-        "effectName": "超感電",
-        "effectDesc": "*超感電：暴擊抵抗減少10%，受到傷害時，額外受到施加者攻擊力100%的傷害"
+        "effectName": "電擊",
+        "effectDesc": "*電擊：造成傷害時，額外造成破擊率100%的傷害"
       },
       {
         "text": "傷害",
@@ -7390,10 +7450,10 @@
         "isEffect": false
       },
       {
-        "text": "超動搖",
+        "text": "體育精神",
         "isEffect": true,
-        "effectName": "超動搖",
-        "effectDesc": "*超動搖：攻擊力減少6%，解除時使持有者技能等級下降，持有者死亡時使敵方全體技能等級下降"
+        "effectName": "體育精神",
+        "effectDesc": "*體育精神：防禦力增加10%，暴擊防禦增加12%，持有者受到單次傷害不得超過自己最大生命值的50%"
       },
       {
         "text": "到達4層時，賦予所有帶有",
@@ -8239,6 +8299,77 @@
     "uniqueSkillName": "強襲細胞（霧嶋董香專屬）",
     "uniqueSkillSegments": [],
     "effectDefs": {}
+  },
+  {
+    "id": "Equip_Special_1160_Atk",
+    "imgFile": "Equip_Special_1160_Atk.png",
+    "iconUrl": "/assets/cells-icon/Equip_Special_1160_Atk.png",
+    "name": "強襲細胞【烈焰一擊】",
+    "rarity": 6,
+    "statType": "ATK",
+    "baseStat": null,
+    "stat1": null,
+    "stat2": null,
+    "stat3": null,
+    "stat4": null,
+    "factors": [
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      },
+      {
+        "stat": "Atk",
+        "name": "攻擊力",
+        "valuePct": 1.5,
+        "iconUrl": "/assets/cells-factor/JS_icon_attr_atk_3.png"
+      }
+    ],
+    "description": "側重提升攻擊能力的Rc細胞，角色裝備後可極大提升攻擊力",
+    "uniqueSkillName": "強襲細胞【烈焰一擊】",
+    "uniqueSkillSegments": [
+      {
+        "text": "當我方角色釋放非主動技能後，使該角色1回合內獲得",
+        "isEffect": false
+      },
+      {
+        "text": "全面活性",
+        "isEffect": true,
+        "effectName": "全面活性",
+        "effectDesc": "*全面活性：暴擊抵抗和暴擊防禦增加20%，下一次主動技能造成傷害增加25%"
+      },
+      {
+        "text": "效果，限疊加3次。戰鬥開始時，如果我方全為安定區角色，使我方全體所有能力值增加10%，並使敵方攻擊力最高和生命值最低的角色3回合內獲得",
+        "isEffect": false
+      },
+      {
+        "text": "反噬",
+        "isEffect": true,
+        "effectName": "反噬",
+        "effectDesc": "*反噬：攻擊力減少20%，攜帶期間無法造成額外傷害，受到2級及以上主動技能傷害增加50%，持有者行動後，施加者立即對其進行反擊，造成施加者攻擊力180%的猛擊傷害"
+      },
+      {
+        "text": "效果",
+        "isEffect": false
+      }
+    ],
+    "effectDefs": {
+      "全面活性": "*全面活性：暴擊抵抗和暴擊防禦增加20%，下一次主動技能造成傷害增加25%",
+      "反噬": "*反噬：攻擊力減少20%，攜帶期間無法造成額外傷害，受到2級及以上主動技能傷害增加50%，持有者行動後，施加者立即對其進行反擊，造成施加者攻擊力180%的猛擊傷害"
+    }
   },
   {
     "id": "Equip_Special_1164_Def",
